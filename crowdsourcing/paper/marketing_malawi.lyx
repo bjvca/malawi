@@ -6,6 +6,9 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+knitr
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -29,6 +32,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -42,8 +46,9 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -91,10 +96,12 @@ author{Bjorn Van Campenhout
 thanks{Development Strategy and Governance Division, International Food
  Policy Research Institute and LICOS Center for Institutions and Economic
  Performance, KULeuven, Belgium - corresponding author: b.vancampenhout@cgiar.org}
-  , Bob Baulch
+  , Joachim De Weerdt
 \backslash
 thanks{Development Strategy and Governance Division, International Food
- Policy Research Institute, Lilongwe, Malawi}}
+ Policy Research Institute, Lilongwe, Malawi} , and Bob Baulch
+\backslash
+thanks{RMIT University,  Ho Chi Minh, Vietnam}}
 \end_layout
 
 \end_inset
@@ -106,6 +113,174 @@ thanks{Development Strategy and Governance Division, International Food
 
 Selling at the farm-gate of traveling to the market: evidence from crowd-sourced
  data
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<marketing_analysis,  echo=F, warning = F, message=F>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+path_lyx <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+source(paste(path_lyx,
+\begin_inset Quotes eld
+\end_inset
+
+/non_parametric_analysis.R
+\begin_inset Quotes erd
+\end_inset
+
+,sep=
+\begin_inset Quotes erd
+\end_inset
+
+/
+\begin_inset Quotes erd
+\end_inset
+
+))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "fafchamps2005selling"
+literal "false"
+
+\end_inset
+
+, 85 percent of Uganda coffee farmers sell at the farm-gate.
+ The rate at which Malawian farmers sell at the farm-gate seems much lower.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "fafchamps2005selling"
+literal "false"
+
+\end_inset
+
+ also only differentiate between selling at the farm-gate 
+\end_layout
+
+\begin_layout Standard
+Even though no figures are given, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "fafchamps2005selling"
+literal "false"
+
+\end_inset
+
+ indicate that prices received on the market are higher than prices farmers
+ get at the farm-gate.
+ This also seems to be case in Malawi.
+ Farmers who sell their maize at the farm-gate receive about xx Malawian
+ Kwatcha per kg, while this is xx Malawian Kwatcha per kg if maize is sold
+ away from the farmstead.
+ A similar different is observed for soy bean, where farmers receive at
+ the farm-gate on average xx Malawian Kwatcha per kg, while this is xx 
+ Malawian Kwatcha per kg.
+ In both cases, the difference is statistically significant.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fig4.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Likelihood of selling at the farm-gate against farm size (acres)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fig6.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distance to market against against farm size (acres)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -129,7 +304,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Likelihood of selling to the market against quantity sold (kg)
+Likelihood of selling at the farm-gate against quantity sold (kg)
 \end_layout
 
 \end_inset
@@ -167,13 +342,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Likelihood of selling to the market against distance to market (minutes)
+Likelihood of selling to the farm-gate against distance to market (minutes)
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "marketing_malawi"
+options "IFPRI_Style"
 
 \end_inset
 

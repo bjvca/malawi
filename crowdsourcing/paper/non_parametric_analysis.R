@@ -3,6 +3,7 @@ rm(list=ls())
 library(ggplot2)
 library(reshape2)
 library(KernSmooth)
+library(stringr)
 set.seed(28052021)
 
 path <- getwd()
@@ -52,6 +53,31 @@ dta$loc_sold[dta$farmgate] <- "farmgate"
 
 ############## start analysis
 
+table(dta$loc_sold, dta$crop)
+df_averages <- matrix(NA,2,3)
+
+
+tapply(dta$pricesold,dta$crop, FUN=mean, na.rm=T)
+tapply(dta$pricesold,dta$loc_sold, FUN=mean, na.rm=T)
+df_averages[1,] <- tapply(dta$pricesold[dta$crop == "maize"],dta$loc_sold[dta$crop == "maize"], FUN=mean, na.rm=T)
+df_averages[2,] <- tapply(dta$pricesold[dta$crop == "soy_bean"],dta$loc_sold[dta$crop == "soy_bean"], FUN=mean, na.rm=T)
+
+
+## 
+dta$day <- str_split_fixed(dta$Timestamp," ",2)[,1]
+
+
+dta$month <- substr(dta$Timestamp,3,5)
+dta$pos <- NA
+dta$pos[dta$month %in% c("apr","may")] <- 1
+dta$pos[dta$month %in% c("jun")] <- 2
+dta$pos[dta$month %in% c("jul")] <- 3
+
+## farmers are more likely to sell to the market early in the season
+prop.table(table(dta$pos,dta$market),1)
+### this is the period when prices are high
+tapply(dta$pricesold,dta$pos, mean, na.rm=T)
+
 
 
 png(paste(path,"paper/figures/fig1.png",sep = "/"), units="px", height=3200, width= 3200, res=600)
@@ -74,10 +100,10 @@ pl <- ggplot(dta, aes(x=Time2Market, y=as.numeric(farmgate), color = crop)) +
 dev.off()
 
 
-#how does competition affect location of sales?
+##how does competition affect location of sales?
 
 png(paste(path,"paper/figures/fig3.png",sep = "/"), units="px", height=3200, width= 3200, res=600)
-pl <- ggplot(dta, aes(x=NumBuyers, y=as.numeric(farmgate), color = crop)) + 
+pl <- ggplot(dta, aes(x=competition, y=as.numeric(farmgate), color = crop)) + 
         geom_smooth(method="loess") +
         coord_cartesian(
   xlim =c(0,5), ylim=c(.25,.6))

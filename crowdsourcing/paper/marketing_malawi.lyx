@@ -31,7 +31,7 @@ knitr
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -193,8 +193,15 @@ literal "false"
  also only differentiate between selling at the farm-gate 
 \end_layout
 
+\begin_layout Section*
+Prices
+\end_layout
+
 \begin_layout Standard
-Even though no figures are given, 
+In general, prices that farmers receive at the market are higher than the
+ prices they can get when selling at the farm-gate.
+ Even though no figures are given, this also the central stylized fact on
+ which 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "fafchamps2005selling"
@@ -202,17 +209,275 @@ literal "false"
 
 \end_inset
 
- indicate that prices received on the market are higher than prices farmers
- get at the farm-gate.
- This also seems to be case in Malawi.
- Farmers who sell their maize at the farm-gate receive about xx Malawian
- Kwatcha per kg, while this is xx Malawian Kwatcha per kg if maize is sold
- away from the farmstead.
- A similar different is observed for soy bean, where farmers receive at
- the farm-gate on average xx Malawian Kwatcha per kg, while this is xx 
- Malawian Kwatcha per kg.
- In both cases, the difference is statistically significant.
+ build their analysis.
+ This price difference is the result of transaction costs that are incurred
+ by traders who need to collect, bulk and transport commodities sourced
+ at the farm-gate to consumer centers, often many miles away.
+ Transaction costs are difficult to measure, because they do not only include
+ costs related to physical transport of the commodities, such as the cost
+ of fuel or vehicle hire, but also more intangible costs such as search
+ costs or a valuation of the risk taken by trader.
+ Furthermore, it is often argued that traders collide to extract mark-ups
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "article"
+literal "false"
+
+\end_inset
+
+.
+ For example, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bergquist2020competition"
+literal "false"
+
+\end_inset
+
+ find that that traders in Kenya act consistently with joint profit maximization
+ and earn median markups of almost 40 percent.
+\end_layout
+
+\begin_layout Standard
+Surprisingly, in Malawi, we do not find significant differences in prices
+ received at the farm-gate and prices received on the market (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Average-prices-received"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ This may mean that the components that make up the transaction cost are
+ modest.
+ For instance, distances traveled is short and risk related to trade negligible.
+ It also suggests that there is substantial competition between traders.
+ The average farmer in the data set indicates that in the seven days before
+ the transaction, they were visited by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(round(mean(dta$competition),digits=0),nsmall=0)}
+\end_layout
+
+\end_inset
+
+ traders.
+ The overall competitiveness of soy bean and maize markets is also reflected
+ in the absence of any significant correlation between prices received at
+ the farm gate and the number of traders that visited in the seven days
+ leading up to the transaction.
+ Alternatively, it may be that traders are able to get higher prices further
+ up the value chain, partially offsetting the transaction cost they incur
+ (for instance because of large quantities or because of a quality premium).
+ 
+\end_layout
+
+\begin_layout Standard
+The way the data was collected also allows us to look at the dynamics of
+ the price difference.
+ It is well known that prices fluctuate substantially over time 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:oup:jafrec:v:24:y:2015:i:2:p:230-253."
+literal "false"
+
+\end_inset
+
+.
+ We explore this by using the timestamp of the reported transactions to
+ split the sample into 3 periods with approximately equal numbers of transaction
+s.
+ In the first period, running from April to May, prices are relatively high,
+ and we see that the price farmers receive on the market is almost 7 percent
+ higher.
+ However, over time, when prices that the premium disappears.
+ Towards the end of the season, the difference between the price obtained
+ on the market and at the farm-gate has virtually disappeared.
+ This pattern does not seem to be related to competition.
+ In fact, farmers report less traders contacting them in June and July than
+ in April and May.
+ Perhaps, many of the transactions are the farm-gate during April and May
+ are distress sales.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Average-prices-received"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that we do find that farmers get significantly higher prices when
+ they sell to admarc.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+	& farm-gate & market  & admarc 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-4} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Maize  &	
+\backslash
+Sexpr{format(round(df_averages[1,2],digits=3),nsmall=3)} &	
+\backslash
+Sexpr{format(round(df_averages[1,3],digits=3),nsmall=3)} &	
+\backslash
+Sexpr{format(round(df_averages[1,1],digits=3),nsmall=3)}		
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Soy bean  &	
+\backslash
+Sexpr{format(round(df_averages[2,2],digits=3),nsmall=3)} &	
+\backslash
+Sexpr{format(round(df_averages[2,3],digits=3),nsmall=3)} &	
+\backslash
+Sexpr{format(round(df_averages[2,1],digits=3),nsmall=3)}		
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Average prices received by farmers
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Average-prices-received"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -325,7 +590,7 @@ Likelihood of selling at the farm-gate against quantity sold (kg)
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -353,6 +618,16 @@ Likelihood of selling to the farm-gate against distance to market (minutes)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+We find that markets are fairly competitive with traders able to charge
+ only minimal markups and these markups disappear as the season progresses.
+ 
 \end_layout
 
 \begin_layout Standard

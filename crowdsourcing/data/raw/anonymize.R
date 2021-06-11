@@ -26,9 +26,9 @@ b_dta2$crop <- "maize"
 names(b_dta2)[names(b_dta2) == 'QuantitySoldinKilogram'] <- 'quantitysold'
 
 
-### merge in time to market
-b_dta <- merge(b_dta,dta[c("PrimaryKey","Time2Market")])
-b_dta2 <- merge(b_dta2,dta2[c("PrimaryKey","Time2Market")])
+### merge in time to market and timestampt
+b_dta <- merge(b_dta,dta[c("PrimaryKey","Time2Market", "Timestamp")])
+b_dta2 <- merge(b_dta2,dta2[c("PrimaryKey","Time2Market","Timestamp")])
 
 
 #define farmgate sales
@@ -53,9 +53,11 @@ b_dta$admarc[b_dta$CategoryofBuyer == "ADMARC"] <- TRUE
 b_dta2$admarc <- FALSE
 b_dta2$admarc[b_dta2$CategoryofBuyer == "ADMARC"] <- TRUE
 
+names(b_dta)[names(b_dta) =='numbuyers'] <- "competition"
+names(b_dta2)[names(b_dta2) =='Howmanybuyershaveapproached'] <- "competition"
 
 
-b_dta <- rbind(b_dta[c("crop", "pricesold","quantitysold","Time2Market","farmsize_acres", "crop_acres", "distance_km", "admarc","farmgate","market")],b_dta2[c("crop", "pricesold","quantitysold","Time2Market","farmsize_acres", "crop_acres","distance_km", "admarc","farmgate","market")])
+b_dta <- rbind(b_dta[c("crop", "pricesold","quantitysold","Time2Market","farmsize_acres", "crop_acres", "distance_km", "admarc","farmgate","market","competition","Timestamp")],b_dta2[c("crop", "pricesold","quantitysold","Time2Market","farmsize_acres", "crop_acres","distance_km", "admarc","farmgate","market","competition","Timestamp")])
 
 write.csv(b_dta,file = paste(path,"public/crowd_sourced_all_baseline.csv", sep="/"), row.names=FALSE)
 

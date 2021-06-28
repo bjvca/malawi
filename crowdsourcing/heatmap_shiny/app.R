@@ -53,6 +53,8 @@ dta$Quantity[dta$Quantity < 50 & dta$crop=="maize"] <- NA
 dta$Quantity[dta$Quantity > 1400 & dta$crop=="soy_bean"] <- NA
 dta$Quantity[dta$Quantity < 45 & dta$crop=="soy_bean"] <- NA
 
+dta$kg <- dta$Quantity
+
 dta$Quantity <- dta$Quantity/max(dta$Quantity, na.rm=T)*25
 
 
@@ -142,9 +144,9 @@ server <- function(input, output) {
 
   get_data_p <- reactive({
   if (input$year_select_p  == "both") {
-    data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4)  & data$crop == input$crop_select_p)  ,]
+    aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4)  & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4)  & data$crop == input$crop_select_p)  ,]$TA_CODE), mean, na.rm=T)
     } else {
-    data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,]
+     aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,]$TA_CODE), mean, na.rm=T)  
     }
     
   })
@@ -152,9 +154,9 @@ server <- function(input, output) {
   get_data_q <- reactive({
 
      if (input$year_select_q  == "both") {
-    data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4)  & data$crop == input$crop_select_q)  ,]
+   aggregate( data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4)  & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4)  & data$crop == input$crop_select_q)  ,]$TA_CODE), mean, na.rm=T)
     } else {
-    data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,]
+      aggregate(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,]$TA_CODE), mean, na.rm=T)  
     }
   })
 
@@ -179,7 +181,7 @@ clearControls() %>%
     data <- get_data_q()
      leafletProxy('volumes', data = data) %>%
   clearGroup('dots')     %>% clearControls() %>%
-          addCircleMarkers(group='dots',data=data, lng=~lon_centroid, lat=~lat_centroid,radius=~Quantity,  stroke = FALSE,color="red", label = ~as.character(TA_NAME), popup = ~as.character(Quantity))  %>% addLegendCustom(colors = c("red", "red", "red","red"), labels = c("400 kg", "800 kg", "1200 kg","1600 kg"), sizes = c(10, 20,30, 40))
+          addCircleMarkers(group='dots',data=data, lng=~lon_centroid, lat=~lat_centroid,radius=~Quantity,  stroke = FALSE,color="red", label = ~as.character(TA_NAME), popup = ~as.character(kg),fillOpacity=.5)  %>% addLegendCustom(colors = c("red", "red", "red","red"), labels = c("400 kg", "800 kg", "1200 kg","1600 kg"), sizes = c(10, 20,30, 40))
   })
   
 

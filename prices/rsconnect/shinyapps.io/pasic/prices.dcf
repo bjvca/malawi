@@ -1,0 +1,10 @@
+name: prices
+title:
+username:
+account: pasic
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4018810
+bundleId: 4510336
+url: https://pasic.shinyapps.io/prices/
+when: 1619193605.34152

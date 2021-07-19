@@ -111,8 +111,7 @@ thanks{RMIT University,  Ho Chi Minh, Vietnam}}
 
 \end_inset
 
-Selling at the farm-gate of traveling to the market: evidence from crowd-sourced
- data
+Market systems in Malawi: combing farmgate and market price data
 \end_layout
 
 \begin_layout Standard
@@ -169,28 +168,34 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "fafchamps2005selling"
-literal "false"
-
-\end_inset
-
-, 85 percent of Uganda coffee farmers sell at the farm-gate.
- The rate at which Malawian farmers sell at the farm-gate seems much lower.
+Studies on market integration usually rely on time series data of price
+ collected in selected markets.
+ Starting from the law of one price, differences in the price of the product
+ in different markets is then used to test hypotheses related to market
+ efficiency.
  
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "fafchamps2005selling"
-literal "false"
+The law of one price posits that adjustment of price margins between markets
+ is a consequence of price arbitrage between the two markets, whereby traders
+ buy the commodity in the low price market and sell the commodity in the
+ high price market.
+ If sufficient traders enter the business, increased demand for the commodity
+ will drive up the price in the low price market while increase in supply
+ will reduce the price in the thigh price market.
+ In the long run, prices will return to a steady state long-run relationship
+ that is determined buy the transaction cost.
+\end_layout
 
-\end_inset
+\begin_layout Standard
+One question that is less often address is how farm gate prices respond
+ to changes in market centers.
+ 
+\end_layout
 
- also only differentiate between selling at the farm-gate 
+\begin_layout Standard
+In this paper, we combine 
 \end_layout
 
 \begin_layout Section*
@@ -299,14 +304,15 @@ s.
  In the first period, running from April to May, prices are relatively high,
  and we see that the price farmers receive on the market is almost 7 percent
  higher.
- However, over time, when prices that the premium disappears.
+ However, over time, when prices increase, that the premium disappears.
  Towards the end of the season, the difference between the price obtained
  on the market and at the farm-gate has virtually disappeared.
- This pattern does not seem to be related to competition.
- In fact, farmers report less traders contacting them in June and July than
- in April and May.
- Perhaps, many of the transactions are the farm-gate during April and May
- are distress sales.
+ This pattern does not seem to be related to competition: In fact, farmers
+ report less traders contacting them in June and July than in April and
+ May.
+ Most likely, it is due to the fact that farmers are more likely to sell
+ to the market early in the season when prices are high and more likely
+ to sell to the market later in the season, when prices are lower.
 \end_layout
 
 \begin_layout Standard

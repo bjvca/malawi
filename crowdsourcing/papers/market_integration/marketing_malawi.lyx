@@ -1,0 +1,234 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Bjorn Van Campenhout
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute and LICOS Center for Institutions and Economic
+ Performance, KULeuven, Belgium - corresponding author: b.vancampenhout@cgiar.org}
+  , Joachim De Weerdt
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Lilongwe, Malawi} , and Bob Baulch
+\backslash
+thanks{RMIT University,  Ho Chi Minh, Vietnam}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Market systems in Malawi: combing farmgate and market price data
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<marketing_analysis,  echo=F, warning = F, message=F>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+path_lyx <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+source(paste(path_lyx,
+\begin_inset Quotes eld
+\end_inset
+
+MI_analysis.R
+\begin_inset Quotes erd
+\end_inset
+
+,sep=
+\begin_inset Quotes erd
+\end_inset
+
+/
+\begin_inset Quotes erd
+\end_inset
+
+))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+Studies on market integration usually rely on time series data of price
+ collected in selected markets.
+ Starting from the law of one price, differences in the price of the product
+ in different markets is then used to test hypotheses related to market
+ efficiency.
+ 
+\end_layout
+
+\begin_layout Standard
+The law of one price posits that adjustment of price margins between markets
+ is a consequence of price arbitrage between the two markets, whereby traders
+ buy the commodity in the low price market and sell the commodity in the
+ high price market.
+ If sufficient traders enter the business, increased demand for the commodity
+ will drive up the price in the low price market while increase in supply
+ will reduce the price in the thigh price market.
+ In the long run, prices will return to a steady state long-run relationship
+ that is determined buy the transaction cost 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "VANCAMPENHOUT2007112,baulch1997transfer"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+One question that is less often address is how farm gate prices are correlated
+ to changes in market centers.
+ This is because empirically modeling price dynamics is done using price
+ series data, which is generally unavailable for farm gate prices.
+ Farm gate prices are generally derived from cross-sectional surveys, and
+ questionnaire modules about commodity marketing often do not provide sufficient
+ detail with respect the the number of transactions and precise timings.
+\end_layout
+
+\begin_layout Standard
+In this paper, we combine high frequency wholesale price data collected
+ in market centers is X cities and towns in Malawi with farm-gate prices
+ crowdsourced by
+\end_layout
+
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+We find that markets are fairly competitive with traders able to charge
+ only minimal markups and these markups disappear as the season progresses.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "marketing_malawi"
+options "IFPRI_Style"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

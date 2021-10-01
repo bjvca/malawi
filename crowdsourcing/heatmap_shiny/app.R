@@ -17,28 +17,43 @@ data.p <- sf::st_read("input/Malawi_TA_2018.shp") %>%
   lat.center <- -13
   zoom.def <- 7.5
   
-dta <- read.csv("input/soja_data.csv")[c("Timestamp","Quantity","Price","TAcode")]
-dta2 <- read.csv("input/maize_data.csv")[c("Timestamp","Quantity","Price","TAcode")]
-dta21 <- read.csv("input/data_21.csv")[c("date","quantity_sold","price","TAcode","crop")]
+dta <- read.csv("input/soja_data.csv",stringsAsFactors = FALSE)[c("Timestamp","Quantity","Price","TAcode")]
+dta2 <- read.csv("input/maize_data.csv",stringsAsFactors = FALSE)[c("Timestamp","Quantity","Price","TAcode")]
+dta21 <- read.csv("input/data_21_TA_codes.csv",stringsAsFactors = FALSE)[c("monthsold","quantity_sold","price","ta","crop")]
+
 names(dta21) <- c("Timestamp","Quantity","Price","TAcode","crop")
 dta21$crop[dta21$crop == "Soya"] <- "soy_bean" 
 dta$crop <- "soy_bean"
 dta2$crop <- "maize"
-
-dta <- rbind(dta,dta2,dta21)
-
-#merge in centroids
-dta <- merge(dta,read.csv("input/Malawi_TA_2018_centroids.csv")[c("TA_CODE","lon_centroid", "lat_centroid")], by.x="TAcode", by.y="TA_CODE")
-
-
+dta <- rbind(dta,dta2)
 dta$day <- str_split_fixed(dta$Timestamp," ",2)[,1]
 
 dta$year <- substr(dta$Timestamp,6,9)
 dta$month <- substr(dta$Timestamp,3,5)
 dta$pos <- NA
-dta$pos[dta$month %in% c("apr","may")] <- 1
-dta$pos[dta$month %in% c("jun")] <- 2
-dta$pos[dta$month %in% c("jul")] <- 3
+dta$pos[dta$month %in% c("apr")] <- 1
+dta$pos[dta$month %in% c("may")] <- 2
+dta$pos[dta$month %in% c("jun")] <- 3
+dta$pos[dta$month %in% c("jul")] <- 4
+
+dta21$pos <- NA
+dta21$pos[dta21$Timestamp=="4"] <- 1
+dta21$pos[dta21$Timestamp=="5"] <- 2
+dta21$pos[dta21$Timestamp=="6"] <- 3
+dta21$pos[dta21$Timestamp=="7"] <- 4
+
+dta21 <- dta21[c("Quantity", "Price", "TAcode","crop", "pos")]
+dta21$year <- 2021
+dta <- dta[c("Quantity", "Price", "TAcode","crop", "pos")]
+dta$year <- 2020
+
+dta <- rbind(dta,dta21)
+
+#merge in centroids
+dta <- merge(dta,read.csv("input/Malawi_TA_2018_centroids.csv")[c("TA_CODE","lon_centroid", "lat_centroid")], by.x="TAcode", by.y="TA_CODE")
+
+
+
 
 dta$crop <- tolower(dta$crop)
 
@@ -79,7 +94,7 @@ tabPanel("Prices", fluid = TRUE,
   sidebarLayout(
     sidebarPanel( p("These interactive maps show the prices that farmers in Malawi report receiving for their maize/soybeans during the main 2020 and 2021 marketing seasons in a crowdsourcing exercise conducted by IFPRI and Farm Radio Trust. Prices are stated in MWK/kg at the TA level, with green colors showing higher prices. TAs where no farmers have reported sales during the month are shaded in grey."),
       sliderInput("period_p",h4("Select period or push play button:"),
-                  min = as.Date("2019-05-01"),max =as.Date("2019-07-01"),value=as.Date("2019-07-01"),step = 31, timeFormat="%b",animate =
+                  min = as.Date("2019-04-01"),max =as.Date("2019-07-01"),value=as.Date("2019-04-01"),step = 31, timeFormat="%b",animate =
                    animationOptions(interval = 5000, loop = TRUE)),
                    radioButtons("crop_select_p","Crop", c("maize" = "maize", "soybean" = "soy_bean"), inline=T),
                    radioButtons("year_select_p","Use data from", c("2020" = "2020", "2021" = "2021","2020 + 2021" = "both"), inline=T)
@@ -97,7 +112,7 @@ tabPanel("Volumes", fluid = TRUE,
   sidebarLayout(
     sidebarPanel( p("These interactive maps show the volumes of maize and soybeans that farmers in Malawi report selling during the main 2020 and 2021 marketing seasons in a crowdsourcing exercise conducted by IFPRI and Farm Radio Trust. Volumes are in kg, with larger circles showing larger sales volumes. TAs where no farmers have reported sales during the month are shaded in grey."),
      sliderInput("period_q",h4("Select period or push play button:"),
-                   min = as.Date("2019-05-01"),max =as.Date("2019-07-01"),value=as.Date("2019-07-01"),step = 31, timeFormat="%b",animate =
+                   min = as.Date("2019-04-01"),max =as.Date("2019-07-01"),value=as.Date("2019-04-01"),step = 31, timeFormat="%b",animate =
                    animationOptions(interval = 2000, loop = TRUE)),
                    radioButtons("crop_select_q","Crop", c("maize" = "maize", "soybean" = "soy_bean"), inline=T),
                   radioButtons("year_select_q","Use data from", c("2020" = "2020", "2021" = "2021","2020 + 2021" =  "both"), inline=T)
@@ -144,9 +159,9 @@ server <- function(input, output) {
 
   get_data_p <- reactive({
   if (input$year_select_p  == "both") {
-    aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4)  & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4)  & data$crop == input$crop_select_p)  ,]$TA_NAME), mean, na.rm=T)
+    aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -3)  & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -3)  & data$crop == input$crop_select_p)  ,]$TA_NAME), mean, na.rm=T)
     } else {
-     aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -4) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,]$TA_NAME), mean, na.rm=T)  
+     aggregate(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -3) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_p, tz="GMT")) -3) & data$year == input$year_select_p & data$crop == input$crop_select_p)  ,]$TA_NAME), mean, na.rm=T)  
     }
     
   })
@@ -154,9 +169,9 @@ server <- function(input, output) {
   get_data_q <- reactive({
 
      if (input$year_select_q  == "both") {
-   aggregate( data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4)  & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4)  & data$crop == input$crop_select_q)  ,]$TA_NAME), mean, na.rm=T)
+   aggregate( data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -3)  & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -3)  & data$crop == input$crop_select_q)  ,]$TA_NAME), mean, na.rm=T)
     } else {
-      aggregate(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -4) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,]$TA_NAME), mean, na.rm=T)  
+      aggregate(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -3) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,][c("Price","lon_centroid","lat_centroid","kg","Quantity","TA_NAME")],list(data[which(data$pos == (month(as.POSIXct(input$period_q, tz="GMT")) -3) & data$year == input$year_select_q & data$crop == input$crop_select_q)  ,]$TA_NAME), mean, na.rm=T)  
     }
   })
 

@@ -5,6 +5,11 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+
+\usepackage{amsmath} 
+\newcommand{\abs}[1]{\left|#1\right|} 
+\end_preamble
 \use_default_options true
 \begin_modules
 knitr
@@ -96,10 +101,7 @@ author{Bjorn Van Campenhout
 thanks{Development Strategy and Governance Division, International Food
  Policy Research Institute and LICOS Center for Institutions and Economic
  Performance, KULeuven, Belgium - corresponding author: b.vancampenhout@cgiar.org}
-  , Joachim De Weerdt
-\backslash
-thanks{Development Strategy and Governance Division, International Food
- Policy Research Institute, Lilongwe, Malawi} , and Bob Baulch
+, and Bob Baulch
 \backslash
 thanks{RMIT University,  Ho Chi Minh, Vietnam}}
 \end_layout
@@ -164,27 +166,58 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Studies on market integration usually rely on time series data of price
- collected in selected markets.
- Starting from the law of one price, differences in the price of the product
- in different markets is then used to test hypotheses related to market
- efficiency.
- 
+Spatial heterogeneity in agro-climatic conditions, geology and seasonality
+ means that in some areas harvesting of a crop is well under way, while
+ other areas are still in the lean season.
+ This results in different demand and supply conditions in different areas,
+ giving rise to situations where the price of a homogenous commodity is
+ much lower in one area (where producers are now flooding the market with
+ newly harvested commodity) than in another area (where consumers are eagerly
+ waiting for the first fields to be harvested).
+ In extreme cases, this may give rise to localized famines even when there
+ is sufficient aggregate food supply.
 \end_layout
 
 \begin_layout Standard
-The law of one price posits that adjustment of price margins between markets
- is a consequence of price arbitrage between the two markets, whereby traders
- buy the commodity in the low price market and sell the commodity in the
- high price market.
- If sufficient traders enter the business, increased demand for the commodity
- will drive up the price in the low price market while increase in supply
- will reduce the price in the thigh price market.
- In the long run, prices will return to a steady state long-run relationship
- that is determined buy the transaction cost 
+An effective means against excessive price differences between two locations
+ for a single homogeneous commodity is special arbitrage.
+ Traders buy the commodity in the area where the price is low and ship this
+ to the area where the price is high.
+ The difference in price minus the costs incurred by shipping the goods,
+ is the profit made by the trader.
+ If sufficient traders enter the business, the increased demand in the low
+ price market will increase demand for the commodity, thereby increasing
+ the price in this area (assuming no change in supply).
+ The high price area will attract traders that want to sell their product
+ there, and the increase in supply (assuming constant demand) will reduce
+ the price of the commodity.
+ This mechanism is so fundament to neo-classical economics that is considered
+ a law: law of one price.
+\end_layout
+
+\begin_layout Standard
+Studies on market integration usually rely on time series data of prices
+ collected in selected markets.
+ Starting from the law of one price, differences in the price of the product
+ in different markets is then used to assess the degree of market interconnected
+ness.
+ Large intermarket price spreads and persistence of large price margins
+ over time are signs of poor market integration.
+ While earlier models were flawed by not taking into account transaction
+ costs, modern market integration studies do, either by explicitly using
+ information on transfer costs at a single point in time 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "VANCAMPENHOUT2007112,baulch1997transfer"
+key "baulch1997transfer"
+literal "false"
+
+\end_inset
+
+ or by exploiting the discontinuity that transaction costs introduce in
+ the dynamics of the price margin 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "VANCAMPENHOUT2007112"
 literal "false"
 
 \end_inset
@@ -193,19 +226,1177 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-One question that is less often address is how farm gate prices are correlated
+While there are now plenty of case studies of market integration of different
+ commodities in difference countries.
+ All these studies investigate how markets are connected to each other.
+ A question that is less often addressed is how farm gate prices are correlated
  to changes in market centers.
  This is because empirically modeling price dynamics is done using price
  series data, which is generally unavailable for farm gate prices.
  Farm gate prices are generally derived from cross-sectional surveys, and
  questionnaire modules about commodity marketing often do not provide sufficient
- detail with respect the the number of transactions and precise timings.
+ detail with respect the number of transactions and precise timings.
 \end_layout
 
 \begin_layout Standard
 In this paper, we combine high frequency wholesale price data collected
- in market centers is X cities and towns in Malawi with farm-gate prices
- crowdsourced by
+ in market centers in Malawi with farm-gate prices collected in the vicinity
+ of these markets.
+ In particular, using crowd-sourcing, we are able to estimate prices that
+ farmers receive for their crops at a reasonably high interval throughout
+ the maize and soy beam marketing season.
+ This allows us to investigate the size and evolution over time of the price
+ spread between the farmgate.
+ 
+\end_layout
+
+\begin_layout Standard
+Market integration, and the ability to measure and diagnose the lack of
+ it, is important for many reasons.
+ As mentioned above, the answer to the question how an initially localized
+ famine is expected to persist will depend on how well markets are integrated
+ into the wider economy 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ravallion1986"
+literal "false"
+
+\end_inset
+
+.
+ From a social welfare perspective, poorly integrated markets may convey
+ inaccurate information, leading to sub-optimal commodity movements and
+ trade flows.
+ Policy interventions that uses prices as the main mediator, such as grain
+ reserves, may be much less effective.
+ Also for agricultural technology adoption, price transition is important
+ to avoid technology treadmill effects, whereby a productivity increasing
+ innovation becomes unprofitable as more farmers start using the technology
+ thereby flooding the market with the commodity.
+ This in turn may lead to dis-adoption 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "BARRETT2008299"
+literal "false"
+
+\end_inset
+
+.
+ Recent research suggests that poorly integrated markets may even have ecologica
+l consequences 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "volatility_and_deforestation"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+This paper contributes to the literature in different ways.
+ First, it adds another case study of regional market integration in Malawi
+ for maize and soybean using high frequency data.
+ Second, it studies how farmers are integrated into the regional market
+ system through the use of crowd-sourced data.
+\end_layout
+
+\begin_layout Standard
+This paper is organized as follows.
+\end_layout
+
+\begin_layout Section*
+Analysis
+\end_layout
+
+\begin_layout Standard
+We start by a standard market integration analysis using simple error correction
+ models, abstracting from transaction costs for now.
+ Define 
+\begin_inset Formula $p_{t}^{R}$
+\end_inset
+
+ as the price of a homogenous commodity in the reference market at time
+ 
+\emph on
+t
+\emph default
+, and 
+\begin_inset Formula $p_{t}$
+\end_inset
+
+ as the price of that same commodity in a random market.
+ Define the price margin at time 
+\emph on
+t
+\emph default
+ to be:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+m_{t}=p_{t}^{R}-p_{t}\label{eq:coint}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The focus then is on how this price margin evolves through time.
+ In its most simplest form, this can be expressed in the following autoregressiv
+e model:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\triangle m_{t}=\rho.m_{t-1}+\varepsilon_{t}\label{eq:error-correct}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\triangle m_{t}=m_{t}-m_{t-1}$
+\end_inset
+
+ measures the change in the price margin between two periods and 
+\begin_inset Formula $\varepsilon_{t}$
+\end_inset
+
+is a normally distributed error term.
+ This equation states that the change in the price margin is a function
+ of the price margin in the previous period.
+ If markets are connected by trade, one would expect that if the price margin
+ is large, it would reduce over time.
+ In other words, 
+\begin_inset Formula $\rho<0$
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Strictly speaking, the price margin will reduce if 
+\begin_inset Formula $-2<\rho<0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\rho=-1$
+\end_inset
+
+, the price difference is completely corrected within one period.
+ If 
+\begin_inset Formula $\rho<-2$
+\end_inset
+
+, there will be over-correction.
+ If 
+\begin_inset Formula $\rho=0$
+\end_inset
+
+ the price margin remains constant and if 
+\begin_inset Formula $\rho>0$
+\end_inset
+
+ the price margin increases over time.
+ 
+\end_layout
+
+\end_inset
+
+,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Time series of prices are usually non-stationary in nature.
+ However, if prices are related to each other by some long run relationship
+ like the law of one price, a linear combination of the price such as equation
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:coint"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ will be stationary, in which case equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:error-correct"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is normally referred to as the error-correction representation that describes
+ short run dynamics consistent with the long run equilibrium.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When price series data at the farm-gate level would be available, the same
+ analysis can be run to look at adjustment of farm gate prices to.
+\end_layout
+
+\begin_layout Standard
+Model 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:error-correct"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ does not consider the existence of transaction costs.
+ A non-zero transaction cost would result in a price band where there is
+ no adjustment.
+ Only when the price difference between the two locations exceeds the transactio
+n cost, trading becomes profitable and so only then prices will start moving
+ towards each other.
+ A popular model that incorporates transaction costs is the Threshold Auto-Regre
+ssive (TAR) model.
+ We will estimate the simple model in equation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:tar}
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+More general TAR models often allow for some arbitrary price adjustment
+ within the price band formed by the transaction cost.
+ Exploiting theory of the law of one price, we imposes unit root behaviour
+ within the price band formed by the transaction costs to increase efficiency
+ in the estimate of model parameters.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+triangle m_{t}
+\end_layout
+
+\begin_layout Plain Layout
+
+&= 
+\backslash
+begin{cases}       
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rho.m_{t-1}+
+\backslash
+varepsilon_{t}
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+text{if $
+\backslash
+lvert m_{t-1} 
+\backslash
+rvert>T_{t-1}$}
+\backslash
+
+\backslash
+    
+\backslash
+varepsilon_{t}
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+text{otherwise}    
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cases} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{align*} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{eq:tar}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:tar}
+\end_layout
+
+\end_inset
+
+ states that the price difference for the commodity between two spatially
+ separated markets reduces over time as long as the price difference in
+ the previous period is larger (in absolute values) than the transaction
+ cost 
+\begin_inset Formula $T_{t-1}$
+\end_inset
+
+.
+ Note that this model allows for reversal of trade flows and assumes transaction
+ costs as well as adjustment are the same regardless of the direction of
+ trade.
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:tar}
+\end_layout
+
+\end_inset
+
+ suggests that there are two dimensions to market integration: transaction
+ costs and the speed of adjustment.
+ Both of these properties need to be considered together when assessing
+ the degree of market integration.
+ Clearly, well integrated markets will have low transaction costs 
+\begin_inset Formula $\left(T_{t-1}\rightarrow0\right)$
+\end_inset
+
+, and when the price difference exceeds the transaction cost, price adjustment
+ will be fast 
+\begin_inset Formula $\left(\lvert\rho\rvert\rightarrow1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Data
+\end_layout
+
+\begin_layout Standard
+One reason why we find larger adjustment speed between farm gate prices
+ and retail prices is because the former are more likely to be prone to
+ measurement error.
+ Error correction models, by definition, will have higher adjustment for
+ noisier data.
+ However, this does not mean that we can can not use the data.
+ It just depends on what comparisons we make.
+ For instance, if we while it would be incorrect to conclude that the inter-mark
+et arbitrage is less efficient than the arbitrage between markets and the
+ farm gate, we may still be able to compare market-farmgate linkages in
+ the North to market-farmgate linkages in the South assuming they are prices
+ are affected by the same measurement error patterns.
+ 
+\end_layout
+
+\begin_layout Section*
+Results
+\end_layout
+
+\begin_layout Standard
+We start with a conventional market integration analysis focusing on arbitrage
+ between market centers.
+ With an eye on the analysis of the margin between regional markets and
+ supply areas around these markets, we will subdivide Malawi in three regions:
+ The north where we take Mzuzu as the reference market, the center where
+ we take Lilongwe to be the reference market, and the south where Zomba
+ is the leading consumer center.
+ 
+\end_layout
+
+\begin_layout Standard
+For Mzuzu, we look at the integration of 5 markets with Mzuzu (Chitipa,
+ Karonga, Rumphi, Mzimba and Jenda).
+ From these market pairs, Mzuzu-Chitipa is the furthest distance apart (about
+ 310 km), while the shortest distance is between Mzuzu and Rumphi (65 km).
+ These three markets are plotted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Maize-prices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In the top panel, nominal price series are shown in malawian kwatcha per
+ kg.
+ Prices in Chitipa are generally lower than prices in Mzuzu, especially
+ in 2018.
+ The reverse seems to be the case for Rumphi, where prices seem to be higher
+ than in Mzuzu, also particularly during the 2018.
+ The bottom panel shows that price margins sometimes switch signs.
+ For instance, in the first half of 2020, the price difference between Mzuzu
+ and Rumphi switches signs eight times.
+ This may indicate that trade flows between the two markets reversed several
+ times.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/fig1.png
+	lyxscale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Maize prices (levels and margins) in Mzuzu, Chipita and Rumpi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Maize-prices"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Adjustment-parameters"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we report parameter estimates for the adjustment parameters of the simple
+ model of Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:error-correct"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For the Mzuzu-Karonga trade link, while these markets are far apart, the
+ adjustment seems to be pretty fast.
+ This is probably because these markets are both connected by the main motorway
+ of Malawi (M1) and runs through low laying areas.
+ Other markets such as Mzimba or Jenda are off the main north-south road
+ connection.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+	& distance & estimate & half-life & nobs
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+cline{2-5} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Mzuzu -   Rumphi & 65 km  & 
+\backslash
+Sexpr{res_n[1,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_n[1,3])<.01,"**",ifelse(as.numeric(res_n[1,3])<.05,"*",i
+felse(as.numeric(res_n[1,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_n[1,2]} days	&	
+\backslash
+Sexpr{res_n[1,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Mzuzu -   Mzimba & 106 km  & 
+\backslash
+Sexpr{res_n[4,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_n[4,3])<.01,"**",ifelse(as.numeric(res_n[4,3])<.05,"*",i
+felse(as.numeric(res_n[4,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_n[4,2]} days	&	
+\backslash
+Sexpr{res_n[4,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Mzuzu -   Jenda & 148 km  & 
+\backslash
+Sexpr{res_n[5,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_n[5,3])<.01,"**",ifelse(as.numeric(res_n[5,3])<.05,"*",i
+felse(as.numeric(res_n[5,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_n[5,2]} days	&	
+\backslash
+Sexpr{res_n[5,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Mzuzu -   Karonga & 218 km  & 
+\backslash
+Sexpr{res_n[3,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_n[3,3])<.01,"**",ifelse(as.numeric(res_n[3,3])<.05,"*",i
+felse(as.numeric(res_n[3,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_n[3,2]} days	&	
+\backslash
+Sexpr{res_n[3,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Mzuzu -   Chitipa & 310 km  & 
+\backslash
+Sexpr{res_n[2,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_n[2,3])<.01,"**",ifelse(as.numeric(res_n[2,3])<.05,"*",i
+felse(as.numeric(res_n[2,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_n[2,2]} days	&	
+\backslash
+Sexpr{res_n[2,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lilongwe -   Mitundu & 40 km  & 
+\backslash
+Sexpr{res_c[2,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_c[2,3])<.01,"**",ifelse(as.numeric(res_c[2,3])<.05,"*",i
+felse(as.numeric(res_c[2,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_c[2,2]} days	&	
+\backslash
+Sexpr{res_c[2,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lilongwe -   Chimbiya & 71 km  & 
+\backslash
+Sexpr{res_c[3,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_c[3,3])<.01,"**",ifelse(as.numeric(res_c[3,3])<.05,"*",i
+felse(as.numeric(res_c[3,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_c[3,2]} days	&	
+\backslash
+Sexpr{res_c[3,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lilongwe -   Salima & 99 km  & 
+\backslash
+Sexpr{res_c[4,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_c[4,3])<.01,"**",ifelse(as.numeric(res_c[4,3])<.05,"*",i
+felse(as.numeric(res_c[4,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_c[4,2]} days	&	
+\backslash
+Sexpr{res_c[4,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Lilongwe -   Mchinji & 111 km  & 
+\backslash
+Sexpr{res_c[1,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_c[1,3])<.01,"**",ifelse(as.numeric(res_c[1,3])<.05,"*",i
+felse(as.numeric(res_c[1,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_c[1,2]} days	&	
+\backslash
+Sexpr{res_c[1,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Lunzu & 14 km  & 
+\backslash
+Sexpr{res_s[1,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[1,3])<.01,"**",ifelse(as.numeric(res_s[1,3])<.05,"*",i
+felse(as.numeric(res_s[1,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[1,2]} days	&	
+\backslash
+Sexpr{res_s[1,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Chikwawa & 53 km  & 
+\backslash
+Sexpr{res_s[6,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[6,3])<.01,"**",ifelse(as.numeric(res_s[6,3])<.05,"*",i
+felse(as.numeric(res_s[6,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[6,2]} days	&	
+\backslash
+Sexpr{res_s[6,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Luchenza & 63 km  & 
+\backslash
+Sexpr{res_s[2,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[2,3])<.01,"**",ifelse(as.numeric(res_s[2,3])<.05,"*",i
+felse(as.numeric(res_s[2,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[2,2]} days	&	
+\backslash
+Sexpr{res_s[2,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Zomba & 67 km  & 
+\backslash
+Sexpr{res_s[4,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[4,3])<.01,"**",ifelse(as.numeric(res_s[4,3])<.05,"*",i
+felse(as.numeric(res_s[4,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[4,2]} days	&	
+\backslash
+Sexpr{res_s[4,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Mulanje & 70 km  & 
+\backslash
+Sexpr{res_s[3,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[3,3])<.01,"**",ifelse(as.numeric(res_s[3,3])<.05,"*",i
+felse(as.numeric(res_s[3,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[3,2]} days	&	
+\backslash
+Sexpr{res_s[3,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Ngabu & 101 km  & 
+\backslash
+Sexpr{res_s[7,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[7,3])<.01,"**",ifelse(as.numeric(res_s[7,3])<.05,"*",i
+felse(as.numeric(res_s[7,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[7,2]} days	&	
+\backslash
+Sexpr{res_s[7,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Chiringa & 105 km  & 
+\backslash
+Sexpr{res_s[5,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[5,3])<.01,"**",ifelse(as.numeric(res_s[5,3])<.05,"*",i
+felse(as.numeric(res_s[5,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[5,2]} days	&	
+\backslash
+Sexpr{res_s[5,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Bangula & 134 km  & 
+\backslash
+Sexpr{res_s[8,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[8,3])<.01,"**",ifelse(as.numeric(res_s[8,3])<.05,"*",i
+felse(as.numeric(res_s[8,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[8,2]} days	&	
+\backslash
+Sexpr{res_s[8,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Blantyre -   Nsanje & 182 km  & 
+\backslash
+Sexpr{res_s[9,1]}$^{
+\backslash
+Sexpr{ifelse(as.numeric(res_s[9,3])<.01,"**",ifelse(as.numeric(res_s[9,3])<.05,"*",i
+felse(as.numeric(res_s[9,3])<.1,"+","")))}}$		&	
+\backslash
+Sexpr{res_s[9,2]} days	&	
+\backslash
+Sexpr{res_s[9,4]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Adjustment parameters
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Adjustment-parameters"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The market system around Lilongwe seems to be less well integrated.
+ While distances between market pairs are generally lower than distance
+ between markets in the north, adjustment is markedly slower.
+ Market integration in the south seems to be more in line with market adjustment
+ in the north.
+ Overall, results are according to expectation where adjustment of a shock
+ to half its initial value takes about 10 days in the market pair that is
+ closest (Blantyre - Lunzu at a 14km distance apart) and up to 27 days in
+ the market pair that is furthest apart (Mzuzu - Chitipa at 310 km distance
+ apart).
+ One notable exception is the trade link between Blantyre and Nsanje that
+ seems to be extremely well integrated.
+\end_layout
+
+\begin_layout Standard
+Adjustment is slower than one would suggest.
+ For instance, in the north, it seems unreasonable that it takes 12 market
+ days for a margin to be cut in half for two markets that are only 65 km
+ apart.
+ The reason why this is the case may be related to the fact that transaction
+ costs are neglected in these models and so the estimated adjustment parameter
+ also includes part of the regime where not adjustment is expected leading
+ to a downward bias.
+\end_layout
+
+\begin_layout Standard
+We therefore re-estimate bilateral market adjustment after taking transaction
+ costs into account.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -216,6 +1407,10 @@ Conclusion
 We find that markets are fairly competitive with traders able to charge
  only minimal markups and these markups disappear as the season progresses.
  
+\end_layout
+
+\begin_layout Section*
+Appendix
 \end_layout
 
 \begin_layout Standard

@@ -1,0 +1,214 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ACE
+\end_layout
+
+\begin_layout Standard
+Agricultural commodity exchanges have differing success rates in Africa.
+ In Malawi, ACE started introducing structured trade 15 years ago.
+ 
+\end_layout
+
+\begin_layout Standard
+What are the key elements or core characteristics of a commodity exchange.
+ Aggregation? Storage? 
+\end_layout
+
+\begin_layout Standard
+Note: The best research projects are those that test behavior economic reasons
+ why farmers appear to behave in a sub-optimal manner.
+ Bias, procrastination, impulses,… This is because these are issues that
+ one generally does not think about (they are generally new and somewhat
+ out of the box reasons why something does not work) and they are often
+ easier to test using RCTs.
+\end_layout
+
+\begin_layout Standard
+What do cost benefit functions look like? Do farmers actually use these
+ cost benefit functions (or do they rely on rules of thumb or certain heuristics
+ when deciding about sales.
+ If they do not 
+\end_layout
+
+\begin_layout Standard
+How can we credibly measure farmer’s beliefs.
+ Can we stratify on baseline beliefs?
+\end_layout
+
+\begin_layout Standard
+Research questions:
+\end_layout
+
+\begin_layout Standard
+- Why do farmers generally sell all maize directly after harvest? Why do
+ farmers not aggregate? Why do farmers not wait until prices are higher?
+ This is from the farmer point of view.
+\end_layout
+
+\begin_layout Standard
+- How can we reduce side selling (both for warehouses and large traders).
+ How can we increase the likelihood that farmers use warehouses.
+ How can we increase volumes in warehouse.
+ How can we increase storage time maize is stored in warehouses.
+ This is from the viewpoint of ACE.
+\end_layout
+
+\begin_layout Standard
+Key outcomes: - sales of commodity (proportion, quantities) - prices fetched
+ - aggregation (sales to warehouse) - disrespecting contract/side selling
+ - farmer welfare - time between harvest and sales
+\end_layout
+
+\begin_layout Standard
+Interventions we propose to test:
+\end_layout
+
+\begin_layout Standard
+- Advertising: ACE mentioned they are experimenting with video and audio
+ to convince more farmers to use WRS and ACE services more broadly.
+ We thus propose to test an intervention that builds on marketing techniques
+ to convince farmers that this is really what they need.
+\end_layout
+
+\begin_layout Standard
+We have tested a similar intervention in Uganda for a project that was more
+ focused on extension (https://onlinelibrary.wiley.com/doi/pdf/10.1002/ajae.12089).
+ We would love to see if similar success can be obtained for marketing.
+\end_layout
+
+\begin_layout Standard
+Questions: • What is the study population here? Can we also include (and
+ bloc on) traders? • What about spillovers in the treatment group? Should
+ we explore spillover by creating three groups (pure control, control but
+ prone to spillover, treated)
+\end_layout
+
+\begin_layout Standard
+Concerns: What is the public goods nature in this? In Jack (2013), the main
+ question is if advertising can be used to address information asymmetries
+ that prevent technology adoption.
+ We need to be careful that what we do also contributes to solving the fundament
+al question of farmers “selling low”, and not merely testing an advertising
+ campaign for a company or organization (ACE).
+\end_layout
+
+\begin_layout Standard
+- commitment: would it be possible to nudge farmers to aggregate more and/or
+ wait longer before they sell if we encourage farmers to commit themselves
+ in some way? Ashraf et al (2006) find that a savings commitment device
+ significantly increased savings.
+ But that study does not allow one to differentiate between temptation models
+ and hyperbolic discounting models (with a larger role for impatience).
+ In the former case, it may be sufficient that the commodity is stored out
+ of sight, but the farmer can, as a marginal cost, decide when to sell.
+ In the latter case, commitment in time is also necessary.
+\end_layout
+
+\begin_layout Standard
+So what if we design an experiment with 3 treatment arms: • control group
+ • T1: farmers get encouraged to commit to storing (part of) their crop
+ in a warehouse at harvest.
+ • T2: farmers get encouraged to commit to storing (part of) their crop
+ in a warehouse at harvest and additionally commit that they do not sell
+ before a specified number of weeks have passed since harvest.
+\end_layout
+
+\begin_layout Standard
+Questions: • Ashraf et al measure impatience using hypothetical questions.
+ We had a good experience doing this in a incentivized way in Tanzania.
+ Should we try this again? • What is the study populations? Farmers should
+ have access to a warehouse or a place where they can deposit maize? Or
+ is the intention enough? Bloc on cooperative?
+\end_layout
+
+\begin_layout Standard
+Concerns: There are likely going to be significant interaction effects from
+ the advertising experiment and commitment experiment, so if we run this
+ as a factorial design, we can not boost power focusing on only one experiment.
+ We will need to estimate fully saturated models with all possible interactions.
+ 
+\end_layout
+
+\begin_layout Standard
+If we want to measure perceptions related to seasonal price cycles, how
+ does this affect behaviour (priming).
+\end_layout
+
+\end_body
+\end_document

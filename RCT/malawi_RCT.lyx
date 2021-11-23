@@ -29,6 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -42,8 +43,10 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine biblatex-natbib
+\cite_engine_type authoryear
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -79,17 +82,137 @@
 ACE
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Agricultural commodity exchanges have differing success rates in Africa.
  In Malawi, ACE started introducing structured trade 15 years ago.
+ This project provides an opportunity for us to do research
+\end_layout
+
+\begin_layout Itemize
+What are the key elements or core characteristics of a commodity exchange.
+ Aggregation? Storage? We need to make a choice here.
+ Or do we consider both as primary outcomes.
+\end_layout
+
+\begin_layout Standard
+Why do farmers generally sell all their maize immediately after harvest
+ to 
+\end_layout
+
+\begin_layout Standard
+In a survey among maize farmers in Uganda, more than 75 percent of farmers
+ that sold maize sold everything in a single transaction, 77 percent to
+ a middlemen and 50 percent immediately after harvest.
+ This is also something that really puzzles me.
+ If this is really about the money, why do people sell everything? Do they
+ need to repay their debts? But even then, can they not wait a little longer?
+\end_layout
+
+\begin_layout Itemize
+Why do farmers sell low and buy high? State of the literature
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is a big one: farmers need the money - In a field experiment in Kenya,
+ we show that credit market imperfections limit farmers’ abilities to move
+ grain intertemporally.
+ Providing timely access to credit allows farmers to buy at lower prices
+ and sell at higher prices, increasing farm revenues and generating a return
+ on investment of 29% 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qjy034"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Dillon02102021"
+literal "false"
+
+\end_inset
+
+ uses the fact that primary school began 3 months earlier in 2010 than in
+ 2009 to demonstrate that this prompted households with children to sell
+ maize when prices are particularly low.
  
 \end_layout
 
-\begin_layout Standard
-What are the key elements or core characteristics of a commodity exchange.
- Aggregation? Storage? 
+\begin_layout Itemize
+failure to commit.
+ This includes failure to resist temptation to extract themselves or social
+ taxation.
+ There is a solid literature on this 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1162/qjec.2006.121.2.635,10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+.
+ I would be particularly interested in individuals that are frequently taxed
+ by friends and relatives.
+ In this context, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+ find that adding an earmarking feature was effective.
 \end_layout
 
+\begin_layout Itemize
+farmers have nowhere to store, so they just sell.
+ This is a reason that is frequently mentioned by farmers themselves 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OMOTILEWA2018176"
+literal "false"
+
+\end_inset
+
+ I tried to look if there are impact evaluations on eg PICS bags on intertempora
+l arbitrage but did not find anything.
+ Maybe Brian knows because of his work in 
+\end_layout
+
+\begin_layout Itemize
+budget neglect (which leads to an overoptimistic view of the future) - how
+ does this fit in the sell low buy high puzzle? But do people really see
+ the future better than it is? I think the term overoptimistic future is
+ very misleading in this article.
+ Towards the end, they speculate on why budget neglect persists.
+ They find that rosy memories dampen ability to learn from the past.
+ This seems to contradict research that claim bad experiences (rejections)
+ tend to stick much more than positive outcomes (acceptance) .
+ 
+\end_layout
+
+\begin_layout Itemize
+The recent Cardell and Michelson article argues that the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
+
+ puzzle is not a puzzle at all by arguing that price movements are insufficient
+ for farmers to engage in inter-temporal arbitrage.
+ But are they using appropriate prices (regional market prices are not a
+ good proxy for farm gate prices)? Also, if farmers are indeed rational
+ to sell everything immediately post harvest, then I am still surprised
+ to see the predictable and recurrent consumption cycles (Kaur)
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 Note: The best research projects are those that test behavior economic reasons
  why farmers appear to behave in a sub-optimal manner.
@@ -208,6 +331,45 @@ Concerns: There are likely going to be significant interaction effects from
 \begin_layout Standard
 If we want to measure perceptions related to seasonal price cycles, how
  does this affect behaviour (priming).
+\end_layout
+
+\begin_layout Standard
+Here is the idea of Brian so far:
+\end_layout
+
+\begin_layout Standard
+one (video based) intervention at the farmer level, were we take the farmers
+ through a detailed cost-benefit analysis of the use of warehouse receipt
+ systems to test the hypothesis of budget neglect
+\end_layout
+
+\begin_layout Standard
+but I would do this at the individual level and cross with interventions
+ at the same level, instead of targeting farmers.
+ Maybe in the 2x2 we can get into some of the cognitive methods that causes
+ budget neglect: 
+\end_layout
+
+\begin_layout Standard
+-anchoring: ask the farmer to write down what the price was last season
+ and stick it on the bag.
+\end_layout
+
+\begin_layout Standard
+-self-serving bias in how people interpret their past performance: rosy
+ experience? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "malawi_RCT"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -79,55 +79,132 @@
 \begin_body
 
 \begin_layout Title
-ACE
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Joachim De Weerdt
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Lilongwe, Malawi}, Brian Dillon
+\backslash
+thanks{Dyson School, Cornell University, Ithaca, United States} , Bjorn
+ Van Campenhout
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Leuven, Belgium}}
 \end_layout
 
-\begin_layout Itemize
-Agricultural commodity exchanges have differing success rates in Africa.
- In Malawi, ACE started introducing structured trade 15 years ago.
- This project provides an opportunity for us to do research
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-What are the key elements or core characteristics of a commodity exchange.
- Aggregation? Storage? We need to make a choice here.
- Or do we consider both as primary outcomes.
+\end_inset
+
+Selling at the farmgate immediately after harvest
+\end_layout
+
+\begin_layout Section*
+Motivation
 \end_layout
 
 \begin_layout Standard
-Why do farmers generally sell all their maize immediately after harvest
- to 
+It is often observed that smallholder farmers sell most—if not all—of their
+ marketable surplus immediately after the harvest to itinerant traders at
+ the farm gate.
+ For example, in a survey among maize farmers in Uganda, more than 75 percent
+ of farmers that sold maize sold everything in a single transaction, 77
+ percent sold to a middlemen and 50 percent immediately after harvest.
+ 
 \end_layout
 
 \begin_layout Standard
-In a survey among maize farmers in Uganda, more than 75 percent of farmers
- that sold maize sold everything in a single transaction, 77 percent to
- a middlemen and 50 percent immediately after harvest.
- This is also something that really puzzles me.
- If this is really about the money, why do people sell everything? Do they
- need to repay their debts? But even then, can they not wait a little longer?
-\end_layout
+The time when these farmers sell is not particularly good.
+ Thin and poorly integrated markets mean that immediately post harvest,
+ prices in excess supply areas drop.
+ Later, during the lean season when some of the farmers run out of stock,
+ prices have recovered, or even increase further since farmers start to
+ buy back.
+ This lead to the 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Itemize
-Why do farmers sell low and buy high? State of the literature
-\end_layout
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
 
-\begin_deeper
-\begin_layout Itemize
-This is a big one: farmers need the money - In a field experiment in Kenya,
- we show that credit market imperfections limit farmers’ abilities to move
- grain intertemporally.
- Providing timely access to credit allows farmers to buy at lower prices
- and sell at higher prices, increasing farm revenues and generating a return
- on investment of 29% 
+ puzzle 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "10.1093/qje/qjy034"
+key "https://doi.org/10.1111/j.1477-9552.2010.00274.x"
 literal "false"
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+The way in which crops are sold—cash-in-hand small quantities to itinerant
+ traders—is equally problematic.
+ It leads to a low bargaining power for the farmer and traders generally
+ pass on transaction costs to smallholders 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.2307/3697909,van2015inter"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Warehousing is a solution to both of these problems.
+ It provides a safe location where agricultural commodities can be aggregated
+ and stored for longer periods.
+ However, even when warehouses are available, farmers seem reluctant to
+ bulk significant amounts of agricultural commodities and store for longer
+ periods.
+\end_layout
+
+\begin_layout Standard
+In this paper, we focus mainly on the question: Why do farmers not store
+ for longer periods?
+\end_layout
+
+\begin_layout Section*
+Literature
+\end_layout
+
+\begin_layout Itemize
+Why do farmers sell low and buy high? State of the literature from most
+ obvious reason to less obvious:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Credit constraints: farmers need the money - 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1093/qje/qjy034"
+literal "false"
+
+\end_inset
+
+ show that in a field experiment in Kenya, credit market imperfections limit
+ farmers’ abilities to move grain intertemporally.
+ Providing timely access to credit allows farmers to buy at lower prices
+ and sell at higher prices, increasing farm revenues and generating a return
+ on investment of 29% .
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -139,33 +216,11 @@ literal "false"
  uses the fact that primary school began 3 months earlier in 2010 than in
  2009 to demonstrate that this prompted households with children to sell
  maize when prices are particularly low.
- 
-\end_layout
-
-\begin_layout Itemize
-failure to commit.
- This includes failure to resist temptation to extract themselves or social
- taxation.
- There is a solid literature on this 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "10.1162/qjec.2006.121.2.635,10.1257/aer.103.4.1138"
-literal "false"
-
-\end_inset
-
-.
- I would be particularly interested in individuals that are frequently taxed
- by friends and relatives.
- In this context, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1257/aer.103.4.1138"
-literal "false"
-
-\end_inset
-
- find that adding an earmarking feature was effective.
+ I think this is pretty much established so I would not focus on this one.
+ Still, I would argue that this is only a partial explanations that leaves
+ many other questions unanswered.
+ Like for instance why sell everything instead of only enough to meet urgent
+ demand and store the rest until there is a better price.
 \end_layout
 
 \begin_layout Itemize
@@ -180,7 +235,56 @@ literal "false"
 
  I tried to look if there are impact evaluations on eg PICS bags on intertempora
 l arbitrage but did not find anything.
- Maybe Brian knows because of his work in 
+ Maybe Brian knows because of his work in Niger?
+\end_layout
+
+\begin_layout Itemize
+social taxing: if I have a lot of maize in my house, this is visible for
+ family and neighbours and it will be very hard to deny if they come and
+ ask for it.
+ Therefore, I sell everything now; I can hide the money.
+ and it also seems seems to be a reason why households do not buy in bulk
+ 
+\begin_inset Quotes eld
+\end_inset
+
+paying more for less
+\begin_inset Quotes erd
+\end_inset
+
+ paper.
+ You find that 
+\end_layout
+
+\begin_layout Itemize
+I would be particularly interested in individuals that are frequently taxed
+ by friends and relatives.
+ In this context, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+ find that adding an earmarking feature was effective.
+\end_layout
+
+\begin_layout Itemize
+lack of self control: seems less plausible as it is money is probably burning
+ a bigger hole in your pocket than the bags of maize you have stored.
+ You can only eat so much.
+ This includes failure to resist temptation to extract themselves or social
+ taxation.
+ There is a solid literature on this for savings 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1162/qjec.2006.121.2.635,10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+, 
 \end_layout
 
 \begin_layout Itemize
@@ -209,145 +313,61 @@ sell low buy high
  But are they using appropriate prices (regional market prices are not a
  good proxy for farm gate prices)? Also, if farmers are indeed rational
  to sell everything immediately post harvest, then I am still surprised
- to see the predictable and recurrent consumption cycles (Kaur)
+ to see the predictable and recurrent consumption cycles (Kaur).
+\end_layout
+
+\begin_layout Itemize
+trust issues: I think this is a big reason why farmers do not want to aggregate.
+ It requires one to have sufficient trust in the store manager.
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-Note: The best research projects are those that test behavior economic reasons
- why farmers appear to behave in a sub-optimal manner.
- Bias, procrastination, impulses,… This is because these are issues that
- one generally does not think about (they are generally new and somewhat
- out of the box reasons why something does not work) and they are often
- easier to test using RCTs.
+\begin_layout Section*
+Intervention
 \end_layout
 
 \begin_layout Standard
-What do cost benefit functions look like? Do farmers actually use these
- cost benefit functions (or do they rely on rules of thumb or certain heuristics
- when deciding about sales.
- If they do not 
+Marketing can be approached in a similar way as technology adoption.
+ Can we use the insights from budget neglect here, like Brian and Jenny
+ think that inability of farmers to incorporate all costs and benefits leads
+ farmers to choose an inferior storage technology?
 \end_layout
 
 \begin_layout Standard
-How can we credibly measure farmer’s beliefs.
- Can we stratify on baseline beliefs?
+In one treatment, we can show farmers a video that details all costs involved?
+ But this seems somewhat lame.
 \end_layout
 
 \begin_layout Standard
-Research questions:
+Here is another explanation that uses the budget neglect idea: Consider
+ a very simple 2 period model where a farmer gets two opportunities to sell.
+ Once immediately after the harvest and once during the lean season.
+ The farmer has a total harvest of H<=q1 + q2 and so needs to decide in
+ period 1 how much to sell, given his price expectation for p2 and how much
+ they expect to need in the future.
+ 
 \end_layout
 
 \begin_layout Standard
-- Why do farmers generally sell all maize directly after harvest? Why do
- farmers not aggregate? Why do farmers not wait until prices are higher?
- This is from the farmer point of view.
+Budget neglect leads farmers to sell too much immediately after harvest.
+ In a first intervention, we do something similar to Kaur et al based on
+ segmentation and recall, but in the context of intertemporal arbitrage.
+ For instance, we ask the farmer to give the expected price 
 \end_layout
 
 \begin_layout Standard
-- How can we reduce side selling (both for warehouses and large traders).
- How can we increase the likelihood that farmers use warehouses.
- How can we increase volumes in warehouse.
- How can we increase storage time maize is stored in warehouses.
- This is from the viewpoint of ACE.
+Pessimistic price expectations also lead to higher sales immediately post
+ harvest.
+ A second intervention looks at anchoring/framing where we ask some farmers
+ to give the lowest/ highest expected price.
+ We can than look at a quadratic loss function compared to the control group
+ the was asked about the expected price, but also look at asymmetry.
 \end_layout
 
 \begin_layout Standard
 Key outcomes: - sales of commodity (proportion, quantities) - prices fetched
  - aggregation (sales to warehouse) - disrespecting contract/side selling
  - farmer welfare - time between harvest and sales
-\end_layout
-
-\begin_layout Standard
-Interventions we propose to test:
-\end_layout
-
-\begin_layout Standard
-- Advertising: ACE mentioned they are experimenting with video and audio
- to convince more farmers to use WRS and ACE services more broadly.
- We thus propose to test an intervention that builds on marketing techniques
- to convince farmers that this is really what they need.
-\end_layout
-
-\begin_layout Standard
-We have tested a similar intervention in Uganda for a project that was more
- focused on extension (https://onlinelibrary.wiley.com/doi/pdf/10.1002/ajae.12089).
- We would love to see if similar success can be obtained for marketing.
-\end_layout
-
-\begin_layout Standard
-Questions: • What is the study population here? Can we also include (and
- bloc on) traders? • What about spillovers in the treatment group? Should
- we explore spillover by creating three groups (pure control, control but
- prone to spillover, treated)
-\end_layout
-
-\begin_layout Standard
-Concerns: What is the public goods nature in this? In Jack (2013), the main
- question is if advertising can be used to address information asymmetries
- that prevent technology adoption.
- We need to be careful that what we do also contributes to solving the fundament
-al question of farmers “selling low”, and not merely testing an advertising
- campaign for a company or organization (ACE).
-\end_layout
-
-\begin_layout Standard
-- commitment: would it be possible to nudge farmers to aggregate more and/or
- wait longer before they sell if we encourage farmers to commit themselves
- in some way? Ashraf et al (2006) find that a savings commitment device
- significantly increased savings.
- But that study does not allow one to differentiate between temptation models
- and hyperbolic discounting models (with a larger role for impatience).
- In the former case, it may be sufficient that the commodity is stored out
- of sight, but the farmer can, as a marginal cost, decide when to sell.
- In the latter case, commitment in time is also necessary.
-\end_layout
-
-\begin_layout Standard
-So what if we design an experiment with 3 treatment arms: • control group
- • T1: farmers get encouraged to commit to storing (part of) their crop
- in a warehouse at harvest.
- • T2: farmers get encouraged to commit to storing (part of) their crop
- in a warehouse at harvest and additionally commit that they do not sell
- before a specified number of weeks have passed since harvest.
-\end_layout
-
-\begin_layout Standard
-Questions: • Ashraf et al measure impatience using hypothetical questions.
- We had a good experience doing this in a incentivized way in Tanzania.
- Should we try this again? • What is the study populations? Farmers should
- have access to a warehouse or a place where they can deposit maize? Or
- is the intention enough? Bloc on cooperative?
-\end_layout
-
-\begin_layout Standard
-Concerns: There are likely going to be significant interaction effects from
- the advertising experiment and commitment experiment, so if we run this
- as a factorial design, we can not boost power focusing on only one experiment.
- We will need to estimate fully saturated models with all possible interactions.
- 
-\end_layout
-
-\begin_layout Standard
-If we want to measure perceptions related to seasonal price cycles, how
- does this affect behaviour (priming).
-\end_layout
-
-\begin_layout Standard
-Here is the idea of Brian so far:
-\end_layout
-
-\begin_layout Standard
-one (video based) intervention at the farmer level, were we take the farmers
- through a detailed cost-benefit analysis of the use of warehouse receipt
- systems to test the hypothesis of budget neglect
-\end_layout
-
-\begin_layout Standard
-but I would do this at the individual level and cross with interventions
- at the same level, instead of targeting farmers.
- Maybe in the 2x2 we can get into some of the cognitive methods that causes
- budget neglect: 
 \end_layout
 
 \begin_layout Standard

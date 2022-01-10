@@ -152,19 +152,12 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The way in which crops are sold—cash-in-hand small quantities to itinerant
- traders—is equally problematic.
- It leads to a low bargaining power for the farmer and traders generally
- pass on transaction costs to smallholders 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "10.2307/3697909,van2015inter"
-literal "false"
-
-\end_inset
-
-.
- 
+In this study, we zoom in on two potential explanations for the sell low
+ buy high puzzle.
+ A first is related to budget neglect, whereby farmers underestimate expenses
+ later in the season and as a result sell too much of their harvest too
+ soon.
+ To test this hypothesis, we implement a field experiment in which
 \end_layout
 
 \begin_layout Standard
@@ -185,14 +178,24 @@ In this paper, we focus mainly on the question: Why do farmers not store
 Literature
 \end_layout
 
-\begin_layout Itemize
-Why do farmers sell low and buy high? State of the literature from most
- obvious reason to less obvious:
+\begin_layout Standard
+Why do farmers sell low and buy high? 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Credit constraints: farmers need the money - 
+\begin_layout Standard
+One of the most obvious, is related to credit constraints.
+ Using observational data, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "https://doi.org/10.1111/j.1477-9552.2010.00274.x"
+literal "false"
+
+\end_inset
+
+ find that to meet consumption needs later in the year, many farmers end
+ up buying back grain from the market a few months after selling it, in
+ effect using the maize market as a high-interest lender of last resort.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "10.1093/qje/qjy034"
@@ -223,6 +226,12 @@ literal "false"
  demand and store the rest until there is a better price.
 \end_layout
 
+\begin_layout Standard
+Risk averse farmers may also fail to delay sales if there is considerable
+ uncertainty about the price in the future.
+ 
+\end_layout
+
 \begin_layout Itemize
 farmers have nowhere to store, so they just sell.
  This is a reason that is frequently mentioned by farmers themselves 
@@ -238,6 +247,7 @@ l arbitrage but did not find anything.
  Maybe Brian knows because of his work in Niger?
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 social taxing: if I have a lot of maize in my house, this is visible for
  family and neighbours and it will be very hard to deny if they come and
@@ -323,7 +333,57 @@ trust issues: I think this is a big reason why farmers do not want to aggregate.
 
 \end_deeper
 \begin_layout Section*
+model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underset{c_{1},c_{2},e_{3}}{max}U_{1}\left(c_{1}\right)+\delta U_{2}\left(c_{2},e_{2}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+st\:c_{1}+c_{2}+\gamma e_{2}=p.h_{1}+(p+\theta).\left(H-h_{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What is left is sold at time 2, when the price has changed by 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
 Intervention
+\end_layout
+
+\begin_layout Standard
+We assume that farmers suffer from budget neglect—the left side of the budget
+ constraint.
+ 
+\end_layout
+
+\begin_layout Standard
+A second intervention is related to the right side of the budget constraint.
+ Here, the hypothesis is that farmers are too pessimistic about the future
+ price.
+ Farmers typically rely on experience an anchoring to attach probabilities
+ to the price distribution.
+ There is some evidence that people provide more weight to negative experiences
+ in the past than to positive experiences.
 \end_layout
 
 \begin_layout Standard
@@ -362,6 +422,32 @@ Pessimistic price expectations also lead to higher sales immediately post
  to give the lowest/ highest expected price.
  We can than look at a quadratic loss function compared to the control group
  the was asked about the expected price, but also look at asymmetry.
+\end_layout
+
+\begin_layout Section*
+Experimental design and power calculations
+\end_layout
+
+\begin_layout Standard
+The proportion of farmers that sold immediately after the harvest.
+ We use the IHS 2019/2020 to run power simulations.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section*
+Outcomes
+\end_layout
+
+\begin_layout Standard
+The proportion of farmers that sold immediately after the harvest.
+\end_layout
+
+\begin_layout Standard
+In this section, we register the outcomes that will be used to assess impact
+ and investigate impact pathways.
 \end_layout
 
 \begin_layout Standard

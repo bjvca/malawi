@@ -92,10 +92,16 @@ status open
 author{Joachim De Weerdt
 \backslash
 thanks{Development Strategy and Governance Division, International Food
- Policy Research Institute, Lilongwe, Malawi}, Brian Dillon
+ Policy Research Institute, Lilongwe, Malawi} , Brian Dillon
 \backslash
-thanks{Dyson School, Cornell University, Ithaca, United States} , Bjorn
- Van Campenhout
+thanks{Dyson School, Cornell University, Ithaca, United States} , Emmanuel
+ Hami
+\backslash
+footnotemark[1] , 
+\backslash
+
+\backslash
+ Bjorn Van Campenhout
 \backslash
 thanks{Development Strategy and Governance Division, International Food
  Policy Research Institute, Leuven, Belgium}}
@@ -108,7 +114,8 @@ thanks{Development Strategy and Governance Division, International Food
 
 \end_inset
 
-Selling at the farmgate immediately after harvest
+Study Protocol: Why do farmers sell immediately after harvest when prices
+ are lowest?
 \end_layout
 
 \begin_layout Section*
@@ -126,7 +133,7 @@ It is often observed that smallholder farmers sell most—if not all—of their
 \end_layout
 
 \begin_layout Standard
-The time when these farmers sell is not particularly good.
+Selling immediately after the harvest is not optimal.
  Thin and poorly integrated markets mean that immediately post harvest,
  prices in excess supply areas drop.
  Later, during the lean season when some of the farmers run out of stock,
@@ -149,6 +156,53 @@ literal "false"
 \end_inset
 
 .
+ In addition to high supply immediately post harvest, agricultural commodities
+ are often not yet in optimal condition.
+ For instance, in the case of maize, fresh grains are generally not dry
+ enough, requiring further processing and leading to increased risk of rot
+ by the trader.
+ Often, this is used as a reason to further drive down the price paid to
+ the farmer.
+\end_layout
+
+\begin_layout Standard
+There are many reasons for this observed behaviour.
+ Farmers may simply not have the space and infrastructure available to safely
+ store large quantities of maize for extended periods of time 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OMOTILEWA2018176"
+literal "false"
+
+\end_inset
+
+.
+ Farmers may be in urgent need of cash after the lean season 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qjy034,Dillon02102021"
+literal "false"
+
+\end_inset
+
+.
+ Price movements may be unpredictable and farmers may be too risk averse
+ to engage into intertemporal arbitrage 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+.
+ It may be that traders only visit villages immediately after harvest, and
+ farmers do not have the means to transport maize to markets themselves.
+ Furthermore, issues related to social taxation may mean farmers convert
+ maize to cash, which is easier to hide from friends and family.
+ There may also be behavioural factors, such as present bias, anchoring
+ of prices to past experience where negative experiences are more salient
+ than postive experiences etc.
 \end_layout
 
 \begin_layout Standard
@@ -179,11 +233,8 @@ Literature
 \end_layout
 
 \begin_layout Standard
-Why do farmers sell low and buy high? 
-\end_layout
-
-\begin_layout Standard
-One of the most obvious, is related to credit constraints.
+Why do farmers sell low and buy high? One of the most obvious, is related
+ to credit constraints.
  Using observational data, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -219,35 +270,68 @@ literal "false"
  uses the fact that primary school began 3 months earlier in 2010 than in
  2009 to demonstrate that this prompted households with children to sell
  maize when prices are particularly low.
- I think this is pretty much established so I would not focus on this one.
- Still, I would argue that this is only a partial explanations that leaves
- many other questions unanswered.
- Like for instance why sell everything instead of only enough to meet urgent
- demand and store the rest until there is a better price.
+ To identify the impacts of liquidity during the lean season, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.20180607"
+literal "false"
+
+\end_inset
+
+ offered subsidized loans in randomly selected villages in rural Zambia
+ and conclude that liquidity constraints contribute to inequality in rural
+ economies.
+ 
 \end_layout
 
 \begin_layout Standard
 Risk averse farmers may also fail to delay sales if there is considerable
  uncertainty about the price in the future.
- 
-\end_layout
+ A recent article argues that the 
+\begin_inset Quotes eld
+\end_inset
 
-\begin_layout Itemize
-farmers have nowhere to store, so they just sell.
- This is a reason that is frequently mentioned by farmers themselves 
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
+
+ puzzle is not a puzzle at all by arguing that price movements are insufficient
+ for farmers to engage in inter-temporal arbitrage 
 \begin_inset CommandInset citation
 LatexCommand citep
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+.
+ However, their analysis use prices obtained from market centers, which
+ may be a poor proxy for the farm gate prices that farmers face: prices
+ in main markets are generally much better integrated in the wider national,
+ regional and even global economy, and so will be less prone to extreme
+ spikes and slumps.
+\end_layout
+
+\begin_layout Standard
+A reason that is often heard in the field is that farmers have nowhere to
+ store, so they just sell.
+ This could be a lack of space, as farmers often harvest 10-20 bags of 100kg
+ of maize.
+ But there are also risk related to pests and diseases affecting the stored
+ maize.
+ If storage is the main reason why farmers do not engage in intertemporal
+ arbitrage more, then providing storage technology should delay sales 
+\begin_inset CommandInset citation
+LatexCommand citet
 key "OMOTILEWA2018176"
 literal "false"
 
 \end_inset
 
- I tried to look if there are impact evaluations on eg PICS bags on intertempora
-l arbitrage but did not find anything.
- Maybe Brian knows because of his work in Niger?
+ indeed find that households that received PICS bags stored maize for a
+ longer period, reported a substantial drop in storage losses
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 social taxing: if I have a lot of maize in my house, this is visible for
  family and neighbours and it will be very hard to deny if they come and
@@ -266,6 +350,7 @@ paying more for less
  You find that 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 I would be particularly interested in individuals that are frequently taxed
  by friends and relatives.
@@ -310,17 +395,7 @@ budget neglect (which leads to an overoptimistic view of the future) - how
 \end_layout
 
 \begin_layout Itemize
-The recent Cardell and Michelson article argues that the 
-\begin_inset Quotes eld
-\end_inset
-
-sell low buy high
-\begin_inset Quotes erd
-\end_inset
-
- puzzle is not a puzzle at all by arguing that price movements are insufficient
- for farmers to engage in inter-temporal arbitrage.
- But are they using appropriate prices (regional market prices are not a
+But are they using appropriate prices (regional market prices are not a
  good proxy for farm gate prices)? Also, if farmers are indeed rational
  to sell everything immediately post harvest, then I am still surprised
  to see the predictable and recurrent consumption cycles (Kaur).
@@ -367,13 +442,15 @@ What is left is sold at time 2, when the price has changed by
 \end_layout
 
 \begin_layout Section*
-Intervention
+Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-We assume that farmers suffer from budget neglect—the left side of the budget
- constraint.
- 
+In a first hypothesis, we assume that farmers suffer from budget neglect—the
+ left side of the budget constraint—which may lead to an overoptimistic
+ view of the future.
+ Budget neglect is also found to be a main contributing factor to recurrent
+ hungry seasons in Zambia.
 \end_layout
 
 \begin_layout Standard
@@ -433,8 +510,82 @@ The proportion of farmers that sold immediately after the harvest.
  We use the IHS 2019/2020 to run power simulations.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section*
+Context and study area
+\end_layout
 
+\begin_layout Standard
+The study focuses on the Central and Northern Region of Malawi (Kasungu,
+ Mzimba, Ntchisi, Rumphi, Dowa and Mchinji).
+ These areas are characterized by rained agriculture with a single season.
+ The resulting seasonal price movements is illustrated in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Price-of-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that shows maize price in kwatcha per Kg in Rumpi over 2020.
+ Planting of maize starts in December, and maize becomes increasingly scarce
+ during the growing season.
+ Harvesting starts around April 2020, which takes the pressure off the prices
+ when farmers start consuming from their own maize.
+ However, farm gate sales are still low as traders wait for maize to dry.
+ This results in a relatively long period of low prices all the way to the
+ start of the planting season towards the end to the year.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename prices_rumphi.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Price of maize in Rumphi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Price-of-maize"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The aim of the study is to encourage farmers to wait just a few months longer
+ and sell 
 \end_layout
 
 \begin_layout Section*

@@ -9,7 +9,7 @@
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -45,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine biblatex-natbib
 \cite_engine_type authoryear
+\biblio_style plainnat
 \biblatex_bibstyle authoryear
 \biblatex_citestyle authoryear
 \use_bibtopic false
@@ -139,7 +140,7 @@ Selling immediately after the harvest is not optimal.
  Later, during the lean season when some of the farmers run out of stock,
  prices have recovered, or even increase further since farmers start to
  buy back.
- This lead to the 
+ This leads to the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -202,30 +203,34 @@ literal "false"
  maize to cash, which is easier to hide from friends and family.
  There may also be behavioural factors, such as present bias, anchoring
  of prices to past experience where negative experiences are more salient
- than postive experiences etc.
+ than positive experiences, etc.
 \end_layout
 
 \begin_layout Standard
-In this study, we zoom in on two potential explanations for the sell low
- buy high puzzle.
+In this study, we zoom in on two potential explanations why farmers seemingly
+ sell at sub-optimal time.
  A first is related to budget neglect, whereby farmers underestimate expenses
  later in the season and as a result sell too much of their harvest too
  soon.
- To test this hypothesis, we implement a field experiment in which
-\end_layout
+ To test this hypothesis, we implement a field experiment that aims to make
+ reduce budget neglect by drawing up expenditure plans up to the next harvest.
+ A second potential explanation is that farmers consistently underestimate
+ the price during the lean season, reducing the incentive to store.
+ There are various reasons why farmers may underestimate the price in the
+ future.
+ One explanation may be that negative experiences tend to stick more than
+ positive experiences 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ledgerwood2014sticky"
+literal "false"
 
-\begin_layout Standard
-Warehousing is a solution to both of these problems.
- It provides a safe location where agricultural commodities can be aggregated
- and stored for longer periods.
- However, even when warehouses are available, farmers seem reluctant to
- bulk significant amounts of agricultural commodities and store for longer
- periods.
-\end_layout
+\end_inset
 
-\begin_layout Standard
-In this paper, we focus mainly on the question: Why do farmers not store
- for longer periods?
+.
+ To overcome this negativity bias, we implement a treatment where past experienc
+e is compared to price data to generate more objective beliefs about future
+ prices.
 \end_layout
 
 \begin_layout Section*
@@ -332,89 +337,67 @@ literal "false"
  longer period, reported a substantial drop in storage losses
 \end_layout
 
-\begin_layout Itemize
-social taxing: if I have a lot of maize in my house, this is visible for
- family and neighbours and it will be very hard to deny if they come and
- ask for it.
- Therefore, I sell everything now; I can hide the money.
- and it also seems seems to be a reason why households do not buy in bulk
- 
-\begin_inset Quotes eld
-\end_inset
-
-paying more for less
-\begin_inset Quotes erd
-\end_inset
-
- paper.
- You find that 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-I would be particularly interested in individuals that are frequently taxed
- by friends and relatives.
- In this context, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1257/aer.103.4.1138"
-literal "false"
-
-\end_inset
-
- find that adding an earmarking feature was effective.
-\end_layout
-
-\begin_layout Itemize
-lack of self control: seems less plausible as it is money is probably burning
- a bigger hole in your pocket than the bags of maize you have stored.
- You can only eat so much.
- This includes failure to resist temptation to extract themselves or social
- taxation.
- There is a solid literature on this for savings 
+\begin_layout Standard
+Another reason may be related to social taxation.
+ If a farmer has a lot of maize in stored in his house, this is visible
+ for family and neighbours, and it will be very hard to deny if they come
+ and ask for help.
+ Therefore, farmers may choose to convert their harvest to money, which
+ is easier to hide, even though this comes at a cost.
+ Social taxation has been found important in a similar marketing decisions
+ where household seem to forgo the benefits of buying in bulk 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "10.1162/qjec.2006.121.2.635,10.1257/aer.103.4.1138"
+key "10.1093/wber/lhz020"
 literal "false"
 
 \end_inset
 
-, 
-\end_layout
-
-\begin_layout Itemize
-budget neglect (which leads to an overoptimistic view of the future) - how
- does this fit in the sell low buy high puzzle? But do people really see
- the future better than it is? I think the term overoptimistic future is
- very misleading in this article.
- Towards the end, they speculate on why budget neglect persists.
- They find that rosy memories dampen ability to learn from the past.
- This seems to contradict research that claim bad experiences (rejections)
- tend to stick much more than positive outcomes (acceptance) .
+.
  
 \end_layout
 
-\begin_layout Itemize
-But are they using appropriate prices (regional market prices are not a
- good proxy for farm gate prices)? Also, if farmers are indeed rational
- to sell everything immediately post harvest, then I am still surprised
- to see the predictable and recurrent consumption cycles (Kaur).
+\begin_layout Standard
+Our study is related to this literature in several ways.
+ The hypothesis related to budget sees liquidity requirements as the main
+ driving force behind the sell low - buy high puzzle.
+ The hypothesis related to the fact that farmers tend to underestimate the
+ future price of maize is related to risk aversion where losses are given
+ a higher weight than gains.
+ 
 \end_layout
 
-\begin_layout Itemize
-trust issues: I think this is a big reason why farmers do not want to aggregate.
- It requires one to have sufficient trust in the store manager.
-\end_layout
-
-\end_deeper
 \begin_layout Section*
-model
+Model
+\end_layout
+
+\begin_layout Standard
+Consider a very simple 2 period model where a farmer maximizes utility by
+ choosing how much to consume in the first and second period 
+\begin_inset Formula $(c_{1},c_{2})$
+\end_inset
+
+.
+ We further add an expenditure that is only relevant in period 2 
+\begin_inset Formula $(e_{2})$
+\end_inset
+
+, and that is affected by a parameter 
+\begin_inset Formula $0\leqslant\gamma\leqslant1$
+\end_inset
+
+ that represents the probability that the agent remembers the expenditure.
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+ is the discount rate.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\underset{c_{1},c_{2},e_{3}}{max}U_{1}\left(c_{1}\right)+\delta U_{2}\left(c_{2},e_{2}\right)
+\underset{c_{1},c_{2},e_{2}}{max}u_{1}\left(c_{1}\right)+\delta\left(u_{2}\left(c_{2}\right)+\gamma v_{2}\left(e_{2}\right)\right)
 \end{equation}
 
 \end_inset
@@ -425,7 +408,7 @@ model
 \begin_layout Standard
 \begin_inset Formula 
 \[
-st\:c_{1}+c_{2}+\gamma e_{2}=p.h_{1}+(p+\theta).\left(H-h_{1}\right)
+st\:c_{1}+c_{2}+\gamma e_{2}=\left(\lambda p_{L}+(1-\lambda)p_{H}\right)Q
 \]
 
 \end_inset
@@ -434,11 +417,45 @@ st\:c_{1}+c_{2}+\gamma e_{2}=p.h_{1}+(p+\theta).\left(H-h_{1}\right)
 \end_layout
 
 \begin_layout Standard
-What is left is sold at time 2, when the price has changed by 
-\begin_inset Formula $\theta$
+On the right hand side of the budget constraint, we model believes about
+ the future price, which can be low 
+\begin_inset Formula $\left(P_{L}\right)$
+\end_inset
+
+ or high 
+\begin_inset Formula $\left(P_{H}\right)$
 \end_inset
 
 .
+ The parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ represents the subjective probability that the price will be low.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+I miss a comparison with the price now.
+ The farmer compares the price now with the expected price in the future
+ to decide on how much to sell now and how much to sell in the future.
+ I think we will need to do this using relative prices in some way, because
+ what matters is 
+\end_layout
+
+\end_inset
+
+ The model will be used to compare a benchmark case, where there is no budget
+ neglect 
+\begin_inset Formula $\left(\gamma=1\right)$
+\end_inset
+
+ and the future price is high 
+\begin_inset Formula $\left(\lambda=0\right)$
+\end_inset
+
+, against alternatives and formulate a series of predictions that can be
+ taken to the data.
 \end_layout
 
 \begin_layout Section*
@@ -446,59 +463,94 @@ Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-In a first hypothesis, we assume that farmers suffer from budget neglect—the
- left side of the budget constraint—which may lead to an overoptimistic
+In a first hypothesis, we assume that farmers suffer from budget neglect—
+ 
+\begin_inset Formula $\gamma<1$
+\end_inset
+
+ on the left side of the budget constraint—which may lead to an overoptimistic
  view of the future.
+ In particular, farmers may neglect some future expenditures when constructing
+ plans.
+ For example, immediately after harvest, they may budget for fresh seed
+ from the agro-input dealer and for fertilizer, but they may forget that
+ they also need pesticides and insecticides.
+ This hypothesis is similar to the planning fallacy, where individuals typically
+ underestimate the time it takes to complete a task, despite extensive experienc
+e with failure to complete the same task in a similar time frame in the
+ past 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "buehler2010planning"
+literal "false"
+
+\end_inset
+
+.
+ Part of it may also be related to optimism bias if farmers neglect or underesti
+mate the risk that something happens.
+ For instance, farmers may not budget for pesticides or insecticides because
+ they believe they will not be affected by pests or insects.
  Budget neglect is also found to be a main contributing factor to recurrent
  hungry seasons in Zambia.
 \end_layout
 
 \begin_layout Standard
-A second intervention is related to the right side of the budget constraint.
- Here, the hypothesis is that farmers are too pessimistic about the future
- price.
- Farmers typically rely on experience an anchoring to attach probabilities
- to the price distribution.
+A second hypothesis is related to the right side of the budget constraint
+ and focuses on price expectations.
+ Here, the hypothesis is that farmers are, for some reason, too pessimistic
+ about the future price.
+ Farmers may rely on experience an anchoring to attach probabilities to
+ the price distribution.
  There is some evidence that people provide more weight to negative experiences
- in the past than to positive experiences.
+ in the past than to positive experiences, implying that 
+\begin_inset Formula $\lambda>0.5$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ledgerwood2014sticky"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Marketing can be approached in a similar way as technology adoption.
- Can we use the insights from budget neglect here, like Brian and Jenny
- think that inability of farmers to incorporate all costs and benefits leads
- farmers to choose an inferior storage technology?
-\end_layout
-
-\begin_layout Standard
-In one treatment, we can show farmers a video that details all costs involved?
- But this seems somewhat lame.
-\end_layout
-
-\begin_layout Standard
-Here is another explanation that uses the budget neglect idea: Consider
- a very simple 2 period model where a farmer gets two opportunities to sell.
- Once immediately after the harvest and once during the lean season.
- The farmer has a total harvest of H<=q1 + q2 and so needs to decide in
- period 1 how much to sell, given his price expectation for p2 and how much
- they expect to need in the future.
+To test the first hypothesis related to budget neglect, we will design an
+ intervention that takes the farmer through a detailed budgeting exercise.
+ The budget exercise will involve three components.
+ A first component uses recall to provide a first approximation of what
+ will be necessary in the future.
+ A second component consists of segmentation, which involves defining categories
+ of expenditures for cognitive ease.
+ Finally, we will look at a range of risks, which involve expenses that
+ are not certain but may materialize.
+ We try as much as possible to attach objective probabilities to these risks
+ and also incorporate this in the budget.
  
 \end_layout
 
 \begin_layout Standard
-Budget neglect leads farmers to sell too much immediately after harvest.
- In a first intervention, we do something similar to Kaur et al based on
- segmentation and recall, but in the context of intertemporal arbitrage.
- For instance, we ask the farmer to give the expected price 
-\end_layout
+To test the second hypothesis, a second intervention will be designed to
+ reduce negativity bias and come to a more objective view on seasonal price
+ movements.
+ This will be done by asking farmers to recall price movements in previous
+ years, and then comparing this with data on price movements derived from
+ theoretical models and price surveys.
+ As such, we consider negativity bias as a kind of learning failure that
+ we hope to solve by drawing attention to particular features of the data
+ that farmers otherwise fail to notice 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qju015"
+literal "false"
 
-\begin_layout Standard
-Pessimistic price expectations also lead to higher sales immediately post
- harvest.
- A second intervention looks at anchoring/framing where we ask some farmers
- to give the lowest/ highest expected price.
- We can than look at a quadratic loss function compared to the control group
- the was asked about the expected price, but also look at asymmetry.
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -506,8 +558,28 @@ Experimental design and power calculations
 \end_layout
 
 \begin_layout Standard
-The proportion of farmers that sold immediately after the harvest.
- We use the IHS 2019/2020 to run power simulations.
+We propose simple 2x2 factorial design.
+ Kaur et al (personal communication) find that, in a similar budget neglect
+ experiment, treated farmers enter the hungry season with 20 percent more
+ maize (valued by current prices at 405 zambian kwatcha instead of 335 zambian
+ kwatcha in the control group).
+ If we assume that standard deviation is about 592 (1.6 times the mean of
+ treatment and control means – the 1.6 is derived from maize production data
+ in Uganda), we get a sample size of 2246.
+ If we run a factorial design and want to power all treatment cell for similar
+ effect sizes, we will need about 4500 observations.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+There power calculations are preliminary.
+ We will perform a series of more elaborate power simulations in the pre-analysi
+s plan of this study.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -536,19 +608,21 @@ noprefix "false"
  However, farm gate sales are still low as traders wait for maize to dry.
  This results in a relatively long period of low prices all the way to the
  start of the planting season towards the end to the year.
+ The aim of the study is to encourage farmers to wait just a few months
+ longer before they sell.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename prices_rumphi.png
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -584,37 +658,101 @@ name "fig:Price-of-maize"
 \end_layout
 
 \begin_layout Standard
-The aim of the study is to encourage farmers to wait just a few months longer
- and sell 
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Quantities-of-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that most sales happen only around August.
+ So farmers do seem to hold on to their maize for reasonably long periods
+ (suggesting some of the other explanations like lack of storage space or
+ social taxation are less likely).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename sales_vs_purchase.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Quantities of maize bought and sold
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Quantities-of-maize"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taken together, the figures suggest that the best time for the interventions
+ would be around April or May, immediately before farmer start to sell.
+ Endline data will be collected in March 2023.
+ We will do a dedicated baseline survey, but ask some questions prior to
+ the intervention.
 \end_layout
 
 \begin_layout Section*
-Outcomes
+Primary and Secondary outcome
 \end_layout
 
 \begin_layout Standard
-The proportion of farmers that sold immediately after the harvest.
+Primary endpoints in this study include amounts of maize sold at different
+ points in time.
+ As the main aim of waiting is intertemporal arbitrage, we will also compare
+ prices obtained between treatment and control farmers.
+ We will equally look at purchases.
+ Further down the impact pathway, we compare welfare, both subjective and
+ through consumption expenditure, between treatment and control households.
 \end_layout
 
 \begin_layout Standard
-In this section, we register the outcomes that will be used to assess impact
- and investigate impact pathways.
+To investigate impact pathways, we will also include a range of questions
+ related to expenditure, and how easy it was for farmers.
+ For instance, did treated households have less issues in meeting expenditures
+ for eg.
+ fertilizer or improved seed for the next season? We will also elicit a
+ full set of future prices to look at impact pathways for the second hypothesis.
 \end_layout
 
 \begin_layout Standard
-Key outcomes: - sales of commodity (proportion, quantities) - prices fetched
- - aggregation (sales to warehouse) - disrespecting contract/side selling
- - farmer welfare - time between harvest and sales
-\end_layout
 
-\begin_layout Standard
--anchoring: ask the farmer to write down what the price was last season
- and stick it on the bag.
-\end_layout
-
-\begin_layout Standard
--self-serving bias in how people interpret their past performance: rosy
- experience? 
 \end_layout
 
 \begin_layout Standard
@@ -622,7 +760,7 @@ Key outcomes: - sales of commodity (proportion, quantities) - prices fetched
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "malawi_RCT"
-options "plain"
+options "plainnat"
 
 \end_inset
 

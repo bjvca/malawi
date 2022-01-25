@@ -558,23 +558,90 @@ Experimental design and power calculations
 \end_layout
 
 \begin_layout Standard
-We propose simple 2x2 factorial design.
+We propose parallel design with one control group and two treatment arms.
  Kaur et al (personal communication) find that, in a similar budget neglect
  experiment, treated farmers enter the hungry season with 20 percent more
- maize (valued by current prices at 405 zambian kwatcha instead of 335 zambian
- kwatcha in the control group).
+ maize (valued by current prices at 405 zambian kwacha instead of 335 zambian
+ kwacha in the control group).
  If we assume that standard deviation is about 592 (1.6 times the mean of
  treatment and control means – the 1.6 is derived from maize production data
- in Uganda), we get a sample size of 2246.
+ in Uganda), we get a sample size of 1123 in each sample.
  If we run a factorial design and want to power all treatment cell for similar
- effect sizes, we will need about 4500 observations.
-\begin_inset Foot
+ effect sizes, we will need about 3369 observations.
+ To account for attrition, we will increase this to 3500.
+ Note for designs with a common control group, maximize power, is attained
+ when allocating approximately 42% of the sample to the control units, and
+ then equally (29% each) to the two treatments.
+ In our case, this means about 1470 farmers in the control group and 1015
+ in each treatment arm.
+ We will implement this in 100 villages, such that in each village we will
+ have 20 farmers in the control group, and 10 farmers in each treatment
+ group.
+\end_layout
+
+\begin_layout Standard
+The intervention will be implemented at the individual level, which raises
+ concerns about potential spillover effects.
+ We expect that farmers that are allocated to the control group may learn
+ from treated farmers.
+ This will thus affect outcomes of control farmers in the same direction
+ as outcomes for treated farmers, making it harder to detect an effect if
+ there is one.
+\begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-There power calculations are preliminary.
- We will perform a series of more elaborate power simulations in the pre-analysi
-s plan of this study.
+If our intervention causes a subset of villagers to wait before selling,
+ this may have as an effect that fewer middlemen visit the village.
+ As a result, control farmers may also (be able to) sell less and indirectly
+ benefit from the intervention.
+ Would this be a spillover effect, or would this rather be a general equilibrium
+ effect? Is there a way we can capture this (eg asking the price enumerators
+ to also ask how many traders were active in the village?)
+\end_layout
+
+\end_inset
+
+ To get a sense of the importance of these spillover effects, we stratify
+ on village size.
+ Using census data, we subdivide villages in the study area in small and
+ large villages based on the median number of inhabitants and then make
+ sure we implement the study in 50 small and 50 large villages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1093/qje/qjy034"
+literal "false"
+
+\end_inset
+
+ document significant effects of a credit intervention on seasonal price
+ fluctuations in local grain market.
+ To study these kind of general equilibrium effects of our intervention,
+ we will also record prices in at regular intervals in the villages we work
+ in.
+ These prices will then be compared with prices collected in similar villages
+ nearby where the intervention is not implemented.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Should we include more villages to increase power for this question? Or
+ can we also exploit the stratification by village to answer this question
+ (note that this is how Burke et al seem to do it: 
+\begin_inset Quotes eld
+\end_inset
+
+To understand general equilibrium (GE) effects of these changes in behavior,
+ we vary the density of loan offers across locations.
+\begin_inset Quotes erd
+\end_inset
+
+) So we could do 50 small villages (highest treatment density), 50 large
+ villages 50 control villages.
+ Or both (100 small villages, 100 large villages, 100 control villages)
 \end_layout
 
 \end_inset
@@ -723,17 +790,52 @@ name "fig:Quantities-of-maize"
 \begin_layout Standard
 Taken together, the figures suggest that the best time for the interventions
  would be around April or May, immediately before farmer start to sell.
- Endline data will be collected in March 2023.
- We will do a dedicated baseline survey, but ask some questions prior to
- the intervention.
+ 
 \end_layout
 
 \begin_layout Section*
-Primary and Secondary outcome
+Data collection and endpoints
 \end_layout
 
 \begin_layout Standard
-Primary endpoints in this study include amounts of maize sold at different
+We will not organize a dedicated baseline survey, but rather ask a limited
+ number of questions immediately prior to the interventions.
+ This information can then be used to demonstrated balance and potentially
+ explore heterogeneous treatment effects.
+\end_layout
+
+\begin_layout Standard
+Instead of relying on a baseline and endline, we will evaluate the interventions
+ through multiple rounds of data collection, often using phone interviews.
+ There are different reasons for this.
+ First, when measuring noisy and relatively less autocorrelated outcomes
+ such as amounts of maize to sell or household expenditure, one can increase
+ power by faking multiple measurements at relatively short intervals to
+ average out noise 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "MCKENZIE2012210"
+literal "false"
+
+\end_inset
+
+.
+ Furthermore, it will allow us to assess the effect of the interventions
+ at multiple points in time instead of just at endline.
+ 
+\end_layout
+
+\begin_layout Standard
+Limited baseline information will be collected in April/May 2022 during
+ the intervention phase.
+ Intermediate data will be collected in July 2022, September 2022, November
+ 2022, and January 2023.
+ A slightly more elaborate in-person endline survey will be organized in
+ March 2023.
+\end_layout
+
+\begin_layout Standard
+Primary outcomes in this study include amounts of maize sold at different
  points in time.
  As the main aim of waiting is intertemporal arbitrage, we will also compare
  prices obtained between treatment and control farmers.

@@ -127,14 +127,7 @@ Motivation
 It is often observed that smallholder farmers sell most—if not all—of their
  marketable surplus immediately after the harvest to itinerant traders at
  the farm gate.
- For example, in a survey among maize farmers in Uganda, more than 75 percent
- of farmers that sold maize sold everything in a single transaction, 77
- percent sold to a middlemen and 50 percent immediately after harvest.
- 
-\end_layout
-
-\begin_layout Standard
-Selling immediately after the harvest is not optimal.
+ Selling immediately after the harvest is not optimal.
  Thin and poorly integrated markets mean that immediately post harvest,
  prices in excess supply areas drop.
  Later, during the lean season when some of the farmers run out of stock,
@@ -162,12 +155,13 @@ literal "false"
  For instance, in the case of maize, fresh grains are generally not dry
  enough, requiring further processing and leading to increased risk of rot
  by the trader.
- Often, this is used as a reason to further drive down the price paid to
- the farmer.
+ Often, this is used by buyers as a reason to further drive down the price
+ paid to the farmer.
 \end_layout
 
 \begin_layout Standard
-There are many reasons for this observed behaviour.
+There are many possible reasons why farmers choose the sell early at low
+ prices instead of waiting a few months until prices recover.
  Farmers may simply not have the space and infrastructure available to safely
  store large quantities of maize for extended periods of time 
 \begin_inset CommandInset citation
@@ -212,25 +206,23 @@ In this study, we zoom in on two potential explanations why farmers seemingly
  A first is related to budget neglect, whereby farmers underestimate expenses
  later in the season and as a result sell too much of their harvest too
  soon.
- To test this hypothesis, we implement a field experiment that aims to make
- reduce budget neglect by drawing up expenditure plans up to the next harvest.
+ To test this hypothesis, we implement a field experiment that aims to reduce
+ budget neglect by drawing up expenditure plans up to the next harvest.
  A second potential explanation is that farmers consistently underestimate
- the price during the lean season, reducing the incentive to store.
- There are various reasons why farmers may underestimate the price in the
- future.
- One explanation may be that negative experiences tend to stick more than
- positive experiences 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "ledgerwood2014sticky"
-literal "false"
-
+ the expected return to waiting, reducing the incentive to store.
+ We conjecture that farmers focus too much on the uncertainty related to
+ the price in isolation, a cognitive bias known as 
+\begin_inset Quotes eld
 \end_inset
 
-.
- To overcome this negativity bias, we implement a treatment where past experienc
-e is compared to price data to generate more objective beliefs about future
- prices.
+narrow bracketing
+\begin_inset Quotes erd
+\end_inset
+
+, and that this makes farmers particularly loss averse.
+ To overcome this bias, we develop a treatment where we point out that in
+ addition to uncertainty related to the price, there are many other sources
+ of uncertainty that play simultaneously.
 \end_layout
 
 \begin_layout Section*
@@ -263,7 +255,7 @@ literal "false"
  farmers’ abilities to move grain intertemporally.
  Providing timely access to credit allows farmers to buy at lower prices
  and sell at higher prices, increasing farm revenues and generating a return
- on investment of 29% .
+ on investment of almost 30%.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -272,9 +264,9 @@ literal "false"
 
 \end_inset
 
- uses the fact that primary school began 3 months earlier in 2010 than in
- 2009 to demonstrate that this prompted households with children to sell
- maize when prices are particularly low.
+ uses the fact that in Malawi, primary school began 3 months earlier in
+ 2010 than in 2009, and notes that this prompted households with children
+ to sell maize when prices are particularly low.
  To identify the impacts of liquidity during the lean season, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -286,7 +278,13 @@ literal "false"
  offered subsidized loans in randomly selected villages in rural Zambia
  and conclude that liquidity constraints contribute to inequality in rural
  economies.
- 
+ While credit constraints thus seems to be an important reason why farmers
+ sell immediately post harvest at low prices, we feel this is not the entire
+ story.
+ If farmers need urgent cash, it would make more sense to only sell part
+ of the harvest to cover most urgent expenses.
+ However, farmers generally sell all maize immediately post harvest at low
+ prices.
 \end_layout
 
 \begin_layout Standard
@@ -300,8 +298,8 @@ sell low buy high
 \begin_inset Quotes erd
 \end_inset
 
- puzzle is not a puzzle at all by arguing that price movements are insufficient
- for farmers to engage in inter-temporal arbitrage 
+ puzzle is not a puzzle at all, as price movements are insufficient for
+ farmers to engage in inter-temporal arbitrage 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:ags:aaea20:304448"
@@ -315,17 +313,23 @@ literal "false"
  in main markets are generally much better integrated in the wider national,
  regional and even global economy, and so will be less prone to extreme
  spikes and slumps.
+ While we agree that uncertainty about prices is indeed an important reason
+ to sell immediately post harvest for loss averse farmers (and indeed loss
+ aversion lies at the core of one of our research hypotheses), we do feel
+ that this is not a sufficient explanation in the face of large recurrent
+ seasonal price movements.
 \end_layout
 
 \begin_layout Standard
-A reason that is often heard in the field is that farmers have nowhere to
- store, so they just sell.
- This could be a lack of space, as farmers often harvest 10-20 bags of 100kg
- of maize.
+A third reason that is often heard in the field is that farmers have nowhere
+ to store, so they just sell.
+ This could be a lack of space, as the average smallholder often harvest
+ 10-20 bags of 100kg of maize.
  But there are also risk related to pests and diseases affecting the stored
  maize.
  If storage is the main reason why farmers do not engage in intertemporal
- arbitrage more, then providing storage technology should delay sales 
+ arbitrage more, then providing storage technology should delay sales.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "OMOTILEWA2018176"
@@ -334,14 +338,18 @@ literal "false"
 \end_inset
 
  indeed find that households that received PICS bags stored maize for a
- longer period, reported a substantial drop in storage losses
+ longer period, reported a substantial drop in storage losses.
+ Again, we feel storage is indeed part of the reason, but it does not explain
+ everything.
+ For instance ACE in Malawi provides storage technology but still fails
+ to fill its warehouses.
 \end_layout
 
 \begin_layout Standard
 Another reason may be related to social taxation.
- If a farmer has a lot of maize in stored in his house, this is visible
- for family and neighbours, and it will be very hard to deny if they come
- and ask for help.
+ If a farmer has a lot of maize stored in his house, this is visible for
+ family and neighbours, and it will be very hard to deny if they come and
+ ask for help.
  Therefore, farmers may choose to convert their harvest to money, which
  is easier to hide, even though this comes at a cost.
  Social taxation has been found important in a similar marketing decisions
@@ -354,17 +362,6 @@ literal "false"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Our study is related to this literature in several ways.
- The hypothesis related to budget sees liquidity requirements as the main
- driving force behind the sell low - buy high puzzle.
- The hypothesis related to the fact that farmers tend to underestimate the
- future price of maize is related to risk aversion where losses are given
- a higher weight than gains.
- 
 \end_layout
 
 \begin_layout Section*
@@ -417,7 +414,7 @@ st\:c_{1}+c_{2}+\gamma e_{2}=\left(\lambda p_{L}+(1-\lambda)p_{H}\right)Q
 \end_layout
 
 \begin_layout Standard
-On the right hand side of the budget constraint, we model believes about
+On the right hand side of the budget constraint, we model beliefs about
  the future price, which can be low 
 \begin_inset Formula $\left(P_{L}\right)$
 \end_inset
@@ -432,19 +429,11 @@ On the right hand side of the budget constraint, we model believes about
 \end_inset
 
  represents the subjective probability that the price will be low.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-I miss a comparison with the price now.
- The farmer compares the price now with the expected price in the future
- to decide on how much to sell now and how much to sell in the future.
- I think we will need to do this using relative prices in some way, because
- what matters is 
-\end_layout
-
+ The parameter 
+\begin_inset Formula $\lambda$
 \end_inset
 
+ is assume to increase due to narrow bracketing.
  The model will be used to compare a benchmark case, where there is no budget
  neglect 
 \begin_inset Formula $\left(\gamma=1\right)$
@@ -463,19 +452,23 @@ Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-In a first hypothesis, we assume that farmers suffer from budget neglect—
- 
+In a first hypothesis, we assume that farmers suffer from budget neglect
+ (
 \begin_inset Formula $\gamma<1$
 \end_inset
 
- on the left side of the budget constraint—which may lead to an overoptimistic
+ on the left side of the budget constraint), which may lead to an overoptimistic
  view of the future.
- In particular, farmers may neglect some future expenditures when constructing
- plans.
+ In particular, farmers may neglect some future expenditures when deciding
+ on how much to sell immediately after the harvest.
  For example, immediately after harvest, they may budget for fresh seed
  from the agro-input dealer and for fertilizer, but they may forget that
  they also need pesticides and insecticides.
- This hypothesis is similar to the planning fallacy, where individuals typically
+ 
+\end_layout
+
+\begin_layout Standard
+This hypothesis is related to the planning fallacy, where individuals typically
  underestimate the time it takes to complete a task, despite extensive experienc
 e with failure to complete the same task in a similar time frame in the
  past 
@@ -488,7 +481,7 @@ literal "false"
 
 .
  Part of it may also be related to optimism bias if farmers neglect or underesti
-mate the risk that something happens.
+mate the risk that adverse effects will happen to them.
  For instance, farmers may not budget for pesticides or insecticides because
  they believe they will not be affected by pests or insects.
  Budget neglect is also found to be a main contributing factor to recurrent
@@ -496,26 +489,62 @@ mate the risk that something happens.
 \end_layout
 
 \begin_layout Standard
-A second hypothesis is related to the right side of the budget constraint
- and focuses on price expectations.
- Here, the hypothesis is that farmers are, for some reason, too pessimistic
- about the future price.
- Farmers may rely on experience an anchoring to attach probabilities to
- the price distribution.
- There is some evidence that people provide more weight to negative experiences
- in the past than to positive experiences, implying that 
-\begin_inset Formula $\lambda>0.5$
+In a second hypothesis, we borrow from the literature on why people fail
+ to invest in high return ventures.
+ There is an emerging behavioural economics literature that blames 
+\begin_inset Quotes eld
 \end_inset
 
- 
+narrow bracketing
+\begin_inset Quotes erd
+\end_inset
+
+ as an important reason why loss averse individuals fail to invest in potentiall
+y high return activities.
+ Narrow bracketing refers to an individual considering each choice or source
+ of uncertainty they face in isolation, failing to integrate it with other
+ choices and risk from other sources 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ledgerwood2014sticky"
+key "doi:10.1126/science.7455683"
 literal "false"
 
 \end_inset
 
 .
+ Narrow bracketing is implicitly assumed in a range of economic models and
+ analyses.
+ It has bite in the case of loss aversion, due to the importance of the
+ sharp kink in the utility function at the reference point, which would
+ effectively be smoothed out if individuals were considering many sources
+ of uncertainty simultaneously 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kremer2019behavioral"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The decision to sell in the future at an uncertain price can be seen as
+ risky prospect.
+ At the time of the harvest, the farmer evaluates this risky project to
+ decide if they should sell or wait.
+ However, the fact that the farmer considers this risky prospect in isolation
+ (due to for instance cognitive capacity limitations) may lead them to refrain
+ from taking the bet (that is wait), while they may take the bet if they
+ concurrently consider the variety of other risky prospects they are faced
+ with.
+ For instance, the utility of the farmer will also depend on the realized
+ price of all the goods in the consumption bundle.
+ Especially when the different risky prospects are negatively correlated,
+ which is likely to be the case since when the price of maize happens to
+ be low during the lean season, the price of foodstuff in the consumption
+ bundle will also be low, the consequences of narrow bracketing may be particula
+rity severe.
 \end_layout
 
 \begin_layout Standard
@@ -534,27 +563,26 @@ To test the first hypothesis related to budget neglect, we will design an
 \end_layout
 
 \begin_layout Standard
-To test the second hypothesis, a second intervention will be designed to
- reduce negativity bias and come to a more objective view on seasonal price
- movements.
- This will be done by asking farmers to recall price movements in previous
- years, and then comparing this with data on price movements derived from
- theoretical models and price surveys.
- As such, we consider negativity bias as a kind of learning failure that
- we hope to solve by drawing attention to particular features of the data
- that farmers otherwise fail to notice 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "10.1093/qje/qju015"
-literal "false"
-
-\end_inset
-
-.
+To test the second hypothesis, a second intervention will be designed.
+ In one arm, the control, we will present expected price distributions at
+ different points in time that the farmer can expect when supplying maize.
+ In a second intervention, we will not only provide information on the sales
+ price distribution of maize, but also of retail prices commonly bought
+ foodstuff.
+ We will also make the negative correlation between maize sold and food
+ bought salient by expressing revenue of maize sales in terms of purchasing
+ power.
 \end_layout
 
 \begin_layout Section*
 Experimental design and power calculations
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Experimental-design-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -575,7 +603,7 @@ We propose parallel design with one control group and two treatment arms.
  In our case, this means about 1470 farmers in the control group and 1015
  in each treatment arm.
  We will implement this in 100 villages, such that in each village we will
- have 20 farmers in the control group, and 10 farmers in each treatment
+ have 15 farmers in the control group, and 10 farmers in each treatment
  group.
 \end_layout
 
@@ -715,10 +743,6 @@ name "fig:Price-of-maize"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -778,10 +802,6 @@ name "fig:Quantities-of-maize"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -791,6 +811,35 @@ name "fig:Quantities-of-maize"
 Taken together, the figures suggest that the best time for the interventions
  would be around April or May, immediately before farmer start to sell.
  
+\end_layout
+
+\begin_layout Standard
+The study population consists of semi-subsistence small scale maize farmers
+ in the study districts defined above.
+ As mentioned in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Experimental-design-and"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we plan to recruit a fixed number of households in each of a total of
+ 100 villages (stratified by size—50 large and 50 small villages).
+ Using census data, within each village, we will randomly sample 35 maize
+ farming households to participate in the study using a random number generator
+ of a computer.
+ We work with the assumption that all households in the area produce maize
+ and produce on a small scale, so all households meet the inclusion condition.
+ In a second stage, these 35 households will be allocated to the three treatment
+ groups (control, treatment 1 and treatment 2).
+ This will also be done by a random number of a computer.
+ These households will then be visited and asked to participate.
+ We will provide study participants with a small token of gratitude (a bar
+ of soap) regardless of whether the household accepts to participate or
+ not.
 \end_layout
 
 \begin_layout Section*

@@ -125,8 +125,8 @@ Motivation
 
 \begin_layout Standard
 It is often observed that smallholder farmers sell most—if not all—of their
- marketable surplus immediately after the harvest to itinerant traders at
- the farm gate.
+ marketable surplus or cash crops immediately after the harvest to itinerant
+ traders at the farm gate.
  Selling immediately after the harvest is not optimal.
  Thin and poorly integrated markets mean that immediately post harvest,
  prices in excess supply areas drop.
@@ -172,7 +172,7 @@ literal "false"
 \end_inset
 
 .
- Farmers may be in urgent need of cash after the lean season 
+ They may be in urgent need of cash after the lean season 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1093/qje/qjy034,Dillon02102021"
@@ -203,26 +203,38 @@ literal "false"
 \begin_layout Standard
 In this study, we zoom in on two potential explanations why farmers seemingly
  sell at sub-optimal time.
- A first is related to budget neglect, whereby farmers underestimate expenses
- later in the season and as a result sell too much of their harvest too
- soon.
+ One focuses on the expenditure side and the other one focuses on the income
+ side.
+ However, as small-scale farmers are often producers and consumers of at
+ least some goods over relatively short periods of time, we also consider
+ a situation where both input and output decisions are connected to each
+ other.
+ 
+\end_layout
+
+\begin_layout Standard
+The first first is related to budget neglect, whereby farmers underestimate
+ expenses later in the season and as a result sell too much of their harvest
+ too soon.
  To test this hypothesis, we implement a field experiment that aims to reduce
  budget neglect by drawing up expenditure plans up to the next harvest.
- A second potential explanation is that farmers consistently underestimate
- the expected return to waiting, reducing the incentive to store.
- We conjecture that farmers focus too much on the uncertainty related to
- the price in isolation, a cognitive bias known as 
-\begin_inset Quotes eld
-\end_inset
+ 
+\end_layout
 
-narrow bracketing
-\begin_inset Quotes erd
-\end_inset
+\begin_layout Standard
+A second potential explanation is that farmers face difficulties planning
+ and committing related to quantities, timings and price of sales of cash
+ crops and marketable surplus.
+ Farmers often rely on simple decision heuristics, or respond to unexpected
+ events in suboptimal ways.
+ To test this hypothesis, we will develop and intervention where we develop
+ detailed plans consisting of limit prices and plans for emergency expenditures.
+\end_layout
 
-, and that this makes farmers particularly loss averse.
- To overcome this bias, we develop a treatment where we point out that in
- addition to uncertainty related to the price, there are many other sources
- of uncertainty that play simultaneously.
+\begin_layout Standard
+In a third treatment, both interventions will be connected to each other
+ and farmers will be required to indicate what expenses will be covered
+ with what income.
 \end_layout
 
 \begin_layout Section*
@@ -664,6 +676,35 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
+Treatments
+\end_layout
+
+\begin_layout Standard
+The first treatment 
+\end_layout
+
+\begin_layout Standard
+For the second treatment, we start by eliciting subjective expectations
+ about future price 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "TJERNSTROM202128,CHARNESS2021234"
+literal "false"
+
+\end_inset
+
+.
+ These subjective expectations are then compared to price distributions
+ calculated based on historical price data.
+ In the control group, we simulate a narrow bracket by only revealing the
+ price distribution of maize.
+ In the treatment group we show price distributions of maize but also price
+ distributions of 3 other crops.
+ Two of these crops will be crops that are typically consumed by the household
+ and one of the crops would be a typical cash crop (soy bean).
+\end_layout
+
+\begin_layout Section*
 Context and study area
 \end_layout
 
@@ -872,7 +913,7 @@ Limited baseline information will be collected in April/May 2022 during
 \end_layout
 
 \begin_layout Standard
-Primary outcomes in this study include amounts of maize stocks and and maize
+Primary outcomes in this study include amounts of maize stocks and maize
  sold at different points in time.
  As the main aim of waiting is intertemporal arbitrage, we will also compare
  prices obtained between treatment and control farmers.
@@ -886,8 +927,7 @@ To investigate impact pathways, we will also include a range of questions
  related to expenditure, and how easy it was for farmers.
  For instance, did treated households have less issues in meeting expenditures
  for eg.
- fertilizer or improved seed for the next season? We will also elicit a
- full set of future prices to look at impact pathways for the second hypothesis.
+ fertilizer or improved seed for the next season? 
 \end_layout
 
 \begin_layout Standard

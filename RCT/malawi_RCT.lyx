@@ -43,11 +43,9 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine biblatex-natbib
+\cite_engine natbib
 \cite_engine_type authoryear
 \biblio_style plainnat
-\biblatex_bibstyle authoryear
-\biblatex_citestyle authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -105,7 +103,10 @@ footnotemark[1] ,
  Bjorn Van Campenhout
 \backslash
 thanks{Development Strategy and Governance Division, International Food
- Policy Research Institute, Leuven, Belgium}}
+ Policy Research Institute, Leuven, Belgium}, Leocardia Nabwire
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Kampala, Uganda}}
 \end_layout
 
 \end_inset
@@ -115,8 +116,8 @@ thanks{Development Strategy and Governance Division, International Food
 
 \end_inset
 
-Study Protocol: Why do farmers sell immediately after harvest when prices
- are lowest?
+Why do farmers sell immediately after harvest when prices are lowest? A
+ pre-analysis plan
 \end_layout
 
 \begin_layout Section*
@@ -210,31 +211,6 @@ In this study, we zoom in on two potential explanations why farmers seemingly
  a situation where both input and output decisions are connected to each
  other.
  
-\end_layout
-
-\begin_layout Standard
-The first first is related to budget neglect, whereby farmers underestimate
- expenses later in the season and as a result sell too much of their harvest
- too soon.
- To test this hypothesis, we implement a field experiment that aims to reduce
- budget neglect by drawing up expenditure plans up to the next harvest.
- 
-\end_layout
-
-\begin_layout Standard
-A second potential explanation is that farmers face difficulties planning
- and committing related to quantities, timings and price of sales of cash
- crops and marketable surplus.
- Farmers often rely on simple decision heuristics, or respond to unexpected
- events in suboptimal ways.
- To test this hypothesis, we will develop and intervention where we develop
- detailed plans consisting of limit prices and plans for emergency expenditures.
-\end_layout
-
-\begin_layout Standard
-In a third treatment, both interventions will be connected to each other
- and farmers will be required to indicate what expenses will be covered
- with what income.
 \end_layout
 
 \begin_layout Section*
@@ -476,7 +452,8 @@ In a first hypothesis, we assume that farmers suffer from budget neglect
  For example, immediately after harvest, they may budget for fresh seed
  from the agro-input dealer and for fertilizer, but they may forget that
  they also need pesticides and insecticides.
- 
+ Furthermore, farmers may underestimate unexpected expenditures due to for
+ instance illness.
 \end_layout
 
 \begin_layout Standard
@@ -493,7 +470,15 @@ literal "false"
 
 .
  Part of it may also be related to optimism bias if farmers neglect or underesti
-mate the risk that adverse effects will happen to them.
+mate the risk that adverse effects will happen to them 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sharot2011optimism"
+literal "false"
+
+\end_inset
+
+.
  For instance, farmers may not budget for pesticides or insecticides because
  they believe they will not be affected by pests or insects.
  Budget neglect is also found to be a main contributing factor to recurrent
@@ -501,75 +486,36 @@ mate the risk that adverse effects will happen to them.
 \end_layout
 
 \begin_layout Standard
-In a second hypothesis, we borrow from the literature on why people fail
- to invest in high return ventures.
- There is an emerging behavioural economics literature that blames 
-\begin_inset Quotes eld
-\end_inset
-
-narrow bracketing
-\begin_inset Quotes erd
-\end_inset
-
- as an important reason why loss averse individuals fail to invest in potentiall
-y high return activities.
- Narrow bracketing refers to an individual considering each choice or source
- of uncertainty they face in isolation, failing to integrate it with other
- choices and risk from other sources 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "doi:10.1126/science.7455683"
-literal "false"
-
-\end_inset
-
-.
- Narrow bracketing is implicitly assumed in a range of economic models and
- analyses.
- It has bite in the case of loss aversion, due to the importance of the
- sharp kink in the utility function at the reference point, which would
- effectively be smoothed out if individuals were considering many sources
- of uncertainty simultaneously 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "kremer2019behavioral"
-literal "false"
-
-\end_inset
-
-.
+In a second hypothesis, we assume that farmers base decisions to sell on
+ the wrong data.
+ Farmers seem to use decision rules that are often anchored in past experience.
+ For instance, during qualitative fieldwork, farmers indicated that they
+ sell when traders from Lilongwe are visiting, as this is an indication
+ that prices are good.
+ Many farmers also indicate that they sell when the price reaches the break-even
+ point.
+ A better strategy would be to commit to a certain limit price, much like
+ traders on the stock market do, and this price should be based on seasonal
+ price movements that reflect increased demand and reduced supply in the
+ lean season, as apposed to the break-even price.
 \end_layout
 
 \begin_layout Standard
-The decision to sell in the future at an uncertain price can be seen as
- risky prospect.
- At the time of the harvest, the farmer evaluates this risky project to
- decide if they should sell or wait.
- However, the fact that the farmer considers this risky prospect in isolation
- (due to for instance cognitive capacity limitations) may lead them to refrain
- from taking the bet (that is wait), while they may take the bet if they
- concurrently consider the variety of other risky prospects they are faced
- with.
- For instance, the utility of the farmer will also depend on the realized
- price of all the goods in the consumption bundle.
- Especially when the different risky prospects are negatively correlated,
- which is likely to be the case since when the price of maize happens to
- be low during the lean season, the price of foodstuff in the consumption
- bundle will also be low, the consequences of narrow bracketing may be particula
-rity severe 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "read1999choice"
-literal "false"
-
-\end_inset
-
-.
+A third hypothesis focuses on distress sales, essentially combining the
+ first and the second hypothesis.
+ Farmers often need money for unexpected expenditures and thus sell part
+ of their crop at prices that are lower than what they wanted.
+ A better strategy is to plan for alternative ways to finance unexpected
+ expenditures, such as through sales of other crops or assets that are less
+ affected by seasonality, or by borrowing money.
+ This is again reminiscent of traders on the stock market who resist selling
+ during a dip at all cost.
 \end_layout
 
 \begin_layout Standard
-To test the first hypothesis related to budget neglect, we will design an
- intervention that takes the farmer through a detailed budgeting exercise.
+To test the first hypothesis related to budget neglect, the focus will be
+ on the expenditure side and we will design an intervention that takes the
+ farmer through a detailed budgeting exercise.
  The budget exercise will involve three components.
  A first component uses recall to provide a first approximation of what
  will be necessary in the future.
@@ -583,15 +529,23 @@ To test the first hypothesis related to budget neglect, we will design an
 \end_layout
 
 \begin_layout Standard
-To test the second hypothesis, a second intervention will be designed.
- In one arm, the control, we will present expected price distributions at
- different points in time that the farmer can expect when supplying maize.
- In a second intervention, we will not only provide information on the sales
- price distribution of maize, but also of retail prices commonly bought
- foodstuff.
- We will also make the negative correlation between maize sold and food
- bought salient by expressing revenue of maize sales in terms of purchasing
- power.
+To test the second hypothesis, we will develop and intervention that involves
+ detailed plans on the income side.
+ To do so, we will consider price movements in the previous years for the
+ cash crops under consideration, and together with the farmer, write down
+ in which months what quantities will be sold at what price to maximize
+ income.
+\end_layout
+
+\begin_layout Standard
+In a third treatment, the expenditures and incomes will be connected.
+ Farmers will be required to indicate what expenses will be covered with
+ what income.
+ Particular attention will be paid to unexpected expenditures, and how these
+ will be covered without recurrence to distress sales.
+ This will involve identifying other commodities or assets that display
+ less seasonality, and potentials sources of credit.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -606,7 +560,7 @@ name "sec:Experimental-design-and"
 \end_layout
 
 \begin_layout Standard
-We propose parallel design with one control group and two treatment arms.
+We propose parallel design with one control group and three treatment arms.
  Kaur et al (personal communication) find that, in a similar budget neglect
  experiment, treated farmers enter the hungry season with 20 percent more
  maize (valued by current prices at 405 zambian kwacha instead of 335 zambian
@@ -614,47 +568,12 @@ We propose parallel design with one control group and two treatment arms.
  If we assume that standard deviation is about 592 (1.6 times the mean of
  treatment and control means – the 1.6 is derived from maize production data
  in Uganda), we get a sample size of 1123 in each sample.
- If we run a factorial design and want to power all treatment cell for similar
- effect sizes, we will need about 3369 observations.
- To account for attrition, we will increase this to 3500.
- Note for designs with a common control group, maximize power, is attained
- when allocating approximately 42% of the sample to the control units, and
- then equally (29% each) to the two treatments.
- In our case, this means about 1470 farmers in the control group and 1015
- in each treatment arm.
- We will implement this in 100 villages, such that in each village we will
- have 15 farmers in the control group, and 10 farmers in each treatment
- group.
-\end_layout
-
-\begin_layout Standard
-The intervention will be implemented at the individual level, which raises
- concerns about potential spillover effects.
- We expect that farmers that are allocated to the control group may learn
- from treated farmers.
- This will thus affect outcomes of control farmers in the same direction
- as outcomes for treated farmers, making it harder to detect an effect if
- there is one.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-If our intervention causes a subset of villagers to wait before selling,
- this may have as an effect that fewer middlemen visit the village.
- As a result, control farmers may also (be able to) sell less and indirectly
- benefit from the intervention.
- Would this be a spillover effect, or would this rather be a general equilibrium
- effect? Is there a way we can capture this (eg asking the price enumerators
- to also ask how many traders were active in the village?)
-\end_layout
-
-\end_inset
-
- To get a sense of the importance of these spillover effects, we stratify
- on village size.
- Using census data, we subdivide villages in the study area in small and
- large villages based on the median number of inhabitants and then make
- sure we implement the study in 50 small and 50 large villages.
+ For one control group and three treatment arms we will thus need about
+ 4500 farmers.
+ As we are interested in all possible comparison between the different arms,
+ we will allocate equal sample sizes to each treatment arm.
+ We will choose 10 villagers in each arm per village, which means we will
+ need about 113 villages.
 \end_layout
 
 \begin_layout Standard
@@ -676,42 +595,24 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
-Treatments
-\end_layout
-
-\begin_layout Standard
-The first treatment 
-\end_layout
-
-\begin_layout Standard
-For the second treatment, we start by eliciting subjective expectations
- about future price 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "TJERNSTROM202128,CHARNESS2021234"
-literal "false"
-
-\end_inset
-
-.
- These subjective expectations are then compared to price distributions
- calculated based on historical price data.
- In the control group, we simulate a narrow bracket by only revealing the
- price distribution of maize.
- In the treatment group we show price distributions of maize but also price
- distributions of 3 other crops.
- Two of these crops will be crops that are typically consumed by the household
- and one of the crops would be a typical cash crop (soy bean).
-\end_layout
-
-\begin_layout Section*
 Context and study area
 \end_layout
 
 \begin_layout Standard
 The study focuses on the Central and Northern Region of Malawi (Kasungu,
  Mzimba, Ntchisi, Rumphi, Dowa and Mchinji).
- These areas are characterized by rained agriculture with a single season.
+ In these areas, maize is generally regarded as the food crop for auto-consumpti
+on or to pay laborers in kind.
+ Maize was also sometimes marketed, but mostly not as the most important
+ one cash crop.
+ The main cash crops in the area are soybean, ground nuts and tobacco.
+ Prices of tobacco do are not seasonal.
+ For the other crops, most farmers also mentioned significant seasonality
+ similar to seasonal price movements of maize.
+\end_layout
+
+\begin_layout Standard
+These areas are characterized by rained agriculture with a single season.
  The resulting seasonal price movements is illustrated in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -797,7 +698,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -841,32 +742,20 @@ Taken together, the figures suggest that the best time for the interventions
 \end_layout
 
 \begin_layout Standard
-The study population consists of semi-subsistence small scale maize farmers
- in the study districts defined above.
- As mentioned in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Experimental-design-and"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, we plan to recruit a fixed number of households in each of a total of
- 100 villages (stratified by size—50 large and 50 small villages).
- Using census data, within each village, we will randomly sample 35 maize
- farming households to participate in the study using a random number generator
- of a computer.
- We work with the assumption that all households in the area produce maize
- and produce on a small scale, so all households meet the inclusion condition.
- In a second stage, these 35 households will be allocated to the three treatment
- groups (control, treatment 1 and treatment 2).
- This will also be done by a random number of a computer.
- These households will then be visited and asked to participate.
- We will provide study participants with a small token of gratitude (a bar
- of soap) regardless of whether the household accepts to participate or
- not.
+Farmers often indicate to have access to finance, but note that interest
+ rates are prohibitively high (30-40%).
+ There is also a strong cooperative movement in Malawi.
+ Some of these cooperatives also provide access to warehousing and engage
+ in collective marketing.
+ Qualitative research suggests that it is pretty easy for farmers to sell
+ even in the off-season.
+ Traders operate in trading centers, writing prices on a blackboard.
+ The trader we interviewed mentioned there were many others like him in
+ the small trading center he was operating in.
+ Traders also visit villages, often using ox carts.
+ If they buy at farm gate, prices are discussed and depend on distance traveled.
+ Traders buy from May to August and sell from December to February.
+ Farmers are suspicious about scales used.
 \end_layout
 
 \begin_layout Section*
@@ -887,7 +776,7 @@ Instead of relying on a baseline and endline, we will evaluate the interventions
  through multiple rounds of data collection, often using phone interviews.
  There are different reasons for this.
  First, when measuring noisy and relatively less autocorrelated outcomes
- such as amounts of maize to sell or household expenditure, one can increase
+ such as amounts of commodities sold or household expenditure, one can increase
  power by taking multiple measurements at relatively short intervals to
  average out noise 
 \begin_inset CommandInset citation
@@ -939,7 +828,7 @@ To investigate impact pathways, we will also include a range of questions
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "malawi_RCT"
-options "plainnat"
+options "IFPRI_Style"
 
 \end_inset
 

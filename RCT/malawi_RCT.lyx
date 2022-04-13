@@ -595,6 +595,16 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
+Sampling
+\end_layout
+
+\begin_layout Standard
+We use a multi-stage sampling procedure to create a self-weighting sample
+ up to the village level and then just sample a fixed number of households
+ per village.
+\end_layout
+
+\begin_layout Section*
 Context and study area
 \end_layout
 

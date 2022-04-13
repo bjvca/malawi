@@ -602,6 +602,9 @@ Sampling
 We use a multi-stage sampling procedure to create a self-weighting sample
  up to the village level and then just sample a fixed number of households
  per village.
+ We then sample villages with the likelihood of a village being selected
+ being proportionate to the number of people that live in this village (such
+ that larger villages are more likely to end up in the sample).
 \end_layout
 
 \begin_layout Section*

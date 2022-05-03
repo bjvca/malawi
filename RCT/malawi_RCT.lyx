@@ -145,7 +145,7 @@ sell low buy high
  puzzle 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "https://doi.org/10.1111/j.1477-9552.2010.00274.x"
+key "https://doi.org/10.1111/j.1477-9552.2010.00274.x,10.1093/qje/qjy034"
 literal "false"
 
 \end_inset
@@ -196,21 +196,60 @@ literal "false"
  farmers do not have the means to transport maize to markets themselves.
  Furthermore, issues related to social taxation may mean farmers convert
  maize to cash, which is easier to hide from friends and family.
- There may also be behavioural factors, such as present bias, anchoring
- of prices to past experience where negative experiences are more salient
- than positive experiences, etc.
+ 
 \end_layout
 
 \begin_layout Standard
-In this study, we zoom in on two potential explanations why farmers seemingly
- sell at sub-optimal time.
- One focuses on the expenditure side and the other one focuses on the income
- side.
- However, as small-scale farmers are often producers and consumers of at
- least some goods over relatively short periods of time, we also consider
- a situation where both input and output decisions are connected to each
- other.
- 
+Most of the explanations above focus on hard constraints to farmers' exploiting
+ intertemporal arbitrate.
+ In this study, we zoom in on three potential behavioural explanations why
+ farmers seemingly sell at sub-optimal time.
+ One potential explanation is situated at the household expenditure side,
+ and assumes that households face challenges in accurately predictive future
+ expenditures.
+ Such budget neglect leads farmer to sell more early on and save too little
+ for later in the year.
+ A second potential explanation is situates at the household income side.
+ Here the assumption is that farmers face cognitive challenges in making
+ inter-temporal cost benefit calculations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/app.6.2.1"
+literal "false"
+
+\end_inset
+
+ and fail to commit to certain thresholds 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1162/qjec.2006.121.2.635,10.1257/aer.101.6.2350"
+literal "false"
+
+\end_inset
+
+.
+ In a third potential explanation, we test if farmers are subject to recency
+ bias—a cognitive bias that favors recent events and under-weight less salient
+ data such as long-term averages.
+\end_layout
+
+\begin_layout Standard
+This document serves as a pre-analysis plan for the study that will be registere
+d in a public repository.
+ It provides background information, outlines hypotheses which will be tested,
+ tools that will be used in the field, power calculations and sample size
+ projections on which sampling is based, outcome variables that will be
+ used to assess impact, and specification that will be estimated.
+ As such, it will provide a useful reference in evaluating the final results
+ of the study 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "humphreys_sanchezdelasierra_vanderwindt_2013"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -218,8 +257,8 @@ Literature
 \end_layout
 
 \begin_layout Standard
-Why do farmers sell low and buy high? One of the most obvious, is related
- to credit constraints.
+Why do farmers sell low and buy high? One of the most obvious neo-classical
+ explanations is related to credit constraints.
  Using observational data, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -353,111 +392,29 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
-Model
+Behavioural constraints to intertemporal arbitrage: Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-Consider a very simple 2 period model where a farmer maximizes utility by
- choosing how much to consume in the first and second period 
-\begin_inset Formula $(c_{1},c_{2})$
-\end_inset
-
-.
- We further add an expenditure that is only relevant in period 2 
-\begin_inset Formula $(e_{2})$
-\end_inset
-
-, and that is affected by a parameter 
-\begin_inset Formula $0\leqslant\gamma\leqslant1$
-\end_inset
-
- that represents the probability that the agent remembers the expenditure.
- 
-\begin_inset Formula $\delta$
-\end_inset
-
- is the discount rate.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\underset{c_{1},c_{2},e_{2}}{max}u_{1}\left(c_{1}\right)+\delta\left(u_{2}\left(c_{2}\right)+\gamma v_{2}\left(e_{2}\right)\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-st\:c_{1}+c_{2}+\gamma e_{2}=\left(\lambda p_{L}+(1-\lambda)p_{H}\right)Q
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-On the right hand side of the budget constraint, we model beliefs about
- the future price, which can be low 
-\begin_inset Formula $\left(P_{L}\right)$
-\end_inset
-
- or high 
-\begin_inset Formula $\left(P_{H}\right)$
-\end_inset
-
-.
- The parameter 
-\begin_inset Formula $\lambda$
-\end_inset
-
- represents the subjective probability that the price will be low.
- The parameter 
-\begin_inset Formula $\lambda$
-\end_inset
-
- is assume to increase due to narrow bracketing.
- The model will be used to compare a benchmark case, where there is no budget
- neglect 
-\begin_inset Formula $\left(\gamma=1\right)$
-\end_inset
-
- and the future price is high 
-\begin_inset Formula $\left(\lambda=0\right)$
-\end_inset
-
-, against alternatives and formulate a series of predictions that can be
- taken to the data.
-\end_layout
-
-\begin_layout Section*
-Hypotheses and Interventions
-\end_layout
-
-\begin_layout Standard
-In a first hypothesis, we assume that farmers suffer from budget neglect
- (
-\begin_inset Formula $\gamma<1$
-\end_inset
-
- on the left side of the budget constraint), which may lead to an overoptimistic
- view of the future.
+The first potential behavioural explanation is situated at the household
+ expenditure side, and assumes that households face challenges in accurately
+ predicting future expenditures.
+ In other words, the first hypothesis assumes farmers suffer from budget
+ neglect, which may lead to an overoptimistic view of the future.
  In particular, farmers may neglect some future expenditures when deciding
  on how much to sell immediately after the harvest.
  For example, immediately after harvest, they may budget for fresh seed
  from the agro-input dealer and for fertilizer, but they may forget that
  they also need pesticides and insecticides.
- Furthermore, farmers may underestimate unexpected expenditures due to for
- instance illness.
+ Furthermore, farmers may underestimate the likelihood of, or simply forget
+ to account for, unexpected events such illness within the family.
+ 
 \end_layout
 
 \begin_layout Standard
-This hypothesis is related to the planning fallacy, where individuals typically
+This hypothesis touches on cognitive limits of the household at the expenditure
+ side.
+ It is also related to the planning fallacy, where individuals typically
  underestimate the time it takes to complete a task, despite extensive experienc
 e with failure to complete the same task in a similar time frame in the
  past 
@@ -486,33 +443,6 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In a second hypothesis, we assume that farmers base decisions to sell on
- the wrong data.
- Farmers seem to use decision rules that are often anchored in past experience.
- For instance, during qualitative fieldwork, farmers indicated that they
- sell when traders from Lilongwe are visiting, as this is an indication
- that prices are good.
- Many farmers also indicate that they sell when the price reaches the break-even
- point.
- A better strategy would be to commit to a certain limit price, much like
- traders on the stock market do, and this price should be based on seasonal
- price movements that reflect increased demand and reduced supply in the
- lean season, as apposed to the break-even price.
-\end_layout
-
-\begin_layout Standard
-A third hypothesis focuses on distress sales, essentially combining the
- first and the second hypothesis.
- Farmers often need money for unexpected expenditures and thus sell part
- of their crop at prices that are lower than what they wanted.
- A better strategy is to plan for alternative ways to finance unexpected
- expenditures, such as through sales of other crops or assets that are less
- affected by seasonality, or by borrowing money.
- This is again reminiscent of traders on the stock market who resist selling
- during a dip at all cost.
-\end_layout
-
-\begin_layout Standard
 To test the first hypothesis related to budget neglect, the focus will be
  on the expenditure side and we will design an intervention that takes the
  farmer through a detailed budgeting exercise.
@@ -529,23 +459,74 @@ To test the first hypothesis related to budget neglect, the focus will be
 \end_layout
 
 \begin_layout Standard
-To test the second hypothesis, we will develop and intervention that involves
- detailed plans on the income side.
- To do so, we will consider price movements in the previous years for the
- cash crops under consideration, and together with the farmer, write down
- in which months what quantities will be sold at what price to maximize
- income.
+This second hypothesis is also related to cognitive limitations when planning,
+ but this time at the income side of the farm household.
+ Farmers may have difficulties in making the intertemporal cost-benefit
+ calculations necessary to determine the optimal reservation price and/or
+ storage period.
+ They often lack precise information about the fixed and variable costs
+ involved, about the level and variability of the future stream of income
+ from sales, or about the time frame of both cost and income 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "campenhout2021role"
+literal "false"
+
+\end_inset
+
+.
+ The fact that farmers are faced with uncertain prices and uncertain expenditure
+s often means they abandon plans and engage in impulsive or distress sales.
 \end_layout
 
 \begin_layout Standard
-In a third treatment, the expenditures and incomes will be connected.
- Farmers will be required to indicate what expenses will be covered with
- what income.
- Particular attention will be paid to unexpected expenditures, and how these
- will be covered without recurrence to distress sales.
- This will involve identifying other commodities or assets that display
- less seasonality, and potentials sources of credit.
- 
+To test the second hypothesis, we will develop, together with the farmer,
+ a detailed plan of how much the farmer will sell over the coming year (per
+ month or per quarter).
+ For each sales event, the farmer will also be asked to commit to a minimum
+ price.
+ This will be done on a special form that farmers can than hang up in their
+ house.
+ Enumerators will be asked to take a picture of the plan.
+ This is to 1) check if enumerators did their job 2) to signal to farmers
+ that we will check if they keep to their commitments.
+\end_layout
+
+\begin_layout Standard
+A third hypothesis focuses on projection bias and recency effects when making
+ marketing decisions.
+ It is well known that individuals place disproportional weight on observations
+ from the recent past or extrapolate recent trends.
+ Farmers seem to use decision rules.
+ For instance, during qualitative fieldwork, farmers indicated that they
+ sell when traders from Lilongwe are visiting, as this is an indication
+ that prices are good.
+ Many farmers also indicate that they sell when the price reaches the break-even
+ point.
+ A better strategy would be to commit to a certain limit price, much like
+ traders on the stock market do, and this price should be based on seasonal
+ price movements that reflect increased demand and reduced supply in the
+ lean season, as apposed to the break-even price.
+\end_layout
+
+\begin_layout Standard
+To test the third hypothesis, we will develop an intervention where we provide
+ farmers with historical (5 years) monthly price movements for maize, soybean
+ and groundnuts.
+ The price data will be for the market that is closest to the treated household.
+ We will show price movements, but also provide summary statistics like
+ minimum price, maximum price and average price to summarize price distribution
+ data in a few easy to understand figures 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qju015,10.1257/app.6.2.1"
+literal "false"
+
+\end_inset
+
+.
+ Price data will be obtained from the Malawian Agricultural Commodity Exchange
+ (ACE).
 \end_layout
 
 \begin_layout Section*

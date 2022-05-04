@@ -758,7 +758,7 @@ Data collection and endpoints
 
 \begin_layout Standard
 We will not organize a dedicated baseline survey, but rather ask a limited
- number of questions immediately prior to the interventions.
+ number of questions immediately prior to the interventions in May 2022.
  This information can then be used to demonstrated balance, to control for
  baseline outcomes for the primary outcome variables in and ANCOVA regression,
  and to explore heterogeneous treatment effects.
@@ -766,7 +766,44 @@ We will not organize a dedicated baseline survey, but rather ask a limited
 \end_layout
 
 \begin_layout Standard
-Instead of relying on a baseline and endline, we will evaluate the interventions
+To demonstrate baseline balance, we will construct a standard balance table
+ consisting of the following variables household/demographic characteristics
+ (inspired by balance tables in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.101.6.2350,10.1093/qje/qju002"
+literal "false"
+
+\end_inset
+
+): household head is female (1=yes), household size (number of people),
+ age of household head (years), number of years of education (years), material
+ of roof (corrugated iron = 1), number of rooms in the house, cultivated
+ acrage (maize+gnuts+soybean), hired in agricultural labour (1=yes), distance
+ to nearest all weather road (km), distance to nearest market (km).
+ 
+\end_layout
+
+\begin_layout Standard
+We will report t-tests comparing treatment and control (unadjusted for multiple
+ hypothesis testing) as well as a joint F-test from a regression of the
+ treatment assignment on all variables in the balance table.
+\end_layout
+
+\begin_layout Standard
+To explore heterogeneity in treatment effects, we will measure the following
+ during baseline: Access to credit, access to storage facility, membership
+ of (marketing related) cooperative, livestock asset ownership, whether
+ the household already makes a budget, distance to nearest market, We will
+ also assess balance on these characteristics.
+\end_layout
+
+\begin_layout Standard
+Price elicitation.
+\end_layout
+
+\begin_layout Standard
+Instead of relying on a single endline, we will evaluate the interventions
  through multiple rounds of data collection, often using phone interviews.
  There are different reasons for this.
  First, when measuring noisy and relatively less autocorrelated outcomes
@@ -775,7 +812,7 @@ Instead of relying on a baseline and endline, we will evaluate the interventions
  average out noise 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "MCKENZIE2012210"
+key "MCKENZIE2012210,10.1093/qje/qjy034"
 literal "false"
 
 \end_inset
@@ -783,13 +820,13 @@ literal "false"
 .
  Furthermore, it will allow us to assess the effect of the interventions
  at multiple points in time instead of just at endline.
- 
+ The follow-up surveys will focus on tracking data on storage inventory
+ of maize, groundnuts and soybean, marketing behavior of the three crops,
+ consumption, and credit and savings behavior
 \end_layout
 
 \begin_layout Standard
-Limited baseline information will be collected in April/May 2022 during
- the intervention phase.
- Intermediate data will be collected in July 2022, September 2022, November
+Intermediate data will be collected in July 2022, September 2022, November
  2022, and January 2023.
  A slightly more elaborate in-person endline survey will be organized in
  March 2023.
@@ -800,7 +837,6 @@ Primary outcomes in this study include amounts of maize stocks and maize
  sold at different points in time.
  As the main aim of waiting is intertemporal arbitrage, we will also compare
  prices obtained between treatment and control farmers.
- We will equally look at purchases.
  Further down the impact pathway, we compare welfare, both subjective and
  through consumption expenditure, between treatment and control households.
 \end_layout
@@ -813,8 +849,12 @@ To investigate impact pathways, we will also include a range of questions
  fertilizer or improved seed for the next season? 
 \end_layout
 
+\begin_layout Section*
+Unresolved questions:
+\end_layout
+
 \begin_layout Standard
-bmd28@cornell.edu
+farmers also use product to pay labourers, how do we handle that?
 \end_layout
 
 \begin_layout Standard

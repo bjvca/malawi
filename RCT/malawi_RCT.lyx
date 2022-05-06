@@ -777,10 +777,11 @@ literal "false"
 \end_inset
 
 ): household head is female (1=yes), household size (number of people),
- age of household head (years), number of years of education (years), material
- of roof (corrugated iron = 1), number of rooms in the house, cultivated
- acrage (maize+gnuts+soybean), hired in agricultural labour (1=yes), distance
- to nearest all weather road (km), distance to nearest market (km).
+ age of household head (years), number of years of education of the household
+ head (years), material of roof (corrugated iron = 1), number of rooms in
+ the house, cultivated acreage (maize+groundnuts+soybean), hired in agricultural
+ labour (1=yes), distance to nearest all weather road (km), distance to
+ nearest market (km).
  
 \end_layout
 
@@ -794,12 +795,8 @@ We will report t-tests comparing treatment and control (unadjusted for multiple
 To explore heterogeneity in treatment effects, we will measure the following
  during baseline: Access to credit, access to storage facility, membership
  of (marketing related) cooperative, livestock asset ownership, whether
- the household already makes a budget, distance to nearest market, We will
- also assess balance on these characteristics.
-\end_layout
-
-\begin_layout Standard
-Price elicitation.
+ the household already makes a budget.
+ We will also assess balance on these characteristics at baseline.
 \end_layout
 
 \begin_layout Standard
@@ -833,10 +830,11 @@ Intermediate data will be collected in July 2022, September 2022, November
 \end_layout
 
 \begin_layout Standard
-Primary outcomes in this study include amounts of maize stocks and maize
- sold at different points in time.
- As the main aim of waiting is intertemporal arbitrage, we will also compare
- prices obtained between treatment and control farmers.
+Primary outcomes in this study include stocks of ground nuts, maize and
+ soybean held by the farmers and how they evolve over time.
+ As there is a particualr focus on marketing behaviour, we will also collect
+ detailed information on sales made, including quantities sold, prices received
+ and who was sold to.
  Further down the impact pathway, we compare welfare, both subjective and
  through consumption expenditure, between treatment and control households.
 \end_layout
@@ -846,7 +844,10 @@ To investigate impact pathways, we will also include a range of questions
  related to expenditure, and how easy it was for farmers.
  For instance, did treated households have less issues in meeting expenditures
  for eg.
- fertilizer or improved seed for the next season? 
+ fertilizer or improved seed for the next season? Furthermore, we include
+ a module on price expectations, which will be useful to see how expectations
+ influence eventual prices obtained, and how interventions affect the relation
+ between expectations and behaviour.
 \end_layout
 
 \begin_layout Section*

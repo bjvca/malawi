@@ -62,4 +62,4 @@ all <- all[with(all, order(all$district, all$ta, all$gvh, all$village)),]
 all$farmer_ID <- paste("F",1:nrow(all), sep="_")
 
 #save csv output
-write.csv(all[,c("district", "ta", "gvh", "village", "treat")], file = paste(path,"sampling_frame_ODK.csv", sep="/"), row.names=F)
+write.csv(all[,c("farmer_ID","district", "ta", "gvh", "village", "treat")], file = paste(path,"sampling_frame_ODK.csv", sep="/"), row.names=F)

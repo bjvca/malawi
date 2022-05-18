@@ -825,6 +825,24 @@ literal "false"
 .
  Furthermore, it will allow us to assess the effect of the interventions
  at multiple points in time instead of just at endline.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MCKENZIE2012210"
+literal "false"
+
+\end_inset
+
+ also cautions about some of the downsides.
+ For instance, it could be that repeated surveys affect people's reporting
+ or even behavior.
+\end_layout
+
+\end_inset
+
  The follow-up surveys will focus on tracking data on storage inventory
  of maize, groundnuts and soybean, marketing behavior of the three crops,
  consumption, and credit and savings behavior.

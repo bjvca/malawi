@@ -523,10 +523,13 @@ A third hypothesis focuses on projection bias and recency effects when making
 To test the third hypothesis, we will develop an intervention where we provide
  farmers with historical (5 years) monthly price movements for maize, soybean
  and groundnuts.
- The price data will be for the market that is closest to the treated household.
- We will show price movements, but also provide summary statistics like
- minimum price, maximum price and average price to summarize price distribution
- data in a few easy to understand figures 
+ We will show all farmers the same price data obtained from the most important
+ market in the country (Lilongwe).
+ We will show price movements graphically, but we will also explicitly point
+ out particular features in the data that farmers need to pay attention
+ to.
+ In particular, for each year, we will point out the highest and the lowest
+ price, as well as the months in which these extremes occured 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1093/qje/qju015,10.1257/app.6.2.1"
@@ -559,8 +562,8 @@ We propose parallel design with one control group and three treatment arms.
  If we assume that standard deviation is about 592 (1.6 times the mean of
  treatment and control means – the 1.6 is derived from maize production data
  in Uganda), we get a sample size of 1123 in each sample.
- For one control group and three treatment arms we will thus need about
- 4500 farmers.
+ For one control group and two treatment arms we will thus need about 3400
+ farmers.
  As we are interested in all possible comparison between the different arms,
  we will allocate equal sample sizes to each treatment arm.
  We will choose 10 villagers in each arm per village, which means we will

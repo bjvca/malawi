@@ -212,7 +212,7 @@ literal "false"
 \begin_layout Standard
 Most of the explanations above focus on hard constraints to farmers' exploiting
  intertemporal arbitrate.
- In this study, we zoom in on three potential behavioural explanations why
+ In this study, we zoom in on two potential behavioural explanations why
  farmers seemingly sell at sub-optimal time.
  One potential explanation is situated at the household expenditure side,
  and assumes that households face challenges in accurately predictive future
@@ -238,9 +238,7 @@ literal "false"
 \end_inset
 
 .
- In a third potential explanation, we test if farmers are subject to recency
- bias—a cognitive bias that favors recent events and under-weight less salient
- data such as long-term averages.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -502,46 +500,6 @@ To test the second hypothesis, we will develop, together with the farmer,
  that we will check if they keep to their commitments.
 \end_layout
 
-\begin_layout Standard
-A third hypothesis focuses on projection bias and recency effects when making
- marketing decisions.
- It is well known that individuals place disproportional weight on observations
- from the recent past or extrapolate recent trends.
- Farmers seem to use decision rules.
- For instance, during qualitative fieldwork, farmers indicated that they
- sell when traders from Lilongwe are visiting, as this is an indication
- that prices are good.
- Many farmers also indicate that they sell when the price reaches the break-even
- point.
- A better strategy would be to commit to a certain limit price, much like
- traders on the stock market do, and this price should be based on seasonal
- price movements that reflect increased demand and reduced supply in the
- lean season, as apposed to the break-even price.
-\end_layout
-
-\begin_layout Standard
-To test the third hypothesis, we will develop an intervention where we provide
- farmers with historical (5 years) monthly price movements for maize, soybean
- and groundnuts.
- We will show all farmers the same price data obtained from the most important
- market in the country (Lilongwe).
- We will show price movements graphically, but we will also explicitly point
- out particular features in the data that farmers need to pay attention
- to.
- In particular, for each year, we will point out the highest and the lowest
- price, as well as the months in which these extremes occured 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "10.1093/qje/qju015,10.1257/app.6.2.1"
-literal "false"
-
-\end_inset
-
-.
- Price data will be obtained from the Malawian Agricultural Commodity Exchange
- (ACE).
-\end_layout
-
 \begin_layout Section*
 Experimental design and power calculations 
 \begin_inset CommandInset label
@@ -554,7 +512,7 @@ name "sec:Experimental-design-and"
 \end_layout
 
 \begin_layout Standard
-We propose parallel design with one control group and three treatment arms.
+We propose parallel design with one control group and two treatment arms.
  Kaur et al (personal communication) find that, in a similar budget neglect
  experiment, treated farmers enter the hungry season with 20 percent more
  maize (valued by current prices at 405 zambian kwacha instead of 335 zambian
@@ -564,10 +522,11 @@ We propose parallel design with one control group and three treatment arms.
  in Uganda), we get a sample size of 1123 in each sample.
  For one control group and two treatment arms we will thus need about 3400
  farmers.
- As we are interested in all possible comparison between the different arms,
- we will allocate equal sample sizes to each treatment arm.
- We will choose 10 villagers in each arm per village, which means we will
- need about 113 villages.
+ As power is optimal when one allocates approximately 42% of the sample
+ to control, and then equally (29% each) to each treatment are, will choose
+ 13 households for the control and 9 households in each of the two treatment
+ groups per village.
+ This means we will need about 109 villages.
 \end_layout
 
 \begin_layout Section*
@@ -591,55 +550,12 @@ We use a multi-stage sampling procedure to create a self-weighting sample
 
 \begin_layout Standard
 We aggregate this list of households to the village level and remove villages
- that have less than 40 households (as we need at least 10 households per
+ that have less than 35 households (as we need at least 31 households per
  treatment arm in each village).
- We then sample 120 villages (113+7 to account for attrition), with the
+ We then sample 114 villages (109+5 to account for attrition), with the
  probability of a village being selected proportional to the number of household
 s that reside in this village.
- Within each village we then create placeholders for 40 households and randomly
- assign them to one out of four treatments (C, T1, T2, T3), generating a
- list of 4800 hypothetical households.
- These placeholders are already assigned a household ID and this information
- (HHID, district, TA, village, treatment) is then uploaded as a 
-\begin_inset CommandInset href
-LatexCommand href
-name "csv file"
-target "https://github.com/bjvca/malawi/blob/master/RCT/sampling/sampling_frame_ODK.csv"
-literal "false"
-
-\end_inset
-
- into the ODK app.
- The R-script that was used for the sampling and treatment allocation is
- under revision control and available for inspection on the 
-\begin_inset CommandInset href
-LatexCommand href
-name "github repository of this project"
-target "https://github.com/bjvca/malawi/blob/master/RCT/sampling/sample_frame.R"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-As is clear from the above, we do not have selected the actual households
- yet (due to privacy concerns we did not get names and IDs of the farmers
- registered in the AIP).
- To fill in these placeholders, we randomly sample within the relevant villages
- using systematic sampling.
- In particular, we first obtain from the village chief a list of all households
- in the village.
- We than determine the from this list the village size (n) and select every
- floor(n/40)th household name in the list to fill in the placeholders.
- For instance, in a village with 80 households, every second household will
- be selected.
- In a village of 400 households, every 10th household will be selected.
- Names of household head and contact details (telephone and gps coordinates)
- will be collected for follow-up.
- The ODK app will also indicate what treatment the household was assigned
- to towards the end of baseline data collection.
+ We then randomly sample 31 households in each of these 114 villages
 \end_layout
 
 \begin_layout Section*
@@ -860,14 +776,16 @@ The expected low correlation of some of our key outcomes over time also
  For instance, when flow variables like stocks held by farmers used as outcome
  variables, we expect that the difference between treatment and control
  will be largest in the early in the season.
- Therefor, when this outcome variable is used, estimate a (separate treatment
- effect) for July 2022, September 2022 and November 2022.
- For sales made by farmers, we expect that the treatment effect reverses
- over time, as early in the season, control farmers are likely to make sales,
- while later in the season (January 2023 and march 2023), treatment farmers
- are likely to make sales.
+ Therefor, when this outcome variable is used, we estimate a (separate treatment
+ effect) for September 2022 and December 2022.
  This will be modeled with a simple OLS regression that also has an interaction
- dummy for treatment and the last two survey rounds (January 2023 and march
+ dummy for treatment and the first two survey rounds (September 2022 and
+ December 2022).For sales made by farmers, we expect that the treatment effect
+ reverses over time, as early in the season, control farmers are likely
+ to make sales, while later in the season (December 2022 and March 2023),
+ treatment farmers are likely to make sales.
+ This will be modeled with a simple OLS regression that also has an interaction
+ dummy for treatment and the last two survey rounds (December 2022 and March
  2023).
 \end_layout
 
@@ -985,8 +903,8 @@ During baseline we will also collect recall data on marketing of the three
 \end_layout
 
 \begin_layout Standard
-Intermediate data will be collected in July 2022, September 2022, November
- 2022, and January 2023, generally by mobile phone.
+Intermediate data will be collected in September 2022 and December 2022,
+ generally by mobile phone.
  To allow for farmers that do not have access to a mobile phone, we will
  make sure that in each village we identify someone with a phone that can
  be shared with the farmer or farmers that do not have a phone.

@@ -104,8 +104,11 @@ all <- all[with(all, order(all$district, all$ta, all$gvh, all$village)),]
 
 all$farmer_ID <- paste("F",1:nrow(all), sep="_")
 
+all$person.name <-  trimws(as.character(all$person.name))
+all$unique_ID <- paste(paste(all$person.name,all$farmer_ID, sep=" ("),")", sep="")
+
 #save csv output
 write.csv(all[,c("farmer_ID","district", "ta", "gvh", "village", "treat")], file = paste(path,"sampling_frame_ODK.csv", sep="/"), row.names=F)
-write.csv(all[,c("farmer_ID","district", "ta", "gvh", "village", "person.type", "person.name", "NID", "sex","treat")], file = paste(path,"sampling_frame_ODK_names.csv", sep="/"), row.names=F)
+write.csv(all[,c("farmer_ID","district", "ta", "gvh", "village", "person.type", "person.name", "NID", "sex","treat","unique_ID")], file = paste(path,"sampling_frame_ODK_names.csv", sep="/"), row.names=F)
 
 

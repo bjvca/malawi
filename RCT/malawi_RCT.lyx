@@ -512,7 +512,8 @@ name "sec:Experimental-design-and"
 \end_layout
 
 \begin_layout Standard
-We propose parallel design with one control group and two treatment arms.
+We propose parallel design with one common control group and two treatment
+ arms (or a factorial design where the interaction cell is left empty).
  Kaur et al (personal communication) find that, in a similar budget neglect
  experiment, treated farmers enter the hungry season with 20 percent more
  maize (valued by current prices at 405 zambian kwacha instead of 335 zambian
@@ -523,9 +524,16 @@ We propose parallel design with one control group and two treatment arms.
  For one control group and two treatment arms we will thus need about 3400
  farmers.
  As power is optimal when one allocates approximately 42% of the sample
- to control, and then equally (29% each) to each treatment are, will choose
- 13 households for the control and 9 households in each of the two treatment
- groups per village.
+ to control, and then equally (29% each) to each treatment arm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muralidharan2019factorial"
+literal "false"
+
+\end_inset
+
+, will choose 13 households for the control and 9 households in each of
+ the two treatment groups per village.
  This means we will need about 109 villages.
 \end_layout
 
@@ -800,6 +808,78 @@ For other key outcomes (like for example prices received, proportion of
  For outcomes further down the impact pathway on which no baseline data
  was collected (such as consumption expenditure of the last month), we will
  simply compare treatment and control households.
+\end_layout
+
+\begin_layout Standard
+The exact model we estimate is the one that is used for factorial designs
+ but without the interaction term 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muralidharan2019factorial"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y=\beta_{0}+\mu_{v}+\beta_{1}T_{1}+\beta_{2}T_{2}+\theta Y_{b}+\varepsilon
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\emph on
+Y
+\emph default
+ is the outcome of interest post treatment, and 
+\begin_inset Formula $Y_{b}$
+\end_inset
+
+ is the outcome of interest measured at baseline.
+ 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+is an indicator dummy for the first treatment and 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ for the second.
+ We will focus on the within-village dimension of the data and so include
+ village fixed effects 
+\begin_inset Formula $\mu_{v}$
+\end_inset
+
+ and an overall constant 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+.
+ The parameters of interest are 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+as the average treatment effect for 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ as the average treatment effect for 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

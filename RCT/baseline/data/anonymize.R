@@ -70,6 +70,35 @@ map <-  leaflet() %>% setView(lat =mean(as.numeric(as.character(dta$gps_latitude
 
 saveWidget(map, file="malawi_progress.html") #traders and farmers 
 
+### create IDs for district, TA and village (q1, q2, q3)
+
+i_dist <- 1
+dta$distID <- NULL
+dta$taID <- NULL
+dta$vilID <- NULL
+
+for (dist in names(table(dta$q1))) {
+	print(dist)
+	i_sub <- 1
+	for (sub in names(table(dta$q2[dta$q1==dist]))) {
+		print(sub)
+			i_village <- 1
+			for (village in names(table(dta$q3[dta$q1 == dist & dta$q2 == sub]))) {
+				print(village)
+				dta$vilID[dta$q1 == dist & dta$q2 == sub & dta$q3 == village] <- i_village
+				i_village <- i_village + 1
+			}
+		dta$taID[dta$q1 == dist & dta$q2 == sub] <- i_sub
+		i_sub <- i_sub + 1
+	}
+dta$distID[dta$q1==dist] <- i_dist
+i_dist <- i_dist + 1
+}
+
+dta$distID <- as.numeric(dta$distID)
+dta$taID <- as.numeric(dta$taID)
+dta$vilID <- as.numeric(dta$vilID)
+
 
 
 to_drop <- c(

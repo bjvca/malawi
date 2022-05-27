@@ -1,0 +1,748 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<code,  echo=FALSE, warning = FALSE, message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+balance <- readRDS(paste(path,"results/balace.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Baseline balance
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Balance table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & nobs 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-5}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Household head is female & 
+\backslash
+Sexpr{balance[1,1]} & 
+\backslash
+Sexpr{balance[1,4]}$^{
+\backslash
+Sexpr{ifelse(balance[1,6]<.01,"**",ifelse(balance[1,6]<.05,"*",ifelse(balance[1,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[1,7]}$^{
+\backslash
+Sexpr{ifelse(balance[1,9]<.01,"**",ifelse(balance[1,9]<.05,"*",ifelse(balance[1,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[1,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[1,2]}) & (
+\backslash
+Sexpr{balance[1,5]})  & (
+\backslash
+Sexpr{balance[1,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Household size (number of people) & 
+\backslash
+Sexpr{balance[2,1]} & 
+\backslash
+Sexpr{balance[2,4]}$^{
+\backslash
+Sexpr{ifelse(balance[2,6]<.01,"**",ifelse(balance[2,6]<.05,"*",ifelse(balance[2,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[2,7]}$^{
+\backslash
+Sexpr{ifelse(balance[2,9]<.01,"**",ifelse(balance[2,9]<.05,"*",ifelse(balance[2,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[2,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[2,2]}) & (
+\backslash
+Sexpr{balance[2,5]})  & (
+\backslash
+Sexpr{balance[2,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Age of household head (year) & 
+\backslash
+Sexpr{balance[3,1]} & 
+\backslash
+Sexpr{balance[3,4]}$^{
+\backslash
+Sexpr{ifelse(balance[3,6]<.01,"**",ifelse(balance[3,6]<.05,"*",ifelse(balance[3,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[3,7]}$^{
+\backslash
+Sexpr{ifelse(balance[3,9]<.01,"**",ifelse(balance[3,9]<.05,"*",ifelse(balance[3,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[3,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[3,2]}) & (
+\backslash
+Sexpr{balance[3,5]})  & (
+\backslash
+Sexpr{balance[3,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Years of education of household head & 
+\backslash
+Sexpr{balance[4,1]} & 
+\backslash
+Sexpr{balance[4,4]}$^{
+\backslash
+Sexpr{ifelse(balance[4,6]<.01,"**",ifelse(balance[4,6]<.05,"*",ifelse(balance[4,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[4,7]}$^{
+\backslash
+Sexpr{ifelse(balance[4,9]<.01,"**",ifelse(balance[4,9]<.05,"*",ifelse(balance[4,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[4,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[4,2]}) & (
+\backslash
+Sexpr{balance[4,5]})  & (
+\backslash
+Sexpr{balance[4,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is corrugated iron & 
+\backslash
+Sexpr{balance[5,1]} & 
+\backslash
+Sexpr{balance[5,4]}$^{
+\backslash
+Sexpr{ifelse(balance[5,6]<.01,"**",ifelse(balance[5,6]<.05,"*",ifelse(balance[5,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[5,7]}$^{
+\backslash
+Sexpr{ifelse(balance[5,9]<.01,"**",ifelse(balance[5,9]<.05,"*",ifelse(balance[5,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[5,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[5,2]}) & (
+\backslash
+Sexpr{balance[5,5]})  & (
+\backslash
+Sexpr{balance[5,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of rooms in house & 
+\backslash
+Sexpr{balance[6,1]} & 
+\backslash
+Sexpr{balance[6,4]}$^{
+\backslash
+Sexpr{ifelse(balance[6,6]<.01,"**",ifelse(balance[6,6]<.05,"*",ifelse(balance[6,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[6,7]}$^{
+\backslash
+Sexpr{ifelse(balance[6,9]<.01,"**",ifelse(balance[6,9]<.05,"*",ifelse(balance[6,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[6,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[6,2]}) & (
+\backslash
+Sexpr{balance[6,5]})  & (
+\backslash
+Sexpr{balance[6,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Area of cultivated land (acres) & 
+\backslash
+Sexpr{balance[7,1]} & 
+\backslash
+Sexpr{balance[7,4]}$^{
+\backslash
+Sexpr{ifelse(balance[7,6]<.01,"**",ifelse(balance[7,6]<.05,"*",ifelse(balance[7,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[7,7]}$^{
+\backslash
+Sexpr{ifelse(balance[7,9]<.01,"**",ifelse(balance[7,9]<.05,"*",ifelse(balance[7,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[7,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[7,2]}) & (
+\backslash
+Sexpr{balance[7,5]})  & (
+\backslash
+Sexpr{balance[7,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Hired labour for maize, soybean or gnut productions? & 
+\backslash
+Sexpr{balance[8,1]} & 
+\backslash
+Sexpr{balance[8,4]}$^{
+\backslash
+Sexpr{ifelse(balance[8,6]<.01,"**",ifelse(balance[8,6]<.05,"*",ifelse(balance[8,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[8,7]}$^{
+\backslash
+Sexpr{ifelse(balance[8,9]<.01,"**",ifelse(balance[8,9]<.05,"*",ifelse(balance[8,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[8,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[8,2]}) & (
+\backslash
+Sexpr{balance[8,5]})  & (
+\backslash
+Sexpr{balance[8,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance to nearest all weather road (km) & 
+\backslash
+Sexpr{balance[9,1]} & 
+\backslash
+Sexpr{balance[9,4]}$^{
+\backslash
+Sexpr{ifelse(balance[9,6]<.01,"**",ifelse(balance[9,6]<.05,"*",ifelse(balance[9,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[9,7]}$^{
+\backslash
+Sexpr{ifelse(balance[9,9]<.01,"**",ifelse(balance[9,9]<.05,"*",ifelse(balance[9,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[9,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[9,2]}) & (
+\backslash
+Sexpr{balance[9,5]})  & (
+\backslash
+Sexpr{balance[9,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance to nearest market (km) & 
+\backslash
+Sexpr{balance[10,1]} & 
+\backslash
+Sexpr{balance[10,4]}$^{
+\backslash
+Sexpr{ifelse(balance[10,6]<.01,"**",ifelse(balance[10,6]<.05,"*",ifelse(balance[10
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[10,7]}$^{
+\backslash
+Sexpr{ifelse(balance[10,9]<.01,"**",ifelse(balance[10,9]<.05,"*",ifelse(balance[10
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[10,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[10,2]}) & (
+\backslash
+Sexpr{balance[10,5]})  & (
+\backslash
+Sexpr{balance[10,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: First column reports control group means (and standard deviations
+ below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

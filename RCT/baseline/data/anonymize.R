@@ -100,7 +100,6 @@ dta$taID <- as.numeric(dta$taID)
 dta$vilID <- as.numeric(dta$vilID)
 
 
-
 to_drop <- c(
 "start",                                        
 "end",                                          

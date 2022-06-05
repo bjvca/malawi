@@ -66,7 +66,7 @@ print(dta[dta$farmer_ID==i,1:27])
 
 pal <- colorFactor(c("red", "#4169E1","#228B22"),dta$treatment)
 
-map <-  leaflet() %>% setView(lat =mean(as.numeric(as.character(dta$gps_latitude)),na.rm=T), lng = mean(as.numeric(as.character(dta$gps_longitude)),na.rm=T), zoom=11)  %>%  addTiles(group="OSM") %>% addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G",  group="Google", attribution = 'Google')  %>% addProviderTiles(providers$OpenTopoMap, group="Topography") %>% addCircleMarkers(data=dta, lng=~as.numeric(as.character(gps_longitude)), lat=~as.numeric(as.character(gps_latitude)),radius= 2,   color = ~pal(treatment), popup = ~as.character(farmer_ID))   %>%  addLayersControl(baseGroups=c('OSM','Google','Topography')) 
+map <-  leaflet() %>% setView(lat =mean(as.numeric(as.character(dta$gps_latitude)),na.rm=T), lng = mean(as.numeric(as.character(dta$gps_longitude)),na.rm=T), zoom=9)  %>%  addTiles(group="OSM") %>% addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G",  group="Google", attribution = 'Google')  %>% addProviderTiles(providers$OpenTopoMap, group="Topography") %>% addCircleMarkers(data=dta, lng=~as.numeric(as.character(gps_longitude)), lat=~as.numeric(as.character(gps_latitude)),radius= 2,   color = ~pal(treatment), popup = ~as.character(farmer_ID))   %>%  addLayersControl(baseGroups=c('OSM','Google','Topography')) 
 
 saveWidget(map, file="malawi_progress.html") #traders and farmers 
 

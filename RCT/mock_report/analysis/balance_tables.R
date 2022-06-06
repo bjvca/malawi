@@ -5,6 +5,8 @@ path <- strsplit(path, "/mock_report")[[1]]
 
 dta <- read.csv(paste(path,"baseline/data/public/baseline_data.csv", sep="/"))
 
+
+
 ###create unique dist_ta_vil variable to use for fixed effects
 dta$fe_vil <- as.factor(paste(paste(dta$distID, dta$taID, sep="_"),dta$vilID, sep ="_"))
 

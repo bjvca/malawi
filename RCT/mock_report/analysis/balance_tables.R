@@ -1,5 +1,10 @@
 
 #run in malawi/RCT/mock_report
+library(nnet)
+library(lmtest)
+
+
+
 path <- getwd()
 path <- strsplit(path, "/mock_report")[[1]]
 
@@ -87,6 +92,24 @@ res_bal[i,9] <- round(allModelsSummaries[[i]]$coefficients[3,4],digits=3)
 res_bal[i,10] <- nrow(model.frame(allModelsResults[[i]]))
 
 }
+
+##joint orthogonality
+
+### do this with a multinomial model and a Likelihood ration test : -2*L(null model) – (-2*L(fitted model)) = 365.736 – 332.641 = 33.095
+
+nullMod <- multinom(treatment ~1, data=na.omit(dta[ , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market))]))
+altMod <- multinom(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta)
+lrtest(altMod, nullMod)
+
+#What if we use F-tests
+x <-  summary(lm((treatment=="T1")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta[dta$treatment%in%c("T1","C"),]))
+
+f_test_p_T1 <-  pf(x$fstatistic[1],x$fstatistic[2],x$fstatistic[3],lower.tail=FALSE)
+ 
+x <-  summary(lm((treatment=="T2")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta[dta$treatment%in%c("T2","C"),]))
+
+f_test_p_T2 <-  pf(x$fstatistic[1],x$fstatistic[2],x$fstatistic[3],lower.tail=FALSE)
+
 
 saveRDS(res_bal, paste(path,"mock_report/results/balace.RData", sep="/"))
 

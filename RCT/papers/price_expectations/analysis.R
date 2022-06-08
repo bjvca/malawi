@@ -2,6 +2,7 @@
 
 library(reshape2)
 library(ggplot2)
+library(ggpubr)
 
 path <- getwd()
 path <- strsplit(path, "papers/price_expectations")[[1]]
@@ -46,6 +47,7 @@ temp_dta$crop <- "groundnuts"
 
 graph <- rbind(graph,temp_dta)
 graph$price[graph$crop=="groundnuts"] <- graph$price[graph$crop=="groundnuts"]/20
+
 
 png(paste(path,"papers/price_expectations/results/fig1.png",sep = ""), units="px", height=3200, width= 3800, res=600)
 ggplot(graph, aes(crop, price,fill=time)) + 
@@ -224,6 +226,25 @@ all$price[all$price < 99] <- NA
 to_plot_soy <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[5:15])
 to_plot_soy$date <- rownames(to_plot_soy)
 names(to_plot_soy) <- c("price","date")
+
+to_plot_soy_b <- to_plot_soy
+to_plot_maize_b <- to_plot_maize
+to_plot_gnuts_b <- to_plot_gnuts
+
+to_plot_soy$price <- to_plot_soy$price / 4
+
+to_plot_soy$crop <- "soy"
+to_plot_maize$crop <- "maize"
+to_plot_gnuts$crop <- "gnuts"
+all_1 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
+names(all_1) <- c("price","month","crop")
+plot_1 <- ggplot(all_1 ,aes(x=as.Date(month),y=price,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b") 
+
+to_plot_soy <- to_plot_soy_b
+to_plot_maize <- to_plot_maize_b
+to_plot_gnuts <- to_plot_gnuts_b
+
+
 to_plot_soy$price <- to_plot_soy$price / to_plot_soy$price[1]*100  
 to_plot_maize$price <- to_plot_maize$price / to_plot_maize$price[1]*100  
 to_plot_gnuts$price <- to_plot_gnuts$price / to_plot_gnuts$price[1]*100  
@@ -232,11 +253,33 @@ to_plot_gnuts$price <- to_plot_gnuts$price / to_plot_gnuts$price[1]*100
 to_plot_soy$crop <- "soy"
 to_plot_maize$crop <- "maize"
 to_plot_gnuts$crop <- "gnuts"
-all <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
+all_2 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
 
-names(all) <- c("price_change","month","crop")
+names(all_2) <- c("price_change","month","crop")
+plot_2 <- ggplot(all_2 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed")
+
+to_plot_soy <- to_plot_soy_b
+to_plot_maize <- to_plot_maize_b
+to_plot_gnuts <- to_plot_gnuts_b
+
+
+to_plot_soy$price <- to_plot_soy$price / to_plot_soy$price[5]*100  
+to_plot_maize$price <- to_plot_maize$price / to_plot_maize$price[5]*100  
+to_plot_gnuts$price <- to_plot_gnuts$price / to_plot_gnuts$price[5]*100  
+
+
+to_plot_soy$crop <- "soy"
+to_plot_maize$crop <- "maize"
+to_plot_gnuts$crop <- "gnuts"
+all_3 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
+
+names(all_3) <- c("price_change","month","crop")
+plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed") + geom_vline(xintercept = as.numeric(as.Date(all$month[5])), linetype="dotted")+ geom_vline(xintercept = as.numeric(as.Date(all$month[9])), linetype="dotted")
+ 
+
+
 
 png(paste(path,"papers/price_expectations/results/fig2.png",sep = ""), units="px", height=3200, width= 3800, res=600)
-ggplot(all ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.5) + scale_x_date(date_labels = "%b") 
+ggarrange(plot_1, plot_2,plot_3, heights = c(2, 2,2), ncol = 1, nrow = 3, align = "v")
 dev.off()
 

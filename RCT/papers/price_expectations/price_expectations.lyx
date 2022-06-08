@@ -195,6 +195,13 @@ We first look at
 
 \begin_layout Section*
 Price expectations
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Price-expectations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -208,11 +215,13 @@ noprefix "false"
 
 \end_inset
 
- shows price expectations for the three crops included in the study.
+ shows price expectations for the three crops included in the study (expressed
+ per kg of the crop).
  As can be seen, farmers expect that prices increase over time.
- But, at least for maize and groundnuts, uncertainty about prices also seem
- to increase over time.
- The increase of the price over the course of only a few months is substantial.
+ But, at least for maize and groundnuts, uncertainty about expected prices
+ also seem to increase over time.
+ The increase of the expected price over the course of only a few months
+ is substantial.
  For example, for maize, the increase in median price is 
 \begin_inset ERT
 status open
@@ -313,7 +322,7 @@ Price seasonality in the previous season
 \end_layout
 
 \begin_layout Standard
-Figure 
+The top panel of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Evolution-of-prices"
@@ -323,24 +332,210 @@ noprefix "false"
 
 \end_inset
 
- shows the evolution of the median prices farmers received for their crops
- in the past.
+ shows the evolution of the median prices that farmers received for their
+ crops in the past.
  In particular, we asked farmers to report if they sold any of the three
  crops under consideration.
  If they reported sales, we asked how many separate transactions occurred
  and for each transaction, we recorded details such as the amount sold and
  price received.
- 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Prices for groundnuts and maize are in kilograms.
+ For soybean, they are per 250 gram to keep the prices on a comparable scales.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The figure show that over the course of the year, prices for all commodities
+The middle panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evolution-of-prices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows price indices with as base the month of May 2021.
+ This is the month following the harvest for most of the crops (although
+ groundnuts is harvested somewhat later) and it also happens to be around
+ the time the survey happened in 2022.
+ The figure show that over the course of the year, prices for all commodities
  have been increasing.
- After only 4 months, prices of groundnuts already inceased by 50 percent.
- After 5 month, in October, median prices of all three crops were 50 percent
- higher than immediately after the harvest in May.
- By December, prices of soybean had doubled.
- Prices of groundnuts doubled by January 2022.
+ After only 4 months, prices of groundnuts already increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_2$price_change[all_2$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+gnuts
+\begin_inset Quotes erd
+\end_inset
+
+][5] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ After 6 months, in November 2021, median prices of all three crops were
+ about 50 percent higher than immediately after the harvest in May.
+ By December, prices of soybean had more than doubled and were still on
+ the rise.
+\end_layout
+
+\begin_layout Standard
+The bottom panel shows price indices with as base the month of September
+ 2021 and is included to facilitate comparison with the price expectations
+ presented in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Price-expectations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It shows that between September 2021 and January 2022, median soybean prices
+ increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+soy
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ However, as seen in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Price-expectations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, farmers expect a price increase in 2022 of only 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="soybean" & graph$time =="December"]
+, na.rm=T)/median(graph$price[graph$crop=="soybean" & graph$time =="September"],
+ na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ For groundnuts, prices increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+gnuts
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent, while expectations are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="groundnuts" & graph$time =="Decembe
+r"], na.rm=T)/median(graph$price[graph$crop=="groundnuts" & graph$time =="Septemb
+er"], na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ For maize, prices remained fairly stable, increasing only 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+maize
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ Farmers expect an increase of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="maize" & graph$time =="December"],
+ na.rm=T)/median(graph$price[graph$crop=="maize" & graph$time =="September"],
+ na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent for maize.
+ 
 \begin_inset Float figure
 wide false
 sideways false

@@ -687,6 +687,54 @@ Sexpr{balance[10,8]})
 
 \begin_layout Plain Layout
 
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+F-test C/T1 (p-value) & 
+\backslash
+Sexpr{balance[11,1]} & (
+\backslash
+Sexpr{balance[11,2]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+F-test C/T2  (p-value) & 
+\backslash
+Sexpr{balance[12,1]} & (
+\backslash
+Sexpr{balance[12,2]})& 
+\backslash
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Likelihood Ratio Test (p-value) & 
+\backslash
+Sexpr{balance[13,1]} & (
+\backslash
+Sexpr{balance[13,2]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -727,7 +775,12 @@ scriptsize
 
 Note: First column reports control group means (and standard deviations
  below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
+ F-test test for joint significance in a regression with treatment status
+ on the left hand side (T1/C or T2/C).
+ Likelihood ratio test is derived from a multinomial model where the left
+ hand side has three levels (T1,T2,C).
  All models include village fixed effects.
+ 
 \end_layout
 
 \end_inset

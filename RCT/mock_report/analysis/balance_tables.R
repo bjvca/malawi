@@ -71,7 +71,7 @@ allModelsSummaries = lapply(allModelsResults, summary)
 
 
 ###prepare matrix that can be easily used 
-res_bal <- matrix(NA,10,10)
+res_bal <- matrix(NA,13,10)
 ### ctrl mean
 res_bal[1:10,1] <- round(colMeans(dta[dta$treatment=="C",basevars], na.rm=T), digits=3)
 
@@ -97,19 +97,28 @@ res_bal[i,10] <- nrow(model.frame(allModelsResults[[i]]))
 
 ### do this with a multinomial model and a Likelihood ration test : -2*L(null model) – (-2*L(fitted model)) = 365.736 – 332.641 = 33.095
 
-nullMod <- multinom(treatment ~1, data=na.omit(dta[ , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market))]))
-altMod <- multinom(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta)
+nullMod <- multinom(treatment ~1 + fe_vil, data=na.omit(dta[ , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil))]))
+altMod <- multinom(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil, data = dta)
 lrtest(altMod, nullMod)
 
-#What if we use F-tests
-x <-  summary(lm((treatment=="T1")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta[dta$treatment%in%c("T1","C"),]))
+res_bal[13,1] <-round(lrtest(altMod, nullMod)[2,4],digits=3)
+res_bal[13,2] <-round(lrtest(altMod, nullMod)[2,5],digits=3)
 
-f_test_p_T1 <-  pf(x$fstatistic[1],x$fstatistic[2],x$fstatistic[3],lower.tail=FALSE)
+##simple F-tests (actully also LR tests because we have fixed effects)
+
+mod1<- lm((treatment=="T1")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil, data = dta[dta$treatment%in%c("T1","C"),])
+mod2<- lm((treatment=="T1")~ fe_vil, data = na.omit(dta[dta$treatment%in%c("T1","C") , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil))]))
+test_res <- lrtest(mod1, mod2) 
+
+res_bal[11,1] <-round(test_res[2,4],digits=3)
+res_bal[11,2] <-round(test_res[2,5],digits=3)
  
-x <-  summary(lm((treatment=="T2")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market, data = dta[dta$treatment%in%c("T2","C"),]))
-
-f_test_p_T2 <-  pf(x$fstatistic[1],x$fstatistic[2],x$fstatistic[3],lower.tail=FALSE)
-
+mod1<- lm((treatment=="T2")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil, data = dta[dta$treatment%in%c("T2","C"),])
+mod2<- lm((treatment=="T2")~ fe_vil, data = na.omit(dta[dta$treatment%in%c("T2","C") , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil))]))
+test_res <- lrtest(mod1, mod2) 
+ 
+res_bal[12,1] <-round(test_res[2,4],digits=3)
+res_bal[12,2] <-round(test_res[2,5],digits=3)
 
 saveRDS(res_bal, paste(path,"mock_report/results/balace.RData", sep="/"))
 

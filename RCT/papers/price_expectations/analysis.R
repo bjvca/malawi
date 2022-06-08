@@ -274,7 +274,7 @@ to_plot_gnuts$crop <- "gnuts"
 all_3 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
 
 names(all_3) <- c("price_change","month","crop")
-plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed") + geom_vline(xintercept = as.numeric(as.Date(all$month[5])), linetype="dotted")+ geom_vline(xintercept = as.numeric(as.Date(all$month[9])), linetype="dotted")
+plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed") + geom_vline(xintercept = as.numeric(as.Date(all_3$month[5])), linetype="dotted")+ geom_vline(xintercept = as.numeric(as.Date(all_3$month[9])), linetype="dotted")
  
 
 

@@ -295,7 +295,8 @@ In this paper, we use survey data to investigate price expectations.
 \end_layout
 
 \begin_layout Standard
-We first look at 
+We first look at smallholder market participation in our sample.
+ We then look at price expectations.
 \end_layout
 
 \begin_layout Section*
@@ -410,6 +411,255 @@ name "fig:Price-expectations"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Smallholder market participation
+\end_layout
+
+\begin_layout Standard
+We find reasonable market participation by the farmers in our sample for
+ the three crops.
+ For instance, of the X farmers interviewed, we find that 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+
+ percent reported at least one sales transaction.
+ But there are also signs of sub-optimal sales behaviour.
+ For instance, in the face of uncertainty of price behavior in both directions,
+ it selling everything in one 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+[is this true? Reference? Theory]
+\end_layout
+
+\end_inset
+
+: of all the farmers that reported to report at least one transaction, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+
+ percent indicated that they sold everything in a single transaction.
+ In addition, of all the farmers that sold, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+
+ percent sold more than 50 percent of marketed quantities in the first 3
+ months after harvest (May, June or July 2021)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Should we delve into this more, eg with cumulative distribution functions
+ of quantities sold
+\end_layout
+
+\end_inset
+
+.
+ Finally, a fair share of farmers appear to fit in the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low
+\begin_inset Quotes erd
+\end_inset
+
+ category X percent of the farmers indicate only a single transaction.
+ Table 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Market participation by crop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& percentage & single & immediately & single transaction 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& sold &transaction & post-harvest & immediately post harves 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-5}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+maize & NA & NA & NA & NA
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gnuts & NA & NA & NA & NA
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+soybean & NA & NA & NA & NA
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -641,6 +891,9 @@ Sexpr{round((median(graph$price[graph$crop=="maize" & graph$time =="December"],
 
  percent for maize.
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false

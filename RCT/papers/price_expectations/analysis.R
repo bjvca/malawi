@@ -8,7 +8,7 @@ path <- getwd()
 path <- strsplit(path, "papers/price_expectations")[[1]]
 
 dta <- read.csv(paste(path,"baseline/data/public/baseline_data.csv", sep="/"))
-
+dta[dta=="n/a"] <- NA
 dta$fe_vil <- as.factor(paste(paste(dta$distID, dta$taID, sep="_"),dta$vilID, sep ="_"))
 
 ### create a graph of price expectations
@@ -185,7 +185,6 @@ names(to_plot_gnuts) <- c("price","date")
 
 ### for soybean
 
-### start with maize  
 sel <- c( "trans2.1..q52b", "trans2.1..q52d")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans2.1..q52a")
@@ -282,4 +281,41 @@ plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=cr
 png(paste(path,"papers/price_expectations/results/fig2.png",sep = ""), units="px", height=3200, width= 3800, res=600)
 ggarrange(plot_1, plot_2,plot_3, heights = c(2, 2,2), ncol = 1, nrow = 3, align = "v")
 dev.off()
+
+
+### do farmers who sell at least once have higher price expectations?
+
+#sold any maize
+
+summary(lm((dta$q24)~q41=="Yes",data=dta))
+summary(lm((dta$q25)~q41=="Yes",data=dta))
+summary(lm((dta$q25 - dta$q24)~q41=="Yes",data=dta))
+
+summary(lm((dta$q27)~q50=="Yes",data=dta))
+summary(lm((dta$q28)~q50=="Yes",data=dta))
+summary(lm((dta$q28 - dta$q27)~q50=="Yes",data=dta))
+
+summary(lm((dta$q30)~q46=="Yes",data=dta))
+summary(lm((dta$q31)~q46=="Yes",data=dta))
+summary(lm((dta$q31 - dta$q30)~q46=="Yes",data=dta))
+
+# if number of sales transactions > 1 how does that affect price expectations
+as.numeric(as.character(dta$q42)>1)
+
+summary(lm((dta$q24)~as.numeric(as.character(dta$q42)>1),data=dta))
+summary(lm((dta$q25)~as.numeric(as.character(dta$q42)>1),data=dta))
+summary(lm((dta$q25 - dta$q24)~as.numeric(as.character(dta$q42)>1),data=dta))
+
+
+summary(lm((dta$q27)~as.numeric(as.character(dta$q51)>1),data=dta))
+summary(lm((dta$q28)~as.numeric(as.character(dta$q51)>1),data=dta))
+summary(lm((dta$q28 - dta$q27)~as.numeric(as.character(dta$q51)>1),data=dta))
+
+
+summary(lm((dta$q30)~as.numeric(as.character(dta$q47)>1),data=dta))
+summary(lm((dta$q31)~as.numeric(as.character(dta$q47)>1),data=dta))
+summary(lm((dta$q31 - dta$q30)~as.numeric(as.character(dta$q47)>1),data=dta))
+
+#does the timing of first sale affect price expectations (the earlier they sold, the lower price expectations)
+
 

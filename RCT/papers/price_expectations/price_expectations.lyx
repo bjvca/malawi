@@ -135,24 +135,7 @@ status open
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 path <- getwd()
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-path <- getwd()
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -162,10 +145,6 @@ source(paste(path, "analysis.R
 \end_inset
 
 , sep = "/"))
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -190,7 +169,7 @@ n.
  and sell a surplus.
  Other farmers cultivate cash crops.
  Therefore, most farmers are not strictly subsistence farmers, but also
- participate in the market not only as consumers, but also as producers.
+ participate in the market, not only as consumers, but also as producers.
 \end_layout
 
 \begin_layout Standard
@@ -208,8 +187,9 @@ literal "false"
 
 .
  This generally also means that prices exhibit significant seasonality,
- with price low immediately after harvest as supply booms, and then gradually
- increasing until reaching a peak just before the next harvest 
+ with price at their lowest immediately after harvest as supply booms, and
+ then gradually increasing until reaching a peak just before the next harvest
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "GILBERT2017119"
@@ -222,12 +202,13 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The recurrent price movements suggests that farmers have an incentive to
- delay sales of at least part of their marketable surplus until prices recovered.
+These predictable and recurrent price movements suggests that farmers have
+ an incentive to delay sales of at least part of their marketable surplus
+ until prices recover.
  In practice, however, we often see that farmers sell all of their crop
  immediately after harvest when prices are at their lowest.
- Often, later in the season, farmers often run out of stocks and are forced
- to turn to the market again, now buying the same commodity at much higher
+ Often, later in the season, farmers run out of stocks and are forced to
+ turn to the market again, now buying the same commodity at much higher
  prices.
  This has sometimes been referred to as that 
 \begin_inset Quotes eld
@@ -284,7 +265,26 @@ literal "false"
  offered subsidized loans in randomly selected villages in rural Zambia
  and conclude that liquidity constraints contribute to inequality in rural
  economies.
- 
+ Farmers may simply lack sufficient safe storage space for their crops,
+ making it too expensive to store for longer periods of time.
+\end_layout
+
+\begin_layout Standard
+In this paper, the focus is on the price.
+ From the time of harvest onward, farmers need to engage in complex inter-tempor
+al cost-benefit calculations and compare what they could get now to what
+ they expect they could get in the future.
+ The key unknown in this Euler equation is the price of the commodity in
+ the future.
+ The farmer will have to, with the best possible information he has at the
+ time of decision making, form expectations about the price.
+\end_layout
+
+\begin_layout Standard
+If farmers sell too low, it means that they expect the price in the future
+ to be too low.
+ There are many reasons why farmers estimate the price to be too low.
+ Due to anchoring, farmers ma
 \end_layout
 
 \begin_layout Standard
@@ -936,6 +936,14 @@ name "fig:Evolution-of-prices"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section*
+Anchoring
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

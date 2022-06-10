@@ -11,7 +11,7 @@ dta_2 <- read.csv(paste(path,"raw/latest_form2.csv", sep="/"),stringsAsFactors =
 
 dta <- rbind.fill(dta,dta_2)
 
-#todo: remote this check.check2.maize. clutter
+#dta <- subset(dta, as.numeric(as.Date(today))!=19135 )
 
 names(dta) <- sub("check.check2.maize.", "",names(dta))
 names(dta) <- sub("_", "",names(dta))
@@ -20,8 +20,9 @@ names(dta)[names(dta) == 'farmerID'] <- 'farmer_ID'
 dim(dta[duplicated(dta$farmer_ID),])
 
 
-## save some records where we could not pull from sampling list due to trailing spaces
-## these were essentially treated as control so we can keep the controls
+## save some records where we could not pull from sampling list due to trailing spaces - this was fixed after a few days
+## records that failed to be pulled did not get a treatment and so are defacto control. Some of the farmers that could not be pulled were controls anyway so these can be saved
+
 
 dta$farmer_ID[dta$Xuuid == "27b660d0-95a0-41be-9a40-c422df65d34f"] <- "F_72"
 dta$treatment[dta$Xuuid == "27b660d0-95a0-41be-9a40-c422df65d34f"] <- "C"
@@ -32,33 +33,25 @@ dta$treatment[dta$Xuuid == "98ba3655-c4d2-4f6c-8e10-99696c20cf5c"] <- "C"
 dta$farmer_ID[dta$Xuuid == "e5ec1f93-9363-4b30-bbf4-de163609bd51"] <- "F_974"
 dta$treatment[dta$Xuuid == "e5ec1f93-9363-4b30-bbf4-de163609bd51"] <- "C"
 
-dta[c("Xuuid","farmername","farmer_ID")][dta$farmer_ID=="n/a",]
+#remove remaining n/as
+dta <- subset(dta, farmer_ID!="n/a")
+### remove cases that have n/a for treatment - these are empty because they did not grow or refused or whatever
+dta$treatment[dta$treatment == "n/a"] <- NA 
+dta <- subset(dta, !is.na(treatment))
 
-### this is from the new form
+dim(dta[duplicated(dta[c("farmer_ID","q11")]),])
 
-
-dim(dta[duplicated(dta$farmer_ID),])
-
-dta$farmer_ID[duplicated(dta$farmer_ID)]
- [1] "n/a"    "F_71"   "F_1055" "F_1014" "n/a"    "F_29"   "F_1083" "F_1065"
- [9] "n/a"    "F_502"  "n/a"    "F_1082" "n/a"    "F_128"  "n/a"    "n/a"   
-[17] "F_455"  "F_575"  "F_577"  "F_572"  "n/a"    "F_538"  "F_476"  "F_589" 
-[25] "F_559"  "F_109"  "F_384"  "F_970"  "F_352"  "F_97"  
+## 1 appears to be real duplicates -  delete
+dta <- subset(dta,dta$Xuuid!= "a26a4e25-b352-4884-b061-a7a9958467e4")
 
 ### I dont think duplicates are a big problem at this stage - we can just treat them as extra interviews
-### so for the duplicates where q4a is no, we can just change the farmer_ID to some random new number?
+### so for the duplicates where q4a is no, we can just change the farmer_ID to some new number?
 
-for (i in dta$farmer_ID[duplicated(dta$farmer_ID)]) {
-if (i != "n/a") {
-print(dta[dta$farmer_ID==i,1:27])
+dups <- dta$Xuuid[duplicated(dta$farmer_ID)]
+
+for (i in 1:sum(duplicated(dta$farmer_ID))) {
+dta$farmer_ID[dta$Xuuid == dups[i]] <- paste("F",3534+i, sep="_")
 }
-}
-
-
-
-
-
-
 
 
 

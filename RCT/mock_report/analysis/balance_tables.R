@@ -2,6 +2,7 @@
 #run in malawi/RCT/mock_report
 library(nnet)
 library(lmtest)
+library(car)
 
 
 
@@ -66,7 +67,12 @@ allModelsList <- lapply(paste(basevars,"treatment + fe_vil", sep="~"), as.formul
 allModelsResults <- lapply(allModelsList, function(x) lm(x, data = dta)) 
 allModelsSummaries = lapply(allModelsResults, summary) 
 
+##some checks
 
+#summary(lm(tot_acre~treatment, data=dta))
+
+#summary(lm(tot_acre~treatment=="T1", data=dta[dta$treatment%in%c("C","T1"),]))
+#summary(lm(tot_acre~treatment=="T2", data=dta[dta$treatment%in%c("C","T2"),]))
 
 
 
@@ -104,21 +110,21 @@ lrtest(altMod, nullMod)
 res_bal[13,1] <-round(lrtest(altMod, nullMod)[2,4],digits=3)
 res_bal[13,2] <-round(lrtest(altMod, nullMod)[2,5],digits=3)
 
-##simple F-tests (actully also LR tests because we have fixed effects)
-
+##simple F-tests
+ 
 mod1<- lm((treatment=="T1")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil, data = dta[dta$treatment%in%c("T1","C"),])
-mod2<- lm((treatment=="T1")~ fe_vil, data = na.omit(dta[dta$treatment%in%c("T1","C") , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil))]))
-test_res <- lrtest(mod1, mod2) 
+test_res <- linearHypothesis(mod1, c("femheadTRUE=0","hhsize=0", "agehead=0","eduhead=0","ironroofTRUE=0","nr_rooms=0","tot_acre=0","hired_labourTRUE=0","distance_road=0","distance_market=0"))
 
-res_bal[11,1] <-round(test_res[2,4],digits=3)
-res_bal[11,2] <-round(test_res[2,5],digits=3)
+
+res_bal[11,1] <-round(test_res[2,5],digits=3)
+res_bal[11,2] <-round(test_res[2,6],digits=3)
  
 mod1<- lm((treatment=="T2")~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil, data = dta[dta$treatment%in%c("T2","C"),])
-mod2<- lm((treatment=="T2")~ fe_vil, data = na.omit(dta[dta$treatment%in%c("T2","C") , all.vars(formula(treatment~femhead+hhsize+agehead+eduhead+ironroof+nr_rooms+tot_acre+hired_labour+distance_road+distance_market + fe_vil))]))
-test_res <- lrtest(mod1, mod2) 
- 
-res_bal[12,1] <-round(test_res[2,4],digits=3)
-res_bal[12,2] <-round(test_res[2,5],digits=3)
+test_res <- linearHypothesis(mod1, c("femheadTRUE=0","hhsize=0", "agehead=0","eduhead=0","ironroofTRUE=0","nr_rooms=0","tot_acre=0","hired_labourTRUE=0","distance_road=0","distance_market=0"))
+
+
+res_bal[12,1] <-round(test_res[2,5],digits=3)
+res_bal[12,2] <-round(test_res[2,6],digits=3)
 
 saveRDS(res_bal, paste(path,"mock_report/results/balace.RData", sep="/"))
 

@@ -7,6 +7,7 @@ library(multiwayvcov)
 library(clubSandwich)
 library(car)
 
+
 path <- getwd()
 path <- strsplit(path, "papers/price_expectations")[[1]]
 
@@ -130,7 +131,7 @@ names(all) <-  c("farmer_ID", "date","form","price")
 all <- subset(all, form ==2)
 all$price[all$price > 999] <- NA
 all$price[all$price < 25] <- NA
-to_plot_maize <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[6:16])
+to_plot_maize <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[7:17])
 to_plot_maize$date <- rownames(to_plot_maize)
 names(to_plot_maize) <- c("price","date")
 
@@ -187,6 +188,9 @@ all$price <- all$price/20
 to_plot_gnuts <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[4:14])
 to_plot_gnuts$date <- rownames(to_plot_gnuts)
 names(to_plot_gnuts) <- c("price","date")
+to_plot_gnuts[11,2] <- "2022-03-01"
+to_plot_gnuts[11,1] <- NA
+
 
 all_gnuts <- all
 
@@ -232,6 +236,12 @@ all$price[all$price < 99] <- NA
 to_plot_soy <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[5:15])
 to_plot_soy$date <- rownames(to_plot_soy)
 names(to_plot_soy) <- c("price","date")
+
+to_plot_soy[10,2] <- "2022-02-01"
+to_plot_soy[10,1] <- NA
+
+to_plot_soy[11,2] <- "2022-03-01"
+to_plot_soy[11,1] <- NA
 
 all_soy <- all
 
@@ -335,6 +345,7 @@ summary(lm((dta$q31 - dta$q30)~as.numeric(as.character(dta$q47)>1),data=dta))
 # does average price affect expectations
 #q: what price to use if more than one transaction?
 #start with average price
+
 
 ## collect results in resmat
 resmat <- matrix(NA,14,3)
@@ -617,3 +628,4 @@ dta$q66[dta$q66>1600] <- NA
 median(dta$q66)
 
 median(dta$q66[dta$soy_sold_share>.8], na.rm=T)
+

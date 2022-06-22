@@ -120,6 +120,13 @@ thanks{Development Strategy and Governance Division, International Food
 Inertia in price expectations: The case of smallholder farmers in Malawi
 \end_layout
 
+\begin_layout Standard
+Smallholder farmers in low and middle income countries often sell the bulk
+ of their marketable surplus immediately after the harvest, when prices
+ are at their lowest.
+ 
+\end_layout
+
 \begin_layout Section*
 Introduction
 \end_layout
@@ -188,8 +195,8 @@ literal "false"
 .
  This generally also means that prices exhibit significant seasonality,
  with price at their lowest immediately after harvest as supply booms, and
- then gradually increasing until reaching a peak just before the next harvest
- 
+ prices then gradually increasing until reaching a peak just before the
+ next harvest 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "GILBERT2017119"
@@ -204,13 +211,13 @@ literal "false"
 \begin_layout Standard
 These predictable and recurrent price movements suggests that farmers have
  an incentive to delay sales of at least part of their marketable surplus
- until prices recover.
+ until prices recover from their post harvest slump.
  In practice, however, we often see that farmers sell all of their crop
  immediately after harvest when prices are at their lowest.
  Often, later in the season, farmers run out of stocks and are forced to
- turn to the market again, now buying the same commodity at much higher
- prices.
- This has sometimes been referred to as that 
+ turn to the market again, now buying back the same commodities at much
+ higher prices.
+ This has sometimes been referred to as the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -265,38 +272,114 @@ literal "false"
  offered subsidized loans in randomly selected villages in rural Zambia
  and conclude that liquidity constraints contribute to inequality in rural
  economies.
- Farmers may simply lack sufficient safe storage space for their crops,
- making it too expensive to store for longer periods of time.
+ Another often heard reason is that farmers may simply lack sufficient safe
+ storage space for their crops, making it too expensive to store for longer
+ periods of time.
+ If storage is the main reason why farmers do not engage in intertemporal
+ arbitrage, then providing storage technology should delay sales.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "OMOTILEWA2018176"
+literal "false"
+
+\end_inset
+
+ indeed find that Ugandan maize farmers that received a low cost, simple,
+ and effective technology for low resource farmers to help them preserve
+ their dry crops after harvest with minimal losses due to storage insects
+ (so called PICS bags) stored maize for a longer period.
+ However, in a study comparing the importance of liquidity constraints and
+ storage limitations, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CHANNA2022102851"
+literal "false"
+
+\end_inset
+
+ finds that only the former contains farmers from selling later at higher
+ prices in Tanzania.
 \end_layout
 
 \begin_layout Standard
-In this paper, the focus is on the price.
+While the above factors will be binding for some farmers, many questions
+ remain unanswered.
+ For example, if liquidity constraints are the main problem, it is unclear
+ why farmers generally sell everything at once, instead of just enough to
+ cover the most urgent expenses.
+ If storage is a problem, it seems strange strange that not more farmers
+ form groups to rent storage space, or why in Malawi the Agricultural Commodity
+ Exchange faces difficulties filling their warehouses.
+ 
+\end_layout
+
+\begin_layout Standard
+In this paper, the focus is on the role of price expectations.
  From the time of harvest onward, farmers need to engage in complex inter-tempor
 al cost-benefit calculations and compare what they could get now to what
  they expect they could get in the future.
  The key unknown in this Euler equation is the price of the commodity in
  the future.
- The farmer will have to, with the best possible information he has at the
- time of decision making, form expectations about the price.
+ At the time of the harvest, the farmer needs to form expectations about
+ the price conditional on the information set available, and this needs
+ to be continuously updated as new information becomes available over time.
+ 
 \end_layout
 
 \begin_layout Standard
-If farmers sell too low, it means that they expect the price in the future
- to be too low.
- There are many reasons why farmers estimate the price to be too low.
- Due to anchoring, farmers ma
+The assumption that farmers sell too low implies that farmers expect the
+ price in the future to be too low
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A recent working paper argues that the assumption that farmers sell too
+ low may be false.
+ Using price data from 751 markets in 26 countries across Sub-Saharan Africa,
+ they find that seasonal price movements are limited and the probability
+ of negative returns to storage substantial 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+.
+ However, it remains unclear if the prices that these authors use (collected
+ in market centers) are representative of the prices farmer face.
+\end_layout
+
+\end_inset
+
+.
+ One reason why farmers may consistently underestimate future prices is
+ related to inertia or anchoring, where farmers rely on past experience
+ to predict future prices..
+ 
 \end_layout
 
 \begin_layout Standard
 In this paper, we use survey data to investigate price expectations.
  In particular, we asked farmers at the time of the harvest about their
  price expectations at two points in time in the near future.
- 
+ We then look at smallholder market participation in the season preceding
+ the survey with a particular focus on prices received.
+ We then correlate prices received in the past to price expectations in
+ the future.
 \end_layout
 
 \begin_layout Standard
-We first look at smallholder market participation in our sample.
- We then look at price expectations.
+We find that prices farmers that received higher prices in the previous
+ season also expect higher prices in the next season.
+ This is especially the case for groundnuts; for soybean, prices in the
+ past are not correlated to prices in the future.
+ Furthermore, we find that farmers that experienced a larger increase in
+ prices over the previous season also expect prices to rise faster.
+ This is especially the case if farmers experienced a price increase early
+ in the season.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -324,8 +407,6 @@ noprefix "false"
  shows price expectations for the three crops included in the study (expressed
  per kg of the crop).
  As can be seen, farmers expect that prices increase over time.
- But, at least for maize and groundnuts, uncertainty about expected prices
- also seem to increase over time.
  The increase of the expected price over the course of only a few months
  is substantial.
  For example, for maize, the increase in median price is 
@@ -381,14 +462,14 @@ er"], na.rm=T))*100-100, digits=0)}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename results/fig1.png
 	lyxscale 20
-	scale 90
+	scale 75
 
 \end_inset
 
@@ -421,6 +502,90 @@ name "fig:Price-expectations"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The fact that farmers do seem to expect a considerable increase in prices
+ over time suggests that farmers are at least aware of the fact that they
+ could make more money by holding on to stocks longer.
+\end_layout
+
+\begin_layout Standard
+At the time of the survey, traders had already started buying soy bean and
+ prices were attractive.
+ As a result we found that many farmers already sold (part of their) soy
+ bean.
+ In particular, of those farmers that already started harvesting soybean,
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(prop.table(table(dta$q64))[2]*100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent indicated that already made at least one sales transaction.
+ We further found that 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(prop.table(table(dta$soy_sold_share>.8))[2]*100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent of those that already harvest sold more than 80 percent of what
+ they had harvested.
+ For those who already sold at least once, the median price they received
+ was 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(median(dta$q66, na.rm=T), digits=0)}
+\end_layout
+
+\end_inset
+
+ Kwatcha, which is substantially lower then expected prices in September
+ and January (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Price-expectations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ For those who sold virtually everything already, the median price they
+ got was also 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(median(dta$q66[dta$soy_sold_share>.8], na.rm=T), digits=0)}
+\end_layout
+
+\end_inset
+
+ Kwatcha.
 \end_layout
 
 \begin_layout Section*
@@ -503,7 +668,7 @@ sell low
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -897,14 +1062,14 @@ Sexpr{round((median(graph$price[graph$crop=="maize" & graph$time =="December"],
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename results/fig2.png
 	lyxscale 10
-	scale 90
+	scale 75
 
 \end_inset
 
@@ -944,7 +1109,879 @@ Anchoring
 \end_layout
 
 \begin_layout Standard
+We now investigate the relationship between price expectations and prices
+ received in the past.
+ We first relate the average price that the farmer received in the previous
+ season to price expectations in the next season using OLS models.
+ To enable comparisons across crops, we use natural logarithms of both expected
+ prices and prices received in the past, such that results can be interpreted
+ as elasticities.
+ 
+\end_layout
 
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Correlation-with-average"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ starts by correlating overall price expectations (defined as simple average
+ over expected price in September and December) to the average price that
+ the farmer reported to have received over the preceding season.
+ We see that there is a significant correlation between prices received
+ in the past and price expectations for maize and for groundnuts, but not
+ for soybean.
+ For example the first column of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Correlation-with-average"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that farmers that sold at double the price (100 percent) than other
+ farmers report expected prices that are about 10 percent higher than what
+ other farmers expect.
+ The second column shows that the elasticity is almost double for groundnuts.
+ We do not find that price expectations for soybean are significantly correlated
+ with average price expectations in the next season.
+\end_layout
+
+\begin_layout Standard
+The table also shows correlation at prices at particular points in time
+ in the future (instead of simple averages).
+ For maize, the relationship between past prices and expected prices seems
+ stable over time: farmers that received higher prices in the past expect
+ higher prices in both September and December and the elasticity is the
+ same.
+ For groundnuts, a change in the average price received in the previous
+ season is correlated to a larger price increase in the expected price in
+ September than in December.
+ The independence of price expectations and past prices of soybean is confirmed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Correlation with average prices received in the past season
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Correlation-with-average"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rdccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& pooled	& maize & groundnuts & soybean 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+cline{1-4} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Average expected price  & 
+\backslash
+Sexpr{format(round(resmat[11,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[13,1]<.01,"***",ifelse(resmat[13,1]<.05,"**",ifelse(resmat[13,
+1]<.1,"*","")))}}   & 
+\backslash
+Sexpr{format(round(resmat[1,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[3,1]<.01,"***",ifelse(resmat[3,1]<.05,"**",ifelse(resmat[3,1]<.
+1,"*","")))}}  &  
+\backslash
+Sexpr{format(round(resmat[4,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[6,1]<.01,"***",ifelse(resmat[6,1]<.05,"**",ifelse(resmat[6,1]<.
+1,"*","")))}} &  
+\backslash
+Sexpr{format(round(resmat[7,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[9,1]<.01,"***",ifelse(resmat[9,1]<.05,"**",ifelse(resmat[9,1]<.
+1,"*","")))}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{format(round(resmat[12,1], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat[2,1], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[5,1], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[8,1], digits=3),nsmall=3)})  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Expected price in September 2022  & 
+\backslash
+Sexpr{format(round(resmat[11,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[13,2]<.01,"***",ifelse(resmat[13,2]<.05,"**",ifelse(resmat[13,
+2]<.1,"*","")))}}  & 
+\backslash
+Sexpr{format(round(resmat[1,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[3,2]<.01,"***",ifelse(resmat[3,2]<.05,"**",ifelse(resmat[3,2]<.
+1,"*","")))}}  &  
+\backslash
+Sexpr{format(round(resmat[4,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[6,2]<.01,"***",ifelse(resmat[6,2]<.05,"**",ifelse(resmat[6,2]<.
+1,"*","")))}} &  
+\backslash
+Sexpr{format(round(resmat[7,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[9,2]<.01,"***",ifelse(resmat[9,2]<.05,"**",ifelse(resmat[9,2]<.
+1,"*","")))}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & (
+\backslash
+Sexpr{format(round(resmat[12,2], digits=3),nsmall=3)})& (
+\backslash
+Sexpr{format(round(resmat[2,2], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[5,2], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[8,2], digits=3),nsmall=3)})  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Expected price in December 2022 & 
+\backslash
+Sexpr{format(round(resmat[11,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[13,3]<.01,"***",ifelse(resmat[13,3]<.05,"**",ifelse(resmat[13,
+3]<.1,"*","")))}}   & 
+\backslash
+Sexpr{format(round(resmat[1,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[3,3]<.01,"***",ifelse(resmat[3,3]<.05,"**",ifelse(resmat[3,3]<.
+1,"*","")))}}  &  
+\backslash
+Sexpr{format(round(resmat[4,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[6,3]<.01,"***",ifelse(resmat[6,3]<.05,"**",ifelse(resmat[6,3]<.
+1,"*","")))}} &  
+\backslash
+Sexpr{format(round(resmat[7,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat[9,3]<.01,"***",ifelse(resmat[9,3]<.05,"**",ifelse(resmat[9,3]<.
+1,"*","")))}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{format(round(resmat[12,3], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat[2,3], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[5,3], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat[8,3], digits=3),nsmall=3)})  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of observations & 
+\backslash
+Sexpr{format(round(resmat[14,1], digits=3),nsmall=0)}  & 
+\backslash
+Sexpr{format(round(resmat[10,1], digits=3),nsmall=0)}  & 
+\backslash
+Sexpr{format(round(resmat[10,2], digits=3),nsmall=0)}  & 
+\backslash
+Sexpr{format(round(resmat[10,3], digits=3),nsmall=0)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: Standard errors are clustered at the household level.
+ *** denotes significance at the 1 percent level, ** at the 5 percent level,
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+and * at the 10 percent level.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Instead of simply averaging prices received in the previous season, we can
+ also look at price dynamics in the previous season to better understand
+ the formation of expectations.
+ For instance, we can check if expectations of the price evolution in the
+ next season of farmers that experienced a sharp increase in prices they
+ received for their crops in the previous season differ from expectations
+ of farmers that experienced relatively stable prices throughout the previous
+ season.
+ To answer this question, we can exploit the fact that some farmers sold
+ more than once in the previous season and relate changes in past prices
+ to changes in expected future prices.
+ 
+\end_layout
+
+\begin_layout Standard
+For each transaction in the previous season, we recorded price obtained
+ and the month in which the transaction took place.
+ To facilitate analysis, we categorize transactions into three periods.
+ First, transactions in May, June or July 2021 are categorizes as early
+ sales.
+ Transactions in August, September and October are referred to as average
+ sales.
+ And finally, sales made in November, December and January are grouped into
+ the third category and are referred to as late sales.
+ We calculate average prices obtained during transactions within each of
+ these three periods at the farmer level and then estimate the following
+ first-differences models:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p_{i,d}^{e}-p_{i,s}^{e}=\beta\left(p_{i,d}-p_{i,s}\right)+\varepsilon_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Results are in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:first_diff"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In the first column, we pool all crops, while the remaining three columns
+ provide results for separate regressions for each crop.
+ In the first row, the change in prices received is based on average prices
+ in August, September and October and average prices received in November,
+ December and January.
+ This roughly corresponds to the difference in timing used for the dependent
+ variables (change between September and December).The second row uses the
+ same dependent variable but relates it to prices received early in the
+ season of 2021 and prices received late in the season.
+ The last row relates changes in expected prices to changes between prices
+ early in the season and mid season.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+First differences model
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:first_diff"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rdccc} 
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{4}{c}{
+\backslash
+textit{difference in expected price between Sep and Dec}} 
+\backslash
+
+\backslash
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& pooled	& maize & groundnuts & soybean 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+cline{1-4} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+p(late) - p(av) & 
+\backslash
+Sexpr{format(round(resmat_fe[1,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[3,1]<.01,"***",ifelse(resmat_fe[3,1]<.05,"**",ifelse(resmat
+_fe[3,1]<.1,"*","")))}}   & 
+\backslash
+Sexpr{format(round(resmat_fe[1,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[3,2]<.01,"***",ifelse(resmat_fe[3,2]<.05,"**",ifelse(resmat
+_fe[3,2]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[1,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[3,3]<.01,"***",ifelse(resmat_fe[3,3]<.05,"**",ifelse(resmat
+_fe[3,3]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[1,4], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[3,4]<.01,"***",ifelse(resmat_fe[3,4]<.05,"**",ifelse(resmat
+_fe[3,4]<.1,"*","")))}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{format(round(resmat_fe[2,1], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat_fe[2,2], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat_fe[2,3], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[4,1], digits=3),nsmall=3)})     
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& [
+\backslash
+Sexpr{format(round(resmat_fe[4,1], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[4,2], digits=3),nsmall=0)}] & [
+\backslash
+Sexpr{format(round(resmat_fe[4,3], digits=3),nsmall=0)}] & [
+\backslash
+Sexpr{format(round(resmat_fe[4,4], digits=3),nsmall=0)}] 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+p(late) - p(early) & 
+\backslash
+Sexpr{format(round(resmat_fe[5,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[7,1]<.01,"***",ifelse(resmat_fe[7,1]<.05,"**",ifelse(resmat
+_fe[7,1]<.1,"*","")))}}  & 
+\backslash
+Sexpr{format(round(resmat_fe[5,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[7,2]<.01,"***",ifelse(resmat_fe[7,2]<.05,"**",ifelse(resmat
+_fe[7,2]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[5,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[7,3]<.01,"***",ifelse(resmat_fe[7,3]<.05,"**",ifelse(resmat
+_fe[7,4]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[5,4], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[7,4]<.01,"***",ifelse(resmat_fe[7,4]<.05,"**",ifelse(resmat
+_fe[7,4]<.1,"*","")))}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{format(round(resmat_fe[6,1], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[6,2], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[6,3], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[6,4], digits=3),nsmall=3)})    
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& [
+\backslash
+Sexpr{format(round(resmat_fe[8,1], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[8,2], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[8,3], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[8,4], digits=3),nsmall=0)}]    
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+p(av) - p(early) & 
+\backslash
+Sexpr{format(round(resmat_fe[9,1], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[11,1]<.01,"***",ifelse(resmat_fe[11,1]<.05,"**",ifelse(resm
+at_fe[11,1]<.1,"*","")))}}  & 
+\backslash
+Sexpr{format(round(resmat_fe[9,2], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[11,2]<.01,"***",ifelse(resmat_fe[11,2]<.05,"**",ifelse(resm
+at_fe[11,2]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[9,3], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[11,3]<.01,"***",ifelse(resmat_fe[11,3]<.05,"**",ifelse(resm
+at_fe[11,3]<.1,"*","")))}} & 
+\backslash
+Sexpr{format(round(resmat_fe[9,4], digits=3),nsmall=3)}^{
+\backslash
+Sexpr{ifelse(resmat_fe[11,4]<.01,"***",ifelse(resmat_fe[11,4]<.05,"**",ifelse(resm
+at_fe[11,4]<.1,"*","")))}}   
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{format(round(resmat_fe[10,1], digits=3),nsmall=3)}) & (
+\backslash
+Sexpr{format(round(resmat_fe[10,2], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[10,3], digits=3),nsmall=3)})  & (
+\backslash
+Sexpr{format(round(resmat_fe[10,4], digits=3),nsmall=3)})     
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& [
+\backslash
+Sexpr{format(round(resmat_fe[12,1], digits=3),nsmall=0)}] & [
+\backslash
+Sexpr{format(round(resmat_fe[12,2], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[12,3], digits=3),nsmall=0)}]  & [
+\backslash
+Sexpr{format(round(resmat_fe[12,4], digits=3),nsmall=0)}]     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: Standard errors in (), clustered at the household level in the pooled
+ model.
+ Observations in [].
+ *** denotes significance at the 1 percent level, ** at the 5 percent level,
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+and * at the 10 percent level.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Alternative explanations for price expectations?
+\end_layout
+
+\begin_layout Standard
+The expected harvest of a particular crop may also affect prices farmers
+ expect.
+ Indeed, recent evidence suggests that even before the harvest materialized,
+ traders respond to weather shocks by increasing prices, indicating that
+ the expectation channel accounts for a substantial share of supply side
+ food price shocks 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/ajae.12258"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Having access to storage (q75)
+\end_layout
+
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+We find that prices farmers that received higher prices in the previous
+ season also expect higher prices in the next season.
+ This is especially the case for groundnuts; for soybean, prices in the
+ past are not correlated to prices in the future.
+ Furthermore, we find that farmers that experienced a larger increase in
+ prices over the previous season also expect prices to rise faster.
+ This is especially the case if farmers experienced a price increase early
+ in the season.
+ 
+\end_layout
+
+\begin_layout Standard
+We find that prices received in the past are positively correlated to price
+ expectations.
+ If farmers are myopic about inflation, this will mean price expectations
+ are biased downward.
+ With average inflation at around 16 percent, it is likely that farmers
+ prone to anchoring leave substantial amounts of money on the table.
+ 
 \end_layout
 
 \begin_layout Standard

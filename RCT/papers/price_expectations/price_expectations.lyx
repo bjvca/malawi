@@ -117,14 +117,20 @@ thanks{Development Strategy and Governance Division, International Food
 
 \end_inset
 
-Inertia in price expectations: The case of smallholder farmers in Malawi
+Market participation of smallholder farmers in Malawi: A baseline report
 \end_layout
 
 \begin_layout Standard
 Smallholder farmers in low and middle income countries often sell the bulk
  of their marketable surplus immediately after the harvest, when prices
  are at their lowest.
- 
+ We pilot several interventions to investigate if this is due to poor planning.
+ In one treatment arm we test if expenditure planning is a main determinant
+ of sub-optimal marketing behaviour, while in a second treatment we look
+ at planning on the income side and ask farmers to commit to timing and
+ sales prices.
+ In this report, we summarize the baseline data that was collected as part
+ of this study.
 \end_layout
 
 \begin_layout Section*
@@ -315,71 +321,23 @@ While the above factors will be binding for some farmers, many questions
 \end_layout
 
 \begin_layout Standard
-In this paper, the focus is on the role of price expectations.
- From the time of harvest onward, farmers need to engage in complex inter-tempor
-al cost-benefit calculations and compare what they could get now to what
- they expect they could get in the future.
- The key unknown in this Euler equation is the price of the commodity in
- the future.
- At the time of the harvest, the farmer needs to form expectations about
- the price conditional on the information set available, and this needs
- to be continuously updated as new information becomes available over time.
- 
-\end_layout
-
-\begin_layout Standard
-The assumption that farmers sell too low implies that farmers expect the
- price in the future to be too low
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-A recent working paper argues that the assumption that farmers sell too
- low may be false.
- Using price data from 751 markets in 26 countries across Sub-Saharan Africa,
- they find that seasonal price movements are limited and the probability
- of negative returns to storage substantial 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "RePEc:ags:aaea20:304448"
+In an 
+\begin_inset CommandInset href
+LatexCommand href
+name "ongoing study"
+target "https://doi.org/10.1257/rct.9410"
 literal "false"
 
 \end_inset
 
-.
- However, it remains unclear if the prices that these authors use (collected
- in market centers) are representative of the prices farmer face.
-\end_layout
-
-\end_inset
-
-.
- One reason why farmers may consistently underestimate future prices is
- related to inertia or anchoring, where farmers rely on past experience
- to predict future prices..
- 
-\end_layout
-
-\begin_layout Standard
-In this paper, we use survey data to investigate price expectations.
- In particular, we asked farmers at the time of the harvest about their
- price expectations at two points in time in the near future.
- We then look at smallholder market participation in the season preceding
- the survey with a particular focus on prices received.
- We then correlate prices received in the past to price expectations in
- the future.
-\end_layout
-
-\begin_layout Standard
-We find that prices farmers that received higher prices in the previous
- season also expect higher prices in the next season.
- This is especially the case for groundnuts; for soybean, prices in the
- past are not correlated to prices in the future.
- Furthermore, we find that farmers that experienced a larger increase in
- prices over the previous season also expect prices to rise faster.
- This is especially the case if farmers experienced a price increase early
- in the season.
- 
+, we test two behavioural explanations related to the inability of farmers
+ to if this is due to poor planning.
+ In one treatment arm we test if expenditure planning is a main determinant
+ of sub-optimal marketing behaviour, while in a second treatment we look
+ at planning on the income side and ask farmers to commit to timing and
+ sales prices.
+ In this report, we summarize the baseline data that was collected as part
+ of this study.
 \end_layout
 
 \begin_layout Section*
@@ -394,6 +352,17 @@ name "sec:Price-expectations"
 \end_layout
 
 \begin_layout Standard
+As part of baseline data collection, we asked questions about price expectations
+ in the coming year.
+ In particular, we asked what price they expect a farmer to receive for
+ selling maize at the market nearest here, in early September of 2022 (the
+ beginning of the school year).
+ This was asked for maize, soybean and for groundnuts in appropriate units
+ (kg for maize and soybean, debbe for groundnuts).
+ We repeated this question, but for late December of 2022 (at the new year).
+\end_layout
+
+\begin_layout Standard
 Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -404,8 +373,8 @@ noprefix "false"
 
 \end_inset
 
- shows price expectations for the three crops included in the study (expressed
- per kg of the crop).
+ shows price expectations for the three crops included in the study (here
+ expressed per kg of the crop).
  As can be seen, farmers expect that prices increase over time.
  The increase of the expected price over the course of only a few months
  is substantial.
@@ -462,7 +431,7 @@ er"], na.rm=T))*100-100, digits=0)}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -502,6 +471,15 @@ name "fig:Price-expectations"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In addition to asking about prices of the three crops, we also asked about
+ prices from a few other items.
+ For instance, we asked about the price of a healthy 2-year old female goat.
+ Interestingly, and against our expectations, we also found that the price
+ of a goat increased substantially over time.
+ While a goat was expected to be sold at X in 
 \end_layout
 
 \begin_layout Standard

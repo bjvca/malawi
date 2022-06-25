@@ -120,7 +120,7 @@ thanks{Development Strategy and Governance Division, International Food
 Market participation of smallholder farmers in Malawi: A baseline report
 \end_layout
 
-\begin_layout Standard
+\begin_layout Abstract
 Smallholder farmers in low and middle income countries often sell the bulk
  of their marketable surplus immediately after the harvest, when prices
  are at their lowest.
@@ -341,6 +341,62 @@ literal "false"
 \end_layout
 
 \begin_layout Section*
+Data collection
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/map.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+map of study area with sampled villages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Farmer characteristics
+\end_layout
+
+\begin_layout Standard
+[Leocardia, please insert here characteristics of the household head like
+ average age of hhhead, proportion of female headed hh, average years of
+ schooling of hhhead,etc and then also characteristics of the household
+ such (q19 - q23).
+ We can also include here proportion of households that report to be holding
+ different assets q33-37.
+ We can here also include a table livestock assets q38.]
+\end_layout
+
+\begin_layout Section*
 Price expectations
 \begin_inset CommandInset label
 LatexCommand label
@@ -479,7 +535,66 @@ In addition to asking about prices of the three crops, we also asked about
  For instance, we asked about the price of a healthy 2-year old female goat.
  Interestingly, and against our expectations, we also found that the price
  of a goat increased substantially over time.
- While a goat was expected to be sold at X in 
+ While a goat was expected to be sold at 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(round(median(dta$q32, na.rm=T), digits=0), scientific=FALSE)}
+\end_layout
+
+\end_inset
+
+ Kwatcha in early September, it increased to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(round(median(dta$q32a, na.rm=T), digits=0), scientific=FALSE)}
+\end_layout
+
+\end_inset
+
+ Kwatcha towards the end of the year.
+ We further asked farmers to quote expected prices for fertilizer at the
+ end of December, an important input for smallholder maize farmers used
+ at that time.
+ We also asked what they expect to pay for hiring labour to prepare 1 acres
+ of farmland for maize production in September, which is when farmers prepare
+ fields.
+ Median value for the former is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(round(median(dta$q26, na.rm=T), digits=0), scientific=FALSE)}
+\end_layout
+
+\end_inset
+
+ kwatcha, and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{format(round(median(dta$q29, na.rm=T), digits=0), scientific=FALSE)}
+\end_layout
+
+\end_inset
+
+ kwatcha for the latter.
 \end_layout
 
 \begin_layout Standard
@@ -564,6 +679,57 @@ Sexpr{round(median(dta$q66[dta$soy_sold_share>.8], na.rm=T), digits=0)}
 \end_inset
 
  Kwatcha.
+\end_layout
+
+\begin_layout Section*
+Crop production
+\end_layout
+
+\begin_layout Standard
+[insert table on crop production]
+\end_layout
+
+\begin_layout Standard
+The average household produced 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(mean(dta$maize_harv, na.rm=T), digits=0)}
+\end_layout
+
+\end_inset
+
+ kg of maize, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(mean(dta$gnuts_harv, na.rm=T), digits=0)}
+\end_layout
+
+\end_inset
+
+ kg of groundnuts and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(mean(dta$soy_harv, na.rm=T), digits=0)}
+\end_layout
+
+\end_inset
+
+ kg of soybean.
 \end_layout
 
 \begin_layout Section*

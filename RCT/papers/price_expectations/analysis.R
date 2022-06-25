@@ -27,6 +27,16 @@ dta$q31[dta$q31 > 30000] <- NA
 dta$q30[dta$q30 == 0] <- NA
 dta$q31[dta$q31 == 0] <- NA
 
+dta$q32[dta$q32 > 80000] <- NA
+dta$q32a[dta$q32a > 80000] <- NA
+
+dta$q32[dta$q32 == 0] <- NA
+dta$q32a[dta$q32a == 0] <- NA
+
+dta$q29[dta$q29 > 100000] <- NA
+dta$q29[dta$q29 ==0] <- NA
+dta$q26[dta$q26 ==0] <- NA
+
 temp_dta <- dta[c("q24","q25")]
 names(temp_dta) <-c("September","December")
 temp_dta <- melt(temp_dta)
@@ -59,6 +69,71 @@ ggplot(graph, aes(crop, price,fill=time)) +
   scale_y_continuous(limits = c(0,1500))
   dev.off()
   
+### create graph for production
+dta$q40 <-as.numeric(dta$group1.q40)
+dta$maize_harv <- NA
+dta$group1.q40a[is.na(dta$group1.q40a)] <- "n/a"
+dta$maize_harv[dta$group1.q40a=="Bags_50kg"] <- dta$q40[dta$group1.q40a=="Bags_50kg"]*50
+dta$maize_harv[dta$group1.q40a=="OX cart"] <- dta$q40[dta$group1.q40a=="OX cart"]*500
+dta$maize_harv[dta$group1.q40a=="kg"] <- dta$q40[dta$group1.q40a=="kg"]
+dta$maize_harv[dta$maize_harv> 20000] <- NA 
+mean(dta$maize_harv, na.rm=T)
+
+dta$q45 <-as.numeric(dta$group3.q45)
+dta$gnuts_harv <- NA
+dta$group3.q45a[is.na(dta$group3.q45a)] <- "n/a"
+dta$gnuts_harv[dta$group3.q45a=="Bags_50kg"] <- dta$q45[dta$group3.q45a=="Bags_50kg"]*50
+dta$gnuts_harv[dta$group3.q45a=="Debbe_Ndowa"] <- dta$q45[dta$group3.q45a=="Debbe_Ndowa"]*4
+dta$gnuts_harv[dta$group3.q45a=="kg"] <- dta$q45[dta$group3.q45a=="kg"]
+dta$gnuts_harv[dta$gnuts_harv> 4000] <- NA 
+mean(dta$gnuts_harv, na.rm=T)
+
+dta$q49 <-as.numeric(dta$group5.q49)
+dta$soy_harv <- NA
+dta$group5.q49a[is.na(dta$group5.q49a)] <- "n/a"
+dta$soy_harv[dta$group5.q49a=="Bags_50kg"] <- dta$q49[dta$group5.q49a=="Bags_50kg"]*50
+dta$soy_harv[dta$group5.q49a=="Debbe_Ndowa"] <- dta$q49[dta$group5.q49a=="Debbe_Ndowa"]*20
+dta$soy_harv[dta$group5.q49a=="kg"] <- dta$q49[dta$group5.q49a=="kg"]
+dta$soy_harv[dta$soy_harv> 4000] <- NA 
+mean(dta$soy_harv, na.rm=T)
+
+dta$q39[dta$q39 == "88"] <- NA
+dta$q39 <- factor(dta$q39, levels=month.name)
+maize_prod <- data.frame(tapply(dta$maize_harv,dta$q39, sum, na.rm=T))
+maize_prod$month <- rownames(maize_prod)
+maize_prod$crop <- "maize"
+names(maize_prod) <- c("prod","month","crop")
+
+dta$q44[dta$q44 == "88"] <- NA
+dta$q44 <- factor(dta$q44, levels=month.name)
+gnuts_prod <- data.frame(tapply(dta$gnuts_harv,dta$q44, sum, na.rm=T))
+gnuts_prod$month <- rownames(gnuts_prod)
+gnuts_prod$crop <- "gnuts"
+names(gnuts_prod) <- c("prod","month","crop")
+
+dta$q48[dta$q48 == "88"] <- NA
+dta$q48 <- factor(dta$q48, levels=month.name)
+soy_prod <- data.frame(tapply(dta$soy_harv,dta$q48, sum, na.rm=T))
+soy_prod$month <- rownames(soy_prod)
+soy_prod$crop <- "soy"
+names(soy_prod) <- c("prod","month","crop")
+
+all_prod <- rbind(maize_prod, gnuts_prod, soy_prod)
+all_prod$month <- factor(all_prod$month, levels=month.name)
+all_prod$crop <- factor(all_prod$crop)
+  
+library(viridis)
+library(hrbrthemes)
+
+
+
+# Plot
+#ggplot(all_prod, aes(x=month, y=prod, fill=crop)) +  geom_area() 
+#   geom_area(alpha=0.6 , size=.5, colour="white") +
+ #   scale_fill_viridis(discrete = T) +
+ #   theme_ipsum() + 
+ #   ggtitle("The race between ...")
+
 ### create a time series graph with average prices 
 ### first stack data of different transactions
 ### start with maize  

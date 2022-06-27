@@ -1,5 +1,5 @@
 #run in papers/price_expectations
-
+rm(list=ls())
 library(reshape2)
 library(ggplot2)
 library(ggpubr)
@@ -122,18 +122,24 @@ all_prod <- rbind(maize_prod, gnuts_prod, soy_prod)
 all_prod$month <- factor(all_prod$month, levels=month.name)
 all_prod$crop <- factor(all_prod$crop)
   
-library(viridis)
-library(hrbrthemes)
-
-
 
 # Plot
-#ggplot(all_prod, aes(x=month, y=prod, fill=crop)) +  geom_area(alpha=0.6 , size=.5, colour="white") 
-#   geom_area(alpha=0.6 , size=.5, colour="white") +
- #   scale_fill_viridis(discrete = T) +
- #   theme_ipsum() + 
- #   ggtitle("The race between ...")
+## quantities    
+plot_1 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=prod, x=month)) + 
+    geom_bar(position="stack", stat="identity")
+all_prod$price[all_prod$crop == "gnuts"] <- 187
+all_prod$price[all_prod$crop == "maize"] <- 114
+all_prod$price[all_prod$crop == "soy"] <- 89
 
+all_prod$value <- all_prod$price*all_prod$prod
+
+plot_2 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=value, x=month)) + 
+  geom_bar(position="stack", stat="identity")
+
+png(paste(path,"papers/price_expectations/results/fig_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)
+ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
+dev.off()
+ 
 ### create a time series graph with average prices 
 ### first stack data of different transactions
 ### start with maize  
@@ -331,12 +337,17 @@ to_plot_maize$crop <- "maize"
 to_plot_gnuts$crop <- "gnuts"
 all_1 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
 names(all_1) <- c("price","month","crop")
+
+###interlude - now that we have prices, create production in value
+
+tapply(all_1[all_1$month%in%c("2021-03-01","2021-04-01","2021-05-01","2021-06-01","2021-07-01","2021-08-01"),]$price,all_1[all_1$month%in%c("2021-03-01","2021-04-01","2021-05-01","2021-06-01","2021-07-01","2021-08-01"),]$crop, mean, na.rm=T)
+
+
 plot_1 <- ggplot(all_1 ,aes(x=as.Date(month),y=price,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b") 
 
 to_plot_soy <- to_plot_soy_b
 to_plot_maize <- to_plot_maize_b
 to_plot_gnuts <- to_plot_gnuts_b
-
 
 to_plot_soy$price <- to_plot_soy$price / to_plot_soy$price[1]*100  
 to_plot_maize$price <- to_plot_maize$price / to_plot_maize$price[1]*100  

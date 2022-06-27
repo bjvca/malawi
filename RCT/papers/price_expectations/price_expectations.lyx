@@ -131,6 +131,8 @@ Smallholder farmers in low and middle income countries often sell the bulk
  sales prices.
  In this report, we summarize the baseline data that was collected as part
  of this study.
+ The study focuses on 3 three semi-commerical crops: maize, soybean and
+ groundnuts.
 \end_layout
 
 \begin_layout Section*
@@ -345,6 +347,38 @@ Data collection
 \end_layout
 
 \begin_layout Standard
+Data collection took place between around the end of May and beginning of
+ June 2022.
+ Using tablet computers and Open Data Kit software, 31 enumerators interviewed
+ 3534 farmers that were sampled from four districts in the Central and Northern
+ Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
+\end_layout
+
+\begin_layout Standard
+To get a nationally representative sampling frame of the smallholders farmers
+ population Malawi, we rely on the list created by the Ministry of Agriculture
+ for their Agricultural Input Programme (AIP).
+ The AIP only targets smallholder farmers in the villages who mostly registered
+ with the village chiefs.
+ We used a two-stage sampling procedure where we first sampled villages
+ with the likelihood of a village being selected being proportionate to
+ the number of people that live in this village (such that larger villages
+ are more likely to end up in the sample).
+ We then randomly sampled 31 households in each of the sampled villages.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:map-of-study"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives a sense of coverage and dispersion of the interviewed households.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -366,6 +400,13 @@ status open
 
 \begin_layout Plain Layout
 map of study area with sampled villages
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:map-of-study"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -487,7 +528,7 @@ er"], na.rm=T))*100-100, digits=0)}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -686,10 +727,6 @@ Crop production
 \end_layout
 
 \begin_layout Standard
-[insert table on crop production]
-\end_layout
-
-\begin_layout Standard
 The average household produced 
 \begin_inset ERT
 status open
@@ -730,6 +767,97 @@ Sexpr{round(mean(dta$soy_harv, na.rm=T), digits=0)}
 \end_inset
 
  kg of soybean.
+ Over an entire year and aggregated over all farmers in our sample, this
+ amounts to 230 tons of groundnuts, 600 tons of soy and almost 4500 tons
+ of maize.
+ The top panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Crop-production"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows how production is distributed over the different months.
+ Most soy is harvested in April and May.
+ Maize harvesting starts in April but most harvest takes place in May and
+ June.
+ Groundnuts is harvested last.
+\end_layout
+
+\begin_layout Standard
+The graph shows that in quantities, maize is a very important commodity.
+ However, the value-to-weight ratio of these crops differs substantially,
+ and so to get a different perspective of the importance of the three crops,
+ we multiply quantities with prices to get an idea of the value of production.
+ To do so, we simply multiply quantities with the average price of the crop
+ received in 2021.
+ Results are in the bottom panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Crop-production"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We see that groundnuts become more important, while the share contributed
+ by soy bean becomes smaller.
+ Note that the value of harvest is a rather theoretical concept.
+ Actual income of the household will depend on how much of this is sold,
+ and especially, when it was sold given potentially large seasonality in
+ prices.
+ The next sections look into these aspects of smallholder farmer behaviour.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/fig_prod.png
+	lyxscale 25
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Crop production
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Crop-production"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1246,6 +1374,10 @@ name "fig:Evolution-of-prices"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Income from cash cropping
 \end_layout
 
 \begin_layout Section*

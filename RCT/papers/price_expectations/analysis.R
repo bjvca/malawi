@@ -82,8 +82,8 @@ mean(dta$maize_harv, na.rm=T)
 dta$q45 <-as.numeric(dta$group3.q45)
 dta$gnuts_harv <- NA
 dta$group3.q45a[is.na(dta$group3.q45a)] <- "n/a"
-dta$gnuts_harv[dta$group3.q45a=="Bags_50kg"] <- dta$q45[dta$group3.q45a=="Bags_50kg"]*50
-dta$gnuts_harv[dta$group3.q45a=="Debbe_Ndowa"] <- dta$q45[dta$group3.q45a=="Debbe_Ndowa"]*4
+dta$gnuts_harv[dta$group3.q45a=="Bags_50kg"] <- dta$q45[dta$group3.q45a=="Bags_50kg"]*13
+dta$gnuts_harv[dta$group3.q45a=="Debbe_Ndowa"] <- dta$q45[dta$group3.q45a=="Debbe_Ndowa"]*5
 dta$gnuts_harv[dta$group3.q45a=="kg"] <- dta$q45[dta$group3.q45a=="kg"]
 dta$gnuts_harv[dta$gnuts_harv> 4000] <- NA 
 mean(dta$gnuts_harv, na.rm=T)
@@ -128,7 +128,7 @@ library(hrbrthemes)
 
 
 # Plot
-#ggplot(all_prod, aes(x=month, y=prod, fill=crop)) +  geom_area() 
+#ggplot(all_prod, aes(x=month, y=prod, fill=crop)) +  geom_area(alpha=0.6 , size=.5, colour="white") 
 #   geom_area(alpha=0.6 , size=.5, colour="white") +
  #   scale_fill_viridis(discrete = T) +
  #   theme_ipsum() + 

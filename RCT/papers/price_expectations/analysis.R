@@ -143,75 +143,76 @@ dev.off()
 ### create a time series graph with average prices 
 ### first stack data of different transactions
 ### start with maize  
-sel <- c( "trans.1..q43b", "trans.1..q43d")
+sel <- c( "trans.1..q43b", "trans.1..q43d","trans.1..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.1..q43a")
+sel <- c( "trans.1..q43a","trans.1..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans1 <- data.frame(dta$farmer_ID,dta$trans.1..q43a,dta$trans.1..q43b,dta$trans.1..q43d)
-names(trans1) <- c("farmer_ID", "date","form","price")
+trans1 <- data.frame(dta$farmer_ID,dta$trans.1..q43a,dta$trans.1..q43b,dta$trans.1..q43d,dta$trans.1..group2.q43c,dta$trans.1..group2.q43c1)
+names(trans1) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.2..q43b", "trans.2..q43d")
+sel <- c( "trans.2..q43b", "trans.2..q43d","trans.2..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.2..q43a")
+sel <- c( "trans.2..q43a","trans.2..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans2 <- data.frame(dta$farmer_ID,dta$trans.2..q43a,dta$trans.2..q43b,dta$trans.2..q43d) 
-names(trans2) <- c("farmer_ID", "date","form","price")
+trans2 <- data.frame(dta$farmer_ID,dta$trans.2..q43a,dta$trans.2..q43b,dta$trans.2..q43d,dta$trans.2..group2.q43c,dta$trans.2..group2.q43c1)
+names(trans2) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.3..q43b", "trans.3..q43d")
+sel <- c( "trans.3..q43b", "trans.3..q43d","trans.3..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.3..q43a")
+sel <- c( "trans.3..q43a","trans.3..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans3 <- data.frame(dta$farmer_ID,dta$trans.3..q43a,dta$trans.3..q43b,dta$trans.3..q43d) 
-names(trans3) <- c("farmer_ID", "date","form","price")
+trans3 <- data.frame(dta$farmer_ID,dta$trans.3..q43a,dta$trans.3..q43b,dta$trans.3..q43d,dta$trans.3..group2.q43c,dta$trans.3..group2.q43c1)
+names(trans3) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.4..q43b", "trans.4..q43d")
+sel <- c( "trans.4..q43b", "trans.4..q43d","trans.4..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.4..q43a")
+sel <- c( "trans.4..q43a","trans.4..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans4 <- data.frame(dta$farmer_ID,dta$trans.4..q43a,dta$trans.4..q43b,dta$trans.4..q43d) 
-names(trans4) <- c("farmer_ID", "date","form","price")
+trans4 <- data.frame(dta$farmer_ID,dta$trans.4..q43a,dta$trans.4..q43b,dta$trans.4..q43d,dta$trans.4..group2.q43c,dta$trans.4..group2.q43c1)
+names(trans4) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.5..q43b", "trans.5..q43d")
+sel <- c( "trans.5..q43b", "trans.5..q43d","trans.5..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.5..q43a")
+sel <- c( "trans.5..q43a","trans.5..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans5 <- data.frame(dta$farmer_ID,dta$trans.5..q43a,dta$trans.5..q43b,dta$trans.5..q43d) 
-names(trans5) <- c("farmer_ID", "date","form","price")
+trans5 <- data.frame(dta$farmer_ID,dta$trans.5..q43a,dta$trans.5..q43b,dta$trans.5..q43d,dta$trans.5..group2.q43c,dta$trans.5..group2.q43c1)
+names(trans5) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.6..q43b", "trans.6..q43d")
+sel <- c( "trans.6..q43b", "trans.6..q43d","trans.6..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.6..q43a")
+sel <- c( "trans.6..q43a","trans.6..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans6 <- data.frame(dta$farmer_ID,dta$trans.6..q43a,dta$trans.6..q43b,dta$trans.6..q43d) 
-names(trans6) <- c("farmer_ID", "date","form","price")
+trans6 <- data.frame(dta$farmer_ID,dta$trans.6..q43a,dta$trans.6..q43b,dta$trans.6..q43d,dta$trans.6..group2.q43c,dta$trans.6..group2.q43c1)
+names(trans6) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.7..q43b", "trans.7..q43d")
+sel <- c( "trans.7..q43b", "trans.7..q43d","trans.7..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.7..q43a")
+sel <- c( "trans.7..q43a","trans.7..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans7 <- data.frame(dta$farmer_ID,dta$trans.7..q43a,dta$trans.7..q43b,dta$trans.7..q43d) 
-names(trans7) <- c("farmer_ID", "date","form","price")
+trans7 <- data.frame(dta$farmer_ID,dta$trans.7..q43a,dta$trans.7..q43b,dta$trans.7..q43d,dta$trans.7..group2.q43c,dta$trans.7..group2.q43c1)
+names(trans7) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans.8..q43b", "trans.8..q43d")
+sel <- c( "trans.8..q43b", "trans.8..q43d","trans.8..group2.q43c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans.8..q43a")
+sel <- c( "trans.8..q43a","trans.8..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans8 <- data.frame(dta$farmer_ID,dta$trans.8..q43a,dta$trans.8..q43b,dta$trans.8..q43d) 
-names(trans8) <- c("farmer_ID", "date","form","price")
+trans8 <- data.frame(dta$farmer_ID,dta$trans.8..q43a,dta$trans.8..q43b,dta$trans.8..q43d,dta$trans.8..group2.q43c,dta$trans.8..group2.q43c1)
+names(trans8) <- c("farmer_ID", "date","form","price","quant","measure")
 
 all <- rbind(trans1, trans2, trans3, trans4, trans5, trans6, trans7,trans8)
-names(all) <-  c("farmer_ID", "date","form","price")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
 all <- subset(all, form ==2)
 all$price[all$price > 999] <- NA
 all$price[all$price < 25] <- NA
+
 to_plot_maize <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[7:17])
 to_plot_maize$date <- rownames(to_plot_maize)
 names(to_plot_maize) <- c("price","date")
@@ -220,52 +221,53 @@ all_maize <- all
 
 #now for gnuts
 
-sel <- c( "trans1.1..q47b", "trans1.1..q47d")
+sel <- c( "trans1.1..q47b", "trans1.1..q47d","trans1.1..group4.q47c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans1.1..q47a")
+sel <- c( "trans1.1..q47a","trans1.1..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans11 <- data.frame(dta$farmer_ID,dta$trans1.1..q47a,dta$trans1.1..q47b,dta$trans1.1..q47d)
-names(trans11) <- c("farmer_ID", "date","form","price")
+trans11 <- data.frame(dta$farmer_ID,dta$trans1.1..q47a,dta$trans1.1..q47b,dta$trans1.1..q47d,dta$trans1.1..group4.q47c,dta$trans1.1..group4.q47c1)
+names(trans11) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans1.2..q47b", "trans1.2..q47d")
+sel <- c( "trans1.2..q47b", "trans1.2..q47d","trans1.2..group4.q47c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans1.2..q47a")
+sel <- c( "trans1.2..q47a","trans1.2..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans12 <- data.frame(dta$farmer_ID,dta$trans1.2..q47a,dta$trans1.2..q47b,dta$trans1.2..q47d) 
-names(trans12) <- c("farmer_ID", "date","form","price")
+trans12 <- data.frame(dta$farmer_ID,dta$trans1.2..q47a,dta$trans1.2..q47b,dta$trans1.2..q47d,dta$trans1.2..group4.q47c,dta$trans1.2..group4.q47c1)
+names(trans12) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans1.3..q47b", "trans1.3..q47d")
+sel <- c( "trans1.3..q47b", "trans1.3..q47d","trans1.3..group4.q47c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans1.3..q47a")
+sel <- c( "trans1.3..q47a","trans1.3..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans13 <- data.frame(dta$farmer_ID,dta$trans1.3..q47a,dta$trans1.3..q47b,dta$trans1.3..q47d) 
-names(trans13) <- c("farmer_ID", "date","form","price")
+trans13 <- data.frame(dta$farmer_ID,dta$trans1.3..q47a,dta$trans1.3..q47b,dta$trans1.3..q47d,dta$trans1.3..group4.q47c,dta$trans1.3..group4.q47c1)
+names(trans13) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans1.4..q47b", "trans1.4..q47d")
+sel <- c( "trans1.4..q47b", "trans1.4..q47d","trans1.4..group4.q47c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans1.4..q47a")
+sel <- c( "trans1.4..q47a","trans1.4..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans14 <- data.frame(dta$farmer_ID,dta$trans1.4..q47a,dta$trans1.4..q47b,dta$trans1.4..q47d) 
-names(trans14) <- c("farmer_ID", "date","form","price")
+trans14 <- data.frame(dta$farmer_ID,dta$trans1.4..q47a,dta$trans1.4..q47b,dta$trans1.4..q47d,dta$trans1.4..group4.q47c,dta$trans1.4..group4.q47c1) 
+names(trans14) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans1.5..q47b", "trans1.5..q47d")
+sel <- c( "trans1.5..q47b", "trans1.5..q47d","trans1.5..group4.q47c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans1.5..q47a")
+sel <- c( "trans1.5..q47a","trans1.5..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans15 <- data.frame(dta$farmer_ID,dta$trans1.5..q47a,dta$trans1.5..q47b,dta$trans1.5..q47d) 
-names(trans15) <- c("farmer_ID", "date","form","price")
+trans15 <- data.frame(dta$farmer_ID,dta$trans1.5..q47a,dta$trans1.5..q47b,dta$trans1.5..q47d,dta$trans1.5..group4.q47c,dta$trans1.5..group4.q47c1)
+names(trans15) <- c("farmer_ID", "date","form","price","quant","measure")
 
 all <- rbind(trans11, trans12, trans13, trans14, trans15)
-names(all) <-  c("farmer_ID", "date","form","price")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
 all <- subset(all, form ==2)
 all$price[all$price > 19999] <- NA
 all$price[all$price < 999] <- NA
 all$price <- all$price/20 
+
 to_plot_gnuts <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[4:14])
 to_plot_gnuts$date <- rownames(to_plot_gnuts)
 names(to_plot_gnuts) <- c("price","date")
@@ -277,43 +279,44 @@ all_gnuts <- all
 
 ### for soybean
 
-sel <- c( "trans2.1..q52b", "trans2.1..q52d")
+sel <- c( "trans2.1..q52b", "trans2.1..q52d","trans2.1..group6.q52c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans2.1..q52a")
+sel <- c( "trans2.1..q52a","trans2.1..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans21 <- data.frame(dta$farmer_ID,dta$trans2.1..q52a,dta$trans2.1..q52b,dta$trans2.1..q52d)
-names(trans21) <- c("farmer_ID", "date","form","price")
+trans21 <- data.frame(dta$farmer_ID,dta$trans2.1..q52a,dta$trans2.1..q52b,dta$trans2.1..q52d,dta$trans2.1..group6.q52c,dta$trans2.1..group6.q52c1)
+names(trans21) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans2.2..q52b", "trans2.2..q52d")
+sel <- c( "trans2.2..q52b", "trans2.2..q52d","trans2.2..group6.q52c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans2.2..q52a")
+sel <- c( "trans2.2..q52a","trans2.2..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans22 <- data.frame(dta$farmer_ID,dta$trans2.2..q52a,dta$trans2.2..q52b,dta$trans2.2..q52d) 
-names(trans22) <- c("farmer_ID", "date","form","price")
+trans22 <- data.frame(dta$farmer_ID,dta$trans2.2..q52a,dta$trans2.2..q52b,dta$trans2.2..q52d,dta$trans2.2..group6.q52c,dta$trans2.2..group6.q52c1)
+names(trans22) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans2.3..q52b", "trans2.3..q52d")
+sel <- c( "trans2.3..q52b", "trans2.3..q52d","trans2.3..group6.q52c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans2.3..q52a")
+sel <- c( "trans2.3..q52a","trans2.3..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans23 <- data.frame(dta$farmer_ID,dta$trans2.3..q52a,dta$trans2.3..q52b,dta$trans2.3..q52d) 
-names(trans23) <- c("farmer_ID", "date","form","price")
+trans23 <- data.frame(dta$farmer_ID,dta$trans2.3..q52a,dta$trans2.3..q52b,dta$trans2.3..q52d,dta$trans2.3..group6.q52c,dta$trans2.3..group6.q52c1)
+names(trans23) <- c("farmer_ID", "date","form","price","quant","measure")
 
-sel <- c( "trans2.4..q52b", "trans2.4..q52d")
+sel <- c( "trans2.4..q52b", "trans2.4..q52d","trans2.4..group6.q52c")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
-sel <- c( "trans2.4..q52a")
+sel <- c( "trans2.4..q52a","trans2.4..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans24 <- data.frame(dta$farmer_ID,dta$trans2.4..q52a,dta$trans2.4..q52b,dta$trans2.4..q52d) 
-names(trans24) <- c("farmer_ID", "date","form","price")
+trans24 <- data.frame(dta$farmer_ID,dta$trans2.4..q52a,dta$trans2.4..q52b,dta$trans2.4..q52d,dta$trans2.4..group6.q52c,dta$trans2.4..group6.q52c1) 
+names(trans24) <- c("farmer_ID", "date","form","price","quant","measure")
 
 all <- rbind(trans21, trans22, trans23, trans24)
-names(all) <-  c("farmer_ID", "date","form","price")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
 all <- subset(all, form ==1)
 all$price[all$price > 1999] <- NA
 all$price[all$price < 99] <- NA
+
 to_plot_soy <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[5:15])
 to_plot_soy$date <- rownames(to_plot_soy)
 names(to_plot_soy) <- c("price","date")
@@ -393,8 +396,88 @@ all_gnuts$crop <- "gnuts"
 
 all_transactions <- rbind(all_maize, all_soy, all_gnuts) 
 
+##% of all farmers sold at least once
+dim(aggregate(all_transactions$quant>0, list(all_transactions$farmer_ID), FUN=sum))[1] / dim(dta)[1] *100
+
+
+sum(aggregate(all_transactions$quant>0, list(all_transactions$farmer_ID), FUN=sum)==1)/dim(aggregate(all_transactions$quant>0, list(all_transactions$farmer_ID), FUN=sum))[1]*100
 ### do farmers who sell at least once have higher price expectations?
 
+round(dim(aggregate(all_transactions[all_transactions$crop=="maize",]$quant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID), FUN=sum))[1] /sum(!is.na(dta$q39))*100, digits=0)
+
+round(dim(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID), FUN=sum))[1] /sum(!is.na(dta$q44))*100, digits=0)
+
+round(dim(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1] /sum(!is.na(dta$q48))*100, digits=0)
+
+sum(aggregate(all_transactions[all_transactions$crop=="maize",]$quant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID), FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="maize",]$quant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID), FUN=sum))[1] *100
+
+sum(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID), FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID), FUN=sum))[1] *100
+
+sum(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1] *100
+
+##identify transactions that happen less than 3 months after harvest
+### merge in production dates from dta into all_transactions
+trans_date <- merge(all_transactions,dta[c("farmer_ID","q39","q44","q48")],by="farmer_ID")
+
+trans_date[trans_date$crop == "maize",]
+trans_date$pdate_num_maize <- NA
+trans_date$pdate_num_maize[trans_date$q39=="April"] <- 18718 
+trans_date$pdate_num_maize[trans_date$q39=="May"] <- 18748 
+trans_date$pdate_num_maize[trans_date$q39=="June"] <- 18779 
+trans_date$pdate_num_maize[trans_date$q39=="July"] <- 18809 
+
+trans_date$pdate_num_gnuts <- NA
+trans_date$pdate_num_gnuts[trans_date$q44=="April"] <- 18718 
+trans_date$pdate_num_gnuts[trans_date$q44=="May"] <- 18748 
+trans_date$pdate_num_gnuts[trans_date$q44=="June"] <- 18779 
+trans_date$pdate_num_gnuts[trans_date$q44=="July"] <- 18809 
+
+trans_date$pdate_num_soy <- NA
+trans_date$pdate_num_soy[trans_date$q48=="April"] <- 18718 
+trans_date$pdate_num_soy[trans_date$q48=="May"] <- 18748 
+trans_date$pdate_num_soy[trans_date$q48=="June"] <- 18779 
+trans_date$pdate_num_soy[trans_date$q48=="July"] <- 18809 
+
+sum((as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize >=0, na.rm=T))*100 
+
+
+sum((as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts >=0, na.rm=T))*100
+
+
+sum((as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy >=0, na.rm=T))*100
+
+
+#### needs to be aggreagated at farmer level -  sells at at least on
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "maize",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize < 90)
+
+nom_maize <- sum((aggregate(trans_date[trans_date$crop == "maize",]$sell_early,list(trans_date[trans_date$crop == "maize",]$farmer_ID), FUN=sum, na.rm=T)[,2]  >0), na.rm=T)
+
+trans_date$sell_corr <- NA
+trans_date[trans_date$crop == "maize",]$sell_corr <- (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize) >= 0
+
+denom_maize <-sum(aggregate(trans_date$sell_corr,list(trans_date$farmer_ID),FUN=sum, na.rm=T)[,2]>0, na.rm=T)
+#gnuts
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "gnuts",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts < 90)
+
+nom_gnuts  <- sum((aggregate(trans_date[trans_date$crop == "gnuts",]$sell_early,list(trans_date[trans_date$crop == "gnuts",]$farmer_ID), FUN=sum, na.rm=T)[,2]  >0), na.rm=T)
+
+trans_date$sell_corr <- NA
+trans_date[trans_date$crop == "gnuts",]$sell_corr <- (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts) >= 0
+
+denom_gnuts <-sum(aggregate(trans_date$sell_corr,list(trans_date$farmer_ID),FUN=sum, na.rm=T)[,2]>0, na.rm=T)
+
+#soy
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "soy",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy < 90)
+
+nom_soy  <- sum((aggregate(trans_date[trans_date$crop == "soy",]$sell_early,list(trans_date[trans_date$crop == "soy",]$farmer_ID), FUN=sum, na.rm=T)[,2]  >0), na.rm=T)
+
+trans_date$sell_corr <- NA
+trans_date[trans_date$crop == "soy",]$sell_corr <- (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy) >= 0
+
+denom_soy <-sum(aggregate(trans_date$sell_corr,list(trans_date$farmer_ID),FUN=sum, na.rm=T)[,2]>0, na.rm=T)
 #sold any maize
 
 summary(lm((dta$q24)~q41=="Yes",data=dta))

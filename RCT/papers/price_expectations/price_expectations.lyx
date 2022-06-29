@@ -766,7 +766,7 @@ Sexpr{round(mean(dta$soy_harv, na.rm=T), digits=0)}
 
 \end_inset
 
- kg of soybean.
+ kg of soybean in the 2021 agricultural season.
  Over an entire year and aggregated over all farmers in our sample, this
  amounts to 230 tons of groundnuts, 600 tons of soy and almost 4500 tons
  of maize.
@@ -818,7 +818,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -836,10 +836,65 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Crop production
+Crop production in 2021
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Crop-production"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also collected information on production in 2022.
+ As the survey took place around the end of May, maize and especially groundnuts
+ were often still in the field.
+ However, we also asked farmers to give an estimate of what they expect
+ to get from fields that still needed to be harvested.
+ Results are in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:(Expected)-crop-production"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We also express production in 2022 in value terms.
+ To do so, we use current prices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(Expected) crop production in 2022
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:(Expected)-crop-production"
 
 \end_inset
 
@@ -867,12 +922,29 @@ Smallholder market participation
 \begin_layout Standard
 We find reasonable market participation by the farmers in our sample for
  the three crops.
- For instance, of the X farmers interviewed, we find that 
-\begin_inset Note Note
+ For instance, of the 
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-X
+
+
+\backslash
+Sexpr{round(dim(dta)[1], digits=0)}
+\end_layout
+
+\end_inset
+
+ farmers interviewed, we find that 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(dim(aggregate(all_transactions$quant>0, list(all_transactions$farmer
+_ID), FUN=sum))[1] / dim(dta)[1] *100, digits=0)}
 \end_layout
 
 \end_inset
@@ -880,27 +952,23 @@ X
  percent reported at least one sales transaction.
  But there are also signs of sub-optimal sales behaviour.
  For instance, in the face of uncertainty of price behavior in both directions,
- it selling everything in one 
-\begin_inset Note Note
+ it seems farmers often sell everything in one go: of all the farmers that
+ reported to report market interactions, 
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-[is this true? Reference? Theory]
+
+
+\backslash
+Sexpr{round(sum(aggregate(all_transactions$quant>0, list(all_transactions$farmer
+_ID), FUN=sum)==1)/dim(aggregate(all_transactions$quant>0, list(all_transactions
+$farmer_ID), FUN=sum))[1]*100, digits=0)}
 \end_layout
 
 \end_inset
 
-: of all the farmers that reported to report at least one transaction, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-X
-\end_layout
-
-\end_inset
-
- percent indicated that they sold everything in a single transaction.
+ percent reports only a single transaction.
  In addition, of all the farmers that sold, 
 \begin_inset Note Note
 status open
@@ -933,20 +1001,139 @@ sell low
 \end_inset
 
  category X percent of the farmers indicate only a single transaction.
- Table 
+ 
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Market-participation-by"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ provides detailed information for each crop separately.
+ We see that of the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(sum(!is.na(dta$q39)), digits=0)}
+\end_layout
+
+\end_inset
+
+ farmers that reported to have grown maize in 2021, half also reported that
+ they sold at least part of this.
+ Soybean is more market oriented.
+ Here, from the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(sum(!is.na(dta$q48)), digits=0)}
+\end_layout
+
+\end_inset
+
+ farmers that reported cultivating soy bean in 2021, almost 90 percent reported
+ that they sold soy during at least one transaction.
+\end_layout
+
+\begin_layout Standard
+Share of transactions that happen withing 3 months at transaction level
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round( sum((as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date)
+)- trans_date[trans_date$crop == "maize",]$pdate_num_maize >=0) & (as.numeric(as.D
+ate(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop
+ == "maize",]$pdate_num_maize < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[tr
+ans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate
+_num_maize >=0, na.rm=T))*100 , digits=0)} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(sum((as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))
+- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts >=0) & (as.numeric(as.Da
+te(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop
+ == "gnuts",]$pdate_num_gnuts < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[tr
+ans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate
+_num_gnuts >=0, na.rm=T))*100 , digits=0)} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(sum((as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))-
+ trans_date[trans_date$crop == "soy",]$pdate_num_soy >=0) & (as.numeric(as.Date(tr
+ans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop ==
+ "soy",]$pdate_num_soy < 90), na.rm=T)/(sum(as.numeric(as.Date(trans_date[trans_dat
+e$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy
+ >=0, na.rm=T))*100, digits=0)} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Market participation by crop
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Market-participation-by"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1025,7 +1212,19 @@ cline{2-5}
 
 \begin_layout Plain Layout
 
-maize & NA & NA & NA & NA
+maize & 
+\backslash
+Sexpr{round(dim(aggregate(all_transactions[all_transactions$crop=="maize",]$quan
+t>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID),
+ FUN=sum))[1] /sum(!is.na(dta$q39))*100, digits=0)} & 
+\backslash
+Sexpr{round(sum(aggregate(all_transactions[all_transactions$crop=="maize",]$quan
+t>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID),
+ FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="maize",]$qu
+ant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID),
+ FUN=sum))[1] *100, digits=0)}  &  
+\backslash
+Sexpr{round(nom_maize/denom_maize*100, digits=0)} & NA
 \backslash
 
 \backslash
@@ -1034,7 +1233,19 @@ maize & NA & NA & NA & NA
 
 \begin_layout Plain Layout
 
-gnuts & NA & NA & NA & NA
+gnuts & 
+\backslash
+Sexpr{round(dim(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quan
+t>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID),
+ FUN=sum))[1] /sum(!is.na(dta$q44))*100, digits=0)} & 
+\backslash
+Sexpr{round(sum(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quan
+t>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID),
+ FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="gnuts",]$qu
+ant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID),
+ FUN=sum))[1] *100, digits=0)}   &  
+\backslash
+Sexpr{round(nom_gnuts/denom_gnuts*100, digits=0)}  & NA
 \backslash
 
 \backslash
@@ -1043,7 +1254,19 @@ gnuts & NA & NA & NA & NA
 
 \begin_layout Plain Layout
 
-soybean & NA & NA & NA & NA
+soybean & 
+\backslash
+Sexpr{round(dim(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>
+0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1]
+ /sum(!is.na(dta$q48))*100, digits=0)} & 
+\backslash
+Sexpr{round(sum(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>
+0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum)==1)
+/dim(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0,
+ list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1]
+ *100, digits=0)}&  
+\backslash
+Sexpr{round(nom_soy/denom_soy*100, digits=0)}  & NA
 \backslash
 
 \backslash
@@ -1089,6 +1312,11 @@ end{center}
 
 \backslash
 
+\end_layout
+
+\begin_layout Plain Layout
+
+note: percentage sold is based on farmers who reported growing the crop.
 \end_layout
 
 \end_inset

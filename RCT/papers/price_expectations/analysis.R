@@ -672,7 +672,92 @@ png(paste(path,"papers/price_expectations/results/fig_current_prod.png",sep = ""
 ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
 dev.off()
 
+### income from cash cropping
+
+
 ### analyis
+all_transactions$quant_kg <- NA
+all_transactions$measure[is.na(all_transactions$measure)] <- "XX"
+all_transactions[(all_transactions$crop %in% c("maize","soy")) & all_transactions$measure=="Bags_50kg",]$quant_kg <- all_transactions[(all_transactions$crop %in% c("maize","soy")) & all_transactions$measure=="Bags_50kg",]$quant*50
+all_transactions[(all_transactions$crop=="gnuts") & all_transactions$measure=="Bags_50kg",]$quant_kg <- all_transactions[(all_transactions$crop=="gnuts") & all_transactions$measure=="Bags_50kg",]$quant*13
+all_transactions[all_transactions$measure=="kg",]$quant_kg <- all_transactions[ all_transactions$measure=="kg",]$quant
+
+all_transactions[(all_transactions$crop=="gnuts") & all_transactions$measure=="Debbe_Ndowa",]$quant_kg <- all_transactions[(all_transactions$crop=="gnuts") & all_transactions$measure=="Debbe_Ndowa",]$quant*5
+all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="Debbe_Ndowa",]$quant_kg <- all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="Debbe_Ndowa",]$quant*20
+
+all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="OX cart",]$quant_kg <- all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="OX cart",]$quant*500
+all_transactions$revenue <- all_transactions$price * all_transactions$quant_kg 
+all_transactions$revenue[all_transactions$revenue>1000000 ] <- NA
+
+revenue_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$revenue,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=median, na.rm=T)
+revenue_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$revenue,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=median, na.rm=T)
+revenue_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$revenue,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=median, na.rm=T)
+
+names(revenue_maize) <- c("date","revenue")
+names(revenue_soy) <- c("date","revenue")
+names(revenue_gnuts) <- c("date","revenue")
+
+revenue_maize$crop <- "maize"
+revenue_soy$crop <- "soy"
+revenue_gnuts$crop <- "gnuts"
+
+revenue_all <- rbind(revenue_maize,revenue_gnuts,revenue_soy)
+revenue_all$month <- NA
+revenue_all$month[revenue_all$date=="2021-04-01"] <- "Apr 21"
+revenue_all$month[revenue_all$date=="2021-05-01"] <- "May 21"
+revenue_all$month[revenue_all$date=="2021-06-01"] <- "Jun 21"
+revenue_all$month[revenue_all$date=="2021-07-01"] <- "Jul 21"
+revenue_all$month[revenue_all$date=="2021-08-01"] <- "Aug 21"
+revenue_all$month[revenue_all$date=="2021-09-01"] <- "Sep 21"
+revenue_all$month[revenue_all$date=="2021-10-01"] <- "Oct 21"
+revenue_all$month[revenue_all$date=="2021-11-01"] <- "Nov 21"
+revenue_all$month[revenue_all$date=="2021-12-01"] <- "Dec 21"
+revenue_all$month[revenue_all$date=="2022-01-01"] <- "Jan 22"
+revenue_all$month[revenue_all$date=="2022-02-01"] <- "Feb 22"
+revenue_all$month[revenue_all$date=="2022-03-01"] <- "Mar 22"
+revenue_all_plot  <-revenue_all[!is.na(revenue_all$month),]
+revenue_all_plot$month <- factor(revenue_all_plot$month, levels=c("Apr 21","May 21","Jun 21","Jul 21","Aug 21","Sep 21","Oct 21","Nov 21","Dec 21","Jan 22","Feb 22","Mar 22"))
+
+plot_res_2 <- ggplot(revenue_all_plot, aes(fill=crop, y=revenue, x=month)) + 
+    geom_bar(position="stack", stat="identity")
+    
+quant_kg_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$quant_kg,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=median, na.rm=T)
+quant_kg_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$quant_kg,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=median, na.rm=T)
+quant_kg_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$quant_kg,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=median, na.rm=T)
+
+names(quant_kg_maize) <- c("date","quant_kg")
+names(quant_kg_gnuts) <- c("date","quant_kg")
+names(quant_kg_soy) <- c("date","quant_kg")
+
+quant_kg_maize$crop <- "maize"
+quant_kg_soy$crop <- "soy"
+quant_kg_gnuts$crop <- "gnuts"
+
+quant_kg_all <- rbind(quant_kg_maize,quant_kg_soy,quant_kg_gnuts)
+quant_kg_all$month <- NA
+quant_kg_all$month[quant_kg_all$date=="2021-04-01"] <- "Apr 21"
+quant_kg_all$month[quant_kg_all$date=="2021-05-01"] <- "May 21"
+quant_kg_all$month[quant_kg_all$date=="2021-06-01"] <- "Jun 21"
+quant_kg_all$month[quant_kg_all$date=="2021-07-01"] <- "Jul 21"
+quant_kg_all$month[quant_kg_all$date=="2021-08-01"] <- "Aug 21"
+quant_kg_all$month[quant_kg_all$date=="2021-09-01"] <- "Sep 21"
+quant_kg_all$month[quant_kg_all$date=="2021-10-01"] <- "Oct 21"
+quant_kg_all$month[quant_kg_all$date=="2021-11-01"] <- "Nov 21"
+quant_kg_all$month[quant_kg_all$date=="2021-12-01"] <- "Dec 21"
+quant_kg_all$month[quant_kg_all$date=="2022-01-01"] <- "Jan 22"
+quant_kg_all$month[quant_kg_all$date=="2022-02-01"] <- "Feb 22"
+quant_kg_all$month[quant_kg_all$date=="2022-03-01"] <- "Mar 22"
+quant_kg_all_plot  <-quant_kg_all[!is.na(quant_kg_all$month),]
+quant_kg_all_plot$month <- factor(quant_kg_all_plot$month, levels=c("Apr 21","May 21","Jun 21","Jul 21","Aug 21","Sep 21","Oct 21","Nov 21","Dec 21","Jan 22","Feb 22","Mar 22"))
+
+plot_res_1 <- ggplot(quant_kg_all_plot, aes(fill=crop, y=quant_kg, x=month)) + 
+    geom_bar(position="stack", stat="identity")
+
+png(paste(path,"papers/price_expectations/results/fig_revenue.png",sep = ""), units="px", height=3200, width= 3800, res=600)
+ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
+dev.off()
+
+
 
 
 summary(lm((dta$q24)~q41=="Yes",data=dta))

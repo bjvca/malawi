@@ -2050,6 +2050,50 @@ name "fig:Evolution-of-prices"
 Income from cash cropping
 \end_layout
 
+\begin_layout Standard
+In this section we look at It seems strange that, even though prices go
+ up, this is not reflected in median revenue.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/fig_revenue.png
+	lyxscale 25
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Revenue
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Anchoring
 \end_layout

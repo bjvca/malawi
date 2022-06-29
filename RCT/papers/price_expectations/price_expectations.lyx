@@ -81,11 +81,12 @@ knitr
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -51260199 "LNabwire"
 \end_header
 
 \begin_body
@@ -453,13 +454,34 @@ Farmer characteristics
 \end_layout
 
 \begin_layout Standard
-[Leocardia, please insert here characteristics of the household head like
- average age of hhhead, proportion of female headed hh, average years of
- schooling of hhhead,etc and then also characteristics of the household
- such (q19 - q23).
- We can also include here proportion of households that report to be holding
- different assets q33-37.
- We can here also include a table livestock assets q38.]
+
+\change_inserted -51260199 1656524403
+Table 1 presents the descriptive statistics of the surveyed farming households.
+ Eighty percent (80%) of the households are headed by men of an average
+ age 43 years, and six years of schooling (primary level).
+ The households have five members on average, living in houses of three
+ rooms.
+ Four in every 10 households have their main houses roofed with corrugated
+ iron sheets.
+ We find that the average distance of the households to the nearest all
+ weather road and nearest market is 1km and 4km respectively.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -51260199 1656524366
+Regarding transport facilities, households mostly have access (either owned
+ or hired) to a bicycle (72% of respondents) and ox-carts (60% of the respondent
+s).
+ Ox-carts are particularly important for transportation of harvest from
+ the farms.
+ Households also own livestock assets; the most common being chicken, goats
+ and pigs.
+ 
+\change_deleted -51260199 1656524265
+[
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard

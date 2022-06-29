@@ -86,7 +86,6 @@ knitr
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -51260199 "LNabwire"
 \end_header
 
 \begin_body
@@ -454,14 +453,23 @@ Farmer characteristics
 \end_layout
 
 \begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
 
-\change_inserted -51260199 1656525395
-Table 1 presents the summary statistics of the households and household
- heads that we surveyed.
- Eighty percent (80%) of the households are headed by men of an average
- age of 43 years, and six years of schooling (primary level).
- The households have five members on average, living in houses of three
- rooms.
+\end_inset
+
+ presents the summary statistics of the households and household heads that
+ we surveyed.
+ Eighty percent (80%) of the households are headed by men.
+ The average household is headed by a 43 year old with six years of schooling
+ (primary level).
+ The typical household has five members on average, living in houses of
+ three rooms.
  Four in every 10 households have their main houses roofed with corrugated
  iron sheets.
  We find that the average distance of the households to the nearest all
@@ -469,21 +477,24 @@ Table 1 presents the summary statistics of the households and household
 \end_layout
 
 \begin_layout Standard
-
-\change_inserted -51260199 1656525621
-We also collected information on the households access to transport facilities
+We also collected information on the households' access to transport facilities
  or assets (either through ownership or hire).
- Results in Table 1 show that households mostly have access to a bicycle
- (72% of respondents) and ox-carts (60% of the respondents).
+ Results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show that households mostly have access to a bicycle (72% of respondents)
+ and ox-carts (60% of the respondents).
  Ox-carts are particularly important for transportation of harvest from
- the farms.
+ the farms to the market.
  Households also own livestock assets; the most common being chicken, goats
  and pigs.
- 
-\change_deleted -51260199 1656524265
-[
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -854,6 +865,13 @@ note: percentage sold is based on farmers who reported growing the crop.
 
 \begin_layout Plain Layout
 Household characteristics
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household-characteristics"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

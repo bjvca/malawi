@@ -478,7 +478,202 @@ trans_date$sell_corr <- NA
 trans_date[trans_date$crop == "soy",]$sell_corr <- (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy) >= 0
 
 denom_soy <-sum(aggregate(trans_date$sell_corr,list(trans_date$farmer_ID),FUN=sum, na.rm=T)[,2]>0, na.rm=T)
-#sold any maize
+
+###now interaction between sold only once and sold 
+#for maize
+
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "maize",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "maize",]$date))- trans_date[trans_date$crop == "maize",]$pdate_num_maize < 90)
+trans_date$ones <- 1
+pt1 <- aggregate(trans_date[trans_date$crop == "maize",]$sell_early,list(trans_date[trans_date$crop == "maize",]$farmer_ID),FUN=sum, na.rm=T)
+names(pt1) <- c("farmer_ID","sold_early")
+
+pt2 <- aggregate(all_transactions[all_transactions$crop=="maize",]$quant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID), FUN=sum)
+names(pt2) <- c("farmer_ID","nr_sales")
+mergepts <- merge(pt1,pt2, by="farmer_ID")
+nomoXe_maize <- sum((mergepts$sold_early>0) & (mergepts$nr_sales == 1))/dim(pt2)[1]*100
+
+#for gnuts
+
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "gnuts",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "gnuts",]$date))- trans_date[trans_date$crop == "gnuts",]$pdate_num_gnuts < 90)
+trans_date$ones <- 1
+pt1 <- aggregate(trans_date[trans_date$crop == "gnuts",]$sell_early,list(trans_date[trans_date$crop == "gnuts",]$farmer_ID),FUN=sum, na.rm=T)
+names(pt1) <- c("farmer_ID","sold_early")
+
+pt2 <- aggregate(all_transactions[all_transactions$crop=="gnuts",]$quant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID), FUN=sum)
+names(pt2) <- c("farmer_ID","nr_sales")
+mergepts <- merge(pt1,pt2, by="farmer_ID")
+nomoXe_gnuts <- sum((mergepts$sold_early>0) & (mergepts$nr_sales == 1))/dim(pt2)[1]*100
+
+#for soy
+
+trans_date$sell_early <- NA
+trans_date[trans_date$crop == "soy",]$sell_early <-  (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy >=0) & (as.numeric(as.Date(trans_date[trans_date$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy < 90)
+trans_date$ones <- 1
+pt1 <- aggregate(trans_date[trans_date$crop == "soy",]$sell_early,list(trans_date[trans_date$crop == "soy",]$farmer_ID),FUN=sum, na.rm=T)
+names(pt1) <- c("farmer_ID","sold_early")
+
+pt2 <- aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum)
+names(pt2) <- c("farmer_ID","nr_sales")
+mergepts <- merge(pt1,pt2, by="farmer_ID")
+nomoXe_soy <- sum((mergepts$sold_early>0) & (mergepts$nr_sales == 1))/dim(pt2)[1]*100
+
+
+### current production
+
+##this is for maize
+
+set <- c("group7.q55b", "groupx1.q55c1","group8.q55f" )
+
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),0))
+
+set <- c("group7.q55b1", "groupx1.q55c2","group8.q55f1" )
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),"XXX"))
+
+dta$group7.q55b[dta$group7.q55b1=="kg"] <- dta$group7.q55b[dta$group7.q55b1=="kg"]
+dta$group7.q55b[dta$group7.q55b1=="Bags_50kg"] <- dta$group7.q55b[dta$group7.q55b1=="Bags_50kg"]*50
+dta$group7.q55b[dta$group7.q55b1=="OX cart"] <- dta$group7.q55b[dta$group7.q55b1=="OX cart"]*500
+
+dta$groupx1.q55c1[dta$groupx1.q55c2=="kg"] <- dta$groupx1.q55c1[dta$groupx1.q55c2=="kg"]
+dta$groupx1.q55c1[dta$groupx1.q55c2=="Bags_50kg"] <- dta$groupx1.q55c1[dta$groupx1.q55c2=="Bags_50kg"]*50
+dta$groupx1.q55c1[dta$groupx1.q55c2=="OX cart"] <- dta$groupx1.q55c1[dta$groupx1.q55c2=="OX cart"]*500
+
+dta$group8.q55f[dta$group8.q55f1=="kg"] <- dta$group8.q55f[dta$group8.q55f1=="kg"]
+dta$group8.q55f[dta$group8.q55f1=="Bags_50kg"] <- dta$group8.q55f[dta$group8.q55f1=="Bags_50kg"]*50
+dta$group8.q55f[dta$group8.q55f1=="OX cart"] <- dta$group8.q55f[dta$group8.q55f1=="OX cart"]*500
+
+set <- c("group7.q55b", "groupx1.q55c1","group8.q55f" )
+dta$prod_maize <-rowSums(dta[set])
+
+set <- c("q55g", "q55d","q55c4" )
+table(dta[set])
+
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="March",3))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="April",4))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="May",5))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="June",6))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="July",7))
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta$prod_maize_month <- rowMeans(dta[set], na.rm=T)
+
+current_prod_maize <- data.frame(tapply(dta$prod_maize, dta$prod_maize_month, sum, na.rm=T))
+current_prod_maize$month <- rownames(current_prod_maize)
+current_prod_maize$crop <- "maize" 
+names(current_prod_maize) <- c("prod","month","crop") 
+###now for gnuts
+
+set <- c("group10.q59b", "groupx2.q59c1","group11.q59f" )
+
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),0))
+
+set <- c("group10.q59b1", "groupx2.q59c2","group11.q59f1" )
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),"XXX"))
+
+dta$group10.q59b[dta$group10.q59b1=="kg"] <- dta$group10.q59b[dta$group10.q59b1=="kg"]
+dta$group10.q59b[dta$group10.q59b1=="Bags_50kg"] <- dta$group10.q59b[dta$group10.q59b1=="Bags_50kg"]*13
+dta$group10.q59b[dta$group10.q59b1=="Debbe_Ndowa"] <- dta$group10.q59b[dta$group10.q59b1=="Debbe_Ndowa"]*5
+
+dta$groupx2.q59c1[dta$groupx2.q59c2=="kg"] <- dta$groupx2.q59c1[dta$groupx2.q59c2=="kg"]
+dta$groupx2.q59c1[dta$groupx2.q59c2=="Bags_50kg"] <- dta$groupx2.q59c1[dta$groupx2.q59c2=="Bags_50kg"]*13
+dta$groupx2.q59c1[dta$groupx2.q59c2=="Debbe_Ndowa"] <- dta$groupx2.q59c1[dta$groupx2.q59c2=="Debbe_Ndowa"]*5
+
+dta$group11.q59f[dta$group11.q59f1=="kg"] <- dta$group11.q59f[dta$group11.q59f1=="kg"]
+dta$group11.q59f[dta$group11.q59f1=="Bags_50kg"] <- dta$group11.q59f[dta$group11.q59f1=="Bags_50kg"]*13
+dta$group11.q59f[dta$group11.q59f1=="Debbe_Ndowa"] <- dta$group11.q59f[dta$group11.q59f1=="Debbe_Ndowa"]*5
+
+set <- c("group10.q59b", "groupx2.q59c1","group11.q59f" )
+dta$prod_gnuts <-rowSums(dta[set])
+
+set <- c("q59g", "q59d","q59c4" )
+table(dta[set])
+
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="March",3))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="April",4))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="May",5))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="June",6))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="July",7))
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta$prod_gnuts_month <- rowMeans(dta[set], na.rm=T)
+
+current_prod_gnuts <- data.frame(tapply(dta$prod_gnuts, dta$prod_gnuts_month, sum, na.rm=T))
+current_prod_gnuts$month <- rownames(current_prod_gnuts)
+current_prod_gnuts$crop <- "gnuts" 
+names(current_prod_gnuts) <- c("prod","month","crop") 
+###now for soy
+
+set <- c("group13.q63b", "groupx3.q63c1","group14.q63f" )
+
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),0))
+
+set <- c("group13.q63b1", "groupx3.q63c2","group14.q63f1" )
+dta[set] <- lapply(dta[set],  function(x) replace(x,is.na(x),"XXX"))
+
+dta$group13.q63b[dta$group13.q63b1=="kg"] <- dta$group13.q63b[dta$group13.q63b1=="kg"]
+dta$group13.q63b[dta$group13.q63b1=="Bags_50kg"] <- dta$group13.q63b[dta$group13.q63b1=="Bags_50kg"]*50
+dta$group13.q63b[dta$group13.q63b1=="Debbe_Ndowa"] <- dta$group13.q63b[dta$group13.q63b1=="Debbe_Ndowa"]*20
+
+dta$groupx3.q63c1[dta$groupx3.q63c2=="kg"] <- dta$groupx3.q63c1[dta$groupx3.q63c2=="kg"]
+dta$groupx3.q63c1[dta$groupx3.q63c2=="Bags_50kg"] <- dta$groupx3.q63c1[dta$groupx3.q63c2=="Bags_50kg"]*50
+dta$groupx3.q63c1[dta$groupx3.q63c2=="Debbe_Ndowa"] <- dta$groupx3.q63c1[dta$groupx3.q63c2=="Debbe_Ndowa"]*20
+
+dta$group14.q63f[dta$group14.q63f1=="kg"] <- dta$group14.q63f[dta$group14.q63f1=="kg"]
+dta$group14.q63f[dta$group14.q63f1=="Bags_50kg"] <- dta$group14.q63f[dta$group14.q63f1=="Bags_50kg"]*50
+dta$group14.q63f[dta$group14.q63f1=="Debbe_Ndowa"] <- dta$group14.q63f[dta$group14.q63f1=="Debbe_Ndowa"]*20
+
+set <- c("group13.q63b", "groupx3.q63c1","group14.q63f" )
+dta$prod_soy <-rowSums(dta[set])
+
+set <- c("q63g", "q63d","q63c4" )
+table(dta[set])
+
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="March",3))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="April",4))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="May",5))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="June",6))
+dta[set] <- lapply(dta[set],  function(x) replace(x,x=="July",7))
+dta[set] <- lapply(dta[set],  function(x) as.numeric(as.character(x)))
+dta$prod_soy_month <- rowMeans(dta[set], na.rm=T)
+
+current_prod_soy <- data.frame(tapply(dta$prod_soy, dta$prod_soy_month, sum, na.rm=T))
+current_prod_soy$month <- rownames(current_prod_soy)
+current_prod_soy$crop <- "soy" 
+names(current_prod_soy) <- c("prod","month","crop") 
+
+##stack
+current_prod_all <- rbind(current_prod_maize, current_prod_gnuts, current_prod_soy)
+current_prod_all$month_num <- current_prod_all$month
+current_prod_all$month <- NA
+current_prod_all$month[current_prod_all$month_num==3] <- "March"
+current_prod_all$month[current_prod_all$month_num==4] <- "April"
+current_prod_all$month[current_prod_all$month_num==5] <- "May"
+current_prod_all$month[current_prod_all$month_num==6] <- "June"
+current_prod_all$month[current_prod_all$month_num==7] <- "July"
+
+
+current_prod_all$month <-  factor(current_prod_all$month, levels=month.name)
+# Plot
+## quantities    
+plot_1 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=prod, x=month)) + 
+    geom_bar(position="stack", stat="identity")
+current_prod_all$price[current_prod_all$crop == "gnuts"] <- 720
+current_prod_all$price[current_prod_all$crop == "maize"] <- 220
+current_prod_all$price[current_prod_all$crop == "soy"] <- 650
+
+current_prod_all$value <- current_prod_all$price*current_prod_all$prod
+
+plot_2 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=value, x=month)) + 
+  geom_bar(position="stack", stat="identity")
+
+png(paste(path,"papers/price_expectations/results/fig_current_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)
+ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
+dev.off()
+
+### analyis
+
 
 summary(lm((dta$q24)~q41=="Yes",data=dta))
 summary(lm((dta$q25)~q41=="Yes",data=dta))

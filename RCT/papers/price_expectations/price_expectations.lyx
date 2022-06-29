@@ -135,7 +135,7 @@ Smallholder farmers in low and middle income countries often sell the bulk
  groundnuts.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Introduction
 \end_layout
 
@@ -342,7 +342,7 @@ literal "false"
  of this study.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Data collection
 \end_layout
 
@@ -382,7 +382,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -423,7 +423,32 @@ name "fig:map-of-study"
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+The focus of the study is on market participation and so the targeted study
+ population are farmers that are likely to engage with markets.
+ As such, we included qualifier questions in our sample, where we asked
+ farmers if they were planning to sell maize, soybean or groundnuts during
+ the 2022 season.
+ Restricting our study population to a particular sub-population has implication
+s for the interpretation of the results.
+ For instance, we will see later that we find relatively high proportions
+ of households reporting to sell to the market as compared to what is typically
+ found in other studies 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barrett2010smallholder"
+literal "false"
+
+\end_inset
+
+.
+ As such, the study population, semi-subsistence smallholder farmers, needs
+ to be kept in mind when interpreting results, as they may be different
+ from for example pure subsistence farmers.
+ 
+\end_layout
+
+\begin_layout Section
 Farmer characteristics
 \end_layout
 
@@ -821,7 +846,7 @@ Household characteristics
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Price expectations
 \begin_inset CommandInset label
 LatexCommand label
@@ -1106,7 +1131,7 @@ Sexpr{round(median(dta$q66[dta$soy_sold_share>.8], na.rm=T), digits=0)}
  Kwatcha.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Crop production
 \end_layout
 
@@ -1250,7 +1275,9 @@ We also collected information on production in 2022.
  were often still in the field.
  However, we also asked farmers to give an estimate of what they expect
  to get from fields that still needed to be harvested.
- Results are in Figure 
+ Aggregating over all households in our sample, we find total production
+ to be about 310 tons of groundnuts, 770 tons of soy and 4000 tons of maize.
+ Results broken down by crops are in the top panel of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:(Expected)-crop-production"
@@ -1261,8 +1288,9 @@ noprefix "false"
 \end_inset
 
 .
- We also express production in 2022 in value terms.
- To do so, we use current prices.
+ We also express production in 2022 in value terms in the bottom panel.
+ To do so, we use current prices, which are substantially higher than prices
+ reported last year during the same period.
 \end_layout
 
 \begin_layout Standard
@@ -1270,6 +1298,18 @@ noprefix "false"
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/fig_current_prod.png
+	lyxscale 25
+	scale 75
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1299,7 +1339,17 @@ name "fig:(Expected)-crop-production"
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+The figure reflects the fact that rains started late in 2022, and so most
+ of the maize and groundnuts still needed to be harvested in June.
+ Soy sells currently at more than 600 kwatcha per kg, which is reflected
+ in a much larger important in total value.
+ However, also groundnuts and maize prizes are multiples of last year, resulting
+ in much larger overall values.
+ 
+\end_layout
+
+\begin_layout Section
 Smallholder market participation
 \end_layout
 
@@ -1353,38 +1403,6 @@ $farmer_ID), FUN=sum))[1]*100, digits=0)}
 \end_inset
 
  percent reports only a single transaction.
- In addition, of all the farmers that sold, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-X
-\end_layout
-
-\end_inset
-
- percent sold more than 50 percent of marketed quantities in the first 3
- months after harvest (May, June or July 2021)
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Should we delve into this more, eg with cumulative distribution functions
- of quantities sold
-\end_layout
-
-\end_inset
-
-.
- Finally, a fair share of farmers appear to fit in the 
-\begin_inset Quotes eld
-\end_inset
-
-sell low
-\begin_inset Quotes erd
-\end_inset
-
- category X percent of the farmers indicate only a single transaction.
  
 \end_layout
 
@@ -1431,13 +1449,41 @@ Sexpr{round(sum(!is.na(dta$q48)), digits=0)}
 
  farmers that reported cultivating soy bean in 2021, almost 90 percent reported
  that they sold soy during at least one transaction.
+ We also see large shares of households that report selling a paricular
+ crop only reported a single transaction.
+ This seems to be especially the case for soybean, where more than 8 out
+ of 10 households report to have sold the entire marketable surplus in one
+ go.
+ 
 \end_layout
 
 \begin_layout Standard
-Share of transactions that happen withing 3 months at transaction level
-\end_layout
+The third column in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Market-participation-by"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Standard
+\end_inset
+
+ provides a measure of early sales.
+ We have defined early here as withing three months from the harvest date
+ of the crop.
+ We find that 45 percent of households report at least one maize sale transactio
+n with the first three months post harvest (when prices are generally still
+ low - see below).
+ Postponing sales to get a higher price seems to be even less common for
+ soybean.
+ Here, again 8 out of 10 households reported at least on transaction with
+ three months from harvest.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+If we look at early sales at the level of the individual transactions before
+ aggregating at the household level, we find that: 
 \begin_inset ERT
 status open
 
@@ -1455,10 +1501,8 @@ _num_maize >=0, na.rm=T))*100 , digits=0)}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+percent of the maize transactions happened within the first three months
+ post harvest; 
 \begin_inset ERT
 status open
 
@@ -1476,10 +1520,8 @@ _num_gnuts >=0, na.rm=T))*100 , digits=0)}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+percent of the groundnut transactions happened within the first three months
+ post harvest; and 
 \begin_inset ERT
 status open
 
@@ -1497,6 +1539,13 @@ e$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy
 
 \end_inset
 
+percent of the soybean transactions happened within the first three months
+ post harvest.
+ 
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1504,7 +1553,7 @@ e$crop == "soy",]$date))- trans_date[trans_date$crop == "soy",]$pdate_num_soy
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1558,7 +1607,7 @@ hline
 
 \begin_layout Plain Layout
 
-& percentage & single & immediately & single transaction 
+& sold & sold & sold immediately & single transaction 
 \backslash
 
 \backslash
@@ -1567,7 +1616,7 @@ hline
 
 \begin_layout Plain Layout
 
-& sold &transaction & post-harvest & immediately post harves 
+& at least once & only once & post-harvest & immediately post harves 
 \backslash
 
 \backslash
@@ -1608,7 +1657,9 @@ t>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID),
 ant>0, list(all_transactions[all_transactions$crop=="maize",]$farmer_ID),
  FUN=sum))[1] *100, digits=0)}  &  
 \backslash
-Sexpr{round(nom_maize/denom_maize*100, digits=0)} & NA
+Sexpr{round(nom_maize/denom_maize*100, digits=0)} & 
+\backslash
+Sexpr{round(nomoXe_maize, digits=0)}
 \backslash
 
 \backslash
@@ -1629,7 +1680,9 @@ t>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID),
 ant>0, list(all_transactions[all_transactions$crop=="gnuts",]$farmer_ID),
  FUN=sum))[1] *100, digits=0)}   &  
 \backslash
-Sexpr{round(nom_gnuts/denom_gnuts*100, digits=0)}  & NA
+Sexpr{round(nom_gnuts/denom_gnuts*100, digits=0)}   & 
+\backslash
+Sexpr{round(nomoXe_gnuts, digits=0)} 
 \backslash
 
 \backslash
@@ -1650,7 +1703,9 @@ Sexpr{round(sum(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>
  list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1]
  *100, digits=0)}&  
 \backslash
-Sexpr{round(nom_soy/denom_soy*100, digits=0)}  & NA
+Sexpr{round(nom_soy/denom_soy*100, digits=0)}   & 
+\backslash
+Sexpr{round(nomoXe_soy, digits=0)} 
 \backslash
 
 \backslash
@@ -1700,7 +1755,10 @@ end{center}
 
 \begin_layout Plain Layout
 
-note: percentage sold is based on farmers who reported growing the crop.
+note: sold is percentage of farmers who reported growing the crop, other
+ measures are percentage of households who reported selling the crop.
+ Sold immediately post harvest is the share of households that made at least
+ one transaction in the first three months post harvest.
 \end_layout
 
 \end_inset
@@ -1708,20 +1766,20 @@ note: percentage sold is based on farmers who reported growing the crop.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+In the last column, we report the share of households that report a single
+ transaction and this transaction happened within three months after the
+ harvest.
+ We see that 2 out of three households sell soy in a single transaction
+ when prices are still low.
+\end_layout
+
+\begin_layout Section
 Price seasonality in the previous season
 \end_layout
 
@@ -1988,11 +2046,11 @@ name "fig:Evolution-of-prices"
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Income from cash cropping
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Anchoring
 \end_layout
 
@@ -2820,34 +2878,22 @@ and * at the 10 percent level.
 
 \end_layout
 
-\begin_layout Section*
-Alternative explanations for price expectations?
-\end_layout
-
-\begin_layout Standard
-The expected harvest of a particular crop may also affect prices farmers
- expect.
- Indeed, recent evidence suggests that even before the harvest materialized,
- traders respond to weather shocks by increasing prices, indicating that
- the expectation channel accounts for a substantial share of supply side
- food price shocks 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "https://doi.org/10.1111/ajae.12258"
-literal "false"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Having access to storage (q75)
-\end_layout
-
-\begin_layout Section*
+\begin_layout Section
 Conclusion
+\end_layout
+
+\begin_layout Standard
+Farmers often sell within the first three months post harvest and sell the
+ entire marketable surplus in one single transaction.
+ This seems to be especially the case for soy bean, which is generally cultivate
+d as a cash crop.
+ Ironically, prices of soybean have more than doubled, but the largest price
+ increase happened only from November onward, when most of the soybean farmers
+ had already sold their marketable surplus.
+ Provided that price movements of soybean follow a similar pattern in the
+ future, soybean farmers can substantially increase their revenue by waiting
+ longer before selling, or selling smaller qualities at different points
+ in time.
 \end_layout
 
 \begin_layout Standard

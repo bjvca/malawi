@@ -9,7 +9,7 @@ Project: Malawi RCT 2022/2023
 
 This do-file generates tables for characterising the surveyed farmers and their households
 
-Last modified: By Leocardia, on 28 June, 2022
+Last modified: By Leocardia, on 30 June, 2022
 
 **********************************************************************************************/
 *setting global path names
@@ -31,7 +31,7 @@ import delimited C:\git\malawi_rct\malawi\RCT\baseline\data\public\baseline_data
 
 //trim variables to only (1) farmer_id, (2) variables that define farmemr/household characteristics
 
-keep farmer_id q12-q23 assetsq33-livestockq38i
+keep farmer_id q12-q23 assetsq33-livestockq38i expq72-expq79
 label var q12 "Respondent is household head"
 recode q12 (1=1) (nonmissing = 0)
 
@@ -187,5 +187,64 @@ label var Number_chicken "Number of chicken owned by household"
 label var Number_ducks "Number of ducks owned by household"
 label var rooms_in_the_house "Number of rooms in the house"
 
+rename q19 household_size
+
 global title "respondent and household characteristics"
 sumx male_headed_hhs_percentage- Number_ducks, stat(mean sd N) word dec(3)
+
+drop q12- Number_ducks
+
+// GENERAL CHARACTERISTICS
+des expq72- expq79
+ed
+replace expq72 = "1" if expq72 == "Yes"
+replace expq72 = "2" if expq72 == "No"
+
+replace expq73 = "1" if expq73 == "Yes"
+replace expq73 = "2" if expq73 == "No"
+
+replace expq74 = "1" if expq74 == "Yes"
+replace expq74 = "2" if expq74 == "No"
+
+replace expq75 = "1" if expq75 == "Yes"
+replace expq75 = "2" if expq75 == "No"
+
+replace expq76 = "1" if expq76 == "Yes"
+replace expq76 = "2" if expq76 == "No"
+
+replace expq77 = "1" if expq77 == "Yes"
+replace expq77 = "2" if expq77 == "No"
+
+replace expq78 = "1" if expq78 == "Yes"
+replace expq78 = "2" if expq78 == "No"
+
+replace expq79 = "1" if expq79 == "Yes"
+replace expq79 = "2" if expq79 == "No"
+
+destring expq72- expq79, ignore ("n/a") replace
+recode expq72- expq74 expq75- expq79 (1=1) (nonmissing = 0)
+
+graph box expq74b
+tab expq74b
+replace expq74b =. if expq74b > 900000
+replace expq74b =. if expq74b < 999.5
+
+label var expq72 "Did you already promise part of the 2022 harvest to a buyer?"
+label var expq73 "Do you have access to credit?"
+label var expq74 "Do you have debts (cash or in-kind) to be repaid after harvest?"
+label var expq74b "Estimated amount (Malawian Kwacha) of debt"
+label var expq75 "Do you have access to storage?"
+label var expq76 "Is the storage crop specific?"
+label var expq77 "Are you member of a Cooperatives?"
+label var expq78 "Does this cooperative provide access to storage?"
+label var expq79 "Is this Cooperative certified by the Agriculture Commodity Exchange?"
+order expq72, after (expq79)
+
+global title "Household characteristics that affect market participation"
+sumx expq73- expq72, stat(mean sd N) word dec(3)
+
+
+
+
+
+

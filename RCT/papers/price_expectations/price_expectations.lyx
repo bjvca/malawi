@@ -86,6 +86,7 @@ knitr
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -51260199 "LNabwire"
 \end_header
 
 \begin_body
@@ -852,7 +853,11 @@ end{center}
 
 \begin_layout Plain Layout
 
+\change_deleted -51260199 1656594657
+
 note: percentage sold is based on farmers who reported growing the crop.
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -877,9 +882,341 @@ name "tab:Household-characteristics"
 \end_inset
 
 
+\change_inserted -51260199 1656594773
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -51260199 1656596138
+Turning to household characteristics that affect market participation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household characteristics that affect market participation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we asked farmers about their access to credit, access to storage, membership
+ in cooperatives, and if they had already promised part of the 2022 harvest
+ to a buyer.
+ Access to credit relaxes the liquidity constraints that may push farmers
+ into selling too early at lower prices.
+ We see that, among the surveyed farmers, about 40 percent indicate that
+ they have access to credit, and that less than a quarter had outstanding
+ debts averaging MWK.
+ 57,000 to repay after harvest.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -51260199 1656595540
+As regards access to storage, 60 percent of the households reported that
+ they have access to storage, of which, a half indicated that the storage
+ was crop specific.
+ We also find that, while farmer participation in cooperatives is limited,
+ a moderate share (40%) of the few (13%) that belong to cooperatives have
+ access to storage space provided by the cooperative.
+ Lastly, we look at the proportion of farmers that committee a part of their
+ crop to buyers before harvest--- a scenario that may often lead farmers
+ to sell under unfavorable price conditions, or reduce the amount of harvest
+ that farmers can sell after harvest.
+ We find that only a negligible share of farmers (8%) had already promised
+ part of the 2022 crop to buyers prior to harvest.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -51260199 1656593487
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+begin{center}
 \end_layout
 
 \begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+begin{tabular}{rccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+	&	Mean	&	Std dev	&	N	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+cline{2-4}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594540
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Credit}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Do you have access to credit? & 0.383 & 0.486 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Do you have debts (cash or in-kind) to be repaid after harvest? & 0.236 &
+ 0.425 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Estimated amount (Malawian Kwacha) of debt & 56,878 & 92,788 & 819 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594555
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Storage}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Do you have access to storage? & 0.599 & 0.49 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594568
+Is the storage crop specific? & 0.482 & 0.5 & 2,114 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594578
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Cooperation}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Are you member of a Cooperatives? & 0.134 & 0.34 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Does this cooperative provide access to storage? & 0.388 & 0.488 & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594594
+Is this Cooperative certified by the Agriculture Commodity Exchange? & 0.727
+ & 0.446 & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656596196
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Advance selling}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594527
+Did you already promise part of the 2022 harvest to a buyer? & 0.077 & 0.267
+ & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656594208
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656593646
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\change_inserted -51260199 1656596092
+Household characteristics that affect market participation
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household characteristics that affect market participation"
+
+\end_inset
+
+
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

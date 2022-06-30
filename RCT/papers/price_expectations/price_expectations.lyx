@@ -81,7 +81,7 @@ knitr
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes true
+\tracking_changes false
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -501,7 +501,26 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Household characteristics
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household-characteristics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -850,30 +869,6 @@ end{center}
 
 \end_layout
 
-\begin_layout Plain Layout
-
-note: percentage sold is based on farmers who reported growing the crop.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Household characteristics
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Household-characteristics"
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
@@ -889,14 +884,11 @@ name "tab:Household-characteristics"
 \end_layout
 
 \begin_layout Section
+Prices 
+\end_layout
+
+\begin_layout Subsection
 Price expectations
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Price-expectations"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1173,6 +1165,250 @@ Sexpr{round(median(dta$q66[dta$soy_sold_share>.8], na.rm=T), digits=0)}
  Kwatcha.
 \end_layout
 
+\begin_layout Subsection
+Price seasonality in the previous season
+\end_layout
+
+\begin_layout Standard
+The top panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evolution-of-prices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the evolution of the median prices that farmers received for their
+ crops in the past.
+ In particular, we asked farmers to report if they sold any of the three
+ crops under consideration.
+ If they reported sales, we asked how many separate transactions occurred
+ and for each transaction, we recorded details such as the amount sold and
+ price received.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Prices for groundnuts and maize are in kilograms.
+ For soybean, they are per 250 gram to keep the prices on a comparable scales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The middle panel of Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evolution-of-prices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows price indices with as base the month of May 2021.
+ This is the month following the harvest for most of the crops (although
+ groundnuts is harvested somewhat later) and it also happens to be around
+ the time the survey happened in 2022.
+ The figure show that over the course of the year, prices for all commodities
+ have been increasing.
+ After only 4 months, prices of groundnuts already increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_2$price_change[all_2$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+gnuts
+\begin_inset Quotes erd
+\end_inset
+
+][5] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ After 6 months, in November 2021, median prices of all three crops were
+ about 50 percent higher than immediately after the harvest in May.
+ By December, prices of soybean had more than doubled and were still on
+ the rise.
+\end_layout
+
+\begin_layout Standard
+The bottom panel shows price indices with as base the month of September
+ 2021 and is included to facilitate comparison with the price expectations
+ presented in above.
+ It shows that between September 2021 and January 2022, median soybean prices
+ increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+soy
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ However, as seen above, farmers expect a price increase in 2022 of only
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="soybean" & graph$time =="December"]
+, na.rm=T)/median(graph$price[graph$crop=="soybean" & graph$time =="September"],
+ na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ For groundnuts, prices increased by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+gnuts
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent, while expectations are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="groundnuts" & graph$time =="Decembe
+r"], na.rm=T)/median(graph$price[graph$crop=="groundnuts" & graph$time =="Septemb
+er"], na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ For maize, prices remained fairly stable, increasing only 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round(all_3$price_change[all_3$crop == 
+\begin_inset Quotes eld
+\end_inset
+
+maize
+\begin_inset Quotes erd
+\end_inset
+
+][9] -100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent.
+ Farmers expect an increase of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{round((median(graph$price[graph$crop=="maize" & graph$time =="December"],
+ na.rm=T)/median(graph$price[graph$crop=="maize" & graph$time =="September"],
+ na.rm=T))*100-100, digits=0)}
+\end_layout
+
+\end_inset
+
+ percent for maize.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/fig2.png
+	lyxscale 10
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Evolution of prices received by farmers in 2021-2022
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Evolution-of-prices"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Crop production
 \end_layout
@@ -1269,7 +1505,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1339,7 +1575,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1821,34 +2057,22 @@ In the last column, we report the share of households that report a single
  when prices are still low.
 \end_layout
 
-\begin_layout Section
-Price seasonality in the previous season
-\end_layout
-
 \begin_layout Standard
-The top panel of Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Evolution-of-prices"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- shows the evolution of the median prices that farmers received for their
- crops in the past.
- In particular, we asked farmers to report if they sold any of the three
- crops under consideration.
- If they reported sales, we asked how many separate transactions occurred
- and for each transaction, we recorded details such as the amount sold and
- price received.
+Smallholder farmers dispose of their crops though four channels.
+ They can sell directly to neighbors, friends or relatives, often within
+ the same village.
+ They can also choose to take their product to a market in their proximity.
+ Furthermore, in villages, there are usually some small traders who aggregate
+ commodities for further sale to larger traders.
+ Finally, there are the itinerant traders from outside of the village that
+ visit farmers and buy at the farm gate.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Prices for groundnuts and maize are in kilograms.
- For soybean, they are per 250 gram to keep the prices on a comparable scales.
+There may be other destinations for crops, such as direct sales to schools
+ or prisons.
+ However, the four destinations we consider are by far the predominant ones.
 \end_layout
 
 \end_inset
@@ -1857,23 +2081,45 @@ Prices for groundnuts and maize are in kilograms.
 \end_layout
 
 \begin_layout Standard
-The middle panel of Figure 
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Evolution-of-prices"
+reference "tab:Crop-disposal"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- shows price indices with as base the month of May 2021.
- This is the month following the harvest for most of the crops (although
- groundnuts is harvested somewhat later) and it also happens to be around
- the time the survey happened in 2022.
- The figure show that over the course of the year, prices for all commodities
- have been increasing.
- After only 4 months, prices of groundnuts already increased by 
+ provides some summary statistics on crop disposal,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Crop disposal
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Crop-disposal"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1881,33 +2127,267 @@ status open
 
 
 \backslash
-Sexpr{round(all_2$price_change[all_2$crop == 
-\begin_inset Quotes eld
-\end_inset
+begin{center}
+\end_layout
 
-gnuts
-\begin_inset Quotes erd
-\end_inset
+\begin_layout Plain Layout
 
-][5] -100, digits=0)}
+
+\backslash
+begin{tabular}{rcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{2}{c}{maize} & 
+\backslash
+multicolumn{2}{c}{soybean} &
+\backslash
+multicolumn{2}{c}{groundnuts} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& percent & price & percent & price & percent & price  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-7}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+neighbors & 
+\backslash
+Sexpr{sold_to_res[1,1]} & 
+\backslash
+Sexpr{sold_to_res[1,2]} & 
+\backslash
+Sexpr{sold_to_res[1,3]} & 
+\backslash
+Sexpr{sold_to_res[1,4]} & 
+\backslash
+Sexpr{sold_to_res[1,5]} & 
+\backslash
+Sexpr{sold_to_res[1,6]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+market & 
+\backslash
+Sexpr{sold_to_res[2,1]} & 
+\backslash
+Sexpr{sold_to_res[2,2]} & 
+\backslash
+Sexpr{sold_to_res[2,3]} & 
+\backslash
+Sexpr{sold_to_res[2,4]} & 
+\backslash
+Sexpr{sold_to_res[2,5]} & 
+\backslash
+Sexpr{sold_to_res[2,6]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+aggregator& 
+\backslash
+Sexpr{sold_to_res[3,1]} & 
+\backslash
+Sexpr{sold_to_res[3,2]} & 
+\backslash
+Sexpr{sold_to_res[3,3]} & 
+\backslash
+Sexpr{sold_to_res[3,4]} & 
+\backslash
+Sexpr{sold_to_res[3,5]} & 
+\backslash
+Sexpr{sold_to_res[3,6]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+trader & 
+\backslash
+Sexpr{sold_to_res[4,1]} & 
+\backslash
+Sexpr{sold_to_res[4,2]} & 
+\backslash
+Sexpr{sold_to_res[4,3]} & 
+\backslash
+Sexpr{sold_to_res[4,4]} & 
+\backslash
+Sexpr{sold_to_res[4,5]} & 
+\backslash
+Sexpr{sold_to_res[4,6]} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
- percent.
- After 6 months, in November 2021, median prices of all three crops were
- about 50 percent higher than immediately after the harvest in May.
- By December, prices of soybean had more than doubled and were still on
- the rise.
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The bottom panel shows price indices with as base the month of September
- 2021 and is included to facilitate comparison with the price expectations
- presented in Section 
+The table also shows that selling to the market is generally the most profitable.
+ However, when farmers directly sell to markets they can get a higher price,
+ but also must incur a transport cost 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/j.1467-8276.2005.00758.x"
+literal "false"
+
+\end_inset
+
+.
+ The second most profitable option is selling to middlemen at the farm gate.
+ Selling to neighbors is more profitable for maize and soybean, but not
+ for groundnuts.
+\end_layout
+
+\begin_layout Standard
+We further asked who made the decision with respect sales.
+ Gender patterns in decision making related to agriculture, and marketing
+ of crops in particular, has been studied extensively in the context of
+ women empowerment in agriculture 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ALKIRE201371"
+literal "false"
+
+\end_inset
+
+.
+ Households are viewed as consisting of different individuals whose preferences
+ do not necessarily align, and norms and customs may result in some crops
+ or activities being more in the domain of one of the genders 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "doi:10.1080/00220388.2010.536222"
+literal "false"
+
+\end_inset
+
+.
+ However, recently, the focus on non-cooperation and bargaining has shifted
+ back, and joint ownership and decision making has become the focus of research
+ again, often through the lens of common pool resources management 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/agec.12540,DOSS2015171"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Results for gendered decision making are summarized in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Price-expectations"
+reference "fig:Who-decided-to"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1915,131 +2395,20 @@ noprefix "false"
 \end_inset
 
 .
- It shows that between September 2021 and January 2022, median soybean prices
- increased by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(all_3$price_change[all_3$crop == 
-\begin_inset Quotes eld
-\end_inset
-
-soy
-\begin_inset Quotes erd
-\end_inset
-
-][9] -100, digits=0)}
+ Categories included instances where 1) the woman decided alone without
+ consulting anyone else in the household, 2) the woman decided alone but
+ after consulting the husband and/or others in the household, 3) the man
+ decided alone without consulting anyone else in the household, 4) the man
+ decided alone but after consulting the wife and/or others in the household,
+ 5) it was a joint decision.
 \end_layout
 
-\end_inset
-
- percent.
- However, as seen in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Price-expectations"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, farmers expect a price increase in 2022 of only 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round((median(graph$price[graph$crop=="soybean" & graph$time =="December"]
-, na.rm=T)/median(graph$price[graph$crop=="soybean" & graph$time =="September"],
- na.rm=T))*100-100, digits=0)}
-\end_layout
-
-\end_inset
-
- percent.
- For groundnuts, prices increased by 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(all_3$price_change[all_3$crop == 
-\begin_inset Quotes eld
-\end_inset
-
-gnuts
-\begin_inset Quotes erd
-\end_inset
-
-][9] -100, digits=0)}
-\end_layout
-
-\end_inset
-
- percent, while expectations are 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round((median(graph$price[graph$crop=="groundnuts" & graph$time =="Decembe
-r"], na.rm=T)/median(graph$price[graph$crop=="groundnuts" & graph$time =="Septemb
-er"], na.rm=T))*100-100, digits=0)}
-\end_layout
-
-\end_inset
-
- percent.
- For maize, prices remained fairly stable, increasing only 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round(all_3$price_change[all_3$crop == 
-\begin_inset Quotes eld
-\end_inset
-
-maize
-\begin_inset Quotes erd
-\end_inset
-
-][9] -100, digits=0)}
-\end_layout
-
-\end_inset
-
- percent.
- Farmers expect an increase of 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{round((median(graph$price[graph$crop=="maize" & graph$time =="December"],
- na.rm=T)/median(graph$price[graph$crop=="maize" & graph$time =="September"],
- na.rm=T))*100-100, digits=0)}
-\end_layout
-
-\end_inset
-
- percent for maize.
- 
+\begin_layout Standard
+We see that husband an wife generally take the decision to sell jointly.
+ Men also often sell alone, but after consulting with the wife.
+ Men almost never sell unilaterally, while women do.
+ There is not a lot of difference between the crops, but one could argue
+ that maize is more a male crop and groundnuts is more in the women domain.
 \end_layout
 
 \begin_layout Standard
@@ -2049,10 +2418,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Graphics
-	filename results/fig2.png
-	lyxscale 10
+	filename results/fig_dec.png
+	lyxscale 25
 	scale 75
 
 \end_inset
@@ -2064,10 +2432,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Evolution of prices received by farmers in 2021-2022
+Who decided to sell?
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:Evolution-of-prices"
+name "fig:Who-decided-to"
 
 \end_inset
 
@@ -2101,7 +2469,7 @@ In this section we look at It seems strange that, even though prices go
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2120,6 +2488,84 @@ status open
 
 \begin_layout Plain Layout
 Revenue
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For each transaction, we also asked what the proceeds of each transaction
+ were mainly used for.
+ Results are summarized in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Use-of-proceeds"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We differnetiate between transactions made by households that reported
+ to have access to credit and households that report not to have access
+ to credit.
+ Proceeds from sales are mostly used for agricultural investment.
+ In Malawi, this is generally for inorganic fertilizer.
+ Interestingly, it is especially farmers that have access to credit that
+ use proceeds for agricultural inputs.
+ 
+\end_layout
+
+\begin_layout Standard
+Selling for immediate home consumption is also important.
+ Here there are signs of distress sales, where farmers that can not borrow
+ to finance consumption report higher incidence of sales.
+ About 10 percent of transactions is done to cover education expenses.
+ About 5 percent of transactions is to pay for health related expenditures
+ and also here, farmers that do not have access to credit sell more.
+ Unsurprisingly, farmers that have access to loans are also more likely
+ to sell to pay back loans.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename results/fig_exp.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use of proceeds of sales
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Use-of-proceeds"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2512,439 +2958,6 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: Standard errors are clustered at the household level.
- *** denotes significance at the 1 percent level, ** at the 5 percent level,
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-and * at the 10 percent level.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Instead of simply averaging prices received in the previous season, we can
- also look at price dynamics in the previous season to better understand
- the formation of expectations.
- For instance, we can check if expectations of the price evolution in the
- next season of farmers that experienced a sharp increase in prices they
- received for their crops in the previous season differ from expectations
- of farmers that experienced relatively stable prices throughout the previous
- season.
- To answer this question, we can exploit the fact that some farmers sold
- more than once in the previous season and relate changes in past prices
- to changes in expected future prices.
- 
-\end_layout
-
-\begin_layout Standard
-For each transaction in the previous season, we recorded price obtained
- and the month in which the transaction took place.
- To facilitate analysis, we categorize transactions into three periods.
- First, transactions in May, June or July 2021 are categorizes as early
- sales.
- Transactions in August, September and October are referred to as average
- sales.
- And finally, sales made in November, December and January are grouped into
- the third category and are referred to as late sales.
- We calculate average prices obtained during transactions within each of
- these three periods at the farmer level and then estimate the following
- first-differences models:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-p_{i,d}^{e}-p_{i,s}^{e}=\beta\left(p_{i,d}-p_{i,s}\right)+\varepsilon_{i}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Results are in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:first_diff"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- In the first column, we pool all crops, while the remaining three columns
- provide results for separate regressions for each crop.
- In the first row, the change in prices received is based on average prices
- in August, September and October and average prices received in November,
- December and January.
- This roughly corresponds to the difference in timing used for the dependent
- variables (change between September and December).The second row uses the
- same dependent variable but relates it to prices received early in the
- season of 2021 and prices received late in the season.
- The last row relates changes in expected prices to changes between prices
- early in the season and mid season.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-First differences model
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:first_diff"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{rdccc} 
-\backslash
-hline 
-\backslash
-hline 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
- & 
-\backslash
-multicolumn{4}{c}{
-\backslash
-textit{difference in expected price between Sep and Dec}} 
-\backslash
-
-\backslash
-  
-\end_layout
-
-\begin_layout Plain Layout
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& pooled	& maize & groundnuts & soybean 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-& 
-\backslash
-cline{1-4} 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-p(late) - p(av) & 
-\backslash
-Sexpr{format(round(resmat_fe[1,1], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[3,1]<.01,"***",ifelse(resmat_fe[3,1]<.05,"**",ifelse(resmat
-_fe[3,1]<.1,"*","")))}}   & 
-\backslash
-Sexpr{format(round(resmat_fe[1,2], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[3,2]<.01,"***",ifelse(resmat_fe[3,2]<.05,"**",ifelse(resmat
-_fe[3,2]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[1,3], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[3,3]<.01,"***",ifelse(resmat_fe[3,3]<.05,"**",ifelse(resmat
-_fe[3,3]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[1,4], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[3,4]<.01,"***",ifelse(resmat_fe[3,4]<.05,"**",ifelse(resmat
-_fe[3,4]<.1,"*","")))}} 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& (
-\backslash
-Sexpr{format(round(resmat_fe[2,1], digits=3),nsmall=3)}) & (
-\backslash
-Sexpr{format(round(resmat_fe[2,2], digits=3),nsmall=3)}) & (
-\backslash
-Sexpr{format(round(resmat_fe[2,3], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[4,1], digits=3),nsmall=3)})     
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& [
-\backslash
-Sexpr{format(round(resmat_fe[4,1], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[4,2], digits=3),nsmall=0)}] & [
-\backslash
-Sexpr{format(round(resmat_fe[4,3], digits=3),nsmall=0)}] & [
-\backslash
-Sexpr{format(round(resmat_fe[4,4], digits=3),nsmall=0)}] 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-p(late) - p(early) & 
-\backslash
-Sexpr{format(round(resmat_fe[5,1], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[7,1]<.01,"***",ifelse(resmat_fe[7,1]<.05,"**",ifelse(resmat
-_fe[7,1]<.1,"*","")))}}  & 
-\backslash
-Sexpr{format(round(resmat_fe[5,2], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[7,2]<.01,"***",ifelse(resmat_fe[7,2]<.05,"**",ifelse(resmat
-_fe[7,2]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[5,3], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[7,3]<.01,"***",ifelse(resmat_fe[7,3]<.05,"**",ifelse(resmat
-_fe[7,4]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[5,4], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[7,4]<.01,"***",ifelse(resmat_fe[7,4]<.05,"**",ifelse(resmat
-_fe[7,4]<.1,"*","")))}} 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& (
-\backslash
-Sexpr{format(round(resmat_fe[6,1], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[6,2], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[6,3], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[6,4], digits=3),nsmall=3)})    
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& [
-\backslash
-Sexpr{format(round(resmat_fe[8,1], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[8,2], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[8,3], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[8,4], digits=3),nsmall=0)}]    
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-p(av) - p(early) & 
-\backslash
-Sexpr{format(round(resmat_fe[9,1], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[11,1]<.01,"***",ifelse(resmat_fe[11,1]<.05,"**",ifelse(resm
-at_fe[11,1]<.1,"*","")))}}  & 
-\backslash
-Sexpr{format(round(resmat_fe[9,2], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[11,2]<.01,"***",ifelse(resmat_fe[11,2]<.05,"**",ifelse(resm
-at_fe[11,2]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[9,3], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[11,3]<.01,"***",ifelse(resmat_fe[11,3]<.05,"**",ifelse(resm
-at_fe[11,3]<.1,"*","")))}} & 
-\backslash
-Sexpr{format(round(resmat_fe[9,4], digits=3),nsmall=3)}^{
-\backslash
-Sexpr{ifelse(resmat_fe[11,4]<.01,"***",ifelse(resmat_fe[11,4]<.05,"**",ifelse(resm
-at_fe[11,4]<.1,"*","")))}}   
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& (
-\backslash
-Sexpr{format(round(resmat_fe[10,1], digits=3),nsmall=3)}) & (
-\backslash
-Sexpr{format(round(resmat_fe[10,2], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[10,3], digits=3),nsmall=3)})  & (
-\backslash
-Sexpr{format(round(resmat_fe[10,4], digits=3),nsmall=3)})     
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-& [
-\backslash
-Sexpr{format(round(resmat_fe[12,1], digits=3),nsmall=0)}] & [
-\backslash
-Sexpr{format(round(resmat_fe[12,2], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[12,3], digits=3),nsmall=0)}]  & [
-\backslash
-Sexpr{format(round(resmat_fe[12,4], digits=3),nsmall=0)}]     
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline  
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tabular}
-\end_layout
-
-\begin_layout Plain Layout
-
- 
-\backslash
-end{center}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-scriptsize
-\end_layout
-
-\begin_layout Plain Layout
-
-Note: Standard errors in (), clustered at the household level in the pooled
- model.
- Observations in [].
  *** denotes significance at the 1 percent level, ** at the 5 percent level,
  
 \end_layout

@@ -143,72 +143,72 @@ dev.off()
 ### create a time series graph with average prices 
 ### first stack data of different transactions
 ### start with maize  
-sel <- c( "trans.1..q43b", "trans.1..q43d","trans.1..group2.q43c")
+sel <- c( "trans.1..q43b", "trans.1..q43d","trans.1..group2.q43c","trans.1..q43e","trans.1..q43f","trans.1..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.1..q43a","trans.1..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans1 <- data.frame(dta$farmer_ID,dta$trans.1..q43a,dta$trans.1..q43b,dta$trans.1..q43d,dta$trans.1..group2.q43c,dta$trans.1..group2.q43c1)
-names(trans1) <- c("farmer_ID", "date","form","price","quant","measure")
+trans1 <- data.frame(dta$farmer_ID,dta$trans.1..q43a,dta$trans.1..q43b,dta$trans.1..q43d,dta$trans.1..group2.q43c,dta$trans.1..group2.q43c1,dta$trans.1..q43e,dta$trans.1..q43f,dta$trans.1..q43g)
+names(trans1) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.2..q43b", "trans.2..q43d","trans.2..group2.q43c")
+sel <- c( "trans.2..q43b", "trans.2..q43d","trans.2..group2.q43c","trans.2..q43e","trans.2..q43f","trans.2..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.2..q43a","trans.2..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans2 <- data.frame(dta$farmer_ID,dta$trans.2..q43a,dta$trans.2..q43b,dta$trans.2..q43d,dta$trans.2..group2.q43c,dta$trans.2..group2.q43c1)
-names(trans2) <- c("farmer_ID", "date","form","price","quant","measure")
+trans2 <- data.frame(dta$farmer_ID,dta$trans.2..q43a,dta$trans.2..q43b,dta$trans.2..q43d,dta$trans.2..group2.q43c,dta$trans.2..group2.q43c1,dta$trans.2..q43e,dta$trans.2..q43f,dta$trans.2..q43g)
+names(trans2) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.3..q43b", "trans.3..q43d","trans.3..group2.q43c")
+sel <- c( "trans.3..q43b", "trans.3..q43d","trans.3..group2.q43c","trans.3..q43e","trans.3..q43f","trans.3..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.3..q43a","trans.3..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans3 <- data.frame(dta$farmer_ID,dta$trans.3..q43a,dta$trans.3..q43b,dta$trans.3..q43d,dta$trans.3..group2.q43c,dta$trans.3..group2.q43c1)
-names(trans3) <- c("farmer_ID", "date","form","price","quant","measure")
+trans3 <- data.frame(dta$farmer_ID,dta$trans.3..q43a,dta$trans.3..q43b,dta$trans.3..q43d,dta$trans.3..group2.q43c,dta$trans.3..group2.q43c1,dta$trans.3..q43e,dta$trans.3..q43f,dta$trans.3..q43g)
+names(trans3) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.4..q43b", "trans.4..q43d","trans.4..group2.q43c")
+sel <- c( "trans.4..q43b", "trans.4..q43d","trans.4..group2.q43c","trans.4..q43e","trans.4..q43f","trans.4..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.4..q43a","trans.4..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans4 <- data.frame(dta$farmer_ID,dta$trans.4..q43a,dta$trans.4..q43b,dta$trans.4..q43d,dta$trans.4..group2.q43c,dta$trans.4..group2.q43c1)
-names(trans4) <- c("farmer_ID", "date","form","price","quant","measure")
+trans4 <- data.frame(dta$farmer_ID,dta$trans.4..q43a,dta$trans.4..q43b,dta$trans.4..q43d,dta$trans.4..group2.q43c,dta$trans.4..group2.q43c1,dta$trans.4..q43e,dta$trans.4..q43f,dta$trans.4..q43g)
+names(trans4) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.5..q43b", "trans.5..q43d","trans.5..group2.q43c")
+sel <- c( "trans.5..q43b", "trans.5..q43d","trans.5..group2.q43c","trans.5..q43e","trans.5..q43f","trans.5..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.5..q43a","trans.5..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans5 <- data.frame(dta$farmer_ID,dta$trans.5..q43a,dta$trans.5..q43b,dta$trans.5..q43d,dta$trans.5..group2.q43c,dta$trans.5..group2.q43c1)
-names(trans5) <- c("farmer_ID", "date","form","price","quant","measure")
+trans5 <- data.frame(dta$farmer_ID,dta$trans.5..q43a,dta$trans.5..q43b,dta$trans.5..q43d,dta$trans.5..group2.q43c,dta$trans.5..group2.q43c1,dta$trans.5..q43e,dta$trans.5..q43f,dta$trans.5..q43g)
+names(trans5) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.6..q43b", "trans.6..q43d","trans.6..group2.q43c")
+sel <- c( "trans.6..q43b", "trans.6..q43d","trans.6..group2.q43c","trans.6..q43e","trans.6..q43f","trans.6..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.6..q43a","trans.6..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans6 <- data.frame(dta$farmer_ID,dta$trans.6..q43a,dta$trans.6..q43b,dta$trans.6..q43d,dta$trans.6..group2.q43c,dta$trans.6..group2.q43c1)
-names(trans6) <- c("farmer_ID", "date","form","price","quant","measure")
+trans6 <- data.frame(dta$farmer_ID,dta$trans.6..q43a,dta$trans.6..q43b,dta$trans.6..q43d,dta$trans.6..group2.q43c,dta$trans.6..group2.q43c1,dta$trans.6..q43e,dta$trans.6..q43f,dta$trans.6..q43g)
+names(trans6) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.7..q43b", "trans.7..q43d","trans.7..group2.q43c")
+sel <- c( "trans.7..q43b", "trans.7..q43d","trans.7..group2.q43c","trans.7..q43e","trans.7..q43f","trans.7..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.7..q43a","trans.7..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans7 <- data.frame(dta$farmer_ID,dta$trans.7..q43a,dta$trans.7..q43b,dta$trans.7..q43d,dta$trans.7..group2.q43c,dta$trans.7..group2.q43c1)
-names(trans7) <- c("farmer_ID", "date","form","price","quant","measure")
+trans7 <- data.frame(dta$farmer_ID,dta$trans.7..q43a,dta$trans.7..q43b,dta$trans.7..q43d,dta$trans.7..group2.q43c,dta$trans.7..group2.q43c1,dta$trans.7..q43e,dta$trans.7..q43f,dta$trans.7..q43g)
+names(trans7) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans.8..q43b", "trans.8..q43d","trans.8..group2.q43c")
+sel <- c( "trans.8..q43b", "trans.8..q43d","trans.8..group2.q43c","trans.8..q43e","trans.8..q43f","trans.8..q43g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans.8..q43a","trans.8..group2.q43c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans8 <- data.frame(dta$farmer_ID,dta$trans.8..q43a,dta$trans.8..q43b,dta$trans.8..q43d,dta$trans.8..group2.q43c,dta$trans.8..group2.q43c1)
-names(trans8) <- c("farmer_ID", "date","form","price","quant","measure")
+trans8 <- data.frame(dta$farmer_ID,dta$trans.8..q43a,dta$trans.8..q43b,dta$trans.8..q43d,dta$trans.8..group2.q43c,dta$trans.8..group2.q43c1,dta$trans.8..q43e,dta$trans.8..q43f,dta$trans.8..q43g)
+names(trans8) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
 all <- rbind(trans1, trans2, trans3, trans4, trans5, trans6, trans7,trans8)
-names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 all <- subset(all, form ==2)
 all$price[all$price > 999] <- NA
 all$price[all$price < 25] <- NA
@@ -221,48 +221,48 @@ all_maize <- all
 
 #now for gnuts
 
-sel <- c( "trans1.1..q47b", "trans1.1..q47d","trans1.1..group4.q47c")
+sel <- c( "trans1.1..q47b", "trans1.1..q47d","trans1.1..group4.q47c","trans1.1..q47e","trans1.1..q47f","trans1.1..q47g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans1.1..q47a","trans1.1..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans11 <- data.frame(dta$farmer_ID,dta$trans1.1..q47a,dta$trans1.1..q47b,dta$trans1.1..q47d,dta$trans1.1..group4.q47c,dta$trans1.1..group4.q47c1)
-names(trans11) <- c("farmer_ID", "date","form","price","quant","measure")
+trans11 <- data.frame(dta$farmer_ID,dta$trans1.1..q47a,dta$trans1.1..q47b,dta$trans1.1..q47d,dta$trans1.1..group4.q47c,dta$trans1.1..group4.q47c1,dta$trans1.1..q47e,dta$trans1.1..q47f,dta$trans1.1..q47g)
+names(trans11) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans1.2..q47b", "trans1.2..q47d","trans1.2..group4.q47c")
+sel <- c( "trans1.2..q47b", "trans1.2..q47d","trans1.2..group4.q47c","trans1.2..q47e","trans1.2..q47f","trans1.2..q47g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans1.2..q47a","trans1.2..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans12 <- data.frame(dta$farmer_ID,dta$trans1.2..q47a,dta$trans1.2..q47b,dta$trans1.2..q47d,dta$trans1.2..group4.q47c,dta$trans1.2..group4.q47c1)
-names(trans12) <- c("farmer_ID", "date","form","price","quant","measure")
+trans12 <- data.frame(dta$farmer_ID,dta$trans1.2..q47a,dta$trans1.2..q47b,dta$trans1.2..q47d,dta$trans1.2..group4.q47c,dta$trans1.2..group4.q47c1,dta$trans1.2..q47e,dta$trans1.2..q47f,dta$trans1.2..q47g)
+names(trans12) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans1.3..q47b", "trans1.3..q47d","trans1.3..group4.q47c")
+sel <- c( "trans1.3..q47b", "trans1.3..q47d","trans1.3..group4.q47c","trans1.3..q47e","trans1.3..q47f","trans1.3..q47g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans1.3..q47a","trans1.3..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans13 <- data.frame(dta$farmer_ID,dta$trans1.3..q47a,dta$trans1.3..q47b,dta$trans1.3..q47d,dta$trans1.3..group4.q47c,dta$trans1.3..group4.q47c1)
-names(trans13) <- c("farmer_ID", "date","form","price","quant","measure")
+trans13 <- data.frame(dta$farmer_ID,dta$trans1.3..q47a,dta$trans1.3..q47b,dta$trans1.3..q47d,dta$trans1.3..group4.q47c,dta$trans1.3..group4.q47c1,dta$trans1.3..q47e,dta$trans1.3..q47f,dta$trans1.3..q47g)
+names(trans13) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans1.4..q47b", "trans1.4..q47d","trans1.4..group4.q47c")
+sel <- c( "trans1.4..q47b", "trans1.4..q47d","trans1.4..group4.q47c","trans1.4..q47e","trans1.4..q47f","trans1.4..q47g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans1.4..q47a","trans1.4..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans14 <- data.frame(dta$farmer_ID,dta$trans1.4..q47a,dta$trans1.4..q47b,dta$trans1.4..q47d,dta$trans1.4..group4.q47c,dta$trans1.4..group4.q47c1) 
-names(trans14) <- c("farmer_ID", "date","form","price","quant","measure")
+trans14 <- data.frame(dta$farmer_ID,dta$trans1.4..q47a,dta$trans1.4..q47b,dta$trans1.4..q47d,dta$trans1.4..group4.q47c,dta$trans1.4..group4.q47c1,dta$trans1.4..q47e,dta$trans1.4..q47f,dta$trans1.4..q47g)
+names(trans14) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans1.5..q47b", "trans1.5..q47d","trans1.5..group4.q47c")
+sel <- c( "trans1.5..q47b", "trans1.5..q47d","trans1.5..group4.q47c","trans1.5..q47e","trans1.5..q47f","trans1.5..q47g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans1.5..q47a","trans1.5..group4.q47c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans15 <- data.frame(dta$farmer_ID,dta$trans1.5..q47a,dta$trans1.5..q47b,dta$trans1.5..q47d,dta$trans1.5..group4.q47c,dta$trans1.5..group4.q47c1)
-names(trans15) <- c("farmer_ID", "date","form","price","quant","measure")
+trans15 <- data.frame(dta$farmer_ID,dta$trans1.5..q47a,dta$trans1.5..q47b,dta$trans1.5..q47d,dta$trans1.5..group4.q47c,dta$trans1.5..group4.q47c1,dta$trans1.5..q47e,dta$trans1.5..q47f,dta$trans1.5..q47g)
+names(trans15) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
 all <- rbind(trans11, trans12, trans13, trans14, trans15)
-names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 all <- subset(all, form ==2)
 all$price[all$price > 19999] <- NA
 all$price[all$price < 999] <- NA
@@ -279,40 +279,40 @@ all_gnuts <- all
 
 ### for soybean
 
-sel <- c( "trans2.1..q52b", "trans2.1..q52d","trans2.1..group6.q52c")
+sel <- c( "trans2.1..q52b", "trans2.1..q52d","trans2.1..group6.q52c","trans2.1..q52e","trans2.1..q52f","trans2.1..q52g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans2.1..q52a","trans2.1..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans21 <- data.frame(dta$farmer_ID,dta$trans2.1..q52a,dta$trans2.1..q52b,dta$trans2.1..q52d,dta$trans2.1..group6.q52c,dta$trans2.1..group6.q52c1)
-names(trans21) <- c("farmer_ID", "date","form","price","quant","measure")
+trans21 <- data.frame(dta$farmer_ID,dta$trans2.1..q52a,dta$trans2.1..q52b,dta$trans2.1..q52d,dta$trans2.1..group6.q52c,dta$trans2.1..group6.q52c1,dta$trans2.1..q52e,dta$trans2.1..q52f,dta$trans2.1..q52g)
+names(trans21) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans2.2..q52b", "trans2.2..q52d","trans2.2..group6.q52c")
+sel <- c( "trans2.2..q52b", "trans2.2..q52d","trans2.2..group6.q52c","trans2.2..q52e","trans2.2..q52f","trans2.2..q52g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans2.2..q52a","trans2.2..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans22 <- data.frame(dta$farmer_ID,dta$trans2.2..q52a,dta$trans2.2..q52b,dta$trans2.2..q52d,dta$trans2.2..group6.q52c,dta$trans2.2..group6.q52c1)
-names(trans22) <- c("farmer_ID", "date","form","price","quant","measure")
+trans22 <- data.frame(dta$farmer_ID,dta$trans2.2..q52a,dta$trans2.2..q52b,dta$trans2.2..q52d,dta$trans2.2..group6.q52c,dta$trans2.2..group6.q52c1,dta$trans2.2..q52e,dta$trans2.2..q52f,dta$trans2.2..q52g)
+names(trans22) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans2.3..q52b", "trans2.3..q52d","trans2.3..group6.q52c")
+sel <- c( "trans2.3..q52b", "trans2.3..q52d","trans2.3..group6.q52c","trans2.3..q52e","trans2.3..q52f","trans2.3..q52g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans2.3..q52a","trans2.3..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans23 <- data.frame(dta$farmer_ID,dta$trans2.3..q52a,dta$trans2.3..q52b,dta$trans2.3..q52d,dta$trans2.3..group6.q52c,dta$trans2.3..group6.q52c1)
-names(trans23) <- c("farmer_ID", "date","form","price","quant","measure")
+trans23 <- data.frame(dta$farmer_ID,dta$trans2.3..q52a,dta$trans2.3..q52b,dta$trans2.3..q52d,dta$trans2.3..group6.q52c,dta$trans2.3..group6.q52c1,dta$trans2.3..q52e,dta$trans2.3..q52f,dta$trans2.3..q52g)
+names(trans23) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
-sel <- c( "trans2.4..q52b", "trans2.4..q52d","trans2.4..group6.q52c")
+sel <- c( "trans2.4..q52b", "trans2.4..q52d","trans2.4..group6.q52c","trans2.4..q52e","trans2.4..q52f","trans2.4..q52g")
 dta[sel] <- lapply(dta[sel],  function(x) as.numeric(as.character(x)))
 sel <- c( "trans2.4..q52a","trans2.4..group6.q52c1")
 dta[sel] <- lapply(dta[sel],  function(x) as.character(x))
 
-trans24 <- data.frame(dta$farmer_ID,dta$trans2.4..q52a,dta$trans2.4..q52b,dta$trans2.4..q52d,dta$trans2.4..group6.q52c,dta$trans2.4..group6.q52c1) 
-names(trans24) <- c("farmer_ID", "date","form","price","quant","measure")
+trans24 <- data.frame(dta$farmer_ID,dta$trans2.4..q52a,dta$trans2.4..q52b,dta$trans2.4..q52d,dta$trans2.4..group6.q52c,dta$trans2.4..group6.q52c1,dta$trans2.4..q52e,dta$trans2.4..q52f,dta$trans2.4..q52g)
+names(trans24) <- c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 
 all <- rbind(trans21, trans22, trans23, trans24)
-names(all) <-  c("farmer_ID", "date","form","price","quant","measure")
+names(all) <-  c("farmer_ID", "date","form","price","quant","measure","buyer","decision","use")
 all <- subset(all, form ==1)
 all$price[all$price > 1999] <- NA
 all$price[all$price < 99] <- NA
@@ -415,9 +415,92 @@ sum(aggregate(all_transactions[all_transactions$crop=="gnuts",]$quant>0, list(al
 
 sum(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum)==1)/dim(aggregate(all_transactions[all_transactions$crop=="soy",]$quant>0, list(all_transactions[all_transactions$crop=="soy",]$farmer_ID), FUN=sum))[1] *100
 
+
+### sold to?
+sold_to_res <- matrix(NA,4,6)
+
+sold_to_res[,2] <- tapply(all_transactions[all_transactions$crop=="maize",]$price,all_transactions[all_transactions$crop=="maize",]$buyer, mean, na.rm=T)[1:4]
+sold_to_res[,4] <- tapply(all_transactions[all_transactions$crop=="soy",]$price,all_transactions[all_transactions$crop=="soy",]$buyer, mean, na.rm=T)[1:4]
+sold_to_res[,6] <- tapply(all_transactions[all_transactions$crop=="gnuts",]$price,all_transactions[all_transactions$crop=="gnuts",]$buyer, mean, na.rm=T)[1:4]
+
+all_transactions$ones <- 1
+
+sold_to_res[,1] <- tapply(all_transactions[all_transactions$crop=="maize",]$one,all_transactions[all_transactions$crop=="maize",]$buyer, sum, na.rm=T)[1:4]/dim(all_transactions[all_transactions$crop=="maize",])[1]*100
+sold_to_res[,3] <- tapply(all_transactions[all_transactions$crop=="soy",]$one,all_transactions[all_transactions$crop=="soy",]$buyer, sum, na.rm=T)[1:4]/dim(all_transactions[all_transactions$crop=="soy",])[1]*100
+sold_to_res[,5] <- tapply(all_transactions[all_transactions$crop=="gnuts",]$one,all_transactions[all_transactions$crop=="gnuts",]$buyer, sum, na.rm=T)[1:4]/dim(all_transactions[all_transactions$crop=="gnuts",])[1]*100
+sold_to_res <- round(sold_to_res, digits=0)
+
+### sold by whom?
+
+
+
+sold_by_res_maize <- data.frame(tapply(all_transactions[all_transactions$crop=="maize",]$one,all_transactions[all_transactions$crop=="maize",]$decision, sum, na.rm=T)[1:5]/sum(tapply(all_transactions[all_transactions$crop=="maize",]$one,all_transactions[all_transactions$crop=="maize",]$decision, sum, na.rm=T)[1:5])*100)
+sold_by_res_soy <- data.frame(tapply(all_transactions[all_transactions$crop=="soy",]$one,all_transactions[all_transactions$crop=="soy",]$decision, sum, na.rm=T)[1:5]/sum(tapply(all_transactions[all_transactions$crop=="soy",]$one,all_transactions[all_transactions$crop=="soy",]$decision, sum, na.rm=T)[1:5])*100)
+sold_by_res_gnuts <- data.frame(tapply(all_transactions[all_transactions$crop=="gnuts",]$one,all_transactions[all_transactions$crop=="gnuts",]$decision, sum, na.rm=T)[1:5]/sum(tapply(all_transactions[all_transactions$crop=="gnuts",]$one,all_transactions[all_transactions$crop=="gnuts",]$decision, sum, na.rm=T)[1:5])*100)
+names(sold_by_res_maize) <- "percent"
+names(sold_by_res_soy) <- "percent"
+names(sold_by_res_gnuts) <- "percent"
+sold_by_res_maize$crop <- "maize" 
+sold_by_res_soy$crop <- "soy" 
+sold_by_res_gnuts$crop <- "gnuts" 
+sold_by_res_maize$dec <- c("woman alone","man alone","woman +", "man +", "joint")
+sold_by_res_soy$dec <- c("woman alone","man alone","woman +", "man +", "joint")
+sold_by_res_gnuts$dec <- c("woman alone","man alone","woman +", "man +", "joint")
+sold_by_all <- rbind(sold_by_res_maize,sold_by_res_soy,sold_by_res_gnuts)
+
+sold_by_all$percent <- round(sold_by_all$percent, digits=0)
+
+png(paste(path,"papers/price_expectations/results/fig_dec.png",sep = ""), units="px", height=1200, width= 3800, res=600)
+# Stacked + percent
+ggplot(sold_by_all, aes(fill=dec, y=percent, x=crop)) + 
+    geom_bar(position="fill", stat="identity", width = 0.3) +coord_flip()
+dev.off()
+
+### merge in access to credit
+library(dplyr)
+all_trans_cred <- merge(all_transactions,dta[c("farmer_ID","exp.q73")], by="farmer_ID")
+
+use_cred_y <- data.frame(tapply(all_trans_cred[all_trans_cred$exp.q73=="Yes",]$one,all_trans_cred[all_trans_cred$exp.q73=="Yes",]$use, sum, na.rm=T)[1:14]/sum(tapply(all_trans_cred[all_trans_cred$exp.q73=="Yes",]$one,all_trans_cred[all_trans_cred$exp.q73=="Yes",]$use, sum, na.rm=T)[1:14])*100)
+
+use_cred_n <-data.frame(tapply(all_trans_cred[all_trans_cred$exp.q73=="No",]$one,all_trans_cred[all_trans_cred$exp.q73=="No",]$use, sum, na.rm=T)[1:14]/sum(tapply(all_trans_cred[all_trans_cred$exp.q73=="No",]$one,all_trans_cred[all_trans_cred$exp.q73=="No",]$use, sum, na.rm=T)[1:14])*100)
+
+all_cred <- cbind(use_cred_y, use_cred_n  )
+names(all_cred) <- c("access_to_credit","no_access_to_credit")
+all_cred$categories <- c("Clothing and footware",
+"Food and non-alcoholic beverages (home consumption)",
+"Alcoholic beverages, tobacco and narcotics",
+"Health expenditure",
+"Transport expenditures",
+"Communications expenditures",
+"Education expenditures",
+"Housing (incl rent), water, electricity, gas and other fuels",
+"Agricultural investment (land rental, livestock, seed, fertilizer,...)",
+"To pay back a loan",
+"Ceremonial expenses (burial, marriage, ...)",
+"Restaurants and hotels",
+"Furnishings, household equipment and routing maintenance",
+"Miscellaneous goods and services"
+)
+
+all_cred <- all_cred  %>%  rowwise() %>% 
+  mutate( mymean = mean(c(access_to_credit,no_access_to_credit) )) %>% 
+  arrange(mymean) %>% 
+  mutate(categories=factor(categories,categories))
+  
+  all_cred <- melt(all_cred[,1:3])
+  names(all_cred) <- c("categories","variable","percentage")
+
+png(paste(path,"papers/price_expectations/results/fig_exp.png",sep = ""), units="px", height=1200, width= 3800, res=400)
+
+ggplot(all_cred, aes(percentage,categories )) +
+        geom_line(aes(group = categories)) +
+        geom_point(aes(color = variable))
+dev.off()
 ##identify transactions that happen less than 3 months after harvest
 ### merge in production dates from dta into all_transactions
 trans_date <- merge(all_transactions,dta[c("farmer_ID","q39","q44","q48")],by="farmer_ID")
+
+
 
 trans_date[trans_date$crop == "maize",]
 trans_date$pdate_num_maize <- NA
@@ -754,7 +837,7 @@ plot_res_1 <- ggplot(quant_kg_all_plot, aes(fill=crop, y=quant_kg, x=month)) +
     geom_bar(position="stack", stat="identity")
 
 png(paste(path,"papers/price_expectations/results/fig_revenue.png",sep = ""), units="px", height=3200, width= 3800, res=600)
-ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
+ggarrange(plot_res_1, plot_res_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
 dev.off()
 
 

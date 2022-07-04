@@ -213,7 +213,7 @@ all <- subset(all, form ==2)
 all$price[all$price > 999] <- NA
 all$price[all$price < 25] <- NA
 
-to_plot_maize <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[7:17])
+to_plot_maize <-data.frame(tapply(all$price, all$date, FUN=mean, na.rm=T)[7:17])
 to_plot_maize$date <- rownames(to_plot_maize)
 names(to_plot_maize) <- c("price","date")
 
@@ -268,7 +268,7 @@ all$price[all$price > 19999] <- NA
 all$price[all$price < 999] <- NA
 all$price <- all$price/20 
 
-to_plot_gnuts <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[4:14])
+to_plot_gnuts <-data.frame(tapply(all$price, all$date, FUN=mean, na.rm=T)[4:14])
 to_plot_gnuts$date <- rownames(to_plot_gnuts)
 names(to_plot_gnuts) <- c("price","date")
 to_plot_gnuts[11,2] <- "2022-03-01"
@@ -317,7 +317,7 @@ all <- subset(all, form ==1)
 all$price[all$price > 1999] <- NA
 all$price[all$price < 99] <- NA
 
-to_plot_soy <-data.frame(tapply(all$price, all$date, FUN=median, na.rm=T)[5:15])
+to_plot_soy <-data.frame(tapply(all$price, all$date, FUN=mean, na.rm=T)[5:15])
 to_plot_soy$date <- rownames(to_plot_soy)
 names(to_plot_soy) <- c("price","date")
 
@@ -769,12 +769,13 @@ all_transactions[(all_transactions$crop=="gnuts") & all_transactions$measure=="D
 all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="Debbe_Ndowa",]$quant_kg <- all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="Debbe_Ndowa",]$quant*20
 
 all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="OX cart",]$quant_kg <- all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="OX cart",]$quant*500
+all_transactions$quant_kg[all_transactions$quant_kg>5000 ] <- NA 
 all_transactions$revenue <- all_transactions$price * all_transactions$quant_kg 
 all_transactions$revenue[all_transactions$revenue>1000000 ] <- NA
 
-revenue_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$revenue,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=median, na.rm=T)
-revenue_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$revenue,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=median, na.rm=T)
-revenue_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$revenue,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=median, na.rm=T)
+revenue_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$revenue,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=mean, na.rm=T)
+revenue_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$revenue,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=mean, na.rm=T)
+revenue_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$revenue,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=mean, na.rm=T)
 
 names(revenue_maize) <- c("date","revenue")
 names(revenue_soy) <- c("date","revenue")
@@ -804,9 +805,9 @@ revenue_all_plot$month <- factor(revenue_all_plot$month, levels=c("Apr 21","May 
 plot_res_2 <- ggplot(revenue_all_plot, aes(fill=crop, y=revenue, x=month)) + 
     geom_bar(position="stack", stat="identity")
     
-quant_kg_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$quant_kg,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=median, na.rm=T)
-quant_kg_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$quant_kg,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=median, na.rm=T)
-quant_kg_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$quant_kg,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=median, na.rm=T)
+quant_kg_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$quant_kg,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=mean, na.rm=T)
+quant_kg_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$quant_kg,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=mean, na.rm=T)
+quant_kg_soy <- aggregate(all_transactions[all_transactions$crop == "soy",]$quant_kg,list(all_transactions[all_transactions$crop=="soy",]$date),FUN=mean, na.rm=T)
 
 names(quant_kg_maize) <- c("date","quant_kg")
 names(quant_kg_gnuts) <- c("date","quant_kg")

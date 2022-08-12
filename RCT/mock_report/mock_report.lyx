@@ -187,6 +187,17 @@ balance_het <- readRDS(paste(path,"results/balace_het.RData", sep="/"))
 
 \begin_layout Plain Layout
 
+prim_maize  <- readRDS(paste(path,"results/prim_maize.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts  <- readRDS(paste(path,"results/prim_gnuts.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy  <- readRDS(paste(path,"results/prim_soy.RData", sep="/"))
 \end_layout
 
 \begin_layout Plain Layout
@@ -257,7 +268,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1686,7 +1697,9 @@ Sexpr{prim_maize[4,8]})
 
 \begin_layout Plain Layout
 
-Quantity sold (/%) & 
+Quantity sold (
+\backslash
+%) & 
 \backslash
 Sexpr{prim_maize[5,1]} & 
 \backslash
@@ -1733,7 +1746,9 @@ Sexpr{prim_maize[5,8]})
 
 \begin_layout Plain Layout
 
-Price sold (/%) & 
+Price sold (
+\backslash
+%) & 
 \backslash
 Sexpr{prim_maize[6,1]} & 
 \backslash
@@ -1780,6 +1795,620 @@ Sexpr{prim_maize[6,8]})
 
 \begin_layout Plain Layout
 
+& 
+\backslash
+multicolumn{4}{c}{
+\backslash
+textit{groundnuts}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_gnuts[1,1]} & 
+\backslash
+Sexpr{prim_gnuts[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[1,6]<.01,"**",ifelse(prim_gnuts[1,6]<.05,"*",ifelse(prim_g
+nuts[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[1,9]<.01,"**",ifelse(prim_gnuts[1,9]<.05,"*",ifelse(prim_g
+nuts[1,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[1,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[1,2]}) & (
+\backslash
+Sexpr{prim_gnuts[1,5]})  & (
+\backslash
+Sexpr{prim_gnuts[1,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_gnuts[2,1]} & 
+\backslash
+Sexpr{prim_gnuts[2,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[2,6]<.01,"**",ifelse(prim_gnuts[2,6]<.05,"*",ifelse(prim_g
+nuts[2,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[2,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[2,9]<.01,"**",ifelse(prim_gnuts[2,9]<.05,"*",ifelse(prim_g
+nuts[2,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[2,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[2,2]}) & (
+\backslash
+Sexpr{prim_gnuts[2,5]})  & (
+\backslash
+Sexpr{prim_gnuts[2,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold (yes/no) & 
+\backslash
+Sexpr{prim_gnuts[3,1]} & 
+\backslash
+Sexpr{prim_gnuts[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[3,6]<.01,"**",ifelse(prim_gnuts[3,6]<.05,"*",ifelse(prim_g
+nuts[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[3,9]<.01,"**",ifelse(prim_gnuts[3,9]<.05,"*",ifelse(prim_g
+nuts[3,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[3,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[3,2]}) & (
+\backslash
+Sexpr{prim_gnuts[3,5]})  & (
+\backslash
+Sexpr{prim_gnuts[3,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quantity sold (abs) & 
+\backslash
+Sexpr{prim_gnuts[4,1]} & 
+\backslash
+Sexpr{prim_gnuts[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[4,6]<.01,"**",ifelse(prim_gnuts[4,6]<.05,"*",ifelse(prim_g
+nuts[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[4,9]<.01,"**",ifelse(prim_gnuts[4,9]<.05,"*",ifelse(prim_g
+nuts[4,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[4,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[4,2]}) & (
+\backslash
+Sexpr{prim_gnuts[4,5]})  & (
+\backslash
+Sexpr{prim_gnuts[4,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quantity sold (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_gnuts[5,1]} & 
+\backslash
+Sexpr{prim_gnuts[5,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[5,6]<.01,"**",ifelse(prim_gnuts[5,6]<.05,"*",ifelse(prim_g
+nuts[5,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[5,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[5,9]<.01,"**",ifelse(prim_gnuts[5,9]<.05,"*",ifelse(prim_g
+nuts[5,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[5,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[5,2]}) & (
+\backslash
+Sexpr{prim_gnuts[5,5]})  & (
+\backslash
+Sexpr{prim_gnuts[5,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Price sold (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_gnuts[6,1]} & 
+\backslash
+Sexpr{prim_gnuts[6,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[6,6]<.01,"**",ifelse(prim_gnuts[6,6]<.05,"*",ifelse(prim_g
+nuts[6,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[6,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts[6,9]<.01,"**",ifelse(prim_gnuts[6,9]<.05,"*",ifelse(prim_g
+nuts[6,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts[6,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_gnuts[6,2]}) & (
+\backslash
+Sexpr{prim_gnuts[6,5]})  & (
+\backslash
+Sexpr{prim_gnuts[6,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{4}{c}{
+\backslash
+textit{soybean}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_soy[1,1]} & 
+\backslash
+Sexpr{prim_soy[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[1,6]<.01,"**",ifelse(prim_soy[1,6]<.05,"*",ifelse(prim_soy[1
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[1,9]<.01,"**",ifelse(prim_soy[1,9]<.05,"*",ifelse(prim_soy[1
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[1,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[1,2]}) & (
+\backslash
+Sexpr{prim_soy[1,5]})  & (
+\backslash
+Sexpr{prim_soy[1,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_soy[2,1]} & 
+\backslash
+Sexpr{prim_soy[2,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[2,6]<.01,"**",ifelse(prim_soy[2,6]<.05,"*",ifelse(prim_soy[2
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[2,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[2,9]<.01,"**",ifelse(prim_soy[2,9]<.05,"*",ifelse(prim_soy[2
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[2,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[2,2]}) & (
+\backslash
+Sexpr{prim_soy[2,5]})  & (
+\backslash
+Sexpr{prim_soy[2,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold (yes/no) & 
+\backslash
+Sexpr{prim_soy[3,1]} & 
+\backslash
+Sexpr{prim_soy[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[3,6]<.01,"**",ifelse(prim_soy[3,6]<.05,"*",ifelse(prim_soy[3
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[3,9]<.01,"**",ifelse(prim_soy[3,9]<.05,"*",ifelse(prim_soy[3
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[3,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[3,2]}) & (
+\backslash
+Sexpr{prim_soy[3,5]})  & (
+\backslash
+Sexpr{prim_soy[3,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quantity sold (abs) & 
+\backslash
+Sexpr{prim_soy[4,1]} & 
+\backslash
+Sexpr{prim_soy[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[4,6]<.01,"**",ifelse(prim_soy[4,6]<.05,"*",ifelse(prim_soy[4
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[4,9]<.01,"**",ifelse(prim_soy[4,9]<.05,"*",ifelse(prim_soy[4
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[4,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[4,2]}) & (
+\backslash
+Sexpr{prim_soy[4,5]})  & (
+\backslash
+Sexpr{prim_soy[4,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quantity sold (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_soy[5,1]} & 
+\backslash
+Sexpr{prim_soy[5,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[5,6]<.01,"**",ifelse(prim_soy[5,6]<.05,"*",ifelse(prim_soy[5
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[5,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[5,9]<.01,"**",ifelse(prim_soy[5,9]<.05,"*",ifelse(prim_soy[5
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[5,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[5,2]}) & (
+\backslash
+Sexpr{prim_soy[5,5]})  & (
+\backslash
+Sexpr{prim_soy[5,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Price sold (
+\backslash
+%) & 
+\backslash
+Sexpr{prim_soy[6,1]} & 
+\backslash
+Sexpr{prim_soy[6,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[6,6]<.01,"**",ifelse(prim_soy[6,6]<.05,"*",ifelse(prim_soy[6
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[6,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy[6,9]<.01,"**",ifelse(prim_soy[6,9]<.05,"*",ifelse(prim_soy[6
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy[6,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{prim_soy[6,2]}) & (
+\backslash
+Sexpr{prim_soy[6,5]})  & (
+\backslash
+Sexpr{prim_soy[6,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1816,10 +2445,6 @@ scriptsize
 
 Note: First column reports control group means (and standard deviations
  below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
- F-test test for joint significance in a regression with treatment status
- on the left hand side (T1/C or T2/C).
- Likelihood ratio test is derived from a multinomial model where the left
- hand side has three levels (T1,T2,C).
  All models include village fixed effects.
  
 \end_layout
@@ -1859,6 +2484,18 @@ name "tab:Primary-outcomes"
 
 \begin_layout Standard
 Note: We have a selection problem for some of the variables included in
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-outcomes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are only recorded for a subset of the sample, and farmers may have entered
+ or left this subset as a consequence of our treatment.
  
 \end_layout
 

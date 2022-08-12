@@ -413,6 +413,7 @@ dta <- trim("stock_soy_abs", dta)
 
 prim_maize <- matrix(NA,13,10)
 prim_maize[1,1] <- mean(dta$stock_maize_abs[dta$treatment=="C"], na.rm=T)
+prim_maize[1,2] <- sd(dta$stock_maize_abs[dta$treatment=="C"], na.rm=T)
 
 prim_maize[1,4] <- summary(lm(stock_maize_abs~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_maize[1,5] <- summary(lm(stock_maize_abs~treatment + fe_vil,data=dta))$coefficients[2,2]
@@ -424,6 +425,9 @@ prim_maize[1,9] <- summary(lm(stock_maize_abs~treatment + fe_vil,data=dta))$coef
 prim_maize[1,10] <- nobs(lm(stock_maize_abs~treatment + fe_vil,data=dta))
 
 prim_gnuts <- matrix(NA,13,10)
+prim_gnuts[1,1] <- mean(dta$stock_gnuts_abs[dta$treatment=="C"], na.rm=T)
+prim_gnuts[1,2] <- sd(dta$stock_gnuts_abs[dta$treatment=="C"], na.rm=T)
+
 prim_gnuts[1,4] <- summary(lm(stock_gnuts_abs~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[1,5] <- summary(lm(stock_gnuts_abs~treatment + fe_vil,data=dta))$coefficients[2,2]
 prim_gnuts[1,6] <- summary(lm(stock_gnuts_abs~treatment + fe_vil,data=dta))$coefficients[2,4]
@@ -434,6 +438,9 @@ prim_gnuts[1,9] <- summary(lm(stock_gnuts_abs~treatment + fe_vil,data=dta))$coef
 prim_gnuts[1,10] <- nobs(lm(stock_gnuts_abs~treatment + fe_vil,data=dta))
 
 prim_soy <- matrix(NA,13,10)
+prim_soy[1,1] <- mean(dta$stock_soy_abs[dta$treatment=="C"], na.rm=T)
+prim_soy[1,2] <- sd(dta$stock_soy_abs[dta$treatment=="C"], na.rm=T)
+
 prim_soy[1,4] <- summary(lm(stock_soy_abs~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[1,5] <- summary(lm(stock_soy_abs~treatment + fe_vil,data=dta))$coefficients[2,2]
 prim_soy[1,6] <- summary(lm(stock_soy_abs~treatment + fe_vil,data=dta))$coefficients[2,4]
@@ -443,6 +450,8 @@ prim_soy[1,8] <- summary(lm(stock_soy_abs~treatment + fe_vil,data=dta))$coeffici
 prim_soy[1,9] <- summary(lm(stock_soy_abs~treatment + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[1,10] <- nobs(lm(stock_soy_abs~treatment + fe_vil,data=dta))
 
+prim_maize[2,1] <- mean(dta$stock_maize_pct[dta$treatment=="C"], na.rm=T)
+prim_maize[2,2] <- sd(dta$stock_maize_pct[dta$treatment=="C"], na.rm=T)
 
 prim_maize[2,4] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_maize[2,5] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
@@ -453,6 +462,9 @@ prim_maize[2,8] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coef
 prim_maize[2,9] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
 prim_maize[2,10] <- nobs(lm(stock_maize_pct~treatment + fe_vil,data=dta))
 
+prim_gnuts[2,1] <- mean(dta$stock_gnuts_pct[dta$treatment=="C"], na.rm=T)
+prim_gnuts[2,2] <- sd(dta$stock_gnuts_pct[dta$treatment=="C"], na.rm=T)
+
 prim_gnuts[2,4] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[2,5] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
 prim_gnuts[2,6] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,4]
@@ -461,6 +473,9 @@ prim_gnuts[2,7] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coef
 prim_gnuts[2,8] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[3,2]
 prim_gnuts[2,9] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
 prim_gnuts[2,10] <- nobs(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))
+
+prim_soy[2,1] <- mean(dta$stock_soy_pct[dta$treatment=="C"], na.rm=T)
+prim_soy[2,2] <- sd(dta$stock_soy_pct[dta$treatment=="C"], na.rm=T)
 
 prim_soy[2,4] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[2,5] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
@@ -471,7 +486,8 @@ prim_soy[2,8] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coeffici
 prim_soy[2,9] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[2,10] <- nobs(lm(stock_soy_pct~treatment + fe_vil,data=dta))
 
-
+prim_maize[3,1] <- mean(dta$sold_maize[dta$treatment=="C"], na.rm=T)
+prim_maize[3,2] <- sd(dta$sold_maize[dta$treatment=="C"], na.rm=T)
 
 prim_maize[3,4] <- summary(lm(sold_maize~treatment + sold_maize_b +fe_vil,data=dta))$coefficients[2,1]
 prim_maize[3,5] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[2,2]
@@ -482,6 +498,9 @@ prim_maize[3,8] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=
 prim_maize[3,9] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[3,4]
 prim_maize[3,10] <- nobs(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))
 
+prim_gnuts[3,1] <- mean(dta$sold_gnuts[dta$treatment=="C"], na.rm=T)
+prim_gnuts[3,2] <- sd(dta$sold_gnuts[dta$treatment=="C"], na.rm=T)
+
 prim_gnuts[3,4] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[3,5] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,2]
 prim_gnuts[3,6] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,4]
@@ -490,6 +509,9 @@ prim_gnuts[3,7] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=
 prim_gnuts[3,8] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[3,2]
 prim_gnuts[3,9] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[3,4]
 prim_gnuts[3,10] <- nobs(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))
+
+prim_soy[3,1] <- mean(dta$sold_soy[dta$treatment=="C"], na.rm=T)
+prim_soy[3,2] <- sd(dta$sold_soy[dta$treatment=="C"], na.rm=T)
 
 prim_soy[3,4] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[3,5] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[2,2]
@@ -500,6 +522,8 @@ prim_soy[3,8] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$
 prim_soy[3,9] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[3,10] <- nobs(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))
 
+prim_maize[4,1] <- mean(dta$sold_maize_kg[dta$treatment=="C"], na.rm=T)
+prim_maize[4,2] <- sd(dta$sold_maize_kg[dta$treatment=="C"], na.rm=T)
 
 prim_maize[4,4] <- summary(lm(sold_maize_kg~treatment + sold_maize_kg_b +fe_vil,data=dta))$coefficients[2,1]
 prim_maize[4,5] <- summary(lm(sold_maize_kg~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[2,2]
@@ -510,6 +534,9 @@ prim_maize[4,8] <- summary(lm(sold_maize_kg~treatment + sold_maize_kg_b + fe_vil
 prim_maize[4,9] <- summary(lm(sold_maize_kg~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[3,4]
 prim_maize[4,10] <- nobs(lm(sold_maize_kg~treatment + sold_maize_kg_b + fe_vil,data=dta))
 
+prim_gnuts[4,1] <- mean(dta$sold_gnuts_kg[dta$treatment=="C"], na.rm=T)
+prim_gnuts[4,2] <- sd(dta$sold_gnuts_kg[dta$treatment=="C"], na.rm=T)
+
 prim_gnuts[4,4] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[4,5] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,2]
 prim_gnuts[4,6] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,4]
@@ -518,6 +545,9 @@ prim_gnuts[4,7] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil
 prim_gnuts[4,8] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[3,2]
 prim_gnuts[4,9] <- summary(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[3,4]
 prim_gnuts[4,10] <- nobs(lm(sold_gnuts_kg~treatment + sold_gnuts_kg_b + fe_vil,data=dta))
+
+prim_soy[4,1] <- mean(dta$sold_soy_kg[dta$treatment=="C"], na.rm=T)
+prim_soy[4,2] <- sd(dta$sold_soy_kg[dta$treatment=="C"], na.rm=T)
 
 prim_soy[4,4] <- summary(lm(sold_soy_kg~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[4,5] <- summary(lm(sold_soy_kg~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[2,2]
@@ -528,6 +558,8 @@ prim_soy[4,8] <- summary(lm(sold_soy_kg~treatment + sold_soy_kg_b + fe_vil,data=
 prim_soy[4,9] <- summary(lm(sold_soy_kg~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[4,10] <- nobs(lm(sold_soy_kg~treatment + sold_soy_kg_b + fe_vil,data=dta))
 
+prim_maize[5,1] <- mean(dta$sold_maize_pct[dta$treatment=="C"], na.rm=T)
+prim_maize[5,2] <- sd(dta$sold_maize_pct[dta$treatment=="C"], na.rm=T)
 
 prim_maize[5,4] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b +fe_vil,data=dta))$coefficients[2,1]
 prim_maize[5,5] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[2,2]
@@ -538,6 +570,9 @@ prim_maize[5,8] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_v
 prim_maize[5,9] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[3,4]
 prim_maize[5,10] <- nobs(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))
 
+prim_gnuts[5,1] <- mean(dta$sold_gnuts_pct[dta$treatment=="C"], na.rm=T)
+prim_gnuts[5,2] <- sd(dta$sold_gnuts_pct[dta$treatment=="C"], na.rm=T)
+
 prim_gnuts[5,4] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[5,5] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,2]
 prim_gnuts[5,6] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,4]
@@ -546,6 +581,9 @@ prim_gnuts[5,7] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_v
 prim_gnuts[5,8] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[3,2]
 prim_gnuts[5,9] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[3,4]
 prim_gnuts[5,10] <- nobs(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))
+
+prim_soy[5,1] <- mean(dta$sold_soy_pct[dta$treatment=="C"], na.rm=T)
+prim_soy[5,2] <- sd(dta$sold_soy_pct[dta$treatment=="C"], na.rm=T)
 
 prim_soy[5,4] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[5,5] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[2,2]
@@ -556,6 +594,9 @@ prim_soy[5,8] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,dat
 prim_soy[5,9] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[5,10] <- nobs(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))
 
+prim_maize[6,1] <- mean(dta$price_maize[dta$treatment=="C"], na.rm=T)
+prim_maize[6,2] <- sd(dta$price_maize[dta$treatment=="C"], na.rm=T)
+
 prim_maize[6,4] <- summary(lm(price_maize~treatment + price_maize_b +fe_vil,data=dta))$coefficients[2,1]
 prim_maize[6,5] <- summary(lm(price_maize~treatment + price_maize_b + fe_vil,data=dta))$coefficients[2,2]
 prim_maize[6,6] <- summary(lm(price_maize~treatment + price_maize_b + fe_vil,data=dta))$coefficients[2,4]
@@ -564,6 +605,9 @@ prim_maize[6,7] <- summary(lm(price_maize~treatment + price_maize_b + fe_vil,dat
 prim_maize[6,8] <- summary(lm(price_maize~treatment + price_maize_b + fe_vil,data=dta))$coefficients[3,2]
 prim_maize[6,9] <- summary(lm(price_maize~treatment + price_maize_b + fe_vil,data=dta))$coefficients[3,4]
 prim_maize[6,10] <- nobs(lm(price_maize~treatment + price_maize_b + fe_vil,data=dta))
+
+prim_gnuts[6,1] <- mean(dta$price_gnuts[dta$treatment=="C"], na.rm=T)
+prim_gnuts[6,2] <- sd(dta$price_gnuts[dta$treatment=="C"], na.rm=T)
 
 prim_gnuts[6,4] <- summary(lm(price_gnuts~treatment + price_gnuts_b + fe_vil,data=dta))$coefficients[2,1]
 prim_gnuts[6,5] <- summary(lm(price_gnuts~treatment + price_gnuts_b + fe_vil,data=dta))$coefficients[2,2]
@@ -574,6 +618,9 @@ prim_gnuts[6,8] <- summary(lm(price_gnuts~treatment + price_gnuts_b + fe_vil,dat
 prim_gnuts[6,9] <- summary(lm(price_gnuts~treatment + price_gnuts_b + fe_vil,data=dta))$coefficients[3,4]
 prim_gnuts[6,10] <- nobs(lm(price_gnuts~treatment + price_gnuts_b + fe_vil,data=dta))
 
+prim_soy[6,1] <- mean(dta$price_soy[dta$treatment=="C"], na.rm=T)
+prim_soy[6,2] <- sd(dta$price_soy[dta$treatment=="C"], na.rm=T)
+
 prim_soy[6,4] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))$coefficients[2,1]
 prim_soy[6,5] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))$coefficients[2,2]
 prim_soy[6,6] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))$coefficients[2,4]
@@ -582,3 +629,71 @@ prim_soy[6,7] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta)
 prim_soy[6,8] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))$coefficients[3,2]
 prim_soy[6,9] <- summary(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))$coefficients[3,4]
 prim_soy[6,10] <- nobs(lm(price_soy~treatment + price_soy_b + fe_vil,data=dta))
+
+prim_maize <-round(prim_maize,digits=3)
+prim_gnuts <-round(prim_gnuts,digits=3)
+prim_soy <-round(prim_soy,digits=3)
+
+saveRDS(prim_maize, paste(path,"mock_report/results/prim_maize.RData", sep="/"))
+saveRDS(prim_gnuts, paste(path,"mock_report/results/prim_gnuts.RData", sep="/"))
+saveRDS(prim_soy, paste(path,"mock_report/results/prim_soy.RData", sep="/"))
+
+
+#### control for FWER using simulation
+
+library(randomizr)
+
+#we need to create an ID within block for merging
+#do this in a loop
+dta$id_in_blocks <- NA
+for (i in levels(dta$fe_vil)) {
+  dta$id_in_blocks[dta$fe_vil==i] <- 1:length(dta$id_in_blocks[dta$fe_vil==i])
+
+}
+to_drop <- "treatment"
+dta <- dta[ , !(names(dta) %in% to_drop)]
+
+blocks <- rep(1:114, times = 31)
+id_in_blocks <- rep(1:31, times = 114)
+block_m_each <- matrix(NA,114,3)
+block_m_each[,1] <- 13
+block_m_each[,2] <- 9 
+block_m_each[,3] <- 9 
+f_s <- c("stock_maize_abs~treatment + fe_vil","stock_maize_pct~treatment + fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"sold_maize_kg~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_soy~treatment + price_soy_b + fe_vil")
+
+# Helper functions
+do_reg <- function(data_set, f_s){
+  summary(lm(as.formula(f_s),data=data_set))$coefficients[2,4]
+  }
+
+permute_treat <- function(dta_fun, f_s){
+  dta_fun$blocks <- as.numeric(dta_fun$fe_vil)
+  assignment <-    data.frame(blocks,id_in_blocks,block_ra(blocks = blocks, block_m_each = block_m_each,conditions = c("control", "T1", "T2")))
+  names(assignment) <- c("blocks","id_in_blocks", "treatment")
+  dta_sim <- merge(dta_fun, assignment, by.x=c("blocks", "id_in_blocks"), by.y=c("blocks", "id_in_blocks"))
+    
+  ps_sim <- matrix(NA,1,length(f_s))               
+  for (i in 1:length(f_s)) {            
+  ps_sim[i] <- do_reg(dta_sim, f_s[i])
+  }
+  return(ps_sim)
+}
+threshold_finder<- function(threshold){
+  mean(apply(many_ps, 2, x <- function(x) sum(x <= threshold) > 0 ))
+}
+
+#we can get the p_obs from the prim_ matrices
+
+p_obs <- prim_maize[1:6,6]
+# Simulate under the sharp null
+many_ps <- replicate(1000, permute_treat(dta,f_s), simplify = TRUE)
+# Obtain the Type I error rate for a series of thresholds
+thresholds <- seq(0, 0.05, length.out = 1000)
+type_I_rate <- sapply(thresholds, threshold_finder)
+# Find the largest threshold that yields an alpha type I error rate
+target_p_value <- thresholds[max(which(type_I_rate <=0.05))]
+# Apply target p_value to observed p_values
+sig_simulated <- p_obs <= target_p_value
+# Compare to raw p-values
+sig <- p_obs <= 0.05
+

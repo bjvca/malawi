@@ -6,6 +6,8 @@ library(lmtest)
 library(car)
 library(clubSandwich)
 
+set.seed(16082022)
+
 ### function we will use for triming contineous variables
 trim <- function(var, dataset, trim_perc=.05) {
   ### function for triming a variable in a dataset - replaces with NA
@@ -653,18 +655,23 @@ for (i in levels(dta$fe_vil)) {
 to_drop <- "treatment"
 dta <- dta[ , !(names(dta) %in% to_drop)]
 
+crit_val <- 0.1
+
 blocks <- rep(1:114, times = 31)
 id_in_blocks <- rep(1:31, times = 114)
 block_m_each <- matrix(NA,114,3)
 block_m_each[,1] <- 13
 block_m_each[,2] <- 9 
 block_m_each[,3] <- 9 
-f_s <- c("stock_maize_abs~treatment + fe_vil","stock_maize_pct~treatment + fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"sold_maize_kg~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_soy~treatment + price_soy_b + fe_vil")
-
+f_s <- c("stock_maize_abs~treatment + fe_vil","stock_maize_pct~treatment + fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"sold_maize_kg~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_maize~treatment + price_maize_b + fe_vil" , "stock_gnuts_abs~treatment + fe_vil","stock_gnuts_pct~treatment + fe_vil","sold_gnuts~treatment + sold_gnuts_b +fe_vil" ,"sold_gnuts_kg~treatment + sold_gnuts_kg_b +fe_vil","sold_gnuts_pct~treatment + sold_gnuts_pct_b +fe_vil","price_gnuts~treatment + price_gnuts_b + fe_vil", "stock_soy_abs~treatment + fe_vil","stock_soy_pct~treatment + fe_vil","sold_soy~treatment + sold_gnuts_b +fe_vil" ,"sold_gnuts_kg~treatment + sold_soy_kg_b +fe_vil","sold_soy_pct~treatment + sold_soy_pct_b +fe_vil","price_soy~treatment + price_soy_b + fe_vil")
 # Helper functions
-do_reg <- function(data_set, f_s){
+do_reg_T1 <- function(data_set, f_s){
   summary(lm(as.formula(f_s),data=data_set))$coefficients[2,4]
-  }
+}
+
+do_reg_T2 <- function(data_set, f_s){
+  summary(lm(as.formula(f_s),data=data_set))$coefficients[3,4]
+}
 
 permute_treat <- function(dta_fun, f_s){
   dta_fun$blocks <- as.numeric(dta_fun$fe_vil)
@@ -672,28 +679,37 @@ permute_treat <- function(dta_fun, f_s){
   names(assignment) <- c("blocks","id_in_blocks", "treatment")
   dta_sim <- merge(dta_fun, assignment, by.x=c("blocks", "id_in_blocks"), by.y=c("blocks", "id_in_blocks"))
     
-  ps_sim <- matrix(NA,1,length(f_s))               
+  ps_sim <- matrix(NA,1,2*length(f_s))               
   for (i in 1:length(f_s)) {            
-  ps_sim[i] <- do_reg(dta_sim, f_s[i])
+  ps_sim[i] <- do_reg_T1(dta_sim, f_s[i])
+  ps_sim[i+(length(f_s))] <- do_reg_T2(dta_sim, f_s[i])
   }
   return(ps_sim)
 }
 threshold_finder<- function(threshold){
   mean(apply(many_ps, 2, x <- function(x) sum(x <= threshold) > 0 ))
 }
-
+startTime <- Sys.time()
 #we can get the p_obs from the prim_ matrices
-
-p_obs <- prim_maize[1:6,6]
+p_obs <- c(prim_maize[1:6,6],prim_gnuts[1:6,6],prim_soy[1:6,6],prim_maize[1:6,9],prim_gnuts[1:6,9],prim_soy[1:6,9])
 # Simulate under the sharp null
 many_ps <- replicate(1000, permute_treat(dta,f_s), simplify = TRUE)
 # Obtain the Type I error rate for a series of thresholds
-thresholds <- seq(0, 0.05, length.out = 1000)
+thresholds <- seq(0, crit_val, length.out = 1000)
 type_I_rate <- sapply(thresholds, threshold_finder)
 # Find the largest threshold that yields an alpha type I error rate
-target_p_value <- thresholds[max(which(type_I_rate <=0.05))]
+target_p_value <- thresholds[max(which(type_I_rate <=crit_val))]
 # Apply target p_value to observed p_values
 sig_simulated <- p_obs <= target_p_value
 # Compare to raw p-values
-sig <- p_obs <= 0.05
+sig <- p_obs <= crit_val
+
+endTime <- Sys.time()
+
+# prints recorded time
+print(endTime - startTime)
+
+pring("the end")
+
+
 

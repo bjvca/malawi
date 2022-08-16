@@ -173,6 +173,27 @@ path <- getwd()
 
 \begin_layout Plain Layout
 
+### you first need to run the R code in RCT/mock_report/analysis
+\end_layout
+
+\begin_layout Plain Layout
+
+### these are: 1) baseline_balance.R
+\end_layout
+
+\begin_layout Plain Layout
+
+### 2) analysis.R
+\end_layout
+
+\begin_layout Plain Layout
+
+### note that analysis.R also inlcludes a simulation analysis that can take
+ a lot of time to run, so only run if needed!
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1427,7 +1448,7 @@ Finally, we calculate the average price received for all transactions that
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -2496,7 +2517,55 @@ noprefix "false"
 
  are only recorded for a subset of the sample, and farmers may have entered
  or left this subset as a consequence of our treatment.
- 
+\end_layout
+
+\begin_layout Standard
+We use simulation to account for multiple comparisons.Simulation methods
+ provide a flexible and intuitive way to think about multiple hypothesis
+ testing.
+ It accommodates the extent to which the multiple comparisons are correlated
+ with one another and allows us to integrate design specific elements such
+ as the blocking and multiple arms.
+ This leads to a study-specific correction that will generally be more powerful
+ than other methods to control the FWER.
+ In particular, to determine target p-value cutoffs, we use the family-wise
+ sharp null of no effect for any unit on any dependent variable and for
+ any hypothesis.
+ More information, including R code on which our tests are based can be
+ found 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://cdn.combinatronics.com/egap/methods-guides/main/multiple-comparisons/multiple-comparisons.html#a-better-way-to-control-the-fwer-is-simulation"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Multiple comparison arise from the number of treatment arms, the different
+ primary outcomes and the different crops included in the analysis.
+ Equation XXX tests 2 hypotheses (we will not directly test T1 against T2),
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-outcomes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ considers six outcomes, and look at 3 crops.
+ This means a total of 36 hypothesis tests.
+ Using a simple Bonferroni correction, this would mean that the 5 percent
+ cut-off for the p-value would reduce to 0.001 and the 10 percent significance
+ cutoff would reduce to 0.003.
+ These values are only slightly higher on simulated data, but it is expected
+ that with real data, correlation between outcomes is higher and difference
+ between Bonferroni and the family wise null becomes larger.
 \end_layout
 
 \begin_layout Standard

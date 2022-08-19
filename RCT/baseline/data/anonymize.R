@@ -53,7 +53,13 @@ for (i in 1:sum(duplicated(dta$farmer_ID))) {
 dta$farmer_ID[dta$Xuuid == dups[i]] <- paste("F",3534+i, sep="_")
 }
 
+### export here for follow up
+path2 <- strsplit(path, "/baseline/data")[[1]]
+dta$name <- ifelse(dta$q4a=="Yes",dta$farmername,paste(paste(dta$q4b,dta$farmer_ID, sep=" ("),")",sep=""))
+dta$name <- ifelse(dta$check.q6=="Yes",dta$name,paste(paste(dta$check.q7,dta$farmer_ID, sep=" ("),")",sep=""))
 
+
+write.csv(dta[c("farmer_ID","enumerator","q1","q2","q3","name","treatment","q11","q11b")],paste(path2,"midline_sept/data/raw/to_upload.csv", sep="/"), row.names=FALSE)
 
 ##create a map
 
@@ -131,7 +137,7 @@ to_drop <- c(
 "Xtotal_media",                                
 "Xmedia_count",                                
 "Xmedia_all_received",                         
-"Xxform_id","T1T2")            
+"Xxform_id","T1T2","name")            
 dta <- dta[ , !(names(dta) %in% to_drop)]
  
 

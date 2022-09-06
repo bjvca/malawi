@@ -64,9 +64,7 @@ graph$price[graph$crop=="groundnuts"] <- graph$price[graph$crop=="groundnuts"]/2
 
 
 png(paste(path,"papers/price_expectations/results/fig1.png",sep = ""), units="px", height=3200, width= 3800, res=600)
-ggplot(graph, aes(crop, price,fill=time)) + 
-  geom_boxplot(outlier.shape = NA) +
-  scale_y_continuous(limits = c(0,1500))
+ggplot(graph, aes(crop, price,fill=time)) + geom_boxplot(outlier.shape = NA) +   scale_y_continuous(limits = c(0,1500)) + scale_fill_grey( start = 0.4, end = 0.8,)
   dev.off()
   
 ### create graph for production
@@ -126,7 +124,7 @@ all_prod$crop <- factor(all_prod$crop)
 # Plot
 ## quantities    
 plot_1 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=prod, x=month)) + 
-    geom_bar(position="stack", stat="identity")
+    geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 all_prod$price[all_prod$crop == "gnuts"] <- 187
 all_prod$price[all_prod$crop == "maize"] <- 114
 all_prod$price[all_prod$crop == "soy"] <- 89
@@ -134,7 +132,7 @@ all_prod$price[all_prod$crop == "soy"] <- 89
 all_prod$value <- all_prod$price*all_prod$prod
 
 plot_2 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=value, x=month)) + 
-  geom_bar(position="stack", stat="identity")
+  geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 
 png(paste(path,"papers/price_expectations/results/fig_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)
 ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
@@ -346,7 +344,7 @@ names(all_1) <- c("price","month","crop")
 tapply(all_1[all_1$month%in%c("2021-03-01","2021-04-01","2021-05-01","2021-06-01","2021-07-01","2021-08-01"),]$price,all_1[all_1$month%in%c("2021-03-01","2021-04-01","2021-05-01","2021-06-01","2021-07-01","2021-08-01"),]$crop, mean, na.rm=T)
 
 
-plot_1 <- ggplot(all_1 ,aes(x=as.Date(month),y=price,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b") 
+plot_1 <- ggplot(all_1 ,aes(x=as.Date(month),y=price,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")   + scale_color_grey( start = 0.4, end = 0.8,)
 
 to_plot_soy <- to_plot_soy_b
 to_plot_maize <- to_plot_maize_b
@@ -363,7 +361,7 @@ to_plot_gnuts$crop <- "gnuts"
 all_2 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
 
 names(all_2) <- c("price_change","month","crop")
-plot_2 <- ggplot(all_2 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed")
+plot_2 <- ggplot(all_2 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed")  + scale_color_grey( start = 0.4, end = 0.8,)
 
 to_plot_soy <- to_plot_soy_b
 to_plot_maize <- to_plot_maize_b
@@ -381,7 +379,7 @@ to_plot_gnuts$crop <- "gnuts"
 all_3 <- rbind(to_plot_soy,to_plot_maize,to_plot_gnuts) 
 
 names(all_3) <- c("price_change","month","crop")
-plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed") + geom_vline(xintercept = as.numeric(as.Date(all_3$month[5])), linetype="dotted")+ geom_vline(xintercept = as.numeric(as.Date(all_3$month[9])), linetype="dotted")
+plot_3 <- ggplot(all_3 ,aes(x=as.Date(month),y=price_change,colour=crop,group=crop)) + geom_line(size=1.2) + scale_x_date(date_labels = "%b")  + geom_hline(yintercept=100, linetype="dashed") + geom_vline(xintercept = as.numeric(as.Date(all_3$month[5])), linetype="dotted")+ geom_vline(xintercept = as.numeric(as.Date(all_3$month[9])), linetype="dotted") + scale_color_grey( start = 0.4, end = 0.8,)
  
 
 
@@ -453,7 +451,7 @@ sold_by_all$percent <- round(sold_by_all$percent, digits=0)
 png(paste(path,"papers/price_expectations/results/fig_dec.png",sep = ""), units="px", height=1200, width= 3800, res=600)
 # Stacked + percent
 ggplot(sold_by_all, aes(fill=dec, y=percent, x=crop)) + 
-    geom_bar(position="fill", stat="identity", width = 0.3) +coord_flip()
+    geom_bar(position="fill", stat="identity", width = 0.3) +coord_flip() + scale_fill_grey( start = 0.4, end = 0.8,)
 dev.off()
 
 ### merge in access to credit
@@ -494,7 +492,7 @@ png(paste(path,"papers/price_expectations/results/fig_exp.png",sep = ""), units=
 
 ggplot(all_cred, aes(percentage,categories )) +
         geom_line(aes(group = categories)) +
-        geom_point(aes(color = variable))
+        geom_point(aes(color = variable))    + scale_color_grey( start = 0.4, end = 0.8)
 dev.off()
 ##identify transactions that happen less than 3 months after harvest
 ### merge in production dates from dta into all_transactions
@@ -741,7 +739,7 @@ current_prod_all$month <-  factor(current_prod_all$month, levels=month.name)
 # Plot
 ## quantities    
 plot_1 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=prod, x=month)) + 
-    geom_bar(position="stack", stat="identity")
+    geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 current_prod_all$price[current_prod_all$crop == "gnuts"] <- 720
 current_prod_all$price[current_prod_all$crop == "maize"] <- 220
 current_prod_all$price[current_prod_all$crop == "soy"] <- 650
@@ -749,7 +747,7 @@ current_prod_all$price[current_prod_all$crop == "soy"] <- 650
 current_prod_all$value <- current_prod_all$price*current_prod_all$prod
 
 plot_2 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=value, x=month)) + 
-  geom_bar(position="stack", stat="identity")
+  geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 
 png(paste(path,"papers/price_expectations/results/fig_current_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)
 ggarrange(plot_1, plot_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")
@@ -803,7 +801,7 @@ revenue_all_plot  <-revenue_all[!is.na(revenue_all$month),]
 revenue_all_plot$month <- factor(revenue_all_plot$month, levels=c("Apr 21","May 21","Jun 21","Jul 21","Aug 21","Sep 21","Oct 21","Nov 21","Dec 21","Jan 22","Feb 22","Mar 22"))
 
 plot_res_2 <- ggplot(revenue_all_plot, aes(fill=crop, y=revenue, x=month)) + 
-    geom_bar(position="stack", stat="identity")
+    geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
     
 quant_kg_maize <- aggregate(all_transactions[all_transactions$crop == "maize",]$quant_kg,list(all_transactions[all_transactions$crop=="maize",]$date),FUN=mean, na.rm=T)
 quant_kg_gnuts <- aggregate(all_transactions[all_transactions$crop == "gnuts",]$quant_kg,list(all_transactions[all_transactions$crop=="gnuts",]$date),FUN=mean, na.rm=T)
@@ -835,7 +833,7 @@ quant_kg_all_plot  <-quant_kg_all[!is.na(quant_kg_all$month),]
 quant_kg_all_plot$month <- factor(quant_kg_all_plot$month, levels=c("Apr 21","May 21","Jun 21","Jul 21","Aug 21","Sep 21","Oct 21","Nov 21","Dec 21","Jan 22","Feb 22","Mar 22"))
 
 plot_res_1 <- ggplot(quant_kg_all_plot, aes(fill=crop, y=quant_kg, x=month)) + 
-    geom_bar(position="stack", stat="identity")
+    geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 
 png(paste(path,"papers/price_expectations/results/fig_revenue.png",sep = ""), units="px", height=3200, width= 3800, res=600)
 ggarrange(plot_res_1, plot_res_2, heights = c(2, 2,2), ncol = 1, nrow = 2, align = "v")

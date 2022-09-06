@@ -117,24 +117,24 @@ thanks{Development Strategy and Governance Division, International Food
 
 \end_inset
 
-Market participation of smallholder farmers in Malawi: A baseline report
+Seasonality and smallholder market participation in Malawi: A baseline report
 \end_layout
 
 \begin_layout Abstract
 Smallholder farmers in low and middle income countries often sell the bulk
  of their marketable surplus immediately after the harvest, when prices
  are at their lowest.
- As part of a study that tests the importance of both expenditure and income
- planning using a field experiment, we collected detailed information about
- market participation from a sample of about 3500 semi-subsistence farmers
- in Malawi.
+ As part of a field experiment that tests the effectiveness of both income
+ and expenditure planning to nudge farmers into delaying sales of cash crops,
+ we collected detailed information about market participation from a sample
+ of about 3,500 semi-subsistence farmers in Malawi.
  In this report, we use this data to describe the situation at baseline,
  before the intervention was implemented.
  The focus is on three crops that are (also) important to obtain cash.
  We provide a detailed account of sales transactions in 2021 and also inquire
  about price expectations in the near future.
  We also provide suggestive evidence that prices obtained in the past influence
- price expectations in the future.
+ price expectations.
 \end_layout
 
 \begin_layout Section
@@ -179,8 +179,8 @@ source(paste(path, "analysis.R
 \end_layout
 
 \begin_layout Standard
-Smallholder farmers in developing countries generally produce for own consumptio
-n.
+Smallholder farmers in low and middle income countries generally produce
+ for own consumption.
  However, most farmers also need cash for a variety of non-food expenditures.
  Some farmers therefore produce more than what they expect they will need,
  and sell a surplus.
@@ -205,8 +205,8 @@ literal "false"
 .
  This often also means that prices of agricultural commodities exhibit significa
 nt seasonality, with prices at their lowest immediately after harvest as
- supply booms, and prices then gradually increasing until reaching a peak
- in the lean season, just before the next harvest 
+ supply booms, and gradually increasing until reaching a peak in the lean
+ season, just before the next harvest when demand outstrips supply 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "GILBERT2017119"
@@ -283,11 +283,22 @@ literal "false"
  offered subsidized loans in randomly selected villages in rural Zambia
  and conclude that liquidity constraints contribute to inequality in rural
  economies.
- Another often heard reason is that farmers may simply lack sufficient safe
- storage space for their crops, making it too expensive to store for longer
- periods of time.
+ 
+\end_layout
+
+\begin_layout Standard
+Another often heard reason for the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
+
+ paradox is that farmers may simply lack sufficient safe storage space for
+ their crops, making it too expensive to store for longer periods of time.
  If storage is the main reason why farmers do not engage in intertemporal
- arbitrage, then providing storage technology should delay sales.
+ arbitrage, then reducing the cost of storage technology should delay sales.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -336,15 +347,20 @@ literal "false"
 \end_inset
 
 , we test two behavioural explanations related to the inability of farmers
- to hold on to harvest longer and fetch higher prices.
+ to hold on to agricultural commodities longer and fetch higher prices.
  In one treatment arm we test if expenditure planning is a main determinant
- of sub-optimal marketing behaviour, while in a second treatment we look
- at planning on the income side and ask farmers to commit to timing and
- sales prices.
- In this report, we summarize the baseline data that was collected as part
- of this study.
+ of sub-optimal marketing behaviour, and ask farmer to elaborate a detailed
+ budget for the coming agricultural year at the time of harvest.
+ In a second treatment we look at planning on the income side and ask farmers
+ to commit to timing and sales prices.
+ 
+\end_layout
+
+\begin_layout Standard
+In this report, we summarize the baseline data that was collected as part
+ of the ongoing field experiment.
  A first section provides information about the sample used and the area
- where the data is collected.
+ where the data was collected.
  We then give some general characteristics of the households involved in
  the study.
  Next, we zoom in on prices, with subsections on expectations and past prices.
@@ -363,42 +379,19 @@ Data collection
 \begin_layout Standard
 Data collection took place between May 20th and June 10th, 2022.
  Using tablet computers and Open Data Kit software, 31 enumerators interviewed
- 3534 farmers that were sampled from four districts in the Central and Northern
- Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
+ 3,534 farmers that were sampled from four districts in the Central and
+ Northern Regions of Malawi (Kasungu, Ntchisi, Dowa, and Mchinji).
  The study areas are characterized by rain-fed agriculture with a single
  agricultural season.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Add some more info on agro-ecology here (eg soil type, geology,...)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 We selected farmers that produce maize, groundnuts and/or soybean.
- Maize is planted early in the year and harvest starts usually starts in
- April and proceeds through May.
+ Maize is planted early in the year and harvest starts usually in April
+ and proceeds through May.
  Soybean is harvested somewhat earlier, groundnuts somewhat later.
  Soybean and groundnuts can be sold pretty much immediately after the harvest;
  maize needs to be dried first.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Add some more/more precise info on production here.
- Like exact planting dates for soy and gnuts, what processing is needed,
- etc.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -486,7 +479,7 @@ literal "false"
 \end_inset
 
 .
- As such, the particular nature of the study population, semi-subsistence
+ Therefore, the particular nature of the study population, semi-subsistence
  smallholder farmers, needs to be kept in mind when interpreting results,
  as they may be different from for example predominantly self-sufficient
  farmers.
@@ -953,16 +946,15 @@ noprefix "false"
 
  shows that among the surveyed farmers, about 40 percent indicate that they
  have access to credit, and that less than a quarter had outstanding debts
- averaging MWK.
- 57,000 to repay after harvest.
+ averaging MWK 57,000 to repay after harvest.
  With regards to access to storage, 60 percent of the households reported
  that they have access, of which half indicated that the storage was crop
  specific.
  We also find that, while farmer participation in cooperatives is limited,
  a moderate share (40%) have access to storage space provided by the cooperative.
- Lastly, we look at the proportion of farmers that commit a part of their
+ Lastly, we look at the proportion of farmers that commit part of their
  crop to buyers before harvest — a scenario that may often lead farmers
- to sell under unfavorable price conditions, or reduce the amount of harvest
+ to sell at unfavorable price conditions, or reduce the amount of harvest
  that farmers can sell after harvest.
  We find that only a negligible share of farmers (8%) had already promised
  (part of) the 2022 crop to buyers prior to harvest.
@@ -1123,7 +1115,7 @@ Is the storage crop specific?  (1=yes) & 0.482 & 0.5 & 2,114
 \backslash
 multicolumn{3}{c}{
 \backslash
-textit{Cooperation}} 
+textit{Cooperatives}} 
 \backslash
 
 \backslash
@@ -1236,7 +1228,8 @@ Prices
 In this section, we take a detailed look at prices, given their importance
  in deciding when and how much to sell.
  We first look at price expectations in the near future and then report
- on prices that were received in the previous season.
+ on prices that were received during transactions in the year preceding
+ the 2022 harvest (May 2021-May 2022).
 \end_layout
 
 \begin_layout Subsection
@@ -1252,7 +1245,7 @@ name "subsec:Price-expectations"
 
 \begin_layout Standard
 As part of baseline data collection, we asked questions about price expectations
- in the coming year.
+ in the coming year (May 2022-May 2023).
  In particular, we asked what price respondents think a farmer will receive
  for selling maize at the nearest market, in early September of 2022 (the
  beginning of the school year).
@@ -1401,7 +1394,13 @@ Sexpr{format(round(mean(dta$q32a, na.rm=T), digits=0), scientific=FALSE)}
 \end_inset
 
  Kwatcha towards the end of the year.
- We further asked farmers to quote expected prices for fertilizer at the
+ Note, however, that the increase is only about 11 percent, which may reflect
+ expectations about general price inflation.
+ 
+\end_layout
+
+\begin_layout Standard
+We further asked farmers to quote expected prices for fertilizer at the
  end of December, an important input for smallholder maize farmers used
  at that time.
  We also asked what they expect to pay for hiring labour to prepare 1 acre
@@ -1449,7 +1448,8 @@ name "subsec:Price-seasonality-in"
 
 \begin_layout Standard
 In addition to price expectations in the future, we also asked about transaction
-s that occurred after the harvest in the previous season (2021).
+s that occurred after the harvest in the previous season (May 2021 - May
+ 2022).
  In particular, we asked farmers to report if they sold any of the three
  crops under consideration.
  If they reported sales, we asked how many separate transactions occurred
@@ -1561,8 +1561,17 @@ soy
 \end_inset
 
  percent.
- However, as seen above, farmers expect a price increase in 2022 of only
- 
+ However, as mentioned in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Price-expectations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, farmers expect a price increase in 2022 of only 
 \begin_inset ERT
 status open
 
@@ -1702,7 +1711,7 @@ Crop production
 \end_layout
 
 \begin_layout Standard
-The average household produced 
+The average household in our sample produced 
 \begin_inset ERT
 status open
 
@@ -1743,8 +1752,8 @@ Sexpr{round(mean(dta$soy_harv, na.rm=T), digits=0)}
 
  kg of soybean in the 2021 agricultural season.
  Over an entire year and aggregated over all farmers in our sample, this
- amounts to 230 tons of groundnuts, 600 tons of soy and almost 4500 tons
- of maize.
+ amounts to 230 metric tons of groundnuts, 600 metric tons of soy and almost
+ 4500 metric tons of maize.
  The top panel of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1755,7 +1764,7 @@ noprefix "false"
 
 \end_inset
 
- shows how production is distributed over the different months.
+ shows how this production is distributed over the different months.
  Most soy is harvested in April and May.
  Maize harvesting starts in April but most harvest takes place in May and
  June.
@@ -1771,7 +1780,8 @@ The graph in the top panel shows that in quantities, maize is a very important
  of production.
  To do so, we simply multiply quantities with the average price of the crop
  received in 2021.
- Results are in the bottom panel of Figure 
+ Results (in millions of Malawian kwatcha) are in the bottom panel of Figure
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Crop-production"
@@ -1846,7 +1856,8 @@ s, were often still in the field.
  However, we also asked farmers to give an estimate of what they expect
  to get from fields that still needed to be harvested.
  Aggregating over all households in our sample, we find total production
- to be about 310 tons of groundnuts, 770 tons of soy and 4000 tons of maize.
+ to be about 310 metric tons of groundnuts, 770 metric tons of soy and 4000
+ metric tons of maize.
  Results broken down by crops are in the top panel of Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1858,7 +1869,8 @@ noprefix "false"
 \end_inset
 
 .
- We also express production in 2022 in value terms in the bottom panel.
+ We also express production in 2022 in value terms (in millions of Malawian
+ kwatcha) in the bottom panel.
  To do so, we use current prices, which are substantially higher than prices
  reported last year during the same period.
 \end_layout
@@ -1911,7 +1923,7 @@ name "fig:(Expected)-crop-production"
 
 \begin_layout Standard
 The figure reflects the fact that rains started late in 2022, and so most
- of the maize and groundnuts still needs to be harvested in June.
+ of the maize and groundnuts still needed to be harvested in June.
  Soy sells currently at more than 600 kwatcha per kg, which is reflected
  in a much larger share in total value.
  However, also groundnuts and maize prices are multiples of last year, resulting
@@ -1925,8 +1937,8 @@ Smallholder market participation
 \end_layout
 
 \begin_layout Standard
-We find reasonable market participation by the farmers in our sample for
- the three crops.
+We find reasonable levels of market participation by the farmers in our
+ sample for the three crops.
  For instance, of the 
 \begin_inset ERT
 status open
@@ -2134,7 +2146,7 @@ percent of the soybean transactions happened within the first three months
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2807,7 +2819,7 @@ Sexpr{round(prop.table(table(dta$soy_sold_share>.8))[2]*100, digits=0)}
 
 \end_inset
 
- percent of those that already harvest sold more than 80 percent of what
+ percent of those that already harvested sold more than 80 percent of what
  they had harvested.
  For those who already sold at least once, the average price they received
  was 
@@ -2953,7 +2965,7 @@ noprefix "false"
  to credit.
  Proceeds from sales are mostly used for agricultural investment.
  In Malawi, this is generally for inorganic fertilizer.
- Interestingly, it is especially farmers that have access to credit that
+ Interestingly, it are especially farmers that have access to credit that
  use proceeds for agricultural inputs.
  This may indicate that credit amounts are insufficient to cover the entire
  cost of inputs, or that the cost of credit is larger than the returns to
@@ -3029,8 +3041,8 @@ Correlation between past prices and price expectations
 \end_layout
 
 \begin_layout Standard
-We now investigate the relationship between price expectations and prices
- received in the past.
+In this section, we investigate the relationship between price expectations
+ and prices received in the past.
  To do so, we relate the average price that the farmer received in the previous
  season to price expectations in the next season using OLS models.
  To enable comparisons across crops, we use natural logarithms of both expected
@@ -3440,7 +3452,7 @@ The data suggest transactions for maize, soybean and groundnuts generally
 
 \begin_layout Standard
 Looking at price expectations, farmers predict substantial price increases
- over time: between September 2022 and new year 2023.
+ over time.
  The fact that farmers do seem to expect a considerable increase in prices
  over time suggests that farmers are at least aware of the fact that they
  could make more money by holding on to stocks longer.
@@ -3465,6 +3477,8 @@ d as a cash crop.
  Unfortunately, we also find that soybean farmers do not use past price
  dynamics as a guide for their price expectations (while maize and groundnut
  farmers do).
+ Initial data on sales in 2022 also indicate many farmers already sold soybean
+ immediately after harvest.
 \end_layout
 
 \begin_layout Standard

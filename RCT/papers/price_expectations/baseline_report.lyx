@@ -319,7 +319,7 @@ While the above factors will be binding for some farmers, many questions
  For example, if liquidity constraints are the main problem, it is unclear
  why farmers generally sell everything at once, instead of just enough to
  cover the most urgent expenses.
- If storage is a problem, it seems strange that not more farmers form groups
+ If storage is a problem, it is puzzling that not more farmers form groups
  to rent storage space, or why in Malawi the Agricultural Commodity Exchange
  (ACE) faces difficulties filling their warehouses.
  
@@ -345,12 +345,12 @@ literal "false"
  of this study.
  A first section provides information about the sample used and the area
  where the data is collected.
- We than give some general characteristics of the households involved in
+ We then give some general characteristics of the households involved in
  the study.
  Next, we zoom in on prices, with subsections on expectations and past prices.
  We then provide statistics on crop production, both in 2021 and 2022.
  We then turn to market participation and income from selling crops.
- We also have short section that correlates prices received in the past
+ We also have a short section that correlates prices received in the past
  to price expectations.
  A last section concludes.
  
@@ -361,7 +361,7 @@ Data collection
 \end_layout
 
 \begin_layout Standard
-Data collection took place around the end of May and beginning of June 2022.
+Data collection took place between May 20th and June 10th, 2022.
  Using tablet computers and Open Data Kit software, 31 enumerators interviewed
  3534 farmers that were sampled from four districts in the Central and Northern
  Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
@@ -405,8 +405,6 @@ Add some more/more precise info on production here.
 To get a nationally representative sampling frame of the smallholders farmers
  population in Malawi, we rely on the list created by the Ministry of Agricultur
 e for their Agricultural Input Programme (AIP).
- The AIP targets smallholder farmers in the villages who mostly registered
- with the village chiefs.
  We used a two-stage sampling procedure where we first sampled villages
  with the likelihood of a village being selected proportionate to the number
  of people that live in this village (such that larger villages are more
@@ -1259,7 +1257,7 @@ As part of baseline data collection, we asked questions about price expectations
  for selling maize at the nearest market, in early September of 2022 (the
  beginning of the school year).
  This was asked for maize, soybean and for groundnuts in appropriate units
- (kg for maize and soybean, debbe for groundnuts).
+ (kg for maize and soybean, debe for groundnuts).
  We repeated this question, but for late December of 2022 (at the new year).
 \end_layout
 
@@ -1661,14 +1659,14 @@ Sexpr{round((mean(graph$price[graph$crop=="maize" & graph$time =="December"],
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename results/fig2.png
 	lyxscale 10
-	scale 75
+	scale 80
 
 \end_inset
 
@@ -1799,7 +1797,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1869,7 +1867,7 @@ noprefix "false"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2369,7 +2367,7 @@ Smallholder farmers dispose of their crops though four channels.
  They can also choose to take their product to a market in their proximity.
  Furthermore, in villages, there are usually some small traders who aggregate
  commodities for further sale to larger traders.
- Finally, there are the itinerant traders from outside of the village that
+ Finally, there are the itinerant traders from outside of the village who
  visit farmers and buy at the farm gate.
 \begin_inset Foot
 status collapsed
@@ -2716,7 +2714,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-We see that husband an wife generally take the decision to sell jointly.
+We see that husband and wife generally take the decision to sell jointly.
  Men also often sell alone, but after consulting with the wife.
  Men almost never sell unilaterally, while women do.
  In line with 

@@ -671,17 +671,889 @@ To test the second hypothesis, we develop, together with the farmer, a detailed
  Again using a template, we start by asking the farmer about the expected
  marketable surplus for maize, groundnuts and soybean.
  We then ask for each month between May 2022 and April 2023 how much the
- farmer is planning to sell from each of the crop and what the minimum expected
- price for this crop is.
-\end_layout
-
-\begin_layout Section
-Fieldwork
+ farmer is planning to sell from each of the crops, and what the minimum
+ expected price for this crop is at that point in time.
+ We also ask farmers to calculate totals per month and also a grand total
+ for the entire year.
 \end_layout
 
 \begin_layout Standard
-Farmers were visited between 21nd of may 2022 and 9th of april 2022.
- We visited a total of 3534 farmers that were located in 
+We asked farmers to put not just forget about these plans, but to hang them
+ in a central place in the house or store them in a convenient location.
+ We also encouraged them to update them regularly.
+ Furthermore, to increase the likelihood that farmers use the plan, we also
+ refer to the plan during midline surveys, and reiterate the importance
+ of using these plans.
+\end_layout
+
+\begin_layout Section
+Data collection
+\end_layout
+
+\begin_layout Standard
+Data collection took place around the end of May and beginning of June 2022.
+ Using tablet computers and Open Data Kit software, 31 enumerators interviewed
+ 3534 farmers that were sampled from four districts in the Central and Northern
+ Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
+ The study areas are characterized by rain-fed agriculture with a single
+ agricultural season.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Add some more info on agro-ecology here (eg soil type, geology,...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We selected farmers that produce maize, groundnuts and/or soybean.
+ Maize is planted early in the year and harvest starts usually starts in
+ April and proceeds through May.
+ Soybean is harvested somewhat earlier, groundnuts somewhat later.
+ Soybean and groundnuts can be sold pretty much immediately after the harvest;
+ maize needs to be dried first.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Add some more/more precise info on production here.
+ Like exact planting dates for soy and gnuts, what processing is needed,
+ etc.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get a nationally representative sampling frame of the smallholders farmers
+ population in Malawi, we rely on the list created by the Ministry of Agricultur
+e for their Agricultural Input Programme (AIP).
+ The AIP targets smallholder farmers in the villages who mostly registered
+ with the village chiefs.
+ We used a two-stage sampling procedure where we first sampled villages
+ with the likelihood of a village being selected proportionate to the number
+ of people that live in this village (such that larger villages are more
+ likely to end up in the sample).
+ We then randomly sampled 31 households in each of the sampled villages.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:map-of-study"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives a sense of coverage and dispersion of the interviewed households.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/bjvca/data/projects/malawi/RCT/papers/price_expectations/results/map.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+map of study area with sampled villages
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:map-of-study"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The focus of the study is on market participation and so the targeted study
+ population consists of farmers that are likely to engage with markets.
+ As such, we included qualifier questions in our survey, where we asked
+ farmers if they were planning to sell maize, soybean or groundnuts during
+ the 2022 season.
+ Restricting our study population to a particular sub-population has implication
+s for the interpretation of the results.
+ For instance, we will see later that we find relatively high proportions
+ of households reporting to sell to the market 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "barrett2010smallholder"
+literal "false"
+
+\end_inset
+
+.
+ As such, the particular nature of the study population, semi-subsistence
+ smallholder farmers, needs to be kept in mind when interpreting results,
+ as they may be different from for example predominantly self-sufficient
+ farmers.
+\end_layout
+
+\begin_layout Section
+Farmer characteristics
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents a number of summary statistics of sampled households and their
+ heads.
+ Eighty percent of households are headed by men.
+ The average household is headed by a 43 year old with six years of schooling
+ (primary level).
+ The typical household has five members, living in houses of three rooms.
+ Four in every 10 households have their main houses roofed with corrugated
+ iron sheets (as opposed to thatch roofing).
+ We find that the average distance of the households to the nearest all
+ weather road and nearest market is 1 and 4 km respectively.
+\end_layout
+
+\begin_layout Standard
+We also collected information on the households' access to transport facilities
+ or assets (either through ownership or hire).
+ Results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show that households mostly have access to a bicycle (72% of respondents)
+ and ox-carts (60% of the respondents).
+ Ox-carts are particularly important for transportation of harvest from
+ the farms to the market.
+ We also collected information on livestock asset ownership, as these are
+ often a form of savings that can be used as a buffer stock to insulate
+ consumption from income fluctuations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "FAFCHAMPS1998273"
+literal "false"
+
+\end_inset
+
+.
+ As such, ownership of livestock assets may reduce the likelihood that farmers
+ have to sell early to address liquidity constraints.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Household characteristics
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household-characteristics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	Mean	&	Std dev	&	N	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Household head}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household head is male (1=yes)	&	0.791	&	0.407	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Age of household head (years)	&	43.426	&	14.831	&	3,414	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Schooling of household head (years)	&	6.329	&	3.489	&	3,427	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is grass thatch (1=yes)	&	0.609	&	0.488	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Household characteristics}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is corrugated iron  (1=yes)	&	0.39	&	0.488	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household size (number of people)	&	5.043	&	1.992	&	3,530	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of rooms in the house	&	3.202	&	1.178	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance (kms) to nearest all weather road	&	1.308	&	3.433	&	3,346	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance (kms) to nearest market	&	4.107	&	4.78	&	3,243	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Transport}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to bicycle	 (1=yes) &	0.719	&	0.45	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to saloon car (1=yes)	&	0.218	&	0.413	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to pick-up or lorry access (1=yes)	&	0.221	&	0.415	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to ox-cart (1=yes)	&	0.595	&	0.491	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household owns a motorbike (1=yes)	&	0.11	&	0.313	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Livestock assets}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of bulls/oxen/steers owned by household	&	0.123	&	0.653	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of cows or heifers owned by household	&	0.128	&	0.799	&	3,532	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of calves owned by household	&	0.053	&	0.495	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of pigs owned by household	&	0.708	&	1.943	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of goats owned by household	&	1.241	&	2.569	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of sheep owned by household	&	0.055	&	0.519	&	3,531	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of chicken owned by household	&	4.743	&	6.509	&	3,532	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of ducks owned by household	&	0.282	&	1.501	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Other household characteristics that affect market participation included
+ access to credit, access to storage, membership of cooperatives, and whether
+ farmers had already promised part of the 2022 harvest to a buyer.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household characteristics that affect market participation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that among the surveyed farmers, about 40 percent indicate that they
+ have access to credit, and that less than a quarter had outstanding debts
+ averaging MWK.
+ 57,000 to repay after harvest.
+ With regards to access to storage, 60 percent of the households reported
+ that they have access, of which half indicated that the storage was crop
+ specific.
+ We also find that, while farmer participation in cooperatives is limited,
+ a moderate share (40%) have access to storage space provided by the cooperative.
+ Lastly, we look at the proportion of farmers that commit a part of their
+ crop to buyers before harvest — a scenario that may often lead farmers
+ to sell under unfavorable price conditions, or reduce the amount of harvest
+ that farmers can sell after harvest.
+ We find that only a negligible share of farmers (8%) had already promised
+ (part of) the 2022 crop to buyers prior to harvest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Household characteristics that affect market participation
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household characteristics that affect market participation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	Mean	&	Std dev	&	N	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Credit}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have access to credit?  (1=yes) & 0.383 & 0.486 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have debts (cash or in-kind) to be repaid after harvest?   (1=yes)
+ & 0.236 & 0.425 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Estimated amount (Malawian Kwacha) of debt & 56,878 & 92,788 & 819 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Storage}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have access to storage?  (1=yes) & 0.599 & 0.49 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Is the storage crop specific?  (1=yes) & 0.482 & 0.5 & 2,114 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Cooperation}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Are you member of a Cooperatives?  (1=yes) & 0.134 & 0.34 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Does this cooperative provide access to storage?  (1=yes) & 0.388 & 0.488
+ & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Is this Cooperative certified by the Agriculture Commodity Exchange?  (1=yes)
+ & 0.727 & 0.446 & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Advance selling}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Did you already promise part of the 2022 harvest to a buyer?  (1=yes) &
+ 0.077 & 0.267 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

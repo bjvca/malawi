@@ -119,19 +119,20 @@ names(soy_prod) <- c("prod","month","crop")
 all_prod <- rbind(maize_prod, gnuts_prod, soy_prod)
 all_prod$month <- factor(all_prod$month, levels=month.name)
 all_prod$crop <- factor(all_prod$crop)
-  
+all_prod$prod_MT <- all_prod$prod/1000
 
 # Plot
 ## quantities    
-plot_1 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=prod, x=month)) + 
+plot_1 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=prod_MT, x=month)) + 
     geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 all_prod$price[all_prod$crop == "gnuts"] <- 187
 all_prod$price[all_prod$crop == "maize"] <- 114
 all_prod$price[all_prod$crop == "soy"] <- 89
 
 all_prod$value <- all_prod$price*all_prod$prod
+all_prod$value_mil <- all_prod$price*all_prod$prod/1000000
 
-plot_2 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=value, x=month)) + 
+plot_2 <- ggplot(all_prod[all_prod$month%in%c("March","April","May","June","July","Auguts"),], aes(fill=crop, y=value_mil, x=month)) + 
   geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 
 png(paste(path,"papers/price_expectations/results/fig_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)
@@ -733,20 +734,21 @@ current_prod_all$month[current_prod_all$month_num==4] <- "April"
 current_prod_all$month[current_prod_all$month_num==5] <- "May"
 current_prod_all$month[current_prod_all$month_num==6] <- "June"
 current_prod_all$month[current_prod_all$month_num==7] <- "July"
-
-
+current_prod_all$prod_MT <- current_prod_all$prod/1000
+ 
 current_prod_all$month <-  factor(current_prod_all$month, levels=month.name)
 # Plot
 ## quantities    
-plot_1 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=prod, x=month)) + 
+plot_1 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=prod_MT, x=month)) + 
     geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 current_prod_all$price[current_prod_all$crop == "gnuts"] <- 720
 current_prod_all$price[current_prod_all$crop == "maize"] <- 220
 current_prod_all$price[current_prod_all$crop == "soy"] <- 650
 
 current_prod_all$value <- current_prod_all$price*current_prod_all$prod
+current_prod_all$value_mil <- current_prod_all$price*current_prod_all$prod/1000000
 
-plot_2 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=value, x=month)) + 
+plot_2 <- ggplot(current_prod_all[current_prod_all$month%in%c("March","April","May","June","July"),], aes(fill=crop, y=value_mil, x=month)) + 
   geom_bar(position="stack", stat="identity") + scale_fill_grey( start = 0.4, end = 0.8,)
 
 png(paste(path,"papers/price_expectations/results/fig_current_prod.png",sep = ""), units="px", height=3200, width= 3800, res=600)

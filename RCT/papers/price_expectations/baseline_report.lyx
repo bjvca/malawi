@@ -1380,7 +1380,7 @@ Sexpr{format(round(mean(dta$q32, na.rm=T), digits=0), scientific=FALSE)}
 
 \end_inset
 
- Kwatcha in early September, it increased to 
+ Kwacha in early September, it increased to 
 \begin_inset ERT
 status open
 
@@ -1393,7 +1393,7 @@ Sexpr{format(round(mean(dta$q32a, na.rm=T), digits=0), scientific=FALSE)}
 
 \end_inset
 
- Kwatcha towards the end of the year.
+ Kwacha towards the end of the year.
  Note, however, that the increase is only about 11 percent, which may reflect
  expectations about general price inflation.
  
@@ -1419,7 +1419,7 @@ Sexpr{format(round(mean(dta$q26, na.rm=T), digits=0), scientific=FALSE)}
 
 \end_inset
 
- kwatcha, and 
+ Kwacha, and 
 \begin_inset ERT
 status open
 
@@ -1432,7 +1432,7 @@ Sexpr{format(round(mean(dta$q29, na.rm=T), digits=0), scientific=FALSE)}
 
 \end_inset
 
- kwatcha for the latter.
+ Kwacha for the latter.
 \end_layout
 
 \begin_layout Subsection
@@ -1780,7 +1780,7 @@ The graph in the top panel shows that in quantities, maize is a very important
  of production.
  To do so, we simply multiply quantities with the average price of the crop
  received in 2021.
- Results (in millions of Malawian kwatcha) are in the bottom panel of Figure
+ Results (in millions of Malawian Kwacha) are in the bottom panel of Figure
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1870,7 +1870,7 @@ noprefix "false"
 
 .
  We also express production in 2022 in value terms (in millions of Malawian
- kwatcha) in the bottom panel.
+ Kwacha) in the bottom panel.
  To do so, we use current prices, which are substantially higher than prices
  reported last year during the same period.
 \end_layout
@@ -1924,7 +1924,7 @@ name "fig:(Expected)-crop-production"
 \begin_layout Standard
 The figure reflects the fact that rains started late in 2022, and so most
  of the maize and groundnuts still needed to be harvested in June.
- Soy sells currently at more than 600 kwatcha per kg, which is reflected
+ Soy sells currently at more than 600 Kwacha per kg, which is reflected
  in a much larger share in total value.
  However, also groundnuts and maize prices are multiples of last year, resulting
  in much larger overall values.
@@ -2835,7 +2835,7 @@ Sexpr{round(mean(dta$q66, na.rm=T), digits=0)}
 
 \end_inset
 
- Kwatcha, which is substantially lower than expected prices in September
+ Kwacha, which is substantially lower than expected prices in September
  and January (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2861,7 +2861,7 @@ Sexpr{round(mean(dta$q66[dta$soy_sold_share>.8], na.rm=T), digits=0)}
 
 \end_inset
 
- Kwatcha.
+ Kwacha.
 \end_layout
 
 \begin_layout Section

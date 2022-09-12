@@ -53,6 +53,9 @@ for (i in 1:sum(duplicated(dta$farmer_ID))) {
 dta$farmer_ID[dta$Xuuid == dups[i]] <- paste("F",3534+i, sep="_")
 }
 
+### there is one farmer that appeared to have been given T1, while they needed to have received T2, change treatment status here 
+dta$treatment[dta$farmer_ID=="F_659"] <- "T1"
+
 ### export here for follow up
 path2 <- strsplit(path, "/baseline/data")[[1]]
 dta$name <- ifelse(dta$q4a=="Yes",dta$farmername,paste(paste(dta$q4b,dta$farmer_ID, sep=" ("),")",sep=""))

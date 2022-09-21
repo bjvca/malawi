@@ -42,4 +42,6 @@ path <- getwd()
 path <- strsplit(path,"/raw")[[1]]
 write.csv(dta,paste(path,"public/midline_sept.csv", sep="/"), row.names=FALSE)
 
-table(dta$q41, dta$treatment)
+prop.table(table(dta$q41, dta$treatment),2)
+
+summary(lm((q41=="Yes")~treatment,data=dta))

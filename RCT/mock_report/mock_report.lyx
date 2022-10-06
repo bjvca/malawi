@@ -3828,9 +3828,9 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-We use simulation to account for multiple comparisons.Simulation methods
- provide a flexible and intuitive way to think about multiple hypothesis
- testing.
+We use simulation to account for multiple comparisons.
+ Simulation methods provide a flexible and intuitive way to think about
+ multiple hypothesis testing.
  It accommodates the extent to which the multiple comparisons are correlated
  with one another and allows us to integrate design specific elements such
  as the blocking and multiple arms.

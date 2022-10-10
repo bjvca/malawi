@@ -936,7 +936,16 @@ We will not organize a dedicated baseline survey, but rather ask a limited
  This information can then be used to demonstrated balance, to control for
  baseline outcomes for the primary outcome variables in and ANCOVA regression,
  and to explore heterogeneous treatment effects.
- 
+ Midline data will be collected in September-October 2022 and December 2022-Janu
+ary 2023, generally by mobile phone.
+ To allow for farmers that do not have access to a mobile phone, we will
+ make sure that in each village we identify someone with a phone that can
+ be shared with the farmer or farmers that do not have a phone.
+ A more elaborate in-person endline survey will be organized in March 2023.
+\end_layout
+
+\begin_layout Subsection*
+Baseline balance
 \end_layout
 
 \begin_layout Standard
@@ -982,41 +991,71 @@ During baseline we will also collect recall data on marketing of the three
  categories were covered with the proceeds from the sale.
 \end_layout
 
-\begin_layout Standard
-Intermediate data will be collected in September 2022 and December 2022,
- generally by mobile phone.
- To allow for farmers that do not have access to a mobile phone, we will
- make sure that in each village we identify someone with a phone that can
- be shared with the farmer or farmers that do not have a phone.
- A slightly more elaborate in-person endline survey will be organized in
- March 2023.
+\begin_layout Subsection*
+Primary outcomes
 \end_layout
 
 \begin_layout Standard
 Primary outcomes in this study include stocks of ground nuts, maize and
  soybean held by the farmers and how they evolve over time.
  As there is a particular focus on marketing behaviour, we will also collect
- detailed information on sales made, including quantities sold, prices received,
- who was sold to, who made the decision and what were proceeds used for.
- As such, questions during follow up and endline on market participation
- will be similar to the recall data that was collected during baseline.
- Further down the impact pathway, we compare welfare, both subjective and
- through consumption expenditure (last month), between treatment and control
- households.
- However, detailed consumption expenditure data will only be collected during
- endline in March 2023 to avoid priming the budget neglect treatment to
- farmers in the control group.
+ detailed information on sales made, including quantities sold and prices
+ received.
+ We ask similar questions on for total amounts bought of each of the crops.
+\end_layout
+
+\begin_layout Subsection*
+Secondary outcomes
 \end_layout
 
 \begin_layout Standard
-To investigate impact pathways, we will also include a range of questions
- related to expenditure, and how easy it was for farmers.
- For instance, did treated households have less issues in meeting expenditures
- for eg.
- fertilizer or improved seed for the next season? Furthermore, we include
- a module on price expectations, which will be useful to see how expectations
- influence eventual prices obtained, and how interventions affect the relation
- between expectations and behaviour.
+In addition to the primary outcomes above, we also look if the intervention
+ affects who was sold to.
+ In particular, we test if farmers increase the likelihood that they sold
+ directly to the market, as this is often the place where they can get the
+ best price for their crop 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.2307/3697909"
+literal "false"
+
+\end_inset
+
+.
+ We also test if there is a change related to decision making, in particular
+ if the likelihood that decisions related to the sales of the commodity
+ was taken jointly buy the household co-heads.
+ We also ask what were proceeds used for, and test if there is a change
+ in the use of proceeds for expected expenditures (education) and unexpected
+ expenditures (health).
+\end_layout
+
+\begin_layout Standard
+Furthermore, we include a module on price expectations, which will be useful
+ to see how expectations influence eventual prices obtained, and how interventio
+ns affect the relation between expectations and behaviour.
+\end_layout
+
+\begin_layout Standard
+Budget neglect or failure to adhere to sales plans may also affect outcomes
+ in the longer run, such as health of household members, resilience against
+ shocks, and agricultural yield.
+ At endline, we will therefore collect also detailed consumption data.
+ Furthermore, we will collect information on farm investment, and also look
+ at changes in the composition of livestock assets, which may have been
+ used to smooth consumption 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qjab045"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Variable construction
 \end_layout
 
 \begin_layout Standard

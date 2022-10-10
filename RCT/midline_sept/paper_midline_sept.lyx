@@ -307,11 +307,11 @@ literal "false"
 
 \end_inset
 
- further argue how farmers also loose out twice, as transport costs are
- passed on by traders to farmers when traders buy commodities from farmers
- in rural areas to aggregate in consumer centers, and farmers need to incur
- transaction costs when they buy back (often from the same traders in towns
- or large warehouses in trading centers).
+ further show how farmers loose out twice, as transport costs are passed
+ on by traders to farmers when traders buy commodities from farmers in rural
+ areas to aggregate in consumer centers, and farmers need to incur transaction
+ costs when they buy back (often from the same traders in towns or large
+ warehouses in trading centers).
  
 \end_layout
 
@@ -338,7 +338,7 @@ literal "false"
 
 .
  Price movements may be unpredictable and farmers may be too risk averse
- to engage into intertemporal arbitrage 
+ to engage in intertemporal arbitrage 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:ags:aaea20:304448"
@@ -366,7 +366,7 @@ literal "false"
 Most of the explanations above focus on neoclassical constraints to farmers'
  exploiting inter-temporal arbitrate.
  In this study, we zoom in on two potential behavioral explanations why
- farmers seemingly sell at sub-optimal time.
+ farmers seemingly sell at sub-optimal timing.
  One potential explanation is situated at the household expenditure side,
  and assumes that households face challenges in accurately predicting future
  expenditures.
@@ -398,51 +398,47 @@ The above hypotheses are tested with a field experiment among smallholder
  farmers in Malawi.
  These farmers produce (a mix of) maize, groundnuts and soybean for which
  at least part is destined for the market.
+ We set up a field experiment with two treatment arms.
+ Farmers that are randomly assigned to the first treatment arm are taken
+ through a detailed budgeting exercise immediately after harvest.
+ In particular, in this intervention a trained enumerator sits with the
+ household head and fills in a budget matrix of projected expenses for each
+ month in the coming year.
+ Farmers that are randomly allocated to the second treatment arm receive
+ a sales planning intervention.
+ Here, a trained enumerator sits with the household head and plans how much
+ they plan to sell of which crop in which month during in the coming year.
+ We also ask the household head to indicate, for each planned sale, what
+ the minimum price is that her or she expects.
+ Impact of the interventions on a variety of outcomes is compared against
+ outcomes of a control group that did not get any intervention.
  
 \end_layout
 
 \begin_layout Standard
-This document serves as a mock report.
- Like pre-analysis plans, mock reports are important tools against publication
- bias.
- It goes one step further than pre-analysis plans by making specifications
- and variables selection explicit through preregistering the actual code
- streams that will be run on the midline and endline data.
- To do so, this document uses the knitr engine to create a dynamic document
- that aims to be as close as possible to the eventual document that will
- be used to report the results of the experiment.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Ideally, the code that performs the analysis would be embedded in the latex
- source code.
- However, some statistical procedures (eg those that rely on simulation)
- may take a significant amount of time to run, making it impractical to
- rerun it each time the latex document is compiled.
- As such, we run the analysis in a separate script that writes results to
- matrices on disk.
- The knitr engine of the latex document then loads these matrices at startup
- and extracts data from these matrices to fill the tables.
- As all coded (R-scripts and latex source code) is under revision control
- and publicly available through git-hub transparency is preserved.
-\end_layout
-
-\end_inset
-
- For now, most table will be filled with results based on simulated endline
- data.
- The ideas is that when mid and endline data is collected, it is simply
- a matter of connecting that data and re As such, it will provide a useful
- reference in evaluating the final results of the study 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "humphreys_sanchezdelasierra_vanderwindt_2013"
+This document has been compiled immediately after the first midline survey
+ was collected (via telephone).
+ It is based on the 
+\begin_inset CommandInset href
+LatexCommand href
+name "pre-analysis plan"
+target "https://github.com/bjvca/malawi/blob/master/RCT/malawi_RCT.pdf"
 literal "false"
 
 \end_inset
 
-.
+ and the 
+\begin_inset CommandInset href
+LatexCommand href
+name "mock report"
+target "https://github.com/bjvca/malawi/blob/master/RCT/mock_report/mock_report.pdf"
+literal "false"
+
+\end_inset
+
+, and compares outcomes about 6 months post intervention of households in
+ the treatment groups to outcomes of households in the control group.
+ Similar documents will be produced when additional survey rounds are completed.
 \end_layout
 
 \begin_layout Section
@@ -503,8 +499,8 @@ literal "false"
  story.
  If farmers need urgent cash, it would make more sense to only sell part
  of the harvest to cover most urgent expenses.
- However, farmers generally sell all maize immediately post harvest at low
- prices.
+ However, farmers often seem to sell all of their marketable surplus immediately
+ post harvest in a single transaction.
 \end_layout
 
 \begin_layout Standard
@@ -541,16 +537,16 @@ literal "false"
  However, their analysis use prices obtained from market centers, which
  may be a poor proxy for the farm gate prices that farmers face: prices
  in main markets are generally much better integrated in the wider national,
- regional and even global economy, and so will be less prone to extreme
- spikes and slumps.
+ regional and even global economy, and so will be less prone to the extreme
+ spikes and slumps that smallholder farmers in more remote areas experience.
 \end_layout
 
 \begin_layout Standard
 A third reason that is often heard in the field is that farmers have nowhere
  to store, so they just sell.
  This could be a lack of space, as the average smallholder often harvest
- 10-20 bags of 100kg of maize.
- But there are also risk related to pests and diseases affecting the stored
+ 20-40 bags of 50kg of maize.
+ But there are also risks related to pests and diseases affecting the stored
  maize.
  If storage is the main reason why farmers do not engage in intertemporal
  arbitrage, then providing storage technology should delay sales.
@@ -562,12 +558,14 @@ literal "false"
 
 \end_inset
 
- indeed find that households that received PICS bags stored maize for a
- longer period, reported a substantial drop in storage losses.
+ indeed find that households that received PICS bags, a type of hermetically
+ sealed bag of two layers of polyethylene liners and a third layer made
+ from woven polypropylene, stored maize for a longer period and reported
+ a substantial drop in storage losses.
  Again, we feel storage is indeed part of the reason, but it does not explain
  everything.
  For instance, this explanation is at odds with the fact that Agricultural
- Commodities Exchange (ACE) in Malawi fails to fill its warehouses.
+ Commodities Exchange (ACE) in Malawi consistently fails to fill its warehouses.
 \end_layout
 
 \begin_layout Standard
@@ -589,15 +587,50 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+Related research on the more behavioral and psychological front that helps
+ explain the puzzle is ongoing.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+ study recurrent seasonal hunger in Zambia, which could be a direct consequence
+ of suboptimal marketing behaviour, and conjecture that individuals tend
+ to overestimate their available resources and consequently under-save.
+ They test this hypothesis through an intervention that induces individuals
+ to think through their budget set and formulate a spending plan very similar
+ to the intervention we do.
+ They find that treated households enter the hunger season with one additional
+ month of savings, leading to a smoother spending profile over the year.
+\end_layout
+
+\begin_layout Standard
+Our second treatment is related to behavioral research on to the cognitive
+ burden of complex intertemporal optimization.
+ It has been found that farmers use various decision heuristics and rules
+ of thumb when making decisions about how much to sell, when and at what
+ price.
+ For instance, farmers may anchor their reservation price the price they
+ received in the previous season.
+ Or, they may interpret particular signals, such as the arrival of traders
+ from large towns in their village, as a sign that prices have reached their
+ peak.
+ Furthermore, the treatment is also grounded the theory on individual's
+ often observed failure to commit in light of time preference and self control
+ issues, and how mental accounting can remedy this.
+\end_layout
+
 \begin_layout Section
 Behavioural constraints to intertemporal arbitrage: Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-As can be seen in the previous section, most research trying to explain
- the sell low buy high puzzle are neoclassical in nature.
- In this study, we want to test two potential explanations that are rooted
- in behavioral sciences.
+We want to test two potential explanations that are rooted in behavioral
+ sciences.
  The first potential behavioral explanation is situated at the household
  expenditure side, and assumes that households face challenges in accurately
  predicting future expenditures.
@@ -613,7 +646,7 @@ As can be seen in the previous section, most research trying to explain
 \end_layout
 
 \begin_layout Standard
-This hypothesis touches on cognitive limits of the household at the expenditure
+This hypothesis touches on cognitive limits of the household on the expenditure
  side.
  It is also related to the planning fallacy, where individuals typically
  underestimate the time it takes to complete a task, despite extensive experienc
@@ -639,8 +672,6 @@ literal "false"
 .
  For instance, farmers may not budget for pesticides or insecticides because
  they believe they will not be affected by pests or insects.
- Budget neglect is also found to be a main contributing factor to recurrent
- hungry seasons in Zambia.
 \end_layout
 
 \begin_layout Standard
@@ -648,21 +679,23 @@ To test the first hypothesis, we designed an intervention that takes the
  farmer through a detailed budgeting exercise.
  In particular, the main decision maker within the household was provided
  with a template that needed to be filled in as detailed as possible.
- Expenditure categories included education expenditures (school fees, uniforms,...)
-, agricultural investment expenditures (seed, fertilizer,...), investment expenditu
-re in non-agricultural businesses (retail shop inventories,...), health and
- medical expenses (medicines, preventive doctor visit,...), household recurrent
- expenditure (food, utilities,...), household equipment and maintenance (furniture,
- renovation,...), and other expenditures (loan repayment, ceremonies,...).
+ Pre-populated expenditure categories included education expenditures (school
+ fees, uniforms,...), agricultural investment expenditures (seed, fertilizer,...),
+ investment expenditure in non-agricultural businesses (retail shop inventories,...
+), health and medical expenses (medicines, preventive doctor visit,...), household
+ recurrent expenditure (food, utilities,...), household equipment and maintenance
+ (furniture, renovation,...), and other expenditures (loan repayment, ceremonies,...).
  For each of these expenditure item lines, farmers were then asked to provide
  an estimate of the total cost for each month between May 2022 and April
  2023 and write it down in the appropriate cell of the expenditure matrix.
  Farmers were also encouraged to provide their top 3 unexpected expenditures
  likely to occur between May 2022 and April 2023.
+ We then calculate totals per month and also a grand total for the entire
+ year.
 \end_layout
 
 \begin_layout Standard
-This second hypothesis is also related to cognitive limitations when planning,
+The second hypothesis is also related to cognitive limitations when planning,
  but this time at the income side of the farm household.
  Farmers may have difficulties in making the intertemporal cost-benefit
  calculations necessary to determine the optimal reservation price and/or
@@ -684,18 +717,18 @@ s often means they abandon plans and engage in impulsive or distress sales.
 
 \begin_layout Standard
 To test the second hypothesis, we develop, together with the farmer, a detailed
- sales plan for the year.
+ sales plan for the year which is assumed to function as a commitment device.
  Again using a template, we start by asking the farmer about the expected
  marketable surplus for maize, groundnuts and soybean.
  We then ask for each month between May 2022 and April 2023 how much the
- farmer is planning to sell from each of the crops, and what the minimum
- expected price for this crop is at that point in time.
- We also ask farmers to calculate totals per month and also a grand total
- for the entire year.
+ farmer is planning to sell for each of the crops, and what the minimum
+ price point in time should be before they sell.
+ Also for the sales plan, we calculate totals per month and also a grand
+ total for the entire year.
 \end_layout
 
 \begin_layout Standard
-We asked farmers to put not just forget about these plans, but to hang them
+We asked farmers to not just forget about these plans, but to hang them
  in a central place in the house or store them in a convenient location.
  We also encouraged them to update them regularly.
  Furthermore, to increase the likelihood that farmers use the plan, we also
@@ -708,7 +741,8 @@ Data collection
 \end_layout
 
 \begin_layout Standard
-Data collection took place around the end of May and beginning of June 2022.
+Baseline data collection took place around the end of May and beginning
+ of June 2022.
  Using tablet computers and Open Data Kit software, 31 enumerators interviewed
  3534 farmers that were sampled from four districts in the Central and Northern
  Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
@@ -822,19 +856,17 @@ The focus of the study is on market participation and so the targeted study
  Restricting our study population to a particular sub-population has implication
 s for the interpretation of the results.
  For instance, we will see later that we find relatively high proportions
- of households reporting to sell to the market 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "barrett2010smallholder"
-literal "false"
-
-\end_inset
-
-.
+ of households reporting to sell to the market.
  As such, the particular nature of the study population, semi-subsistence
  smallholder farmers, needs to be kept in mind when interpreting results,
  as they may be different from for example predominantly self-sufficient
  farmers.
+\end_layout
+
+\begin_layout Standard
+Midline data was collected by phone over the course of one month (September
+ 2022).
+ 
 \end_layout
 
 \begin_layout Section
@@ -883,17 +915,7 @@ noprefix "false"
  the farms to the market.
  We also collected information on livestock asset ownership, as these are
  often a form of savings that can be used as a buffer stock to insulate
- consumption from income fluctuations 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "FAFCHAMPS1998273"
-literal "false"
-
-\end_inset
-
-.
- As such, ownership of livestock assets may reduce the likelihood that farmers
- have to sell early to address liquidity constraints.
+ consumption from income fluctuations.
 \end_layout
 
 \begin_layout Standard
@@ -1578,9 +1600,9 @@ Baseline balance
 \end_layout
 
 \begin_layout Standard
-We follow our pre-analysis plan states and demonstrate baseline balance
- by constructing a standard balance table consisting of the following variables
- household/demographic characteristics (inspired by balance tables in 
+We follow our pre-analysis plan and demonstrate baseline balance by constructing
+ a standard balance table consisting of the following variables household/demogr
+aphic characteristics (inspired by balance tables in 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "10.1257/aer.101.6.2350,10.1093/qje/qju002"
@@ -1614,7 +1636,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2272,13 +2294,18 @@ Note: First column reports control group means (and standard deviations
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We find significant imbalance on some of the variables, particularly for
+ the sales plan treatment.
+ While joint F-test for separate treatment control comparisons are not significa
+nt, we do find signs of imbalance when we us a likelihood ratio test derived
+ from a multinomial model where the left hand side has three levels (T1,
+ T2, C).
 \end_layout
 
 \begin_layout Standard
@@ -2728,12 +2755,16 @@ Note: First column reports control group means (and standard deviations
 \end_layout
 
 \begin_layout Section
+Impact at midline
+\end_layout
+
+\begin_layout Subsection
 Primary outcomes
 \end_layout
 
 \begin_layout Standard
 We start with the most parsimonious specification by reporting simple difference
- between treatment and control farmer from a regression in the top panel
+ between treatment and control farmers from a regression in the top panel
  of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2768,6 +2799,37 @@ noprefix "false"
 \end_inset
 
 , and village fixed effects.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reports results for maize; Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary_soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are similar tables but for grounduts and soybean, respectively.
 \end_layout
 
 \begin_layout Standard
@@ -2775,9 +2837,8 @@ A first primary outcome we consider is stocks of the three commodities at
  the time of the midline/endline.
  In particular, we ask farmers how many bags of the commodity (standard
  50 kg bags) they still have in store.
- This variables were top coded at 100 bags.
- Furthermore, as the distributions are skewed to the right and include zeros
- as well, we use an inverse hyperbolic sine transformation 
+ As the distributions are skewed to the right and include zeros as well,
+ we use an inverse hyperbolic sine transformation 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "https://doi.org/10.1111/obes.12325"
@@ -2786,6 +2847,25 @@ literal "false"
 \end_inset
 
 .
+ We see that the average control farmer has about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_tc[1,1]}
+\end_layout
+
+\end_inset
+
+ bags in store at the time of the survey.
+ We do not find that this is significantly different in the sample of farmers
+ that was taken through a budgeting exercise.
+ We do find that stocks are significantly higher among farmers that made
+ a sales plan.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2823,7 +2903,7 @@ Finally, we calculate the average price received for all transactions that
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5403,7 +5483,7 @@ noprefix "false"
  between Bonferroni and the family wise null becomes larger.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Secondary outcomes
 \end_layout
 

@@ -2759,6 +2759,27 @@ Impact at midline
 \end_layout
 
 \begin_layout Subsection
+Attrition
+\end_layout
+
+\begin_layout Standard
+As data collection was by phone, we expected that we would not be able to
+ reach some farmers, even though at baseline we always collected information
+ on alternative ways to reach the farmers (for instance through village
+ headship).
+ From the original 3534 farmers that were interviewed at baseline, we successful
+ly reached 3382 farmers, leading to an attrition rate of just under 5 percent.
+ Enumerators made on average 10 attempts before indicating the farmers could
+ not be reached.
+ Treatments are not correlated to the likelihood that farmers are missing
+ from the data (
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ test of independence of proportions is rejected at p=0.912).
+\end_layout
+
+\begin_layout Subsection
 Primary outcomes
 \end_layout
 
@@ -2863,8 +2884,8 @@ Sexpr{prim_maize_tc[1,1]}
  bags in store at the time of the survey.
  We do not find that this is significantly different in the sample of farmers
  that was taken through a budgeting exercise.
- We do find that stocks are significantly higher among farmers that made
- a sales plan.
+ However, we do find that stocks are significantly higher among farmers
+ that made a sales plan.
  
 \end_layout
 
@@ -2903,7 +2924,7 @@ Finally, we calculate the average price received for all transactions that
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3720,7 +3741,11 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
+ below); mean stock is current situation in 50kg bags, ATE is ihs transformed.
+ Sold or bought is since intervention untill midline survey, quantity bought/sol
+d is total quantity between intervention and midline survey, prices are
+ average prices of transactions that occured between intervention and midline
+ survey  **, * and + denote significance at the 1, 5 and 10 percent levels.
  All models include village fixed effects and controls for baseline characterist
 ics that show imbalance at the 5 percent level or less in Table XXX.
  
@@ -3734,6 +3759,25 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we repeat the entire analysis, but now for groundnuts.
+ Also here, we see that households that drew up a sales plan have stocks
+ that are about 10 percent higher than in the control group.
+ Now, we also see that stocks are significantly higher in the group that
+ was asked to make a detailed expenditure plan.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4571,6 +4615,23 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Finally, Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary_soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows impact of the interventions on primary outcomes for soybean.
+ Interestingly, we do not find that that stocks at midline differ significantly
+ between treatment groups and the control.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5419,25 +5480,32 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_layout
 
 \begin_layout Standard
-Note: We have a selection problem for some of the variables included in
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Primary-outcomes"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- are only recorded for a subset of the sample, and farmers may have entered
- or left this subset as a consequence of our treatment.
+We find that households that were exposed to the interventions have higher
+ stocks at the time of the midline survey.
+ The effect on stocks is strongest for ground nuts and for the treatment
+ that involves drawing up a sales plan.
 \end_layout
 
 \begin_layout Standard
-We use simulation to account for multiple comparisons.Simulation methods
- provide a flexible and intuitive way to think about multiple hypothesis
- testing.
+We further find that households that drew up a detailed budget are significantly
+ less likely to have bought soybean in the three months preceding the midline
+ survey.
+ A similar effect on purchases is found for the second intervention.
+ The reason why we find an expected reduction in buying back of crops only
+ for soybean may be due to the fact that for soybean control group farmers
+ have already started buying back, while this is not yet happening as similar
+ scales.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We use simulation to account for multiple comparisons.
+ Simulation methods provide a flexible and intuitive way to think about
+ multiple hypothesis testing.
  It accommodates the extent to which the multiple comparisons are correlated
  with one another and allows us to integrate design specific elements such
  as the blocking and multiple arms.
@@ -5459,7 +5527,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Multiple comparison arise from the number of treatment arms, the different
  primary outcomes and the different crops included in the analysis.
  Equation XXX tests 2 hypotheses (we will not directly test T1 against T2),
@@ -5481,6 +5549,11 @@ noprefix "false"
  These values are only slightly higher on simulated data, but it is expected
  that with real data, correlation between outcomes is higher and difference
  between Bonferroni and the family wise null becomes larger.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -6123,8 +6196,11 @@ scriptsize
 
 \begin_layout Plain Layout
 
-Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
+Note: Sold jointly is one if all transactions between intervention and midline
+ were taken by co-heads together, sold to market is 1 if all sales between
+ intervention and midline were to the market.
+ First column reports control group means (and standard deviations below);
+  **, * and + denote significance at the 1, 5 and 10 percent levels.
  All models include village fixed effects and controls for baseline characterist
 ics that show imbalance at the 5 percent level or less in Table XXX.
  
@@ -7420,6 +7496,40 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Conclusion
+\end_layout
+
+\begin_layout Standard
+We find some evidence that households that were exposed to the interventions
+ have higher stocks at the time of the midline survey.
+ The effect on stocks is strongest for ground nuts and for the treatment
+ that involves drawing up a sales plan.
+ We also find for soybean, and to a lesser extent for groundnuts, households
+ that committed a detailed plan on when to sell and at what price also were
+ more likely to sell and sold larger quantities.
+ Finally, we find some evidence that for soybean, farmers that were exposed
+ to the treatment are less likely to engage in buying back later in the
+ season (at higher prices).
+\end_layout
+
+\begin_layout Standard
+While the results are much more muted that for example that large increases
+ in savings found immediately after implementing a similar budgeting interventio
+n in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+ in Zambia, we do think that results are encouraging.
+ We do for instance find that for the crop that is harvested first and so
+ households are likely to start running out of stock earlier, households
+ that were exposed to the treatment were less likelty to 
 \end_layout
 
 \begin_layout Standard

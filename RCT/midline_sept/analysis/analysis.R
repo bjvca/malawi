@@ -385,10 +385,19 @@ dta$hired_labour <- dta$hired_labour== "Yes"
 dta$hhsize <- as.numeric(as.character(dta$q19))
 dta$ironroof <- as.numeric(as.character(dta$q20)) == 2
 
-##@@@ this sumulates outcomes - this is what needs to be replace with id/endline data
+##@@@ this is where midline data gets read in
 
 midline_sept <- read.csv(paste(path,"midline_sept/data/public/midline_sept.csv", sep="/"))
-midline_sept <- midline_sept[!duplicated(midline_sept$farmer_ID),]
+##remove duplicates
+dups <- midline_sept$farmer_ID[duplicated(midline_sept$farmer_ID)]
+midline_sept <- midline_sept[!(midline_sept$farmer_ID) %in% dups,]
+
+### quick look at attrition
+
+dta$interviewed <- merge(dta,midline_sept[c("farmer_ID","q4a")],by="farmer_ID", all.x=T  )$q4a
+dta$interviewed[is.na(dta$interviewed)] <- "No"
+prop.table(table(dta$treatment,dta$interviewed),1)
+chisq.test(table(dta$treatment,dta$interviewed))
 
 dta$stock_maize_abs <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","q43gy")],by="farmer_ID", all.x=T  )$q43gy))
 dta$stock_gnuts_abs <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","q47gy")],by="farmer_ID", all.x=T  )$q47gy))
@@ -398,17 +407,49 @@ dta$sold_maize <-  merge(dta,midline_sept[c("farmer_ID","q41")],by="farmer_ID", 
 dta$sold_gnuts <-  merge(dta,midline_sept[c("farmer_ID","q46")],by="farmer_ID", all.x=T  )$q46.y == "Yes"
 dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","q50")],by="farmer_ID", all.x=T  )$q50.y == "Yes"
 
+### BUT: only consider sold if sales happened after treatment
+#step 1: determine date of intervention - interventions happened between 21/may and 9/june 2022.
+#to keep it simple, let us just drop sales transactions that happened before 1/06 (and for robustness, those that happened before 1/07)
+#as.numeric(as.POSIXct("2022-07-01", format="%Y-%m-%d")) #  1656626400
+#as.numeric(as.POSIXct("2022-06-01", format="%Y-%m-%d")) #1654034400
+
+
+set <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
+midline_sept$sold_maize <- rowSums(midline_sept[set],na.rm=T) >0
+
+set <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
+midline_sept$sold_gnuts <- rowSums(midline_sept[set],na.rm=T) >0
+
+set <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
+midline_sept$sold_soy <- rowSums(midline_sept[set],na.rm=T) >0
+
+dta$sold_maize <-  merge(dta,midline_sept[c("farmer_ID","sold_maize")],by="farmer_ID", all.x=T  )$sold_maize.y
+dta$sold_gnuts <-  merge(dta,midline_sept[c("farmer_ID","sold_gnuts")],by="farmer_ID", all.x=T  )$sold_gnuts.y
+dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","sold_soy")],by="farmer_ID", all.x=T  )$sold_soy.y
+
+
 set <- c("trans.1..group2.q43c", "trans.2..group2.q43c","trans.3..group2.q43c","trans.4..group2.q43c","trans.5..group2.q43c" )
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0))
 midline_sept$sold_maize_kg <- rowSums(midline_sept[set]) 
 dta$sold_maize_kg <- merge(dta,midline_sept[c("farmer_ID","sold_maize_kg")],by="farmer_ID", all.x=T)$sold_maize_kg
 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$sold_maize_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+dta$sold_maize_kg <- merge(dta,midline_sept[c("farmer_ID","sold_maize_kg_2")],by="farmer_ID", all.x=T)$sold_maize_kg_2
+
 set <- c("trans1.1..group4.q47c", "trans1.2..group4.q47c","trans1.3..group4.q47c","trans1.4..group4.q47c","trans1.5..group4.q47c","trans1.6..group4.q47c","trans1.7..group4.q47c")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0))
 midline_sept$sold_gnuts_kg <- rowSums(midline_sept[set]) 
 dta$sold_gnuts_kg <- merge(dta,midline_sept[c("farmer_ID","sold_gnuts_kg")],by="farmer_ID", all.x=T)$sold_gnuts_kg
+
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$sold_gnuts_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+dta$sold_gnuts_kg <- merge(dta,midline_sept[c("farmer_ID","sold_gnuts_kg_2")],by="farmer_ID", all.x=T)$sold_gnuts_kg_2
   
 set <- c("trans2.1..group6.q52c", "trans2.2..group6.q52c","trans2.3..group6.q52c","trans2.4..group6.q52c","trans2.5..group6.q52c","trans2.6..group6.q52c","trans2.7..group6.q52c","trans2.8..group6.q52c","trans2.9..group6.q52c","trans2.10..group6.q52c","trans2.11..group6.q52c")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
@@ -416,79 +457,117 @@ midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0
 midline_sept$sold_soy_kg <- rowSums(midline_sept[set]) 
 dta$sold_soy_kg <- merge(dta,midline_sept[c("farmer_ID","sold_soy_kg")],by="farmer_ID", all.x=T)$sold_soy_kg
 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$sold_soy_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+dta$sold_soy_kg <- merge(dta,midline_sept[c("farmer_ID","sold_soy_kg_2")],by="farmer_ID", all.x=T)$sold_soy_kg_2
+
 set <- c("trans.1..q43d", "trans.2..q43d","trans.3..q43d","trans.4..q43d","trans.5..q43d")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept$price_maize <- rowMeans(midline_sept[set],na.rm=T) 
 dta$price_maize <- merge(dta,midline_sept[c("farmer_ID","price_maize")],by="farmer_ID", all.x=T)$price_maize
+
+##multiply prices with indicator of sales post treatment 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$price_maize_2 <-rowMeans(midline_sept[set]*midline_sept[set_1],na.rm=T)
+midline_sept$price_maize_2[midline_sept$price_maize_2==0] <- NA
+dta$price_maize <- merge(dta,midline_sept[c("farmer_ID","price_maize_2")],by="farmer_ID", all.x=T)$price_maize_2
 
 set <- c("trans1.1..q47d", "trans1.2..q47d","trans1.3..q47d","trans1.4..q47d","trans1.5..q47d","trans1.6..q47d","trans1.7..q47d")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept$price_gnuts <- rowMeans(midline_sept[set],na.rm=T) 
 dta$price_gnuts <- merge(dta,midline_sept[c("farmer_ID","price_gnuts")],by="farmer_ID", all.x=T)$price_gnuts
 
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$price_gnuts_2 <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)
+midline_sept$price_gnuts_2[midline_sept$price_gnuts_2==0] <- NA
+dta$price_gnuts <- merge(dta,midline_sept[c("farmer_ID","price_gnuts_2")],by="farmer_ID", all.x=T)$price_gnuts_2
+
 set <- c("trans2.1..q52d", "trans2.2..q52d","trans2.3..q52d","trans2.4..q52d","trans2.5..q52d","trans2.6..q52d","trans2.7..q52d","trans2.8..q52d","trans2.9..q52d","trans2.10..q52d","trans2.11..q52d")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept$price_soy <- rowMeans(midline_sept[set],na.rm=T) 
 dta$price_soy <- merge(dta,midline_sept[c("farmer_ID","price_soy")],by="farmer_ID", all.x=T)$price_soy
 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$price_soy_2 <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)
+midline_sept$price_soy_2[midline_sept$price_soy_2==0] <- NA
+dta$price_soy <- merge(dta,midline_sept[c("farmer_ID","price_soy_2")],by="farmer_ID", all.x=T)$price_soy_2
+
+###secondary outcomes
 set <- c("trans.1..q43f", "trans.2..q43f","trans.3..q43f","trans.4..q43f","trans.5..q43f")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==5)
-midline_sept$joint_maize <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$joint_maize <- rowMeans(midline_sept[set]*midline_sept[set_1],na.rm=T)==1 
 dta$joint_maize <- merge(dta,midline_sept[c("farmer_ID","joint_maize")],by="farmer_ID", all.x=T)$joint_maize
+
 
 set <- c("trans1.1..q47f", "trans1.2..q47f","trans1.3..q47f","trans1.4..q47f","trans1.5..q47f","trans1.6..q47f","trans1.7..q47f")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==5)
-midline_sept$joint_gnuts <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$joint_gnuts <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)==1 
 dta$joint_gnuts <- merge(dta,midline_sept[c("farmer_ID","joint_gnuts")],by="farmer_ID", all.x=T)$joint_gnuts
 
 set <- c("trans2.1..q52f", "trans2.2..q52f","trans2.3..q52f","trans2.4..q52f","trans2.5..q52f","trans2.6..q52f","trans2.7..q52f","trans2.8..q52f","trans2.9..q52f","trans2.10..q52f","trans2.11..q52f")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==5)
-midline_sept$joint_soy <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$joint_soy <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)==1 
 dta$joint_soy <- merge(dta,midline_sept[c("farmer_ID","joint_soy")],by="farmer_ID", all.x=T)$joint_soy
 
+##what market sold to?
 set <- c("trans.1..q43e", "trans.2..q43e","trans.3..q43e","trans.4..q43e","trans.5..q43e")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==2)
-midline_sept$market_maize <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$market_maize <- rowMeans(midline_sept[set]*midline_sept[set_1],na.rm=T)==1 
 dta$market_maize <- merge(dta,midline_sept[c("farmer_ID","market_maize")],by="farmer_ID", all.x=T)$market_maize
 
 set <- c("trans1.1..q47e", "trans1.2..q47e","trans1.3..q47e","trans1.4..q47e","trans1.5..q47e","trans1.6..q47e","trans1.7..q47e")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==2)
-midline_sept$market_gnuts <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$market_gnuts <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)==1 
 dta$market_gnuts <- merge(dta,midline_sept[c("farmer_ID","market_gnuts")],by="farmer_ID", all.x=T)$market_gnuts
 
 set <- c("trans2.1..q52e", "trans2.2..q52e","trans2.3..q52e","trans2.4..q52e","trans2.5..q52e","trans2.6..q52e","trans2.7..q52e","trans2.8..q52e","trans2.9..q52e","trans2.10..q52e","trans2.11..q52e")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x))==2)
-midline_sept$market_soy <- rowMeans(midline_sept[set],na.rm=T)==1 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$market_soy <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)==1 
 dta$market_soy <- merge(dta,midline_sept[c("farmer_ID","market_soy")],by="farmer_ID", all.x=T)$market_soy
+
+### proceeds used for education
 midline_sept_c <- midline_sept
 set <- c("trans.1..q43g", "trans.2..q43g","trans.3..q43g","trans.4..q43g","trans.5..q43g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==7)
-midline_sept$edu_maize <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$edu_maize <- rowMeans(midline_sept[set]*midline_sept[set_1],na.rm=T)>0 
 dta$edu_maize <- merge(dta,midline_sept[c("farmer_ID","edu_maize")],by="farmer_ID", all.x=T)$edu_maize
 
 set <- c("trans1.1..q47g", "trans1.2..q47g","trans1.3..q47g","trans1.4..q47g","trans1.5..q47g","trans1.6..q47g","trans1.7..q47g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==7)
-midline_sept$edu_gnuts <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$edu_gnuts <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)>0 
 dta$edu_gnuts <- merge(dta,midline_sept[c("farmer_ID","edu_gnuts")],by="farmer_ID", all.x=T)$edu_gnuts
 
 set <- c("trans2.1..q52g", "trans2.2..q52g","trans2.3..q52g","trans2.4..q52g","trans2.5..q52g","trans2.6..q52g","trans2.7..q52g","trans2.8..q52g","trans2.9..q52g","trans2.10..q52g","trans2.11..q52g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==7)
-midline_sept$edu_soy <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$edu_soy <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)>0 
 dta$edu_soy <- merge(dta,midline_sept[c("farmer_ID","edu_soy")],by="farmer_ID", all.x=T)$edu_soy
 
+###expenditure for health
 set <- c("trans.1..q43g", "trans.2..q43g","trans.3..q43g","trans.4..q43g","trans.5..q43g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==4)
-midline_sept$health_maize <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
+midline_sept$health_maize <-  rowMeans(midline_sept[set]*midline_sept[set_1],na.rm=T)>0 
 dta$health_maize <- merge(dta,midline_sept[c("farmer_ID","health_maize")],by="farmer_ID", all.x=T)$health_maize
 
 set <- c("trans1.1..q47g", "trans1.2..q47g","trans1.3..q47g","trans1.4..q47g","trans1.5..q47g","trans1.6..q47g","trans1.7..q47g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==4)
-midline_sept$health_gnuts <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
+midline_sept$health_gnuts <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)>0 
 dta$health_gnuts <- merge(dta,midline_sept[c("farmer_ID","health_gnuts")],by="farmer_ID", all.x=T)$health_gnuts
 
 set <- c("trans2.1..q52g", "trans2.2..q52g","trans2.3..q52g","trans2.4..q52g","trans2.5..q52g","trans2.6..q52g","trans2.7..q52g","trans2.8..q52g","trans2.9..q52g","trans2.10..q52g","trans2.11..q52g")
 midline_sept[set] <- lapply(midline_sept_c[set],  function(x) as.numeric(as.character(x))==4)
-midline_sept$health_soy <- rowMeans(midline_sept[set],na.rm=T)>0 
+set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
+midline_sept$health_soy <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)>0 
 dta$health_soy <- merge(dta,midline_sept[c("farmer_ID","health_soy")],by="farmer_ID", all.x=T)$health_soy
 
 dta$bought_maize <- merge(dta,midline_sept[c("farmer_ID","x1")],by="farmer_ID", all.x=T  )$x1=="Yes"

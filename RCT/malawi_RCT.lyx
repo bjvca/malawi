@@ -941,7 +941,8 @@ ary 2023, generally by mobile phone.
  To allow for farmers that do not have access to a mobile phone, we will
  make sure that in each village we identify someone with a phone that can
  be shared with the farmer or farmers that do not have a phone.
- A more elaborate in-person endline survey will be organized in March 2023.
+ A more elaborate in-person endline survey will be organized in March-April
+ 2023.
 \end_layout
 
 \begin_layout Subsection*
@@ -1052,6 +1053,25 @@ literal "false"
 \end_inset
 
 .
+ In addition, poor planning may also affect labor allocations within the
+ household, and so we will also investigate the effect of the interventions
+ on, for instance, seasonal labour provided by household members 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/aer.20180607"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At the time of endline data collection, households are normally harvesting,
+ and if they did not start harvesting yet, they should have a good idea
+ of the harvest they can expect.
+ We will also look at the impact of the interventions on production and
+ yield of the the three crops in April 2023.
 \end_layout
 
 \begin_layout Subsection*

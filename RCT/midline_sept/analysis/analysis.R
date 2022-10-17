@@ -403,9 +403,9 @@ dta$stock_maize_abs <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_
 dta$stock_gnuts_abs <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","q47gy")],by="farmer_ID", all.x=T  )$q47gy))
 dta$stock_soy_abs <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","q52gy")],by="farmer_ID", all.x=T  )$q52gy))
 
-dta$sold_maize <-  merge(dta,midline_sept[c("farmer_ID","q41")],by="farmer_ID", all.x=T  )$q41.y == "Yes"
-dta$sold_gnuts <-  merge(dta,midline_sept[c("farmer_ID","q46")],by="farmer_ID", all.x=T  )$q46.y == "Yes"
-dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","q50")],by="farmer_ID", all.x=T  )$q50.y == "Yes"
+midline_sept$q41[midline_sept$q41 =="n/a"] <- NA
+midline_sept$q46[midline_sept$q46 =="n/a"] <- NA
+midline_sept$q50[midline_sept$q50 =="n/a"] <- NA
 
 ### BUT: only consider sold if sales happened after treatment
 #step 1: determine date of intervention - interventions happened between 21/may and 9/june 2022.
@@ -416,49 +416,58 @@ dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","q50")],by="farmer_ID", all
 
 set <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
 midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
-midline_sept$sold_maize <- rowSums(midline_sept[set],na.rm=T) >0
+midline_sept$sold_maize <- (rowSums(midline_sept[set],na.rm=T) >0) 
+midline_sept$sold_maize[is.na(midline_sept$q41)] <- NA
 
 set <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
 midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
-midline_sept$sold_gnuts <- rowSums(midline_sept[set],na.rm=T) >0
+midline_sept$sold_gnuts <- (rowSums(midline_sept[set],na.rm=T) >0)
+midline_sept$sold_gnuts[is.na(midline_sept$q46)] <- NA
 
 set <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
 midline_sept[set] <- lapply(midline_sept[set], function(x)  as.numeric(as.POSIXct(x, format="%Y-%m-%d"))>=1654034400)
-midline_sept$sold_soy <- rowSums(midline_sept[set],na.rm=T) >0
+midline_sept$sold_soy <- (rowSums(midline_sept[set],na.rm=T) >0) 
+midline_sept$sold_soy[is.na(midline_sept$q50)] <- NA 
 
-dta$sold_maize <-  merge(dta,midline_sept[c("farmer_ID","sold_maize")],by="farmer_ID", all.x=T  )$sold_maize.y
-dta$sold_gnuts <-  merge(dta,midline_sept[c("farmer_ID","sold_gnuts")],by="farmer_ID", all.x=T  )$sold_gnuts.y
-dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","sold_soy")],by="farmer_ID", all.x=T  )$sold_soy.y
+dta$sold_maize <-  merge(dta,midline_sept[c("farmer_ID","sold_maize")],by="farmer_ID", all.x=T  )$sold_maize
+dta$sold_gnuts <-  merge(dta,midline_sept[c("farmer_ID","sold_gnuts")],by="farmer_ID", all.x=T  )$sold_gnuts
+dta$sold_soy <- merge(dta,midline_sept[c("farmer_ID","sold_soy")],by="farmer_ID", all.x=T  )$sold_soy
 
 
 set <- c("trans.1..group2.q43c", "trans.2..group2.q43c","trans.3..group2.q43c","trans.4..group2.q43c","trans.5..group2.q43c" )
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0))
 midline_sept$sold_maize_kg <- rowSums(midline_sept[set]) 
+midline_sept$sold_maize_kg[is.na(midline_sept$q41)] <- NA
 dta$sold_maize_kg <- merge(dta,midline_sept[c("farmer_ID","sold_maize_kg")],by="farmer_ID", all.x=T)$sold_maize_kg
 
 set_1 <- c("trans.1..q43a", "trans.2..q43a", "trans.3..q43a", "trans.4..q43a", "trans.5..q43a")
 midline_sept$sold_maize_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+midline_sept$sold_maize_kg_2[is.na(midline_sept$q41)] <- NA
 dta$sold_maize_kg <- merge(dta,midline_sept[c("farmer_ID","sold_maize_kg_2")],by="farmer_ID", all.x=T)$sold_maize_kg_2
 
 set <- c("trans1.1..group4.q47c", "trans1.2..group4.q47c","trans1.3..group4.q47c","trans1.4..group4.q47c","trans1.5..group4.q47c","trans1.6..group4.q47c","trans1.7..group4.q47c")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0))
 midline_sept$sold_gnuts_kg <- rowSums(midline_sept[set]) 
+midline_sept$sold_gnuts_kg[is.na(midline_sept$q46)] <- NA
 dta$sold_gnuts_kg <- merge(dta,midline_sept[c("farmer_ID","sold_gnuts_kg")],by="farmer_ID", all.x=T)$sold_gnuts_kg
 
 set_1 <- c("trans1.1..q47a", "trans1.2..q47a","trans1.3..q47a","trans1.4..q47a","trans1.5..q47a","trans1.6..q47a","trans1.7..q47a")
 midline_sept$sold_gnuts_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+midline_sept$sold_gnuts_kg_2[is.na(midline_sept$q46)] <- NA
 dta$sold_gnuts_kg <- merge(dta,midline_sept[c("farmer_ID","sold_gnuts_kg_2")],by="farmer_ID", all.x=T)$sold_gnuts_kg_2
   
 set <- c("trans2.1..group6.q52c", "trans2.2..group6.q52c","trans2.3..group6.q52c","trans2.4..group6.q52c","trans2.5..group6.q52c","trans2.6..group6.q52c","trans2.7..group6.q52c","trans2.8..group6.q52c","trans2.9..group6.q52c","trans2.10..group6.q52c","trans2.11..group6.q52c")
 midline_sept[set] <- lapply(midline_sept[set],  function(x) as.numeric(as.character(x)))
 midline_sept[set] <- lapply(midline_sept[set],  function(x) replace(x,is.na(x),0))
 midline_sept$sold_soy_kg <- rowSums(midline_sept[set]) 
+midline_sept$sold_soy_kg[is.na(midline_sept$q50)] <- NA 
 dta$sold_soy_kg <- merge(dta,midline_sept[c("farmer_ID","sold_soy_kg")],by="farmer_ID", all.x=T)$sold_soy_kg
 
 set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a","trans2.5..q52a","trans2.6..q52a","trans2.7..q52a","trans2.8..q52a","trans2.9..q52a","trans2.10..q52a","trans2.11..q52a")
 midline_sept$sold_soy_kg_2 <- rowSums(midline_sept[set]*midline_sept[set_1], na.rm=T)
+midline_sept$sold_soy_kg_2[is.na(midline_sept$q50)] <- NA 
 dta$sold_soy_kg <- merge(dta,midline_sept[c("farmer_ID","sold_soy_kg_2")],by="farmer_ID", all.x=T)$sold_soy_kg_2
 
 set <- c("trans.1..q43d", "trans.2..q43d","trans.3..q43d","trans.4..q43d","trans.5..q43d")
@@ -570,6 +579,10 @@ set_1 <- c("trans2.1..q52a", "trans2.2..q52a","trans2.3..q52a","trans2.4..q52a",
 midline_sept$health_soy <- rowMeans(midline_sept[set]*midline_sept[set_1], na.rm=T)>0 
 dta$health_soy <- merge(dta,midline_sept[c("farmer_ID","health_soy")],by="farmer_ID", all.x=T)$health_soy
 
+midline_sept$x1[midline_sept$x1=="n/a"] <- NA
+midline_sept$x4[midline_sept$x4=="n/a"] <- NA
+midline_sept$x7[midline_sept$x7=="n/a"] <- NA
+
 dta$bought_maize <- merge(dta,midline_sept[c("farmer_ID","x1")],by="farmer_ID", all.x=T  )$x1=="Yes"
 dta$bought_gnuts <- merge(dta,midline_sept[c("farmer_ID","x4")],by="farmer_ID", all.x=T  )$x4=="Yes"
 dta$bought_soy <-merge(dta,midline_sept[c("farmer_ID","x7")],by="farmer_ID", all.x=T  )$x7=="Yes"
@@ -647,9 +660,10 @@ dta$sold_soy_pct_b[is.na(dta$sold_soy_pct_b)] <- 0
 
 ## trim stocks as this is a continuous variable - also check skewness
 ## edit: better to remove outliers (likely to be kg instead of bags)
-dta$stock_maize_abs[dta$stock_maize_abs >=100 & !is.na(dta$stock_maize_abs)] <- dta$stock_maize_abs[dta$stock_maize_abs >=100 & !is.na(dta$stock_maize_abs)]/50 
-dta$stock_gnuts_abs[dta$stock_gnuts_abs >=100 & !is.na(dta$stock_gnuts_abs)] <-dta$stock_gnuts_abs[dta$stock_gnuts_abs >=100 & !is.na(dta$stock_gnuts_abs)]/50
-dta$stock_soy_abs[dta$stock_soy_abs >=50 & !is.na(dta$stock_soy_abs)] <- dta$stock_soy_abs[dta$stock_soy_abs >=50 & !is.na(dta$stock_soy_abs)]/50 
+### we need a better way here - compare to produced and sold???
+dta$stock_maize_abs[dta$stock_maize_abs >=50 & !is.na(dta$stock_maize_abs) & !is.na(dta$prod_maize)  & (dta$prod_maize<dta$stock_maize_abs)] <- dta$stock_maize_abs[dta$stock_maize_abs >=50 & !is.na(dta$stock_maize_abs) & !is.na(dta$prod_maize) & (dta$prod_maize<dta$stock_maize_abs)]/50 
+dta$stock_gnuts_abs[dta$stock_gnuts_abs >=100 & !is.na(dta$stock_gnuts_abs)  & !is.na(dta$prod_gnuts)  & (dta$prod_gnuts<dta$stock_gnuts_abs)] <-dta$stock_gnuts_abs[dta$stock_gnuts_abs >=100 & !is.na(dta$stock_gnuts_abs)  & !is.na(dta$prod_gnuts)  & (dta$prod_gnuts<dta$stock_gnuts_abs)]/13
+dta$stock_soy_abs[dta$stock_soy_abs >=50 & !is.na(dta$stock_soy_abs)  & !is.na(dta$prod_soy)  & (dta$prod_soy<dta$stock_soy_abs)] <- dta$stock_soy_abs[dta$stock_soy_abs >=50 & !is.na(dta$stock_soy_abs)  & !is.na(dta$prod_soy)  & (dta$prod_soy<dta$stock_soy_abs)]/50 
 
 
 dta$stock_maize_pct <- dta$stock_maize_abs/dta$prod_maize*100
@@ -684,6 +698,12 @@ prim_maize_tc[1,4] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coeff
 prim_maize_tc[1,5] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[1,6] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[2,4]
 
+log_dta <- dta
+log_dta$stock_maize_log <- log(log_dta$stock_maize_abs)
+log_dta[is.na(log_dta) | log_dta=="-Inf"] = NA
+summary(lm((stock_maize_log)~treatment+hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=log_dta))
+summary(lm((stock_maize_log)~treatment,data=log_dta))
+
 prim_maize[1,7] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
 prim_maize[1,8] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
 prim_maize[1,9] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
@@ -709,6 +729,13 @@ prim_gnuts[1,6] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+t
 prim_gnuts_tc[1,4] <- summary(lm(ihs(stock_gnuts_abs)~treatment ,data=dta))$coefficients[2,1]
 prim_gnuts_tc[1,5] <- summary(lm(ihs(stock_gnuts_abs)~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[1,6] <- summary(lm(ihs(stock_gnuts_abs)~treatment,data=dta))$coefficients[2,4]
+
+
+log_dta <- dta
+log_dta$stock_gnuts_log <- log(log_dta$stock_gnuts_abs)
+log_dta[is.na(log_dta) | log_dta=="-Inf"] = NA
+summary(lm((stock_gnuts_log)~treatment+hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=log_dta))
+summary(lm((stock_gnuts_log)~treatment,data=log_dta))
 
 prim_gnuts[1,7] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
 prim_gnuts[1,8] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]

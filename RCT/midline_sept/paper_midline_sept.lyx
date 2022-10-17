@@ -692,6 +692,7 @@ To test the first hypothesis, we designed an intervention that takes the
  likely to occur between May 2022 and April 2023.
  We then calculate totals per month and also a grand total for the entire
  year.
+ This first intervention will be referred to as treatment one (T1).
 \end_layout
 
 \begin_layout Standard
@@ -725,6 +726,7 @@ To test the second hypothesis, we develop, together with the farmer, a detailed
  price point in time should be before they sell.
  Also for the sales plan, we calculate totals per month and also a grand
  total for the entire year.
+ This second intervention will be referred to as treatment two (T2).
 \end_layout
 
 \begin_layout Standard
@@ -1636,7 +1638,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2785,8 +2787,10 @@ Primary outcomes
 
 \begin_layout Standard
 We start with the most parsimonious specification by reporting simple difference
- between treatment and control farmers from a regression in the top panel
- of Table 
+ between treatment and control farmers obtained from an Ordinary Least Squares
+ regression that regresses the outcome of interest on two dummy variables
+ indicating if the household received T1 or T2 respectively.
+ Results are in the top panel of Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Primary-maize"
@@ -2807,7 +2811,7 @@ noprefix "false"
 
 \end_inset
 
- we include additional controls.
+ we show results after including additional controls.
  These include outcomes at baseline, baseline variables for which we found
  imbalance in Table 
 \begin_inset CommandInset ref
@@ -2850,14 +2854,14 @@ noprefix "false"
 
 \end_inset
 
- are similar tables but for grounduts and soybean, respectively.
+ are similar tables but for groundnuts and soybean, respectively.
 \end_layout
 
 \begin_layout Standard
 A first primary outcome we consider is stocks of the three commodities at
- the time of the midline/endline.
- In particular, we ask farmers how many bags of the commodity (standard
- 50 kg bags) they still have in store.
+ the time of the midline survey.
+ In particular, we asked farmers how many bags of the commodity (standard
+ 50 kg bags) they have in store.
  As the distributions are skewed to the right and include zeros as well,
  we use an inverse hyperbolic sine transformation 
 \begin_inset CommandInset citation
@@ -2868,7 +2872,29 @@ literal "false"
 \end_inset
 
 .
- We see that the average control farmer has about 
+ 
+\end_layout
+
+\begin_layout Standard
+For both treatments, we expect a positive effect.
+ Similar to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+, we expect that when making households aware about future needs, they will
+ reduce discretionary expenditures and save more for the future.
+ Furthermore, if farmers expect prices to go up over time and this is reflected
+ in their sales plan, farmers that received T2 will also be more likely
+ to have saved more early on in the season.
+ 
+\end_layout
+
+\begin_layout Standard
+We see that the average control farmer has about 
 \begin_inset ERT
 status open
 
@@ -2881,43 +2907,123 @@ Sexpr{prim_maize_tc[1,1]}
 
 \end_inset
 
- bags in store at the time of the survey.
+ bags of maize in store at the time of the survey.
  We do not find that this is significantly different in the sample of farmers
- that was taken through a budgeting exercise.
+ that were taken through a budgeting exercise.
  However, we do find that stocks are significantly higher among farmers
  that made a sales plan.
- 
+ Farmers that were asked to commit to a sales plan have stocks that are
+ about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_tc[1,7]*100}
+\end_layout
+
+\end_inset
+
+ percent higher than maize stocks of farmers in the control group.
+ If we add controls to the regression, the effect reduces substantially
+ and falls just below the significance threshold.
 \end_layout
 
 \begin_layout Standard
-We look at absolute values in kg, as well as stock as a share of quantity
- harvested.
- For farmers that did not produce the crop, stocks are coded as zero.
- A second primary outcome is closely related to the first one and looks
- at stocks as a share of total production.
- Also here, we code farmers that did not produce the crop as zero.
+A second primary outcome tests if the household sold any of the crop in
+ the interval between the intervention and the midline survey.
+ We expect that the treatment would reduce the likelihood of selling early
+ on in the season.
 \end_layout
 
 \begin_layout Standard
-A third primary outcome tests if the household sold at least once before
- a particular date.
- The binary variable that indicates if the household sold at baseline is
- constructed by checking if the household sold before first of October 2021.
- 
+We find that 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_tc[3,1]*100}
+\end_layout
+
+\end_inset
+
+ percent of households in the control group indicated that they made at
+ least on sales transaction between in the first few months after the start
+ of the project.
+ We do not find that this proportion differs for farmers in T1 nor for farmers
+ in T2.
 \end_layout
 
 \begin_layout Standard
-The third primary outcome is quantity sold.
+The third primary outcome is related to the second and is the quantity that
+ was sold during the period between the intervention and the first midline
+ survey.
  While we may not find that the treatment reduced the fact that farmers
  sell early, we still may find that farmers sell less of the crop immediately
  after harvest.
 \end_layout
 
 \begin_layout Standard
-Finally, we calculate the average price received for all transactions that
- the household made for a particular crop before October 2022.
- We control for the average price received for transactions over the same
- period in the 2021 season.
+We find that farmers in the control group sell on average 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_tc[4,1]}
+\end_layout
+
+\end_inset
+
+ bags of maize.
+ Contrary to our expectations, we see that these quantities are higher in
+ both treatment groups, but the differences are not significant.
+\end_layout
+
+\begin_layout Standard
+For farmers that did engage in sales, we can calculate the average price
+ that farmers received for their crop.
+ The farmers that sold in the control group got on average 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_tc[6,1]}
+\end_layout
+
+\end_inset
+
+ MKW per kilogram of maize.
+ We again do not find that prices differ significantly in any of the treatment
+ groups.
+\end_layout
+
+\begin_layout Standard
+We also consider behaviour related to purchases of the commodities as key
+ primary outcomes.
+ We expect that, especially later in the season, due to our interventions
+ households will have to buy back less.
+ We see that in the control group, more than a quarter of the farmers already
+ made at least one purchase before midline and this proportion is similar
+ in both treatment groups.
+\end_layout
+
+\begin_layout Standard
+As for sales, we also look at quantities bought and prices at which the
+ commodities were bought.
+ We find that the average control group household bought less than one bag
+ on average and paid slightly more than the sales price.
+ We do not see any effects from the interventions.
 \end_layout
 
 \begin_layout Standard
@@ -3773,11 +3879,69 @@ noprefix "false"
 \end_inset
 
 , we repeat the entire analysis, but now for groundnuts.
+ Households in the control group remain with less than 2 bags of groundnuts
+ in stock.
  Also here, we see that households that drew up a sales plan have stocks
- that are about 10 percent higher than in the control group.
+ that are about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_gnuts_tc[1,7]*100}
+\end_layout
+
+\end_inset
+
+ percent higher than in the control group.
  Now, we also see that stocks are significantly higher in the group that
  was asked to make a detailed expenditure plan.
- 
+\end_layout
+
+\begin_layout Standard
+A surprisingly larges share of households, over two thirds, indicate that
+ they made at least one sales transaction between the intervention and the
+ midline survey.
+ We now also find that households with a sales plan are more likely to have
+ already sold—
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_gnuts[3,7]*100}
+\end_layout
+
+\end_inset
+
+ percentage points more according to the full model in the second panel
+ of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+—and appear to have sold large quantities.
+ Prices (here express in MKW per debe) do not appear to be different from
+ the control group.
+\end_layout
+
+\begin_layout Standard
+We also asked if farmers already bought groudnuts in the first few months
+ post harvest.
+ Significanlty less farmers appear to have bought groundnuts than maize.
+ We find no effects of the interventions on the likelihood that farmers
+ buy, nor on the quantity bought.
+ Finally, we also do not find an impact on prices, but as very few farmers
+ bought sample size becomes too small to come to reasonable estimates.
 \end_layout
 
 \begin_layout Standard
@@ -4631,7 +4795,11 @@ noprefix "false"
  shows impact of the interventions on primary outcomes for soybean.
  Interestingly, we do not find that that stocks at midline differ significantly
  between treatment groups and the control.
- 
+ We also do not find that sales behaviour in any of the treatment groups
+ differs from sales behaviour on the control group.
+ We do find, however, that buying of soybean does seem lower in both the
+ T1 and T2 groups and that the average quantities are significantly lower
+ for households that made a sales plan.
 \end_layout
 
 \begin_layout Standard
@@ -5480,25 +5648,6 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_layout
 
 \begin_layout Standard
-We find that households that were exposed to the interventions have higher
- stocks at the time of the midline survey.
- The effect on stocks is strongest for ground nuts and for the treatment
- that involves drawing up a sales plan.
-\end_layout
-
-\begin_layout Standard
-We further find that households that drew up a detailed budget are significantly
- less likely to have bought soybean in the three months preceding the midline
- survey.
- A similar effect on purchases is found for the second intervention.
- The reason why we find an expected reduction in buying back of crops only
- for soybean may be due to the fact that for soybean control group farmers
- have already started buying back, while this is not yet happening as similar
- scales.
- 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -5558,6 +5707,73 @@ noprefix "false"
 
 \begin_layout Subsection
 Secondary outcomes
+\end_layout
+
+\begin_layout Standard
+In this section, we look at some additional outcome which may be indirectly
+ affected by the interventions.
+ 
+\end_layout
+
+\begin_layout Standard
+A first outcome we look at is the price in the near future.
+ In particular, we asked all households what they expected the price would
+ be around the end of the year.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that farmers still expect a sizable price increase: while we saw
+ in the previous section that the average farmer in the control group only
+ got about 225 MKW per kilogram of maize during the first few months after
+ harvest, the price is expected to be about 380 per kilogram around new
+ year.
+ Interestingly, we see that farmers who were taken through a budgeting exercise
+ expect price to be higher still.
+\end_layout
+
+\begin_layout Standard
+We also wonder if our intervention would affect intra-household dynamics,
+ in particular who is in charge of sales of the commodity.
+ We see that in about 37 percent of households, the decisions related to
+ the sales of maize is taken by the male and female co-head jointly, with
+ both co-head having equal voice.
+\end_layout
+
+\begin_layout Standard
+Another secondary outcome we consider is related to who was sold to.
+ In particular, we test if, in response to our interventions, farmers increase
+ the likelihood that they sold directly to the market, as this is often
+ the place where they can get the best price for their crop 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.2307/3697909"
+literal "false"
+
+\end_inset
+
+.
+ We find that very few farmers in our sample sell maize directly to the
+ market, and that there are no difference between the different treatment
+ groups.
+\end_layout
+
+\begin_layout Standard
+Finally, we asked farmers that sold between the harvest and the midline
+ survey what they used the proceeds for.
+ We examine the effect of our interventions on two categories.
+ One expenditure type, payment of school fees, is likely to be predictable
+ by the farmer.
+ A second expenditure type, health related expenses are probably less predictabl
+e.
+ We do not find that the treatment intervention changed the propensity that
+ sales were made for any of these expenses.
 \end_layout
 
 \begin_layout Standard
@@ -6217,6 +6433,45 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_layout
 
 \begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ looks at secondary outcomes for groundnuts, and is similar to Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Also here, farmers in the control group expect a further 60 percent increase
+ of the price by the end of the year.
+ Now, we see that farmers that were asked to provide a sales plan estimate
+ that future prices will be lower than what control group farmers think.
+\end_layout
+
+\begin_layout Standard
+We further find that decisions related to the sales of groundnuts are made
+ jointly in slightly more households than was the case for maize.
+ However, also here, there is no effect of the interventions.
+ Groundnuts are rarely sold directly to the market, and there is also no
+ effect of T1 not T2.
+ Finally, for the expense categories, we see that households that were asked
+ to provide a detailed budget are more likely to have sold groundnuts to
+ pay for school fees than farmers in the control group.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -6855,6 +7110,34 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Finally, Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows results for secondary outcomes for soybean.
+ Control group farmers estimate that prices will be almost double what they
+ were during the first few months post harvest.
+ As was the case for groundnuts, farmers that were assigned to the sales
+ plan treatment (T2) provide slightly lower estimates for the price at the
+ end of the year than farmers in the control group.
+\end_layout
+
+\begin_layout Standard
+There is significant less joint decision making when it comes to sales of
+ soybean.
+ However, also here, who makes decisions is not affected by the interventions.
+ Results for who was sold to are similar to those for groundnuts.
+ We also do not find any impact of the interventions on what happens with
+ the proceeds from soybean sales.
 \end_layout
 
 \begin_layout Standard
@@ -7503,16 +7786,49 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
+In this paper, we test two behavioral explanations for the sell low buy
+ high hypothesis.
+ The first explanation assumes that farmers underestimate how much money
+ they will need later on in the season, leading them to sell too much at
+ prices that are too low.
+ We test this explanation through an intervention in which households are
+ asked to prepare immediately post harvest a detailed budget of what they
+ will need for the entire year.
+ It is expected that by making future expenditure more explicit, farmers
+ will suffer less from budget neglect when making market participation decisions.
+\end_layout
+
+\begin_layout Standard
+The second explanation assumes that farmers face challenges in planning
+ and committing on the income side.
+ To test this, we ask farmers to prepare a detailed sales plan, indicating
+ how much of each crop will be sold when during the coming year, and what
+ the minimum price is they want for it.
+\end_layout
+
+\begin_layout Standard
+We implement our field experiment in a sample of about 3500 farmers in four
+ districts in the Central and Northern Regions of Malawi.
+ Treatments were administered during baseline data collection immediately
+ after the maize harvest in April 2022.
+ Results in this paper are based on a first (telephone based) midline survey.
+\end_layout
+
+\begin_layout Standard
 We find some evidence that households that were exposed to the interventions
  have higher stocks at the time of the midline survey.
  The effect on stocks is strongest for ground nuts and for the treatment
  that involves drawing up a sales plan.
- We also find for soybean, and to a lesser extent for groundnuts, households
- that committed a detailed plan on when to sell and at what price also were
- more likely to sell and sold larger quantities.
+ We also find that for groundnuts, households that committed to a detailed
+ plan on when to sell and at what price, were more likely to sell and sold
+ larger quantities.
  Finally, we find some evidence that for soybean, farmers that were exposed
  to the treatment are less likely to engage in buying back later in the
  season (at higher prices).
+ For secondary outcomes, there is some evidence that farmers who are asked
+ to draw up a sales plan expect more modest price increases than farmers
+ in the control group.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7529,7 +7845,9 @@ literal "false"
  in Zambia, we do think that results are encouraging.
  We do for instance find that for the crop that is harvested first and so
  households are likely to start running out of stock earlier, households
- that were exposed to the treatment were less likelty to 
+ that were exposed to the treatment were less likely to have bought the
+ crop.
+ 
 \end_layout
 
 \begin_layout Standard

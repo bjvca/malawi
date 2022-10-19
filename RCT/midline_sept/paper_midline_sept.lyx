@@ -132,28 +132,37 @@ thanks{Development Strategy and Governance Division, International Food
 
 \end_inset
 
-Why do farmers sell immediately after harvest when prices are lowest? Impact
- at September midline
+ Expecting Too Much, Foreseeing Too Little? Behavioral Explanations for
+ the Sell Low-Buy High Puzzle in Smallholder Market Participation
 \end_layout
 
 \begin_layout Abstract
-It is often observed that smallholder farmers sell most—if not all—of their
- marketable surplus or cash crops immediately after the harvest during which
- seasonal price movement reach their lowest point.
+It is often observed that smallholder farmers sell most of their marketable
+ surplus immediately after the harvest when seasonal price movement reach
+ their lowest point, instead of waiting just a few months until prices recover.
  Most explanations for this apparently sub-optimal behavior focus on economic
  or infrastructural issue, such as credit constraints or lack of storage
  facilities.
- In this study, we zoom in on two potential behavioural explanations.
- One potential explanation is situated at the household expenditure side,
- and assumes that households face challenges in accurately predicting future
- expenditures.
- Such budget neglect leads farmer to sell more of their marketable surplus
- immediately after the harvest and save too little for later in the year.
+ In this study, we zoom in on two potential behavioral explanations.
+ One explanation is situated at the household expenditure side, and assumes
+ that households face challenges in accurately predicting future expenditures,
+ systematically underestimating future needs.
  A second potential explanation is situated at the household income side.
- Here the assumption is that farmers face cognitive challenges in making
- inter-temporal cost benefit calculations and fail to commit to certain
- thresholds.
- This document reports impact about half a year after the intervention.
+ Here the assumption is that farmers suffer self-control problems and are
+ not sophisticated about this leading them to sell too early and/or at lower
+ prices.
+ To test these hypotheses, we conduct two planning based interventions among
+ a sample of Malawian smallholder farmers: a detailed expense budget and
+ a sales plan with explicit commitment to timing of sales, quantities and
+ prices.
+ At the first midline, we find that households that were exposed to the
+ interventions have higher stocks at the time of the midline survey and
+ are less likely to engage in buying back later in the season.
+\end_layout
+
+\begin_layout Standard
+Keywords: smallholder marketing, cash crops, budget neglect, commitment
+ failure.
 \end_layout
 
 \begin_layout Standard
@@ -286,7 +295,7 @@ Over time, prices gradually recover, reaching their seasonal high just before
 \begin_inset Quotes eld
 \end_inset
 
-sell low buy high
+sell low-buy high
 \begin_inset Quotes erd
 \end_inset
 
@@ -307,10 +316,10 @@ literal "false"
 
 \end_inset
 
- further show how farmers loose out twice, as transport costs are passed
+ further show how farmers loose out twice, as transaction costs are passed
  on by traders to farmers when traders buy commodities from farmers in rural
- areas to aggregate in consumer centers, and farmers need to incur transaction
- costs when they buy back (often from the same traders in towns or large
+ areas to aggregate in consumer centers, but farmers also incur transaction
+ costs when they buy back (often from the same traders in towns, or large
  warehouses in trading centers).
  
 \end_layout
@@ -371,45 +380,60 @@ Most of the explanations above focus on neoclassical constraints to farmers'
  and assumes that households face challenges in accurately predicting future
  expenditures.
  Such budget neglect leads farmer to sell more early on and save too little
- for later in the year.
- A second potential explanation is situates at the household income side.
- Here the assumption is that farmers face cognitive challenges in making
- inter-temporal cost benefit calculations 
+ for later in the year 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "10.1257/app.6.2.1"
-literal "false"
-
-\end_inset
-
- and fail to commit to certain thresholds 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "10.1162/qjec.2006.121.2.635,10.1257/aer.101.6.2350"
+key "augenblick2021budget"
 literal "false"
 
 \end_inset
 
 .
+ A second potential explanation is situates at the household income side.
+ Here the assumption is that farmers face self-control issues and are unsophisti
+cated about this 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/aer.101.6.2350"
+literal "false"
+
+\end_inset
+
+.
+ As a result, farmers end up selling at lower prices and earlier in the
+ year then they would if they would be able to better commit 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1162/qjec.2006.121.2.635"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
 The above hypotheses are tested with a field experiment among smallholder
  farmers in Malawi.
- These farmers produce (a mix of) maize, groundnuts and soybean for which
+ These farmers produce (a mix of) maize, groundnuts and soybean from which
  at least part is destined for the market.
- We set up a field experiment with two treatment arms.
- Farmers that are randomly assigned to the first treatment arm are taken
- through a detailed budgeting exercise immediately after harvest.
+ Our experiment takes the form of a simple parallel design with two treatment
+ arms and one control group.
+ A first treatment arm tests for the role of budget neglect in explaining
+ the sell low- buy high paradox: Farmers that are randomly assigned to the
+ first treatment arm are taken through a detailed budgeting exercise immediately
+ after harvest.
  In particular, in this intervention a trained enumerator sits with the
  household head and fills in a budget matrix of projected expenses for each
  month in the coming year.
+ The second treatment arm tests the importance of failure to commit.
  Farmers that are randomly allocated to the second treatment arm receive
  a sales planning intervention.
  Here, a trained enumerator sits with the household head and plans how much
  they plan to sell of which crop in which month during in the coming year.
- We also ask the household head to indicate, for each planned sale, what
- the minimum price is that her or she expects.
+ For each planned sale, the household head is also asked to commit to a
+ minimum price is that they expect.
  Impact of the interventions on a variety of outcomes is compared against
  outcomes of a control group that did not get any intervention.
  
@@ -438,7 +462,26 @@ literal "false"
 
 , and compares outcomes about 6 months post intervention of households in
  the treatment groups to outcomes of households in the control group.
- Similar documents will be produced when additional survey rounds are completed.
+ We find that, consistent with the theory, households in treatment groups
+ remain with larges stocks of the maize and groundnuts.
+ We also find that households in the treatment group were less likely to
+ have bought soybean.
+ In general, effects are stronger for the sales plan intervention than for
+ the budgeting intervention.
+ Somewhat surprisingly, we also find that households that received the sales
+ plan intervention were more likely have sold groundnut , and sold larger
+ quantities, in the first few months after the intervention.
+\end_layout
+
+\begin_layout Standard
+In the next section, we provide a selective overview of related studies.
+ We then outline the main research hypothesis we want to test, and describe
+ the interventions we will use to do so.
+ We then turn to the data with subsections that present descriptives for
+ the study population and balance between treatment and control groups.
+ We then turn to the midline data and report attrition and impact on primary
+ and secondary outcomes.
+ A last section concludes.
 \end_layout
 
 \begin_layout Section
@@ -871,7 +914,7 @@ Midline data was collected by phone over the course of one month (September
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Farmer characteristics
 \end_layout
 
@@ -1597,7 +1640,7 @@ end{center}
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Baseline balance
 \end_layout
 

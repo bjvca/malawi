@@ -139,7 +139,8 @@ thanks{Development Strategy and Governance Division, International Food
 \begin_layout Abstract
 It is often observed that smallholder farmers sell most of their marketable
  surplus immediately after the harvest when seasonal price movement reach
- their lowest point, instead of waiting just a few months until prices recover.
+ their lowest point, instead of waiting just a few more months until prices
+ recover.
  Most explanations for this apparently sub-optimal behavior focus on economic
  or infrastructural issue, such as credit constraints or lack of storage
  facilities.
@@ -156,8 +157,10 @@ It is often observed that smallholder farmers sell most of their marketable
  a sales plan with explicit commitment to timing of sales, quantities and
  prices.
  At the first midline, we find that households that were exposed to the
- interventions have higher stocks at the time of the midline survey and
- are less likely to engage in buying back later in the season.
+ interventions have higher stocks at the time of the midline survey.
+ There are also indications that households that were exposed to the interventio
+ns are less likely to turn to the market to buy back some of the commodities
+ they sold.
 \end_layout
 
 \begin_layout Standard
@@ -421,7 +424,7 @@ The above hypotheses are tested with a field experiment among smallholder
  Our experiment takes the form of a simple parallel design with two treatment
  arms and one control group.
  A first treatment arm tests for the role of budget neglect in explaining
- the sell low- buy high paradox: Farmers that are randomly assigned to the
+ the sell low-buy high paradox: Farmers that are randomly assigned to the
  first treatment arm are taken through a detailed budgeting exercise immediately
  after harvest.
  In particular, in this intervention a trained enumerator sits with the
@@ -489,8 +492,16 @@ Related Research
 \end_layout
 
 \begin_layout Standard
-Why do farmers sell low and buy high? One of the most obvious neo-classical
- explanations is related to credit constraints.
+Why do farmers 
+\begin_inset Quotes eld
+\end_inset
+
+sell low and buy high
+\begin_inset Quotes erd
+\end_inset
+
+? One of the most obvious neo-classical explanations is related to credit
+ constraints.
  Using observational data, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -526,7 +537,8 @@ literal "false"
  uses the fact that in Malawi, primary school began 3 months earlier in
  2010 than in 2009, and notes that this prompted households with children
  to sell maize when prices are particularly low.
- To identify the impacts of liquidity during the lean season, 
+ To identify the impacts of liquidity constraints during the lean season,
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "10.1257/aer.20180607"
@@ -534,14 +546,18 @@ literal "false"
 
 \end_inset
 
- offered subsidized loans in randomly selected villages in rural Zambia
- and conclude that liquidity constraints contribute to inequality in rural
- economies.
+ offered subsidized loans in randomly selected villages in rural Zambia.
+ They find that relaxing liquidity constraints not only changed marketing
+ behavior, but also increased labor allocated to agricultural production
+ (as opposed to day laboring as a coping strategy) and conclude that liquidity
+ constraints thus contribute to inequality in rural economies in the longer
+ run as well.
  While credit constraints thus seems to be an important reason why farmers
  sell immediately post harvest at low prices, we feel this is not the entire
  story.
  If farmers need urgent cash, it would make more sense to only sell part
- of the harvest to cover most urgent expenses.
+ of the harvest to cover most urgent expenses, or to sell commodities that
+ are less affected by price seasonality, like small livestock.
  However, farmers often seem to sell all of their marketable surplus immediately
  post harvest in a single transaction.
 \end_layout
@@ -585,14 +601,15 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A third reason that is often heard in the field is that farmers have nowhere
- to store, so they just sell.
+A third reason may be that farmers have nowhere to safely store crops, so
+ they just sell.
  This could be a lack of space, as the average smallholder often harvest
  20-40 bags of 50kg of maize.
  But there are also risks related to pests and diseases affecting the stored
  maize.
- If storage is the main reason why farmers do not engage in intertemporal
- arbitrage, then providing storage technology should delay sales.
+ If lack of safe storage is the main reason why farmers do not engage in
+ intertemporal arbitrage, then providing storage technology should delay
+ sales.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -645,26 +662,37 @@ literal "false"
  of suboptimal marketing behaviour, and conjecture that individuals tend
  to overestimate their available resources and consequently under-save.
  They test this hypothesis through an intervention that induces individuals
- to think through their budget set and formulate a spending plan very similar
- to the intervention we do.
+ to think through their budget set and formulate a spending plan.
  They find that treated households enter the hunger season with one additional
  month of savings, leading to a smoother spending profile over the year.
 \end_layout
 
 \begin_layout Standard
-Our second treatment is related to behavioral research on to the cognitive
- burden of complex intertemporal optimization.
- It has been found that farmers use various decision heuristics and rules
- of thumb when making decisions about how much to sell, when and at what
- price.
- For instance, farmers may anchor their reservation price the price they
- received in the previous season.
- Or, they may interpret particular signals, such as the arrival of traders
- from large towns in their village, as a sign that prices have reached their
- peak.
- Furthermore, the treatment is also grounded the theory on individual's
- often observed failure to commit in light of time preference and self control
- issues, and how mental accounting can remedy this.
+Our research is also related to an established literature on lack of self-contro
+l in cases where individuals have to make complex intertemporal decisions
+ involving uncertain future events.
+ If farmers are impatient and unsophisticated about this, nudges may be
+ effective in reducing discretionary spending in increase investment in
+ the future 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/aer.101.6.2350"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+ find that devices which simply help individuals harness the power of mental
+ accounting helps them to save more.
+ 
 \end_layout
 
 \begin_layout Section
@@ -672,11 +700,9 @@ Behavioural constraints to intertemporal arbitrage: Hypotheses and Interventions
 \end_layout
 
 \begin_layout Standard
-We want to test two potential explanations that are rooted in behavioral
- sciences.
- The first potential behavioral explanation is situated at the household
- expenditure side, and assumes that households face challenges in accurately
- predicting future expenditures.
+The first potential behavioral explanation for the sell low buy high puzzle
+ is situated at the household expenditure side, and assumes that households
+ face challenges in accurately predicting future expenditures.
  In particular, we assume that farmers systematically underestimate how
  much money they need in the future and as a result sell too much immediately
  after the harvest.
@@ -689,8 +715,19 @@ We want to test two potential explanations that are rooted in behavioral
 \end_layout
 
 \begin_layout Standard
-This hypothesis touches on cognitive limits of the household on the expenditure
- side.
+There are various reasons why individuals may suffer from this kind of budget
+ neglect.
+ In general, predicting the full set of expenditures under all possible
+ states of the world is likely to be beyond the cognitive capacity of human
+ beings 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+.
  It is also related to the planning fallacy, where individuals typically
  underestimate the time it takes to complete a task, despite extensive experienc
 e with failure to complete the same task in a similar time frame in the
@@ -713,8 +750,7 @@ literal "false"
 \end_inset
 
 .
- For instance, farmers may not budget for pesticides or insecticides because
- they believe they will not be affected by pests or insects.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -741,40 +777,41 @@ To test the first hypothesis, we designed an intervention that takes the
 \begin_layout Standard
 The second hypothesis is also related to cognitive limitations when planning,
  but this time at the income side of the farm household.
- Farmers may have difficulties in making the intertemporal cost-benefit
- calculations necessary to determine the optimal reservation price and/or
- storage period.
- They often lack precise information about the fixed and variable costs
- involved, about the level and variability of the future stream of income
- from sales, or about the time frame of both cost and income 
+ While farmers may initially have a good idea of when to sell and at what
+ price, various factor may lead them to revise the plans and sell sooner
+ and at lower prices.
+ These include unexpected events but also social taxation 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "campenhout2021role"
+key "10.1093/restud/rdv033"
 literal "false"
 
 \end_inset
 
-.
- The fact that farmers are faced with uncertain prices and uncertain expenditure
-s often means they abandon plans and engage in impulsive or distress sales.
+ Furthermore, farmers may be influenced by various decision heuristics (such
+ as seeing their neighbor sell their crop) that are at odds with their plans
+ and again revise to sell earlier or at lower prices.
 \end_layout
 
 \begin_layout Standard
-To test the second hypothesis, we develop, together with the farmer, a detailed
- sales plan for the year which is assumed to function as a commitment device.
+To test if the sell low-buy high puzzle is predominantly cause by a failure
+ to commit, we develop, together with the farmer, a detailed sales plan
+ for the year which is assumed to function as a commitment device closely
+ modeled in the idea of mental accounting.
  Again using a template, we start by asking the farmer about the expected
  marketable surplus for maize, groundnuts and soybean.
  We then ask for each month between May 2022 and April 2023 how much the
  farmer is planning to sell for each of the crops, and what the minimum
- price point in time should be before they sell.
+ price and point in time should be before they sell.
  Also for the sales plan, we calculate totals per month and also a grand
  total for the entire year.
  This second intervention will be referred to as treatment two (T2).
 \end_layout
 
 \begin_layout Standard
-We asked farmers to not just forget about these plans, but to hang them
- in a central place in the house or store them in a convenient location.
+We did not merely ask farmers to create these plans, but also encouraged
+ them to hang them in a central place in the house or store them in a convenient
+ location.
  We also encouraged them to update them regularly.
  Furthermore, to increase the likelihood that farmers use the plan, we also
  refer to the plan during midline surveys, and reiterate the importance
@@ -828,7 +865,7 @@ Add some more/more precise info on production here.
 \end_layout
 
 \begin_layout Standard
-To get a nationally representative sampling frame of the smallholders farmers
+To get a nationally representative sampling frame of the smallholder farmer
  population in Malawi, we rely on the list created by the Ministry of Agricultur
 e for their Agricultural Input Programme (AIP).
  The AIP targets smallholder farmers in the villages who mostly registered
@@ -930,7 +967,7 @@ noprefix "false"
 \end_inset
 
  presents a number of summary statistics of sampled households and their
- heads.
+ heads at baseline.
  Eighty percent of households are headed by men.
  The average household is headed by a 43 year old with six years of schooling
  (primary level).
@@ -942,8 +979,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-We also collected information on the households' access to transport facilities
- or assets (either through ownership or hire).
+We also collected information on access to transport facilities or assets
+ (either through ownership or hire).
  Results in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1373,9 +1410,9 @@ noprefix "false"
  We also find that, while farmer participation in cooperatives is limited,
  a moderate share (40%) have access to storage space provided by the cooperative.
  Lastly, we look at the proportion of farmers that commit a part of their
- crop to buyers before harvest — a scenario that may often lead farmers
- to sell under unfavorable price conditions, or reduce the amount of harvest
- that farmers can sell after harvest.
+ crop to buyers before harvest—a scenario that may often lead farmers to
+ sell at unfavorable prices, or reduces the amount of harvest that farmers
+ can sell after harvest.
  We find that only a negligible share of farmers (8%) had already promised
  (part of) the 2022 crop to buyers prior to harvest.
 \end_layout
@@ -1645,7 +1682,7 @@ Baseline balance
 \end_layout
 
 \begin_layout Standard
-We follow our pre-analysis plan and demonstrate baseline balance by constructing
+We follow our pre-analysis plan and test baseline balance by constructing
  a standard balance table consisting of the following variables household/demogr
 aphic characteristics (inspired by balance tables in 
 \begin_inset CommandInset citation
@@ -1658,12 +1695,12 @@ literal "false"
 ): household head is female (1=yes), household size (number of people),
  age of household head (years), number of years of education of the household
  head (years), material of roof (corrugated iron = 1), number of rooms in
- the house, cultivated acreage (maize+groundnuts+soybean), hired in agricultural
- labour (1=yes), distance to nearest all weather road (km), distance to
- nearest market (km).
- We also report t-tests comparing treatment and control (unadjusted for
- multiple hypothesis testing) as well as a joint F-test from a regression
- of the treatment assignment on all variables in the balance table.
+ the house, cultivated acreage (maize+groundnuts+soybean), whether the household
+ hired in agricultural labour (1=yes), distance to nearest all weather road
+ (km), and distance to nearest market (km).
+ We report t-tests comparing treatment and control (unadjusted for multiple
+ hypothesis testing) as well as a joint F-test from a regression of the
+ treatment assignment on all variables in the balance table.
  Results are summarized in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2346,11 +2383,11 @@ Note: First column reports control group means (and standard deviations
 
 \begin_layout Standard
 We find significant imbalance on some of the variables, particularly for
- the sales plan treatment.
+ the sales plan treatment (T2).
  While joint F-test for separate treatment control comparisons are not significa
 nt, we do find signs of imbalance when we us a likelihood ratio test derived
  from a multinomial model where the left hand side has three levels (T1,
- T2, C).
+ T2, Ctrl).
 \end_layout
 
 \begin_layout Standard
@@ -2358,7 +2395,7 @@ The pre-analysis plan also states that we assess balance on a range of character
 istics that we will use to investigate heterogeneous treatment effects.
  The variables mentioned there are access to credit, access to storage facility,
  membership of (marketing related) cooperative, livestock asset ownership,
- whether the household already makes a budget.
+ and whether the household already makes a budget.
  Results for these variables are in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2808,10 +2845,10 @@ Attrition
 \end_layout
 
 \begin_layout Standard
-As data collection was by phone, we expected that we would not be able to
- reach some farmers, even though at baseline we always collected information
- on alternative ways to reach the farmers (for instance through village
- headship).
+As data collection for the September midline was by phone, we expected that
+ we would not be able to reach some farmers, even though at baseline we
+ always collected information on alternative ways to reach the farmers (for
+ instance through village headship).
  From the original 3534 farmers that were interviewed at baseline, we successful
 ly reached 3382 farmers, leading to an attrition rate of just under 5 percent.
  Enumerators made on average 10 attempts before indicating the farmers could
@@ -2855,8 +2892,8 @@ noprefix "false"
 \end_inset
 
  we show results after including additional controls.
- These include outcomes at baseline, baseline variables for which we found
- imbalance in Table 
+ These include the outcome at baseline, baseline variables for which we
+ found imbalance in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Balance_main"
@@ -2867,7 +2904,7 @@ noprefix "false"
 \end_inset
 
 , and village fixed effects.
- Table 
+ We start with Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Primary-maize"
@@ -2877,7 +2914,7 @@ noprefix "false"
 
 \end_inset
 
- reports results for maize; Tables 
+, which reports results for maize; Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Primary-gnuts"
@@ -2901,11 +2938,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-A first primary outcome we consider is stocks of the three commodities at
- the time of the midline survey.
+A first primary outcome we consider is stocks held of the commodity at the
+ time of the midline survey.
  In particular, we asked farmers how many bags of the commodity (standard
  50 kg bags) they have in store.
- As the distributions are skewed to the right and include zeros as well,
+ As the distributions are skewed to the right and includes zeros as well,
  we use an inverse hyperbolic sine transformation 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -2915,11 +2952,7 @@ literal "false"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-For both treatments, we expect a positive effect.
+ For both treatments, we expect a positive effect.
  Similar to 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -2931,9 +2964,8 @@ literal "false"
 , we expect that when making households aware about future needs, they will
  reduce discretionary expenditures and save more for the future.
  Furthermore, if farmers expect prices to go up over time and this is reflected
- in their sales plan, farmers that received T2 will also be more likely
- to have saved more early on in the season.
- 
+ in their sales plan, farmers that are encouraged to commit to this sales
+ plan will also be more likely to have saved more early on in the season.
 \end_layout
 
 \begin_layout Standard
@@ -2977,12 +3009,9 @@ Sexpr{prim_maize_tc[1,7]*100}
 \begin_layout Standard
 A second primary outcome tests if the household sold any of the crop in
  the interval between the intervention and the midline survey.
- We expect that the treatment would reduce the likelihood of selling early
- on in the season.
-\end_layout
-
-\begin_layout Standard
-We find that 
+ For similar reasons why we expect stocks to be higher, we expect that the
+ treatment would reduce the likelihood of selling early on in the season.
+ We find that 
 \begin_inset ERT
 status open
 
@@ -3007,12 +3036,9 @@ The third primary outcome is related to the second and is the quantity that
  was sold during the period between the intervention and the first midline
  survey.
  While we may not find that the treatment reduced the fact that farmers
- sell early, we still may find that farmers sell less of the crop immediately
+ sell early, we may still find that farmers sell less of the crop immediately
  after harvest.
-\end_layout
-
-\begin_layout Standard
-We find that farmers in the control group sell on average 
+ We find that farmers in the control group sell on average 
 \begin_inset ERT
 status open
 
@@ -3033,6 +3059,7 @@ Sexpr{prim_maize_tc[4,1]}
 \begin_layout Standard
 For farmers that did engage in sales, we can calculate the average price
  that farmers received for their crop.
+ The aim of the intervention is to increase the price at which farmers sell.
  The farmers that sold in the control group got on average 
 \begin_inset ERT
 status open
@@ -3056,16 +3083,24 @@ We also consider behaviour related to purchases of the commodities as key
  primary outcomes.
  We expect that, especially later in the season, due to our interventions
  households will have to buy back less.
- We see that in the control group, more than a quarter of the farmers already
- made at least one purchase before midline and this proportion is similar
- in both treatment groups.
+ We see that in the control group, of the farmers that already sold maize,
+ about 17 percent also made at least one purchase of maize before midline
+ and this proportion is similar in both treatment groups.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We also ran the analysis for buying behaviour of all farmers instead of
+ only farmers that sold.
+ Results were very similar.
 \end_layout
 
-\begin_layout Standard
-As for sales, we also look at quantities bought and prices at which the
+\end_inset
+
+ As for sales, we also look at quantities bought and prices at which the
  commodities were bought.
- We find that the average control group household bought less than one bag
- on average and paid slightly more than the sales price.
+ We find that for maize, the average control group household bought less
+ than one bag on average and paid slightly more than the sales price.
  We do not see any effects from the interventions.
 \end_layout
 
@@ -3924,7 +3959,7 @@ noprefix "false"
 , we repeat the entire analysis, but now for groundnuts.
  Households in the control group remain with less than 2 bags of groundnuts
  in stock.
- Also here, we see that households that drew up a sales plan have stocks
+ Also here, we see that households that drew up a sales plan (T2) have stocks
  that are about 
 \begin_inset ERT
 status open
@@ -3939,16 +3974,18 @@ Sexpr{prim_gnuts_tc[1,7]*100}
 \end_inset
 
  percent higher than in the control group.
- Now, we also see that stocks are significantly higher in the group that
- was asked to make a detailed expenditure plan.
+ For groundnuts, we also see that stocks are significantly higher in the
+ group that was asked to make a detailed expenditure plan (T1).
 \end_layout
 
 \begin_layout Standard
 A surprisingly larges share of households, over two thirds, indicate that
  they made at least one sales transaction between the intervention and the
  midline survey.
- We now also find that households with a sales plan are more likely to have
- already sold—
+ However, it should also be noted that many households indicate that they
+ did not cultivate groundnuts.
+ Also surprising is that we find that households with a sales plan are more
+ likely to have already sold—
 \begin_inset ERT
 status open
 
@@ -3973,18 +4010,19 @@ noprefix "false"
 \end_inset
 
 —and appear to have sold large quantities.
- Prices (here express in MKW per debe) do not appear to be different from
+ Prices (here expressed in MKW per debe) do not appear to be different from
  the control group.
 \end_layout
 
 \begin_layout Standard
-We also asked if farmers already bought groudnuts in the first few months
- post harvest.
- Significanlty less farmers appear to have bought groundnuts than maize.
- We find no effects of the interventions on the likelihood that farmers
- buy, nor on the quantity bought.
- Finally, we also do not find an impact on prices, but as very few farmers
- bought sample size becomes too small to come to reasonable estimates.
+As for maize, we also asked if farmers that sold groundnuts also already
+ bought groudnuts in the first few months post harvest.
+ Only about 8 percent of farmers report buy back behaviour.
+ However, we do find that farmers that were asked to create a budget are
+ less likely to be both buying and selling.
+ Finally, we also do not find an impact on prices at which groundnuts were
+ purchased, but as very few farmers bought groundnuts, sample size becomes
+ too small to obtain reliable estimates.
 \end_layout
 
 \begin_layout Standard
@@ -4836,13 +4874,13 @@ noprefix "false"
 \end_inset
 
  shows impact of the interventions on primary outcomes for soybean.
- Interestingly, we do not find that that stocks at midline differ significantly
- between treatment groups and the control.
+ Interestingly, we do not find that that stocks for soybean at midline differ
+ significantly between treatment groups and the control.
  We also do not find that sales behaviour in any of the treatment groups
  differs from sales behaviour on the control group.
- We do find, however, that buying of soybean does seem lower in both the
- T1 and T2 groups and that the average quantities are significantly lower
- for households that made a sales plan.
+ We do find, however, that treated households that sold already were also
+ significantly less likely to already have bought soybean and that the average
+ quantities are significantly lower for households that made a sales plan.
 \end_layout
 
 \begin_layout Standard
@@ -5692,7 +5730,7 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 We use simulation to account for multiple comparisons.
@@ -5755,7 +5793,39 @@ Secondary outcomes
 \begin_layout Standard
 In this section, we look at some additional outcome which may be indirectly
  affected by the interventions.
- 
+ These outcomes may help explain some of the effect on primary outcomes,
+ or they may be outcomes for which the expected effects are ambiguous.
+ We again present separate tables for maize (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), for groundnuts (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and for soybean (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Secondary-soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -5775,10 +5845,10 @@ noprefix "false"
  shows that farmers still expect a sizable price increase: while we saw
  in the previous section that the average farmer in the control group only
  got about 225 MKW per kilogram of maize during the first few months after
- harvest, the price is expected to be about 380 per kilogram around new
- year.
+ harvest, the price is expected to increase to about 380 per kilogram around
+ new year.
  Interestingly, we see that farmers who were taken through a budgeting exercise
- expect price to be higher still.
+ expect prices to be higher still.
 \end_layout
 
 \begin_layout Standard
@@ -5787,12 +5857,13 @@ We also wonder if our intervention would affect intra-household dynamics,
  We see that in about 37 percent of households, the decisions related to
  the sales of maize is taken by the male and female co-head jointly, with
  both co-head having equal voice.
+ We do not find that decision making is affected by the interventions.
 \end_layout
 
 \begin_layout Standard
 Another secondary outcome we consider is related to who was sold to.
  In particular, we test if, in response to our interventions, farmers increase
- the likelihood that they sold directly to the market, as this is often
+ the likelihood that they sell directly to the market, as this is often
  the place where they can get the best price for their crop 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -5809,14 +5880,14 @@ literal "false"
 
 \begin_layout Standard
 Finally, we asked farmers that sold between the harvest and the midline
- survey what they used the proceeds for.
+ survey what the proceeds from the transaction was used for.
  We examine the effect of our interventions on two categories.
  One expenditure type, payment of school fees, is likely to be predictable
  by the farmer.
- A second expenditure type, health related expenses are probably less predictabl
+ A second expenditure type, health related expenses, is probably less predictabl
 e.
  We do not find that the treatment intervention changed the propensity that
- sales were made for any of these expenses.
+ sales of maize were made for any of these expenses.
 \end_layout
 
 \begin_layout Standard
@@ -6476,7 +6547,7 @@ ics that show imbalance at the 5 percent level or less in Table XXX.
 \end_layout
 
 \begin_layout Standard
-Table 
+Turning to Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Secondary-gnuts"
@@ -6486,19 +6557,9 @@ noprefix "false"
 
 \end_inset
 
- looks at secondary outcomes for groundnuts, and is similar to Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Secondary-maize"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Also here, farmers in the control group expect a further 60 percent increase
- of the price by the end of the year.
+ for secondary outcomes of groundnuts, we see that farmers in the control
+ group expect a further 60 percent increase of the price by the end of the
+ year.
  Now, we see that farmers that were asked to provide a sales plan estimate
  that future prices will be lower than what control group farmers think.
 \end_layout
@@ -6508,10 +6569,10 @@ We further find that decisions related to the sales of groundnuts are made
  jointly in slightly more households than was the case for maize.
  However, also here, there is no effect of the interventions.
  Groundnuts are rarely sold directly to the market, and there is also no
- effect of T1 not T2.
- Finally, for the expense categories, we see that households that were asked
- to provide a detailed budget are more likely to have sold groundnuts to
- pay for school fees than farmers in the control group.
+ effect of T1, nor T2.
+ For the expense categories, we see that households that were asked to provide
+ a detailed budget are more likely to have sold groundnuts to pay for school
+ fees than farmers in the control group.
 \end_layout
 
 \begin_layout Standard
@@ -7175,8 +7236,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-There is significant less joint decision making when it comes to sales of
- soybean.
+There is significantly less joint decision making when it comes to sales
+ of soybean.
  However, also here, who makes decisions is not affected by the interventions.
  Results for who was sold to are similar to those for groundnuts.
  We also do not find any impact of the interventions on what happens with
@@ -7829,14 +7890,21 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-In this paper, we test two behavioral explanations for the sell low buy
- high hypothesis.
+In this paper, we test two behavioral explanations for the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low-buy high
+\begin_inset Quotes erd
+\end_inset
+
+ puzzle.
  The first explanation assumes that farmers underestimate how much money
- they will need later on in the season, leading them to sell too much at
- prices that are too low.
+ they will need later on in the season, leading them to sell too much immediatel
+y post harvest at prices that are too low.
  We test this explanation through an intervention in which households are
- asked to prepare immediately post harvest a detailed budget of what they
- will need for the entire year.
+ asked to prepare a detailed budget of what they will need for the entire
+ year.
  It is expected that by making future expenditure more explicit, farmers
  will suffer less from budget neglect when making market participation decisions.
 \end_layout
@@ -7844,9 +7912,13 @@ In this paper, we test two behavioral explanations for the sell low buy
 \begin_layout Standard
 The second explanation assumes that farmers face challenges in planning
  and committing on the income side.
- To test this, we ask farmers to prepare a detailed sales plan, indicating
- how much of each crop will be sold when during the coming year, and what
- the minimum price is they want for it.
+ For a variety of reasons such as temptation, emergencies or social pressures,
+ farmers are assumed to sell earlier than they would like to, and at lower
+ prices than they envisioned.
+ We test this using a light touch intervention where we ask farmers to prepare
+ a detailed sales plan, indicating how much of each crop will be sold when
+ during the coming year, and what the minimum price is they want for it,
+ and hope this serves as a commitment device for the farmer.
 \end_layout
 
 \begin_layout Standard
@@ -7854,20 +7926,20 @@ We implement our field experiment in a sample of about 3500 farmers in four
  districts in the Central and Northern Regions of Malawi.
  Treatments were administered during baseline data collection immediately
  after the maize harvest in April 2022.
- Results in this paper are based on a first (telephone based) midline survey.
+ Results in this paper are based on a first (telephone based) midline survey,
+ which was done in September 2022.
 \end_layout
 
 \begin_layout Standard
 We find some evidence that households that were exposed to the interventions
- have higher stocks at the time of the midline survey.
- The effect on stocks is strongest for ground nuts and for the treatment
+ remain with higher stocks at the time of the midline survey.
+ The effect on stocks is strongest for groundnuts and for the treatment
  that involves drawing up a sales plan.
  We also find that for groundnuts, households that committed to a detailed
- plan on when to sell and at what price, were more likely to sell and sold
- larger quantities.
- Finally, we find some evidence that for soybean, farmers that were exposed
- to the treatment are less likely to engage in buying back later in the
- season (at higher prices).
+ plan on when to sell and at what price were more likely to have sold already
+ during the first few months after the intervention, and sold larger quantities.
+ Finally, we find some evidence that farmers that were exposed to the treatment
+ were less likely to engage in buying soybean.
  For secondary outcomes, there is some evidence that farmers who are asked
  to draw up a sales plan expect more modest price increases than farmers
  in the control group.
@@ -7886,10 +7958,14 @@ literal "false"
 \end_inset
 
  in Zambia, we do think that results are encouraging.
- We do for instance find that for the crop that is harvested first and so
- households are likely to start running out of stock earlier, households
+ We do for instance find that for the crop that is harvested first (and
+ so households are likely to start running out of stock earlier) households
  that were exposed to the treatment were less likely to have bought the
  crop.
+ Furthermore, as this is analysis is based on only a first mideline survey
+ done only three months after the intervention, we expect that many of the
+ effects (such as the effect on sales prices) will become stronger in future
+ rounds of data collection.
  
 \end_layout
 

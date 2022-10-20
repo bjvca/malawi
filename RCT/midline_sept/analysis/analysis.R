@@ -586,6 +586,10 @@ midline_sept$x7[midline_sept$x7=="n/a"] <- NA
 dta$bought_maize <- merge(dta,midline_sept[c("farmer_ID","x1")],by="farmer_ID", all.x=T  )$x1=="Yes"
 dta$bought_gnuts <- merge(dta,midline_sept[c("farmer_ID","x4")],by="farmer_ID", all.x=T  )$x4=="Yes"
 dta$bought_soy <-merge(dta,midline_sept[c("farmer_ID","x7")],by="farmer_ID", all.x=T  )$x7=="Yes"
+### restrict to sample of farmers that already sold 
+dta$bought_maize[dta$sold_maize==FALSE] <- NA 
+dta$bought_gnuts[dta$sold_gnuts==FALSE] <- NA 
+dta$bought_soy[dta$sold_soy==FALSE] <- NA 
 
 dta$bought_maize_amt <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","x2")],by="farmer_ID", all.x=T  )$x2))
 dta$bought_gnuts_amt <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","x5")],by="farmer_ID", all.x=T  )$x5))
@@ -594,6 +598,10 @@ dta$bought_soy_amt <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_I
 dta$bought_maize_amt[!(dta$bought_maize)] <- 0
 dta$bought_gnuts_amt[!(dta$bought_gnuts)] <- 0 
 dta$bought_soy_amt[!(dta$bought_soy)] <- 0 
+
+dta$bought_maize_amt[dta$sold_maize==FALSE] <- NA 
+dta$bought_gnuts_amt[dta$sold_gnuts==FALSE] <- NA 
+dta$bought_soy_amt[dta$sold_soy==FALSE] <- NA 
 
 dta$bought_maize_amt[dta$bought_maize_amt>50] <- NA
 dta$bought_gnuts_amt[dta$bought_gnuts_amt>10] <- NA
@@ -604,6 +612,10 @@ dta$bought_gnuts_price <- as.numeric(as.character(merge(dta,midline_sept[c("farm
 dta$bought_soy_price <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","x9")],by="farmer_ID", all.x=T  )$x9))
 dta$bought_gnuts_price[dta$bought_gnuts_price < 1000] <- NA
 dta$bought_maize_price[dta$bought_maize_price > 500] <- NA
+
+dta$bought_maize_price[dta$sold_maize==FALSE] <- NA 
+dta$bought_gnuts_price[dta$sold_gnuts==FALSE] <- NA 
+dta$bought_soy_price[dta$sold_soy==FALSE] <- NA 
 
 #caclulate production of maize
 dta$prod_maize <- as.numeric(as.character(merge(dta,midline_sept[c("farmer_ID","group1.q40")],by="farmer_ID", all.x=T  )$group1.q40.y))

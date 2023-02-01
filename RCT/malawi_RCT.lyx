@@ -313,6 +313,16 @@ literal "false"
  offered subsidized loans in randomly selected villages in rural Zambia
  and conclude that liquidity constraints contribute to inequality in rural
  economies.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CHANNA2022102851"
+literal "false"
+
+\end_inset
+
+ show that harvest loan recipients stored 29% more and sold 50% more maize
+ in lean season on average (but found no impact of improved storage technology).
  While credit constraints thus seems to be an important reason why farmers
  sell immediately post harvest at low prices, we feel this is not the entire
  story.

@@ -14,7 +14,6 @@ to_drop <- c(
   "phonenumber",                                  
   "subscriberid",                                 
   "enumerator",                                   
-  "q1",
   "q2",                                     
   "q3",                                          
   "farmer_name",                                                              

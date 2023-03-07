@@ -1784,6 +1784,8 @@ saveRDS(prim_maize_tc, paste(path,"midline_dec/results/prim_maize_tc.RData", sep
 saveRDS(prim_gnuts_tc, paste(path,"midline_dec/results/prim_gnuts_tc.RData", sep="/"))
 saveRDS(prim_soy_tc, paste(path,"midline_dec/results/prim_soy_tc.RData", sep="/"))
 
+###write data for merging with midline 2
+write.csv(dta,paste(path,"all_rounds/data/midline_dec.csv", sep="/"))
 
 #### control for FWER using simulation
 

@@ -311,6 +311,10 @@ all_transactions[(all_transactions$crop=="soy") & all_transactions$measure=="OX 
 all_transactions$revenue <- all_transactions$price * all_transactions$quant_kg 
 
 ###aggregate at household level
+total_revenue <- aggregate(all_transactions$revenue , list(all_transactions$farmer_ID),FUN=sum, na.rm=T)
+names(total_revenue) <- c("farmer_ID","total_revenue")
+
+dta <- merge(dta,total_revenue, by="farmer_ID", all.x=TRUE)
 
 sold_maize_kg <- aggregate(all_transactions$quant_kg[all_transactions$crop=="maize"] , list(all_transactions$farmer_ID[all_transactions$crop=="maize"] ),FUN=sum, na.rm=T)
 names(sold_maize_kg) <- c("farmer_ID","sold_maize_kg_b")

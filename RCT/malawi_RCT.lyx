@@ -1162,6 +1162,56 @@ mock report: After baseline data is collected, a pre-registered report will
  further reducing the opportunity of specification search.
 \end_layout
 
+\begin_layout Section*
+Epilogue
+\end_layout
+
+\begin_layout Standard
+Right before endline data collection, it was decided to allow for (potential)
+ follow-up in the longer run.
+ This included re-treating some of the farmers.
+ However, instead of simply repeating the treatment according to the original
+ randomization, we also decided to include variation in treatment over time
+ (year 1 versus year 2).
+ In particular, we wanted to differentiate between farmers that were never
+ treated ((CC)); farmers that were always treated ((T1T1) and (T2T2)); farmers
+ that were treated only in the first year ((T1C) and (T2C)); and farmers
+ that started receiving treatment in the second year ((CT1) and (CT2)).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In addition to measuring a dosage effect (once versus twice treated) the
+ decision was also influence by the fact that we found significant imbalance
+ on a range of baseline characteristics for the second treatment.
+ We hope that concerns related this imbalance can be addressed by comparing
+ differences between C and T2 in year one to differences in year 2 (comparing
+ CC and CT2).
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In control households in year 1, we assign 28 percent to the first treatment
+ (CT1) and 28 percent to the second treatment (CT2), while the remaining
+ 44 percent remains in the control group in the second year (CC).
+\end_layout
+
+\begin_layout Itemize
+Among households that received the first treatment in year 1, we assign
+ 50 percent to the first treatment again in year 2 (T1T1).
+ The remaining 50 percent did not receive the treatment again (T1C)
+\end_layout
+
+\begin_layout Itemize
+Among households that received the second treatment in year 1, we assign
+ 50 percent to the second treatment again in year 2 (T2T2).
+ The remaining 50 percent did not receive the treatment again (T2C).
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex

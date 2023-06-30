@@ -713,9 +713,9 @@ prim_maize[1,2] <- sd(dta$stock_maize_abs[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[1,1] <- mean(dta$stock_maize_abs[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[1,2] <- sd(dta$stock_maize_abs[dta$treatment=="C"], na.rm=T)
 
-prim_maize[1,4] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_maize[1,5] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[1,6] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[1,4] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_maize[1,5] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[1,6] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[1,4] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[1,5] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[2,2]
@@ -727,10 +727,10 @@ log_dta[is.na(log_dta) | log_dta=="-Inf"] = NA
 summary(lm((stock_maize_log)~treatment+hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=log_dta))
 summary(lm((stock_maize_log)~treatment,data=log_dta))
 
-prim_maize[1,7] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[1,8] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[1,9] <- summary(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[1,10] <- nobs(lm(ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[1,7] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[1,8] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[1,9] <- summary(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[1,10] <- nobs(lm(ihs(stock_maize_abs)~treatment + fe_vil,data=dta))
 
 prim_maize_tc[1,7] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[1,8] <- summary(lm(ihs(stock_maize_abs)~treatment,data=dta))$coefficients[3,2]
@@ -745,9 +745,9 @@ prim_gnuts[1,2] <- sd(dta$stock_gnuts_abs[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[1,1] <- mean(dta$stock_gnuts_abs[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[1,2] <- sd(dta$stock_gnuts_abs[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[1,4] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[1,5] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[1,6] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[1,4] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[1,5] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[1,6] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[1,4] <- summary(lm(ihs(stock_gnuts_abs)~treatment ,data=dta))$coefficients[2,1]
 prim_gnuts_tc[1,5] <- summary(lm(ihs(stock_gnuts_abs)~treatment,data=dta))$coefficients[2,2]
@@ -760,10 +760,10 @@ log_dta[is.na(log_dta) | log_dta=="-Inf"] = NA
 summary(lm((stock_gnuts_log)~treatment+hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=log_dta))
 summary(lm((stock_gnuts_log)~treatment,data=log_dta))
 
-prim_gnuts[1,7] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[1,8] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[1,9] <- summary(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[1,10] <- nobs(lm(ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[1,7] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[1,8] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[1,9] <- summary(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[1,10] <- nobs(lm(ihs(stock_gnuts_abs)~treatment + fe_vil,data=dta))
 
 prim_gnuts_tc[1,7] <- summary(lm(ihs(stock_gnuts_abs)~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[1,8] <- summary(lm(ihs(stock_gnuts_abs)~treatment,data=dta))$coefficients[3,2]
@@ -778,18 +778,18 @@ prim_soy[1,2] <- sd(dta$stock_soy_abs[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[1,1] <- mean(dta$stock_soy_abs[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[1,2] <- sd(dta$stock_soy_abs[dta$treatment=="C"], na.rm=T)
 
-prim_soy[1,4] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[1,5] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[1,6] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[1,4] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[1,5] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[1,6] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[1,4] <- summary(lm(ihs(stock_soy_abs)~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[1,5] <- summary(lm(ihs(stock_soy_abs)~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[1,6] <- summary(lm(ihs(stock_soy_abs)~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[1,7] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[1,8] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[1,9] <- summary(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[1,10] <- nobs(lm(ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[1,7] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[1,8] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[1,9] <- summary(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[1,10] <- nobs(lm(ihs(stock_soy_abs)~treatment + fe_vil,data=dta))
 
 prim_soy_tc[1,7] <- summary(lm(ihs(stock_soy_abs)~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[1,8] <- summary(lm(ihs(stock_soy_abs)~treatment,data=dta))$coefficients[3,2]
@@ -804,18 +804,18 @@ prim_maize[2,2] <- sd(dta$stock_maize_pct[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[2,1] <- mean(dta$stock_maize_pct[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[2,2] <- sd(dta$stock_maize_pct[dta$treatment=="C"], na.rm=T)
 
-prim_maize[2,4] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_maize[2,5] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[2,6] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[2,4] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_maize[2,5] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[2,6] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[2,4] <- summary(lm(stock_maize_pct~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[2,5] <- summary(lm(stock_maize_pct~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[2,6] <- summary(lm(stock_maize_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[2,7] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[2,8] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[2,9] <- summary(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[2,10] <- nobs(lm(stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[2,7] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[2,8] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[2,9] <- summary(lm(stock_maize_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[2,10] <- nobs(lm(stock_maize_pct~treatment + fe_vil,data=dta))
 
 prim_maize_tc[2,7] <- summary(lm(stock_maize_pct~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[2,8] <- summary(lm(stock_maize_pct~treatment,data=dta))$coefficients[3,2]
@@ -828,18 +828,18 @@ prim_gnuts[2,2] <- sd(dta$stock_gnuts_pct[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[2,1] <- mean(dta$stock_gnuts_pct[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[2,2] <- sd(dta$stock_gnuts_pct[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[2,4] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[2,5] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[2,6] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[2,4] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[2,5] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[2,6] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[2,4] <- summary(lm(stock_gnuts_pct~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[2,5] <- summary(lm(stock_gnuts_pct~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[2,6] <- summary(lm(stock_gnuts_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[2,7] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[2,8] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[2,9] <- summary(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[2,10] <- nobs(lm(stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[2,7] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[2,8] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[2,9] <- summary(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[2,10] <- nobs(lm(stock_gnuts_pct~treatment + fe_vil,data=dta))
 
 prim_gnuts_tc[2,7] <- summary(lm(stock_gnuts_pct~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[2,8] <- summary(lm(stock_gnuts_pct~treatment,data=dta))$coefficients[3,2]
@@ -852,18 +852,18 @@ prim_soy[2,2] <- sd(dta$stock_soy_pct[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[2,1] <- mean(dta$stock_soy_pct[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[2,2] <- sd(dta$stock_soy_pct[dta$treatment=="C"], na.rm=T)
 
-prim_soy[2,4] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[2,5] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[2,6] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[2,4] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[2,5] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[2,6] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[2,4] <- summary(lm(stock_soy_pct~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[2,5] <- summary(lm(stock_soy_pct~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[2,6] <- summary(lm(stock_soy_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[2,7] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[2,8] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[2,9] <- summary(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[2,10] <- nobs(lm(stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[2,7] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[2,8] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[2,9] <- summary(lm(stock_soy_pct~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[2,10] <- nobs(lm(stock_soy_pct~treatment + fe_vil,data=dta))
 
 prim_soy_tc[2,7] <- summary(lm(stock_soy_pct~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[2,8] <- summary(lm(stock_soy_pct~treatment,data=dta))$coefficients[3,2]
@@ -877,18 +877,18 @@ prim_maize[3,2] <- sd(dta$sold_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[3,1] <- mean(dta$sold_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[3,2] <- sd(dta$sold_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[3,4] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_maize[3,5] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[3,6] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[3,4] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[2,1]
+prim_maize[3,5] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[3,6] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[3,4] <- summary(lm(sold_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[3,5] <- summary(lm(sold_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[3,6] <- summary(lm(sold_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[3,7] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[3,8] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[3,9] <- summary(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[3,10] <- nobs(lm(sold_maize~treatment + sold_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[3,7] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[3,8] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[3,9] <- summary(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[3,10] <- nobs(lm(sold_maize~treatment + sold_maize_b + fe_vil,data=dta))
 
 prim_maize_tc[3,7] <- summary(lm(sold_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[3,8] <- summary(lm(sold_maize~treatment,data=dta))$coefficients[3,2]
@@ -901,18 +901,18 @@ prim_gnuts[3,2] <- sd(dta$sold_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[3,1] <- mean(dta$sold_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[3,2] <- sd(dta$sold_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[3,4] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[3,5] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[3,6] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[3,4] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[3,5] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[3,6] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[3,4] <- summary(lm(sold_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[3,5] <- summary(lm(sold_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[3,6] <- summary(lm(sold_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[3,7] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[3,8] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[3,9] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[3,10] <- nobs(lm(sold_gnuts~treatment + sold_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[3,7] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[3,8] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[3,9] <- summary(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[3,10] <- nobs(lm(sold_gnuts~treatment + sold_gnuts_b + fe_vil,data=dta))
 
 prim_gnuts_tc[3,7] <- summary(lm(sold_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[3,8] <- summary(lm(sold_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -925,18 +925,18 @@ prim_soy[3,2] <- sd(dta$sold_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[3,1] <- mean(dta$sold_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[3,2] <- sd(dta$sold_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[3,4] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[3,5] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[3,6] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[3,4] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[3,5] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[3,6] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[3,4] <- summary(lm(sold_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[3,5] <- summary(lm(sold_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[3,6] <- summary(lm(sold_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[3,7] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[3,8] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[3,9] <- summary(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[3,10] <- nobs(lm(sold_soy~treatment + sold_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[3,7] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[3,8] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[3,9] <- summary(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[3,10] <- nobs(lm(sold_soy~treatment + sold_soy_b + fe_vil,data=dta))
 
 prim_soy_tc[3,7] <- summary(lm(sold_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[3,8] <- summary(lm(sold_soy~treatment,data=dta))$coefficients[3,2]
@@ -951,18 +951,18 @@ prim_maize[4,2] <- sd(dta$sold_maize_kg[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[4,1] <- mean(dta$sold_maize_kg[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[4,2] <- sd(dta$sold_maize_kg[dta$treatment=="C"], na.rm=T)
 
-prim_maize[4,4] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_maize[4,5] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[4,6] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[4,4] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[2,1]
+prim_maize[4,5] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[4,6] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[4,4] <- summary(lm(ihs(sold_maize_kg)~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[4,5] <- summary(lm(ihs(sold_maize_kg)~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[4,6] <- summary(lm(ihs(sold_maize_kg)~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[4,7] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[4,8] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[4,9] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[4,10] <- nobs(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[4,7] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[4,8] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[4,9] <- summary(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[4,10] <- nobs(lm(ihs(sold_maize_kg)~treatment + sold_maize_kg_b + fe_vil,data=dta))
 
 prim_maize_tc[4,7] <- summary(lm(ihs(sold_maize_kg)~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[4,8] <- summary(lm(ihs(sold_maize_kg)~treatment,data=dta))$coefficients[3,2]
@@ -975,18 +975,18 @@ prim_gnuts[4,2] <- sd(dta$sold_gnuts_kg[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[4,1] <- mean(dta$sold_gnuts_kg[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[4,2] <- sd(dta$sold_gnuts_kg[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[4,4] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[4,5] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[4,6] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[4,4] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[4,5] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[4,6] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[4,4] <- summary(lm(ihs(sold_gnuts_kg)~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[4,5] <- summary(lm(ihs(sold_gnuts_kg)~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[4,6] <- summary(lm(ihs(sold_gnuts_kg)~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[4,7] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[4,8] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[4,9] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[4,10] <- nobs(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[4,7] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[4,8] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[4,9] <- summary(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[4,10] <- nobs(lm(ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b + fe_vil,data=dta))
 
 prim_gnuts_tc[4,7] <- summary(lm(ihs(sold_gnuts_kg)~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[4,8] <- summary(lm(ihs(sold_gnuts_kg)~treatment,data=dta))$coefficients[3,2]
@@ -999,18 +999,18 @@ prim_soy[4,2] <- sd(dta$sold_soy_kg[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[4,1] <- mean(dta$sold_soy_kg[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[4,2] <- sd(dta$sold_soy_kg[dta$treatment=="C"], na.rm=T)
 
-prim_soy[4,4] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[4,5] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[4,6] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[4,4] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[4,5] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[4,6] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[4,4] <- summary(lm(ihs(sold_soy_kg)~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[4,5] <- summary(lm(ihs(sold_soy_kg)~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[4,6] <- summary(lm(ihs(sold_soy_kg)~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[4,7] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[4,8] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[4,9] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[4,10] <- nobs(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[4,7] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[4,8] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[4,9] <- summary(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[4,10] <- nobs(lm(ihs(sold_soy_kg)~treatment + sold_soy_kg_b + fe_vil,data=dta))
 
 prim_soy_tc[4,7] <- summary(lm(ihs(sold_soy_kg)~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[4,8] <- summary(lm(ihs(sold_soy_kg)~treatment,data=dta))$coefficients[3,2]
@@ -1026,17 +1026,17 @@ prim_maize[5,1] <- mean(dta$sold_maize_pct[dta$treatment=="C"], na.rm=T)
 prim_maize[5,2] <- sd(dta$sold_maize_pct[dta$treatment=="C"], na.rm=T)
 
 prim_maize[5,4] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b +fe_vil,data=dta))$coefficients[2,1]
-prim_maize[5,5] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[5,6] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[5,5] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[5,6] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[5,4] <- summary(lm(sold_maize_pct~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[5,5] <- summary(lm(sold_maize_pct~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[5,6] <- summary(lm(sold_maize_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[5,7] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[5,8] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[5,9] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[5,10] <- nobs(lm(sold_maize_pct~treatment + sold_maize_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[5,7] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[5,8] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[5,9] <- summary(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[5,10] <- nobs(lm(sold_maize_pct~treatment + sold_maize_pct_b + fe_vil,data=dta))
 
 prim_maize_tc[5,7] <- summary(lm(sold_maize_pct~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[5,8] <- summary(lm(sold_maize_pct~treatment,data=dta))$coefficients[3,2]
@@ -1049,18 +1049,18 @@ prim_gnuts[5,2] <- sd(dta$sold_gnuts_pct[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[5,1] <- mean(dta$sold_gnuts_pct[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[5,2] <- sd(dta$sold_gnuts_pct[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[5,4] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[5,5] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[5,6] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[5,4] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[5,5] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[5,6] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[5,4] <- summary(lm(sold_gnuts_pct~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[5,5] <- summary(lm(sold_gnuts_pct~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[5,6] <- summary(lm(sold_gnuts_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[5,7] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[5,8] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[5,9] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[5,10] <- nobs(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[5,7] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[5,8] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[5,9] <- summary(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[5,10] <- nobs(lm(sold_gnuts_pct~treatment + sold_gnuts_pct_b + fe_vil,data=dta))
 
 prim_gnuts_tc[5,7] <- summary(lm(sold_gnuts_pct~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[5,8] <- summary(lm(sold_gnuts_pct~treatment,data=dta))$coefficients[3,2]
@@ -1073,18 +1073,18 @@ prim_soy[5,2] <- sd(dta$sold_soy_pct[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[5,1] <- mean(dta$sold_soy_pct[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[5,2] <- sd(dta$sold_soy_pct[dta$treatment=="C"], na.rm=T)
 
-prim_soy[5,4] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[5,5] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[5,6] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[5,4] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[5,5] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[5,6] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[5,4] <- summary(lm(sold_soy_pct~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[5,5] <- summary(lm(sold_soy_pct~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[5,6] <- summary(lm(sold_soy_pct~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[5,7] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[5,8] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[5,9] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[5,10] <- nobs(lm(sold_soy_pct~treatment + sold_soy_pct_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[5,7] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[5,8] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[5,9] <- summary(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[5,10] <- nobs(lm(sold_soy_pct~treatment + sold_soy_pct_b + fe_vil,data=dta))
 
 prim_soy_tc[5,7] <- summary(lm(sold_soy_pct~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[5,8] <- summary(lm(sold_soy_pct~treatment,data=dta))$coefficients[3,2]
@@ -1099,18 +1099,18 @@ prim_maize[6,2] <- sd(dta$price_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[6,1] <- mean(dta$price_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[6,2] <- sd(dta$price_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[6,4] <- summary(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[6,5] <- summary(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[6,6] <- summary(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[6,4] <- summary(lm(price_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[6,5] <- summary(lm(price_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[6,6] <- summary(lm(price_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[6,4] <- summary(lm(price_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[6,5] <- summary(lm(price_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[6,6] <- summary(lm(price_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[6,7] <- summary(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[6,8] <- summary(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[6,9] <- summary(lm(price_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[6,10] <- nobs(lm(price_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[6,7] <- summary(lm(price_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[6,8] <- summary(lm(price_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[6,9] <- summary(lm(price_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[6,10] <- nobs(lm(price_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[6,7] <- summary(lm(price_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[6,8] <- summary(lm(price_maize~treatment,data=dta))$coefficients[3,2]
@@ -1123,18 +1123,18 @@ prim_gnuts[6,2] <- sd(dta$price_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[6,1] <- mean(dta$price_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[6,2] <- sd(dta$price_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[6,4] <- summary(lm(price_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[6,5] <- summary(lm(price_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[6,6] <- summary(lm(price_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[6,4] <- summary(lm(price_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[6,5] <- summary(lm(price_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[6,6] <- summary(lm(price_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[6,4] <- summary(lm(price_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[6,5] <- summary(lm(price_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[6,6] <- summary(lm(price_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[6,7] <- summary(lm(price_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[6,8] <- summary(lm(price_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[6,9] <- summary(lm(price_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[6,10] <- nobs(lm(price_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[6,7] <- summary(lm(price_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[6,8] <- summary(lm(price_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[6,9] <- summary(lm(price_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[6,10] <- nobs(lm(price_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[6,7] <- summary(lm(price_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[6,8] <- summary(lm(price_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1147,18 +1147,18 @@ prim_soy[6,2] <- sd(dta$price_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[6,1] <- mean(dta$price_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[6,2] <- sd(dta$price_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[6,4] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[6,5] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[6,6] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[6,4] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[6,5] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[6,6] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[6,4] <- summary(lm(price_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[6,5] <- summary(lm(price_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[6,6] <- summary(lm(price_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[6,7] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[6,8] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[6,9] <- summary(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[6,10] <- nobs(lm(price_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[6,7] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[6,8] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[6,9] <- summary(lm(price_soy~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[6,10] <- nobs(lm(price_soy~treatment + fe_vil,data=dta))
 
 prim_soy_tc[6,7] <- summary(lm(price_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[6,8] <- summary(lm(price_soy~treatment,data=dta))$coefficients[3,2]
@@ -1174,18 +1174,18 @@ prim_maize[7,2] <- sd(dta$bought_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[7,1] <- mean(dta$bought_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[7,2] <- sd(dta$bought_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[7,4] <- summary(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[7,5] <- summary(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[7,6] <- summary(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[7,4] <- summary(lm(bought_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[7,5] <- summary(lm(bought_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[7,6] <- summary(lm(bought_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[7,4] <- summary(lm(bought_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[7,5] <- summary(lm(bought_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[7,6] <- summary(lm(bought_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[7,7] <- summary(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[7,8] <- summary(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[7,9] <- summary(lm(bought_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[7,10] <- nobs(lm(bought_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[7,7] <- summary(lm(bought_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[7,8] <- summary(lm(bought_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[7,9] <- summary(lm(bought_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[7,10] <- nobs(lm(bought_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[7,7] <- summary(lm(bought_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[7,8] <- summary(lm(bought_maize~treatment,data=dta))$coefficients[3,2]
@@ -1199,18 +1199,18 @@ prim_gnuts[7,2] <- sd(dta$bought_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[7,1] <- mean(dta$bought_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[7,2] <- sd(dta$bought_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[7,4] <- summary(lm(bought_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[7,5] <- summary(lm(bought_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[7,6] <- summary(lm(bought_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[7,4] <- summary(lm(bought_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[7,5] <- summary(lm(bought_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[7,6] <- summary(lm(bought_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[7,4] <- summary(lm(bought_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[7,5] <- summary(lm(bought_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[7,6] <- summary(lm(bought_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[7,7] <- summary(lm(bought_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[7,8] <- summary(lm(bought_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[7,9] <- summary(lm(bought_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[7,10] <- nobs(lm(bought_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[7,7] <- summary(lm(bought_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[7,8] <- summary(lm(bought_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[7,9] <- summary(lm(bought_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[7,10] <- nobs(lm(bought_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[7,7] <- summary(lm(bought_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[7,8] <- summary(lm(bought_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1224,18 +1224,18 @@ prim_soy[7,2] <- sd(dta$bought_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[7,1] <- mean(dta$bought_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[7,2] <- sd(dta$bought_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[7,4] <- summary(lm(bought_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[7,5] <- summary(lm(bought_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[7,6] <- summary(lm(bought_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[7,4] <- summary(lm(bought_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[7,5] <- summary(lm(bought_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[7,6] <- summary(lm(bought_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[7,4] <- summary(lm(bought_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[7,5] <- summary(lm(bought_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[7,6] <- summary(lm(bought_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[7,7] <- summary(lm(bought_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[7,8] <- summary(lm(bought_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[7,9] <- summary(lm(bought_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[7,10] <- nobs(lm(bought_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[7,7] <- summary(lm(bought_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[7,8] <- summary(lm(bought_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[7,9] <- summary(lm(bought_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[7,10] <- nobs(lm(bought_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[7,7] <- summary(lm(bought_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[7,8] <- summary(lm(bought_soy~treatment,data=dta))$coefficients[3,2]
@@ -1251,18 +1251,18 @@ prim_maize[8,2] <- sd(dta$bought_maize_amt[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[8,1] <- mean(dta$bought_maize_amt[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[8,2] <- sd(dta$bought_maize_amt[dta$treatment=="C"], na.rm=T)
 
-prim_maize[8,4] <- summary(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[8,5] <- summary(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[8,6] <- summary(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[8,4] <- summary(lm(ihs(bought_maize_amt)~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[8,5] <- summary(lm(ihs(bought_maize_amt)~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[8,6] <- summary(lm(ihs(bought_maize_amt)~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[8,4] <- summary(lm(ihs(bought_maize_amt)~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[8,5] <- summary(lm(ihs(bought_maize_amt)~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[8,6] <- summary(lm(ihs(bought_maize_amt)~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[8,7] <- summary(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[8,8] <- summary(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[8,9] <- summary(lm(ihs(bought_maize_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[8,10] <- nobs(lm(ihs(bought_maize_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[8,7] <- summary(lm(ihs(bought_maize_amt)~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[8,8] <- summary(lm(ihs(bought_maize_amt)~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[8,9] <- summary(lm(ihs(bought_maize_amt)~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[8,10] <- nobs(lm(ihs(bought_maize_amt)~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[8,7] <- summary(lm(ihs(bought_maize_amt)~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[8,8] <- summary(lm(ihs(bought_maize_amt)~treatment,data=dta))$coefficients[3,2]
@@ -1276,18 +1276,18 @@ prim_gnuts[8,2] <- sd(dta$bought_gnuts_amt[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[8,1] <- mean(dta$bought_gnuts_amt[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[8,2] <- sd(dta$bought_gnuts_amt[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[8,4] <- summary(lm(ihs(bought_gnuts_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[8,5] <- summary(lm(ihs(bought_gnuts_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[8,6] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[8,4] <- summary(lm(ihs(bought_gnuts_amt)~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[8,5] <- summary(lm(ihs(bought_gnuts_amt)~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[8,6] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[8,4] <- summary(lm(ihs(bought_gnuts_amt)~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[8,5] <- summary(lm(ihs(bought_gnuts_amt)~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[8,6] <- summary(lm(ihs(bought_gnuts_amt)~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[8,7] <- summary(lm(ihs(bought_gnuts_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[8,8] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[8,9] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[8,10] <- nobs(lm(ihs(bought_gnuts_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[8,7] <- summary(lm(ihs(bought_gnuts_amt)~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[8,8] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[8,9] <- summary(lm(ihs(bought_gnuts_amt)~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[8,10] <- nobs(lm(ihs(bought_gnuts_amt)~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[8,7] <- summary(lm(ihs(bought_gnuts_amt)~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[8,8] <- summary(lm(ihs(bought_gnuts_amt)~treatment,data=dta))$coefficients[3,2]
@@ -1301,18 +1301,18 @@ prim_soy[8,2] <- sd(dta$bought_soy_amt[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[8,1] <- mean(dta$bought_soy_amt[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[8,2] <- sd(dta$bought_soy_amt[dta$treatment=="C"], na.rm=T)
 
-prim_soy[8,4] <- summary(lm(ihs(bought_soy_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[8,5] <- summary(lm(ihs(bought_soy_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[8,6] <- summary(lm(ihs(bought_soy_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[8,4] <- summary(lm(ihs(bought_soy_amt)~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[8,5] <- summary(lm(ihs(bought_soy_amt)~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[8,6] <- summary(lm(ihs(bought_soy_amt)~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[8,4] <- summary(lm(ihs(bought_soy_amt)~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[8,5] <- summary(lm(ihs(bought_soy_amt)~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[8,6] <- summary(lm(ihs(bought_soy_amt)~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[8,7] <- summary(lm(ihs(bought_soy_amt)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[8,8] <- summary(lm(ihs(bought_soy_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[8,9] <- summary(lm(ihs(bought_soy_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[8,10] <- nobs(lm(ihs(bought_soy_amt)~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[8,7] <- summary(lm(ihs(bought_soy_amt)~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[8,8] <- summary(lm(ihs(bought_soy_amt)~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[8,9] <- summary(lm(ihs(bought_soy_amt)~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[8,10] <- nobs(lm(ihs(bought_soy_amt)~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[8,7] <- summary(lm(ihs(bought_soy_amt)~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[8,8] <- summary(lm(ihs(bought_soy_amt)~treatment,data=dta))$coefficients[3,2]
@@ -1328,18 +1328,18 @@ prim_maize[9,2] <- sd(dta$bought_maize_price[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[9,1] <- mean(dta$bought_maize_price[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[9,2] <- sd(dta$bought_maize_price[dta$treatment=="C"], na.rm=T)
 
-prim_maize[9,4] <- summary(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[9,5] <- summary(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[9,6] <- summary(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[9,4] <- summary(lm(bought_maize_price~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[9,5] <- summary(lm(bought_maize_price~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[9,6] <- summary(lm(bought_maize_price~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[9,4] <- summary(lm(bought_maize_price~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[9,5] <- summary(lm(bought_maize_price~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[9,6] <- summary(lm(bought_maize_price~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[9,7] <- summary(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[9,8] <- summary(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[9,9] <- summary(lm(bought_maize_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[9,10] <- nobs(lm(bought_maize_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[9,7] <- summary(lm(bought_maize_price~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[9,8] <- summary(lm(bought_maize_price~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[9,9] <- summary(lm(bought_maize_price~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[9,10] <- nobs(lm(bought_maize_price~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[9,7] <- summary(lm(bought_maize_price~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[9,8] <- summary(lm(bought_maize_price~treatment,data=dta))$coefficients[3,2]
@@ -1353,18 +1353,18 @@ prim_gnuts[9,2] <- sd(dta$bought_gnuts_price[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[9,1] <- mean(dta$bought_gnuts_price[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[9,2] <- sd(dta$bought_gnuts_price[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[9,4] <- summary(lm(bought_gnuts_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[9,5] <- summary(lm(bought_gnuts_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[9,6] <- summary(lm(bought_gnuts_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[9,4] <- summary(lm(bought_gnuts_price~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[9,5] <- summary(lm(bought_gnuts_price~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[9,6] <- summary(lm(bought_gnuts_price~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[9,4] <- summary(lm(bought_gnuts_price~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[9,5] <- summary(lm(bought_gnuts_price~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[9,6] <- summary(lm(bought_gnuts_price~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[9,7] <- summary(lm(bought_gnuts_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[9,8] <- summary(lm(bought_gnuts_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[9,9] <- summary(lm(bought_gnuts_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[9,10] <- nobs(lm(bought_gnuts_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[9,7] <- summary(lm(bought_gnuts_price~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[9,8] <- summary(lm(bought_gnuts_price~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[9,9] <- summary(lm(bought_gnuts_price~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[9,10] <- nobs(lm(bought_gnuts_price~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[9,7] <- summary(lm(bought_gnuts_price~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[9,8] <- summary(lm(bought_gnuts_price~treatment,data=dta))$coefficients[3,2]
@@ -1378,18 +1378,18 @@ prim_soy[9,2] <- sd(dta$bought_soy_price[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[9,1] <- mean(dta$bought_soy_price[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[9,2] <- sd(dta$bought_soy_price[dta$treatment=="C"], na.rm=T)
 
-prim_soy[9,4] <- summary(lm(bought_soy_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[9,5] <- summary(lm(bought_soy_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[9,6] <- summary(lm(bought_soy_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[9,4] <- summary(lm(bought_soy_price~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[9,5] <- summary(lm(bought_soy_price~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[9,6] <- summary(lm(bought_soy_price~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[9,4] <- summary(lm(bought_soy_price~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[9,5] <- summary(lm(bought_soy_price~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[9,6] <- summary(lm(bought_soy_price~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[9,7] <- summary(lm(bought_soy_price~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[9,8] <- summary(lm(bought_soy_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[9,9] <- summary(lm(bought_soy_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[9,10] <- nobs(lm(bought_soy_price~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[9,7] <- summary(lm(bought_soy_price~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[9,8] <- summary(lm(bought_soy_price~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[9,9] <- summary(lm(bought_soy_price~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[9,10] <- nobs(lm(bought_soy_price~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[9,7] <- summary(lm(bought_soy_price~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[9,8] <- summary(lm(bought_soy_price~treatment,data=dta))$coefficients[3,2]
@@ -1405,18 +1405,18 @@ prim_maize[10,2] <- sd(dta$price_dec_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[10,1] <- mean(dta$price_dec_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[10,2] <- sd(dta$price_dec_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[10,4] <- summary(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[10,5] <- summary(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[10,6] <- summary(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[10,4] <- summary(lm(price_dec_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[10,5] <- summary(lm(price_dec_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[10,6] <- summary(lm(price_dec_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[10,4] <- summary(lm(price_dec_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[10,5] <- summary(lm(price_dec_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[10,6] <- summary(lm(price_dec_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[10,7] <- summary(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[10,8] <- summary(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[10,9] <- summary(lm(price_dec_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[10,10] <- nobs(lm(price_dec_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[10,7] <- summary(lm(price_dec_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[10,8] <- summary(lm(price_dec_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[10,9] <- summary(lm(price_dec_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[10,10] <- nobs(lm(price_dec_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[10,7] <- summary(lm(price_dec_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[10,8] <- summary(lm(price_dec_maize~treatment,data=dta))$coefficients[3,2]
@@ -1430,18 +1430,18 @@ prim_gnuts[10,2] <- sd(dta$price_dec_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[10,1] <- mean(dta$price_dec_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[10,2] <- sd(dta$price_dec_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[10,4] <- summary(lm(price_dec_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[10,5] <- summary(lm(price_dec_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[10,6] <- summary(lm(price_dec_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[10,4] <- summary(lm(price_dec_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[10,5] <- summary(lm(price_dec_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[10,6] <- summary(lm(price_dec_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[10,4] <- summary(lm(price_dec_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[10,5] <- summary(lm(price_dec_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[10,6] <- summary(lm(price_dec_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[10,7] <- summary(lm(price_dec_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[10,8] <- summary(lm(price_dec_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[10,9] <- summary(lm(price_dec_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[10,10] <- nobs(lm(price_dec_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[10,7] <- summary(lm(price_dec_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[10,8] <- summary(lm(price_dec_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[10,9] <- summary(lm(price_dec_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[10,10] <- nobs(lm(price_dec_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[10,7] <- summary(lm(price_dec_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[10,8] <- summary(lm(price_dec_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1455,18 +1455,18 @@ prim_soy[10,2] <- sd(dta$price_dec_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[10,1] <- mean(dta$price_dec_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[10,2] <- sd(dta$price_dec_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[10,4] <- summary(lm(price_dec_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[10,5] <- summary(lm(price_dec_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[10,6] <- summary(lm(price_dec_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[10,4] <- summary(lm(price_dec_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[10,5] <- summary(lm(price_dec_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[10,6] <- summary(lm(price_dec_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[10,4] <- summary(lm(price_dec_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[10,5] <- summary(lm(price_dec_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[10,6] <- summary(lm(price_dec_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[10,7] <- summary(lm(price_dec_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[10,8] <- summary(lm(price_dec_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[10,9] <- summary(lm(price_dec_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[10,10] <- nobs(lm(price_dec_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[10,7] <- summary(lm(price_dec_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[10,8] <- summary(lm(price_dec_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[10,9] <- summary(lm(price_dec_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[10,10] <- nobs(lm(price_dec_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[10,7] <- summary(lm(price_dec_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[10,8] <- summary(lm(price_dec_soy~treatment,data=dta))$coefficients[3,2]
@@ -1482,18 +1482,18 @@ prim_maize[11,2] <- sd(dta$joint_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[11,1] <- mean(dta$joint_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[11,2] <- sd(dta$joint_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[11,4] <- summary(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[11,5] <- summary(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[11,6] <- summary(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[11,4] <- summary(lm(joint_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[11,5] <- summary(lm(joint_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[11,6] <- summary(lm(joint_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[11,4] <- summary(lm(joint_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[11,5] <- summary(lm(joint_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[11,6] <- summary(lm(joint_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[11,7] <- summary(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[11,8] <- summary(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[11,9] <- summary(lm(joint_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[11,10] <- nobs(lm(joint_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[11,7] <- summary(lm(joint_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[11,8] <- summary(lm(joint_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[11,9] <- summary(lm(joint_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[11,10] <- nobs(lm(joint_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[11,7] <- summary(lm(joint_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[11,8] <- summary(lm(joint_maize~treatment,data=dta))$coefficients[3,2]
@@ -1507,18 +1507,18 @@ prim_gnuts[11,2] <- sd(dta$joint_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[11,1] <- mean(dta$joint_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[11,2] <- sd(dta$joint_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[11,4] <- summary(lm(joint_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[11,5] <- summary(lm(joint_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[11,6] <- summary(lm(joint_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[11,4] <- summary(lm(joint_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[11,5] <- summary(lm(joint_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[11,6] <- summary(lm(joint_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[11,4] <- summary(lm(joint_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[11,5] <- summary(lm(joint_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[11,6] <- summary(lm(joint_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[11,7] <- summary(lm(joint_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[11,8] <- summary(lm(joint_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[11,9] <- summary(lm(joint_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[11,10] <- nobs(lm(joint_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[11,7] <- summary(lm(joint_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[11,8] <- summary(lm(joint_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[11,9] <- summary(lm(joint_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[11,10] <- nobs(lm(joint_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[11,7] <- summary(lm(joint_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[11,8] <- summary(lm(joint_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1532,18 +1532,18 @@ prim_soy[11,2] <- sd(dta$joint_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[11,1] <- mean(dta$joint_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[11,2] <- sd(dta$joint_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[11,4] <- summary(lm(joint_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[11,5] <- summary(lm(joint_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[11,6] <- summary(lm(joint_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[11,4] <- summary(lm(joint_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[11,5] <- summary(lm(joint_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[11,6] <- summary(lm(joint_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[11,4] <- summary(lm(joint_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[11,5] <- summary(lm(joint_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[11,6] <- summary(lm(joint_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[11,7] <- summary(lm(joint_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[11,8] <- summary(lm(joint_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[11,9] <- summary(lm(joint_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[11,10] <- nobs(lm(joint_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[11,7] <- summary(lm(joint_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[11,8] <- summary(lm(joint_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[11,9] <- summary(lm(joint_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[11,10] <- nobs(lm(joint_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[11,7] <- summary(lm(joint_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[11,8] <- summary(lm(joint_soy~treatment,data=dta))$coefficients[3,2]
@@ -1558,18 +1558,18 @@ prim_maize[12,2] <- sd(dta$market_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[12,1] <- mean(dta$market_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[12,2] <- sd(dta$market_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[12,4] <- summary(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[12,5] <- summary(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[12,6] <- summary(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[12,4] <- summary(lm(market_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[12,5] <- summary(lm(market_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[12,6] <- summary(lm(market_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[12,4] <- summary(lm(market_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[12,5] <- summary(lm(market_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[12,6] <- summary(lm(market_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[12,7] <- summary(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[12,8] <- summary(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[12,9] <- summary(lm(market_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[12,10] <- nobs(lm(market_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[12,7] <- summary(lm(market_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[12,8] <- summary(lm(market_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[12,9] <- summary(lm(market_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[12,10] <- nobs(lm(market_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[12,7] <- summary(lm(market_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[12,8] <- summary(lm(market_maize~treatment,data=dta))$coefficients[3,2]
@@ -1583,18 +1583,18 @@ prim_gnuts[12,2] <- sd(dta$market_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[12,1] <- mean(dta$market_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[12,2] <- sd(dta$market_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[12,4] <- summary(lm(market_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[12,5] <- summary(lm(market_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[12,6] <- summary(lm(market_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[12,4] <- summary(lm(market_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[12,5] <- summary(lm(market_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[12,6] <- summary(lm(market_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[12,4] <- summary(lm(market_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[12,5] <- summary(lm(market_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[12,6] <- summary(lm(market_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[12,7] <- summary(lm(market_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[12,8] <- summary(lm(market_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[12,9] <- summary(lm(market_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[12,10] <- nobs(lm(market_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[12,7] <- summary(lm(market_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[12,8] <- summary(lm(market_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[12,9] <- summary(lm(market_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[12,10] <- nobs(lm(market_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[12,7] <- summary(lm(market_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[12,8] <- summary(lm(market_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1608,18 +1608,18 @@ prim_soy[12,2] <- sd(dta$market_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[12,1] <- mean(dta$market_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[12,2] <- sd(dta$market_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[12,4] <- summary(lm(market_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[12,5] <- summary(lm(market_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[12,6] <- summary(lm(market_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[12,4] <- summary(lm(market_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[12,5] <- summary(lm(market_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[12,6] <- summary(lm(market_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[12,4] <- summary(lm(market_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[12,5] <- summary(lm(market_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[12,6] <- summary(lm(market_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[12,7] <- summary(lm(market_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[12,8] <- summary(lm(market_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[12,9] <- summary(lm(market_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[12,10] <- nobs(lm(market_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[12,7] <- summary(lm(market_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[12,8] <- summary(lm(market_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[12,9] <- summary(lm(market_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[12,10] <- nobs(lm(market_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[12,7] <- summary(lm(market_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[12,8] <- summary(lm(market_soy~treatment,data=dta))$coefficients[3,2]
@@ -1634,18 +1634,18 @@ prim_maize[13,2] <- sd(dta$edu_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[13,1] <- mean(dta$edu_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[13,2] <- sd(dta$edu_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[13,4] <- summary(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[13,5] <- summary(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[13,6] <- summary(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[13,4] <- summary(lm(edu_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[13,5] <- summary(lm(edu_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[13,6] <- summary(lm(edu_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[13,4] <- summary(lm(edu_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[13,5] <- summary(lm(edu_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[13,6] <- summary(lm(edu_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[13,7] <- summary(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[13,8] <- summary(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[13,9] <- summary(lm(edu_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[13,10] <- nobs(lm(edu_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[13,7] <- summary(lm(edu_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[13,8] <- summary(lm(edu_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[13,9] <- summary(lm(edu_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[13,10] <- nobs(lm(edu_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[13,7] <- summary(lm(edu_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[13,8] <- summary(lm(edu_maize~treatment,data=dta))$coefficients[3,2]
@@ -1659,18 +1659,18 @@ prim_gnuts[13,2] <- sd(dta$edu_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[13,1] <- mean(dta$edu_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[13,2] <- sd(dta$edu_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[13,4] <- summary(lm(edu_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[13,5] <- summary(lm(edu_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[13,6] <- summary(lm(edu_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[13,4] <- summary(lm(edu_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[13,5] <- summary(lm(edu_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[13,6] <- summary(lm(edu_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[13,4] <- summary(lm(edu_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[13,5] <- summary(lm(edu_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[13,6] <- summary(lm(edu_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[13,7] <- summary(lm(edu_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[13,8] <- summary(lm(edu_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[13,9] <- summary(lm(edu_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[13,10] <- nobs(lm(edu_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[13,7] <- summary(lm(edu_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[13,8] <- summary(lm(edu_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[13,9] <- summary(lm(edu_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[13,10] <- nobs(lm(edu_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[13,7] <- summary(lm(edu_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[13,8] <- summary(lm(edu_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1684,18 +1684,18 @@ prim_soy[13,2] <- sd(dta$edu_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[13,1] <- mean(dta$edu_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[13,2] <- sd(dta$edu_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[13,4] <- summary(lm(edu_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[13,5] <- summary(lm(edu_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[13,6] <- summary(lm(edu_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[13,4] <- summary(lm(edu_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[13,5] <- summary(lm(edu_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[13,6] <- summary(lm(edu_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[13,4] <- summary(lm(edu_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[13,5] <- summary(lm(edu_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[13,6] <- summary(lm(edu_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[13,7] <- summary(lm(edu_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[13,8] <- summary(lm(edu_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[13,9] <- summary(lm(edu_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[13,10] <- nobs(lm(edu_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[13,7] <- summary(lm(edu_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[13,8] <- summary(lm(edu_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[13,9] <- summary(lm(edu_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[13,10] <- nobs(lm(edu_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[13,7] <- summary(lm(edu_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[13,8] <- summary(lm(edu_soy~treatment,data=dta))$coefficients[3,2]
@@ -1710,18 +1710,18 @@ prim_maize[14,2] <- sd(dta$health_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[14,1] <- mean(dta$health_maize[dta$treatment=="C"], na.rm=T)
 prim_maize_tc[14,2] <- sd(dta$health_maize[dta$treatment=="C"], na.rm=T)
 
-prim_maize[14,4] <- summary(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+fe_vil,data=dta))$coefficients[2,1]
-prim_maize[14,5] <- summary(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_maize[14,6] <- summary(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_maize[14,4] <- summary(lm(health_maize~treatment  +fe_vil,data=dta))$coefficients[2,1]
+prim_maize[14,5] <- summary(lm(health_maize~treatment  + fe_vil,data=dta))$coefficients[2,2]
+prim_maize[14,6] <- summary(lm(health_maize~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_maize_tc[14,4] <- summary(lm(health_maize~treatment,data=dta))$coefficients[2,1]
 prim_maize_tc[14,5] <- summary(lm(health_maize~treatment,data=dta))$coefficients[2,2]
 prim_maize_tc[14,6] <- summary(lm(health_maize~treatment,data=dta))$coefficients[2,4]
 
-prim_maize[14,7] <- summary(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_maize[14,8] <- summary(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_maize[14,9] <- summary(lm(health_maize~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_maize[14,10] <- nobs(lm(health_maize~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_maize[14,7] <- summary(lm(health_maize~treatment  + fe_vil,data=dta))$coefficients[3,1]
+prim_maize[14,8] <- summary(lm(health_maize~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_maize[14,9] <- summary(lm(health_maize~treatment + fe_vil,data=dta))$coefficients[3,4]
+prim_maize[14,10] <- nobs(lm(health_maize~treatment  + fe_vil,data=dta))
 
 prim_maize_tc[14,7] <- summary(lm(health_maize~treatment,data=dta))$coefficients[3,1]
 prim_maize_tc[14,8] <- summary(lm(health_maize~treatment,data=dta))$coefficients[3,2]
@@ -1735,18 +1735,18 @@ prim_gnuts[14,2] <- sd(dta$health_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[14,1] <- mean(dta$health_gnuts[dta$treatment=="C"], na.rm=T)
 prim_gnuts_tc[14,2] <- sd(dta$health_gnuts[dta$treatment=="C"], na.rm=T)
 
-prim_gnuts[14,4] <- summary(lm(health_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_gnuts[14,5] <- summary(lm(health_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_gnuts[14,6] <- summary(lm(health_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_gnuts[14,4] <- summary(lm(health_gnuts~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_gnuts[14,5] <- summary(lm(health_gnuts~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_gnuts[14,6] <- summary(lm(health_gnuts~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_gnuts_tc[14,4] <- summary(lm(health_gnuts~treatment,data=dta))$coefficients[2,1]
 prim_gnuts_tc[14,5] <- summary(lm(health_gnuts~treatment,data=dta))$coefficients[2,2]
 prim_gnuts_tc[14,6] <- summary(lm(health_gnuts~treatment,data=dta))$coefficients[2,4]
 
-prim_gnuts[14,7] <- summary(lm(health_gnuts~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_gnuts[14,8] <- summary(lm(health_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_gnuts[14,9] <- summary(lm(health_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_gnuts[14,10] <- nobs(lm(health_gnuts~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_gnuts[14,7] <- summary(lm(health_gnuts~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_gnuts[14,8] <- summary(lm(health_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_gnuts[14,9] <- summary(lm(health_gnuts~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_gnuts[14,10] <- nobs(lm(health_gnuts~treatment  + fe_vil,data=dta))
 
 prim_gnuts_tc[14,7] <- summary(lm(health_gnuts~treatment,data=dta))$coefficients[3,1]
 prim_gnuts_tc[14,8] <- summary(lm(health_gnuts~treatment,data=dta))$coefficients[3,2]
@@ -1760,18 +1760,18 @@ prim_soy[14,2] <- sd(dta$health_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[14,1] <- mean(dta$health_soy[dta$treatment=="C"], na.rm=T)
 prim_soy_tc[14,2] <- sd(dta$health_soy[dta$treatment=="C"], na.rm=T)
 
-prim_soy[14,4] <- summary(lm(health_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,1]
-prim_soy[14,5] <- summary(lm(health_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,2]
-prim_soy[14,6] <- summary(lm(health_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[2,4]
+prim_soy[14,4] <- summary(lm(health_soy~treatment + fe_vil,data=dta))$coefficients[2,1]
+prim_soy[14,5] <- summary(lm(health_soy~treatment + fe_vil,data=dta))$coefficients[2,2]
+prim_soy[14,6] <- summary(lm(health_soy~treatment  + fe_vil,data=dta))$coefficients[2,4]
 
 prim_soy_tc[14,4] <- summary(lm(health_soy~treatment,data=dta))$coefficients[2,1]
 prim_soy_tc[14,5] <- summary(lm(health_soy~treatment,data=dta))$coefficients[2,2]
 prim_soy_tc[14,6] <- summary(lm(health_soy~treatment,data=dta))$coefficients[2,4]
 
-prim_soy[14,7] <- summary(lm(health_soy~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,1]
-prim_soy[14,8] <- summary(lm(health_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,2]
-prim_soy[14,9] <- summary(lm(health_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))$coefficients[3,4]
-prim_soy[14,10] <- nobs(lm(health_soy~treatment  + hhsize+ironroof+tot_acre+hired_labour+ fe_vil,data=dta))
+prim_soy[14,7] <- summary(lm(health_soy~treatment + fe_vil,data=dta))$coefficients[3,1]
+prim_soy[14,8] <- summary(lm(health_soy~treatment  + fe_vil,data=dta))$coefficients[3,2]
+prim_soy[14,9] <- summary(lm(health_soy~treatment  + fe_vil,data=dta))$coefficients[3,4]
+prim_soy[14,10] <- nobs(lm(health_soy~treatment  + fe_vil,data=dta))
 
 prim_soy_tc[14,7] <- summary(lm(health_soy~treatment,data=dta))$coefficients[3,1]
 prim_soy_tc[14,8] <- summary(lm(health_soy~treatment,data=dta))$coefficients[3,2]
@@ -1821,7 +1821,7 @@ block_m_each <- matrix(NA,114,3)
 block_m_each[,1] <- 13
 block_m_each[,2] <- 9 
 block_m_each[,3] <- 9 
-f_s <- c("ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"ihs(sold_maize_kg)~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_maize~treatment + price_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil" , "ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_gnuts~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b +fe_vil","sold_gnuts_pct~treatment + sold_gnuts_pct_b +fe_vil","price_gnuts~treatment + price_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil", "ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_soy~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_soy_kg)~treatment + sold_soy_kg_b +fe_vil","sold_soy_pct~treatment + sold_soy_pct_b +fe_vil","price_soy~treatment + price_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil")
+f_s <- c("ihs(stock_maize_abs)~treatment + fe_vil","stock_maize_pct~treatment + fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"ihs(sold_maize_kg)~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_maize~treatment + price_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil" , "ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_gnuts~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b +fe_vil","sold_gnuts_pct~treatment + sold_gnuts_pct_b +fe_vil","price_gnuts~treatment + price_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil", "ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_soy~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_soy_kg)~treatment + sold_soy_kg_b +fe_vil","sold_soy_pct~treatment + sold_soy_pct_b +fe_vil","price_soy~treatment + price_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil")
 
 # Helper functions
 do_reg_T1 <- function(data_set, f_s){

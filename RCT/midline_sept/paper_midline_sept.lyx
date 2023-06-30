@@ -148,11 +148,11 @@ preliminary and incomplete version – please do not cite
 
 \begin_layout Abstract
 It is often observed that smallholder farmers sell most of their marketable
- surplus immediately after the harvest when seasonal price movement reach
+ surplus immediately after the harvest when seasonal price movements reach
  their lowest point, instead of waiting just a few more months until prices
  recover.
  Most explanations for this apparently sub-optimal behavior focus on economic
- or infrastructural issue, such as credit constraints or lack of storage
+ or infrastructural issues, such as credit constraints or lack of storage
  facilities.
  In this study, we zoom in on two potential behavioral explanations.
  One explanation is situated at the household expenditure side, and assumes
@@ -3102,7 +3102,7 @@ We also consider behaviour related to purchases of the commodities as key
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3919,11 +3919,9 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below); mean stock is current situation in 50kg bags, ATE is ihs transformed.
- Sold or bought is since intervention untill midline survey, quantity bought/sol
-d is total quantity between intervention and midline survey, prices are
- average prices of transactions that occured between intervention and midline
- survey  **, * and + denote significance at the 1, 5 and 10 percent levels.
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
 \end_layout
 
 \end_inset
@@ -4019,7 +4017,7 @@ As for maize, we also asked if farmers that sold groundnuts also already
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4836,9 +4834,8 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
- All models include village fixed effects and controls for baseline characterist
-ics that show imbalance at the 5 percent level or less in Table XXX.
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
 
@@ -4877,7 +4874,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5702,9 +5699,8 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
- All models include village fixed effects and controls for baseline characterist
-ics that show imbalance at the 5 percent level or less in Table XXX.
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
 
@@ -5884,7 +5880,7 @@ e.
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6516,13 +6512,9 @@ scriptsize
 
 \begin_layout Plain Layout
 
-Note: Sold jointly is one if all transactions between intervention and midline
- were taken by co-heads together, sold to market is 1 if all sales between
- intervention and midline were to the market.
- First column reports control group means (and standard deviations below);
-  **, * and + denote significance at the 1, 5 and 10 percent levels.
- All models include village fixed effects and controls for baseline characterist
-ics that show imbalance at the 5 percent level or less in Table XXX.
+Note: First column reports control group means (and standard deviations
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
 
@@ -6570,7 +6562,7 @@ We further find that decisions related to the sales of groundnuts are made
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7191,9 +7183,8 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
- All models include village fixed effects and controls for baseline characterist
-ics that show imbalance at the 5 percent level or less in Table XXX.
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
 
@@ -7239,7 +7230,7 @@ There is significantly less joint decision making when it comes to sales
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7860,10 +7851,9 @@ scriptsize
 \begin_layout Plain Layout
 
 Note: First column reports control group means (and standard deviations
- below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
- All models include village fixed effects and controls for baseline characterist
-ics that show imbalance at the 5 percent level or less in Table XXX.
- 
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+  
 \end_layout
 
 \end_inset

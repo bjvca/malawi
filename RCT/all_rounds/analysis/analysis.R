@@ -54,12 +54,44 @@ pool$T2_R3[pool$survey==3 & pool$treatment=="T2"] <- 1
 pool$stock_maize_abs <- as.numeric(as.character(pool$stock_maize_abs))
 pool$sold_maize_kg <- as.numeric(as.character(pool$sold_maize_kg))
 pool$price_maize <- as.numeric(as.character(pool$price_maize))
+pool$price_maize[pool$price_maize<100] <- NA
 pool$bought_maize_amt <- as.numeric(as.character(pool$bought_maize_amt))
 pool$bought_maize_price <- as.numeric(as.character(pool$bought_maize_price))
+pool$bought_maize_price[pool$bought_maize_price<100] <- NA
 pool$price_exp_maize <- as.numeric(as.character(pool$price_exp_maize))
 
 pool$bought_maize <- as.numeric(pool$bought_maize==TRUE)
 pool$sold_maize <- as.numeric(pool$sold_maize==TRUE)
+
+pool$revenue <- pool$sold_maize_kg*pool$price_maize 
+pool$revenue[is.na(pool$revenue)] <- 0
+pool$expenses <- pool$bought_maize_amt*pool$bought_maize_price
+pool$expenses[is.na(pool$expenses)] <- 0
+pool$balance <- pool$revenue - pool$expenses 
+
+##prices (at transaction level)
+feols(as.formula( "price_maize~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "bought_maize_price~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+feols(as.formula( "revenue~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "expenses~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "balance~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+### how different is this from first taking averages at farmer level?
+pool$treatment_num <- as.numeric(as.factor(pool$treatment))
+pool$fe_vil_num <- as.numeric(as.factor(pool$fe_vil))
+hh_level <- aggregate(pool[c("price_maize","bought_maize_price","revenue","expenses","balance","treatment_num","fe_vil_num")], list(pool$farmer_id), FUN=mean, na.rm=T)
+summary(lm(price_maize~as.factor(treatment_num),data=hh_level)) ## no village fixed effects
+feols(as.formula( "price_maize~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "bought_maize_price~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+## now revenue and expenses (at transaction level)
+feols(as.formula( "revenue~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "expenses~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "balance~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+
+
 #iterate over outcomes
 outcomes <- c("stock_maize_abs","sold_maize","sold_maize_kg","price_maize","bought_maize", "bought_maize_amt", "bought_maize_price","price_exp_maize")
 #matrix to store results
@@ -141,12 +173,43 @@ pool$T2_R3[pool$survey==3 & pool$treatment=="T2"] <- 1
 pool$stock_soy_abs <- as.numeric(as.character(pool$stock_soy_abs))
 pool$sold_soy_kg <- as.numeric(as.character(pool$sold_soy_kg))
 pool$price_soy <- as.numeric(as.character(pool$price_soy))
+pool$price_soy[pool$price_soy<200] <- NA
 pool$bought_soy_amt <- as.numeric(as.character(pool$bought_soy_amt))
 pool$bought_soy_price <- as.numeric(as.character(pool$bought_soy_price))
+pool$bought_soy_price[pool$bought_soy_price<200] <- NA
 pool$price_exp_soy <- as.numeric(as.character(pool$price_exp_soy))
 
 pool$bought_soy <- as.numeric(pool$bought_soy==TRUE)
 pool$sold_soy <- as.numeric(pool$sold_soy==TRUE)
+
+pool$revenue <- pool$sold_soy_kg*pool$price_soy 
+pool$revenue[is.na(pool$revenue)] <- 0
+pool$expenses <- pool$bought_soy_amt*pool$bought_soy_price
+pool$expenses[is.na(pool$expenses)] <- 0
+pool$balance <- pool$revenue - pool$expenses 
+
+##prices (at transaction level)
+feols(as.formula( "price_soy~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "bought_soy_price~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+feols(as.formula( "revenue~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "expenses~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "balance~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+### how different is this from first taking averages at farmer level?
+pool$treatment_num <- as.numeric(as.factor(pool$treatment))
+pool$fe_vil_num <- as.numeric(as.factor(pool$fe_vil))
+hh_level <- aggregate(pool[c("price_soy","bought_soy_price","revenue","expenses","balance","treatment_num","fe_vil_num")], list(pool$farmer_id), FUN=mean, na.rm=T)
+summary(lm(price_soy~as.factor(treatment_num),data=hh_level)) ## no village fixed effects
+feols(as.formula( "price_soy~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "bought_soy_price~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+## now revenue and expenses (at transaction level)
+feols(as.formula( "revenue~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "expenses~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "balance~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+
 #iterate over outcomes
 outcomes <- c("stock_soy_abs","sold_soy","sold_soy_kg","price_soy","bought_soy", "bought_soy_amt", "bought_soy_price","price_exp_soy")
 #matrix to store results
@@ -232,6 +295,36 @@ pool$price_exp_gnuts <- as.numeric(as.character(pool$price_exp_gnuts))
 
 pool$bought_gnuts <- as.numeric(pool$bought_gnuts==TRUE)
 pool$sold_gnuts <- as.numeric(pool$sold_gnuts==TRUE)
+
+
+pool$revenue <- pool$sold_gnuts_kg*pool$price_gnuts 
+pool$revenue[is.na(pool$revenue)] <- 0
+pool$expenses <- pool$bought_gnuts_amt*pool$bought_gnuts_price
+pool$expenses[is.na(pool$expenses)] <- 0
+pool$balance <- pool$revenue - pool$expenses 
+
+##prices (at transaction level)
+feols(as.formula( "price_gnuts~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "bought_gnuts_price~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+feols(as.formula( "revenue~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "expenses~treatment|fe_vil"),cluster = ~farmer_id, pool)
+feols(as.formula( "balance~treatment|fe_vil"),cluster = ~farmer_id, pool)
+
+### how different is this from first taking averages at farmer level?
+pool$treatment_num <- as.numeric(as.factor(pool$treatment))
+pool$fe_vil_num <- as.numeric(as.factor(pool$fe_vil))
+hh_level <- aggregate(pool[c("price_gnuts","bought_gnuts_price","revenue","expenses","balance","treatment_num","fe_vil_num")], list(pool$farmer_id), FUN=mean, na.rm=T)
+feols(as.formula( "price_gnuts~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "bought_gnuts_price~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+## now revenue and expenses (at transaction level)
+feols(as.formula( "revenue~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "expenses~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+feols(as.formula( "balance~as.factor(treatment_num)|fe_vil_num"), hh_level) ## with village fixed effects
+
+
+
 #iterate over outcomes
 outcomes <- c("stock_gnuts_abs","sold_gnuts","sold_gnuts_kg","price_gnuts","bought_gnuts", "bought_gnuts_amt", "bought_gnuts_price","price_exp_gnuts")
 #matrix to store results

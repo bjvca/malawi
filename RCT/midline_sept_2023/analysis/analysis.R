@@ -1478,13 +1478,13 @@ prim_gnuts_tc <-round(prim_gnuts_tc,digits=3)
 prim_soy_tc <-round(prim_soy_tc,digits=3)
 
 
-saveRDS(prim_maize, paste(path,"midline_sept/results/prim_maize.RData", sep="/"))
-saveRDS(prim_gnuts, paste(path,"midline_sept/results/prim_gnuts.RData", sep="/"))
-saveRDS(prim_soy, paste(path,"midline_sept/results/prim_soy.RData", sep="/"))
+saveRDS(prim_maize, paste(path,"midline_sept_2023/results/prim_maize.RData", sep="/"))
+saveRDS(prim_gnuts, paste(path,"midline_sept_2023/results/prim_gnuts.RData", sep="/"))
+saveRDS(prim_soy, paste(path,"midline_sept_2023/results/prim_soy.RData", sep="/"))
 
-saveRDS(prim_maize_tc, paste(path,"midline_sept/results/prim_maize_tc.RData", sep="/"))
-saveRDS(prim_gnuts_tc, paste(path,"midline_sept/results/prim_gnuts_tc.RData", sep="/"))
-saveRDS(prim_soy_tc, paste(path,"midline_sept/results/prim_soy_tc.RData", sep="/"))
+saveRDS(prim_maize_tc, paste(path,"midline_sept_2023/results/prim_maize_tc.RData", sep="/"))
+saveRDS(prim_gnuts_tc, paste(path,"midline_sept_2023/results/prim_gnuts_tc.RData", sep="/"))
+saveRDS(prim_soy_tc, paste(path,"midline_sept_2023/results/prim_soy_tc.RData", sep="/"))
 
 ###write data for merging with midline 2
 #write.csv(dta,paste(path,"all_rounds/data/midline_sept.csv", sep="/"))

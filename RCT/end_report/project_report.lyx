@@ -1,0 +1,7202 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\emergencystretch 3em
+\end_preamble
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, urlcolor=blue, citecolor=blue, pdfstartview={FitH}, hyperfootnotes=false, unicode=true"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Joachim De Weerdt
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Lilongwe, Malawi} , Brian Dillon
+\backslash
+thanks{Dyson School, Cornell University, Ithaca, United States} , Emmanuel
+ Hami
+\backslash
+footnotemark[1] , 
+\backslash
+
+\backslash
+ Bjorn Van Campenhout
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Leuven, Belgium}, Leocardia Nabwire
+\backslash
+thanks{Development Strategy and Governance Division, International Food
+ Policy Research Institute, Kampala, Uganda}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Expecting Too Much, Foreseeing Too Little? Behavioral Explanations for
+ the Sell Low-Buy High Puzzle in Smallholder Market Participation
+\end_layout
+
+\begin_layout Standard
+\align center
+project report
+\end_layout
+
+\begin_layout Standard
+\align center
+preliminary and incomplete version – please do not cite
+\end_layout
+
+\begin_layout Abstract
+It is often observed that smallholder farmers sell most of their marketable
+ surplus immediately after the harvest when seasonal price movements reach
+ their lowest point, instead of waiting just a few more months until prices
+ recover.
+ Most explanations for this apparently sub-optimal behavior focus on economic
+ or infrastructural issues, such as credit constraints or lack of storage
+ facilities.
+ In this study, we zoom in on two potential behavioral explanations.
+ One explanation is situated at the household expenditure side, and assumes
+ that households face challenges in accurately predicting future expenditures,
+ systematically underestimating future needs.
+ A second potential explanation is situated at the household income side,
+ where motivated reasoning leads farmers to sell too early and/or at low
+ prices.
+ To test these hypotheses, we conduct two planning based interventions among
+ a sample of Malawian smallholder farmers: (1) a detailed expense budget
+ and (2) a sales plan with explicit commitment to timing of sales, quantities
+ and prices.
+ The treatments were administered at harvest time in May 2022 and repeated
+ at harvest time in April 2023.
+\end_layout
+
+\begin_layout Standard
+Keywords: smallholder marketing, cash crops, budget neglect, commitment
+ failure.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+It is often observed that smallholder farmers sell most of their marketable
+ surplus or cash crops immediately after the harvest to itinerant traders
+ at the farm gate.
+ Selling immediately after the harvest is not optimal: Thin and poorly integrate
+d markets often mean that immediately post harvest prices in excess supply
+ areas drop to their seasonal low.
+ In addition to high supply immediately post harvest, agricultural commodities
+ are often not yet in optimal condition.
+ For instance, in the case of maize, fresh grains are generally not dry
+ enough, requiring further processing and leading to increased risk of rot
+ by the trader.
+ Often, this is used by buyers as an additional reason to further drive
+ down the price paid to the farmer.
+\end_layout
+
+\begin_layout Standard
+Over time, prices gradually recover, reaching their seasonal high just before
+ the next harvest.
+ At this time, many farmers have run out of stock, and need to turn to the
+ market to buy back maize at prices that are often a multiple of what they
+ received, a phenomenon known as the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low-buy high
+\begin_inset Quotes erd
+\end_inset
+
+ puzzle 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/j.1477-9552.2010.00274.x,10.1093/qje/qjy034"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "van2015inter"
+literal "false"
+
+\end_inset
+
+ further show how farmers loose out twice, as transaction costs are passed
+ on by traders to farmers when traders buy commodities from farmers in rural
+ areas immediately after the harvest and store in warehouses in towns, but
+ farmers also incur transaction costs when they have to go to town to buy
+ back maize from the same traders.
+ 
+\end_layout
+
+\begin_layout Standard
+The literature suggest many possible reasons why farmers choose the sell
+ early at low prices instead of waiting a few months until prices recover.
+ Farmers may simply not have the space and infrastructure available to safely
+ store large quantities of maize for extended periods of time 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OMOTILEWA2018176"
+literal "false"
+
+\end_inset
+
+.
+ They may be in urgent need of cash after the lean season 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/qje/qjy034,Dillon02102021"
+literal "false"
+
+\end_inset
+
+.
+ Price movements may be unpredictable and farmers may be too risk averse
+ to engage in intertemporal arbitrage 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+.
+ It may be that traders only visit villages immediately after harvest, and
+ farmers do not have the means to transport maize to markets themselves.
+ Furthermore, issues related to social taxation may mean farmers convert
+ maize to cash, which is easier to hide from friends and family 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/restud/rdv033"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Most of the explanations above focus on neoclassical constraints to farmers'
+ exploiting inter-temporal arbitrage.
+ In this study, we zoom in on two potential behavioral explanations why
+ farmers seemingly sell at sub-optimal timing.
+ One potential explanation is situated at the household expenditure side,
+ and assumes that households face challenges in accurately predicting future
+ expenditures.
+ In particular, farmers are constrained in their cognitive capacity leading
+ them to underestimate future needs.
+ Such 
+\begin_inset Quotes eld
+\end_inset
+
+budget neglect
+\begin_inset Quotes erd
+\end_inset
+
+ leads farmer to sell more early on and save too little for later in the
+ year 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+.
+ A second potential explanation is situated at the household income side.
+ Here the assumption is that 
+\begin_inset Quotes eld
+\end_inset
+
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
+
+ behavior is caused by the fact that impatient farmers are prone to motivated
+ reasoning, with farmers spending more than they should because they use
+ reasoning to justify discretionary expenditures.
+\end_layout
+
+\begin_layout Standard
+The above hypotheses are tested with a field experiment among smallholder
+ farmers in Malawi.
+ These farmers produce (a mix of) maize, groundnuts and soybean from which
+ at least part is destined for the market.
+ Our experiment takes the form of a simple parallel design with two treatment
+ arms and one control group.
+ A first treatment arm tests for the role of budget neglect in explaining
+ the sell low-buy high paradox: Farmers that are randomly assigned to the
+ first treatment arm are taken through a detailed budgeting exercise immediately
+ after harvest.
+ In particular, in this intervention a trained enumerator sits with the
+ household head and fills in a budget matrix of projected expenses for each
+ month in the coming year.
+ The second treatment arm uses commitment as a way to test the motivated
+ reason hypothesis.
+ Farmers that are randomly allocated to the second treatment arm receive
+ a sales planning intervention.
+ Here, a trained enumerator sits with the household head and plans how much
+ they plan to sell of which crop in which month during in the coming year.
+ For each planned sale, the household head is also asked to commit to a
+ minimum price.
+ Impact of the interventions on a variety of outcomes is compared against
+ outcomes of a control group that did not get any intervention.
+ 
+\end_layout
+
+\begin_layout Standard
+We also decided to repeat the treatment after one season allowing us to
+ test if repeated treatments are more effective than one off treatments.
+ As such, in the second year we have seven parallel treatment arms.
+ Farmers that were in the control group in both years, farmers that received
+ a treatment in the first year (either the first or the second) but not
+ in the second year, farmers that received the treatment only in the second
+ year (either the first or the second), and those the received the treatment
+ in both years (the same treatment was administered in both years; we do
+ not switch treatments).
+ 
+\end_layout
+
+\begin_layout Standard
+This document presents the main findings of the project.
+ It is based on the 
+\begin_inset CommandInset href
+LatexCommand href
+name "pre-analysis plan"
+target "https://github.com/bjvca/malawi/blob/master/RCT/malawi_RCT.pdf"
+literal "false"
+
+\end_inset
+
+ and the 
+\begin_inset CommandInset href
+LatexCommand href
+name "mock report"
+target "https://github.com/bjvca/malawi/blob/master/RCT/mock_report/mock_report.pdf"
+literal "false"
+
+\end_inset
+
+, and compares outcomes of households in the different treatment groups
+ at particular points in time during the course of the two agricultural
+ seasons during which this project was implemented.
+ It combines findings of different interim reports that were created after
+ each survey round (September 2022, January 2023, April 2023, September
+ 2023, January 2024 and April 2024).
+\end_layout
+
+\begin_layout Standard
+In the next section, we provide a selective overview of related studies.
+ We then outline the main research hypothesis we test, and describe the
+ interventions used to do so.
+ We then turn to the data with subsections that present descriptives for
+ the study population and balance between treatment and control groups.
+ We then turn to the endline data and report attrition and impact on primary
+ and secondary outcomes.
+ A last section concludes.
+\end_layout
+
+\begin_layout Section
+Related Research
+\end_layout
+
+\begin_layout Standard
+Why do farmers 
+\begin_inset Quotes eld
+\end_inset
+
+sell low and buy high
+\begin_inset Quotes erd
+\end_inset
+
+? One of the most obvious neo-classical explanations is related to credit
+ constraints.
+ Using observational data, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "https://doi.org/10.1111/j.1477-9552.2010.00274.x"
+literal "false"
+
+\end_inset
+
+ find that to meet consumption needs later in the year, many farmers end
+ up buying back grain from the market a few months after selling it, effectively
+ using the maize market as a high-interest lender of last resort.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1093/qje/qjy034"
+literal "false"
+
+\end_inset
+
+ show that in a field experiment in Kenya, credit market imperfections limit
+ farmers’ abilities to move grain intertemporally.
+ Providing timely access to credit allows farmers to buy at lower prices
+ and sell at higher prices, increasing farm revenues and generating a return
+ on investment of almost 30%.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Dillon02102021"
+literal "false"
+
+\end_inset
+
+ uses the fact that in Malawi, primary school began 3 months earlier in
+ 2010 than in 2009, and notes that this prompted households with children
+ to sell maize when prices are particularly low.
+ To identify the impacts of liquidity constraints during the lean season,
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.20180607"
+literal "false"
+
+\end_inset
+
+ offered subsidized loans in randomly selected villages in rural Zambia.
+ They find that relaxing liquidity constraints not only changed marketing
+ behavior, but also increased labor allocated to agricultural production
+ (as opposed to day laboring as a coping strategy) and conclude that liquidity
+ constraints thus contribute to inequality in rural economies in the longer
+ run as well.
+ While credit constraints thus seems to be an important reason why farmers
+ sell immediately post harvest at low prices, we feel this is not the entire
+ story.
+ If farmers need urgent cash, it would make more sense to only sell part
+ of the harvest to cover most urgent expenses, or to sell commodities that
+ are less affected by price seasonality, like small livestock.
+ However, farmers often seem to sell all of their marketable surplus immediately
+ post harvest in a single transaction.
+\end_layout
+
+\begin_layout Standard
+Risk averse farmers may also fail to delay sales if there is considerable
+ uncertainty about the price in the future.
+ A recent article by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+ argues that the 
+\begin_inset Quotes eld
+\end_inset
+
+sell low buy high
+\begin_inset Quotes erd
+\end_inset
+
+ puzzle is not a puzzle at all.
+ Using 20 years of data from 787 markets in 26 countries, they argue that
+ in many cases the price increase seems insufficient and too uncertain for
+ farmers to engage in inter-temporal arbitrage 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ags:aaea20:304448"
+literal "false"
+
+\end_inset
+
+.
+ However, their analysis use prices obtained from market centers, which
+ may be a poor proxy for the farm-gate prices that farmers face: markets
+ in main towns are generally much better integrated in the wider national,
+ regional and even global economy, and so will be less prone to the extreme
+ spikes and slumps that smallholder farmers in more remote areas experience.
+\end_layout
+
+\begin_layout Standard
+A third reason may be that farmers have nowhere to safely store crops, so
+ they just sell.
+ This could be a lack of space, as the average smallholder often harvest
+ 20-40 bags of 50kg of maize.
+ But there are also risks related to pests and diseases affecting the stored
+ maize.
+ If lack of safe storage is the main reason why farmers do not engage in
+ intertemporal arbitrage, then providing storage technology should delay
+ sales.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "OMOTILEWA2018176"
+literal "false"
+
+\end_inset
+
+ indeed find that households that received PICS bags, a type of hermetically
+ sealed bag of two layers of polyethylene liners and a third layer made
+ from woven polypropylene, stored maize for a longer period and reported
+ a substantial drop in storage losses.
+ Again, we feel storage is indeed part of the reason, but it does not explain
+ everything.
+ For instance, this explanation is at odds with the fact that the Agricultural
+ Commodities Exchange (ACE) in Malawi consistently fails to fill its warehouses.
+\end_layout
+
+\begin_layout Standard
+Another reason may be related to social taxation.
+ If a farmer has a lot of maize stored in his house, this is visible for
+ family and neighbors, and it will be very hard to deny if neighbors come
+ and ask for help during the hunger season.
+ Therefore, farmers may choose to convert their harvest to money, which
+ is easier to hide, even though this comes at a cost.
+ Social taxation has been found important in a similar marketing decisions
+ where household seem to forgo the benefits of buying in bulk 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/wber/lhz020"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Related research on the more behavioral and psychological front that helps
+ explain the puzzle is ongoing.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+ study recurrent seasonal hunger in Zambia, which could be a direct consequence
+ of suboptimal marketing behaviour, and conjecture that individuals tend
+ to overestimate their available resources and consequently under-save.
+ They test this hypothesis through an intervention that induces individuals
+ to think through their budget set and formulate a spending plan.
+ They find that treated households enter the hunger season with one additional
+ month of savings, leading to a smoother spending profile over the year.
+\end_layout
+
+\begin_layout Standard
+Our research is also related to an established literature on lack of self-contro
+l in cases where individuals have to make complex intertemporal decisions
+ involving uncertain future events.
+ If farmers are impatient and unsophisticated about this, nudges may be
+ effective in reducing discretionary spending and increase investment in
+ the future 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/aer.101.6.2350"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.103.4.1138"
+literal "false"
+
+\end_inset
+
+ find that devices which simply help individuals harness the power of mental
+ accounting helps them to save more.
+ 
+\end_layout
+
+\begin_layout Section
+Behavioural constraints to intertemporal arbitrage: Hypotheses and Interventions
+\end_layout
+
+\begin_layout Standard
+Broadly speaking, the behavioral foundation of the sell low-buy high behaviour
+ is akin to the planning fallacy, where individuals typically underestimate
+ the time it takes to complete a task, despite extensive experience with
+ failure to complete the same task in a similar time frame in the past 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "buehler2010planning"
+literal "false"
+
+\end_inset
+
+.
+ The planning fallacy has different origins, including cognitive limitations
+ and motivational factors 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "buehler2010planning"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The first potential behavioral explanation for the sell low buy high puzzle
+ that we will study is situated at the household expenditure side, and assumes
+ that households face challenges in accurately predicting future expenditures.
+ In particular, we assume that farmers systematically underestimate how
+ much money they need in the future and as a result sell too much immediately
+ after the harvest.
+ For example, immediately after harvest, they may budget for fresh seed
+ from the agro-input dealer and for fertilizer, but they may forget that
+ they also need pesticides and insecticides.
+ In general, predicting the full set of expenditures under all possible
+ states of the world is likely to be beyond the cognitive capacity of human
+ beings 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+.
+ Furthermore, farmers may underestimate the likelihood of, or simply forget
+ to account for, unexpected events such illness within the family.
+ 
+\end_layout
+
+\begin_layout Standard
+To test the first hypothesis, we designed an intervention that takes the
+ farmer through a detailed budgeting exercise.
+ In particular, the main decision maker within the household was provided
+ with a template that needed to be filled as detailed as possible.
+ Pre-populated expenditure categories included education expenditures (school
+ fees, uniforms,...), agricultural investment expenditures (seed, fertilizer,...),
+ investment expenditure in non-agricultural businesses (retail shop inventories,...
+), health and medical expenses (medicines, preventive doctor visit,...), household
+ recurrent expenditure (food, utilities,...), household equipment and maintenance
+ (furniture, renovation,...), and other expenditures (loan repayment, ceremonies,...).
+ For each of these expenditure item lines, farmers were then asked to provide
+ an estimate of the total cost for each month between May 2022 and April
+ 2023 and write it down in the appropriate cell of the expenditure matrix.
+ Farmers were also encouraged to provide their top 3 unexpected expenditures
+ likely to occur between May 2022 and April 2023 (and between May 2023 and
+ April 2024 for the second season).
+ We then calculate totals per month and also a grand total for the entire
+ year.
+ This first intervention will be referred to as treatment one (T1).
+\end_layout
+
+\begin_layout Standard
+The second hypothesis is at the income side of the farm household and touches
+ on the motivational origins of the planning fallacy.
+ Immediately post harvest, farmers form expectations about how much they
+ will get in the future from selling crops.
+ If farmers are impatient and prone to motivated reasoning, the expected
+ future revenue (and particularly the more stochastic elements such as the
+ price) is a function of how much they will want to spend now.
+ This may lead farmers to expect higher prices in the future to justify
+ current discretionary spending.
+ 
+\end_layout
+
+\begin_layout Standard
+To test if the sell low-buy high puzzle is predominantly cause by motivated
+ reasoning, we develop, together with the farmer, a detailed sales plan
+ for the year which is assumed to function as a commitment device closely
+ modeled in the idea of mental accounting.
+ Again using a template, we start by asking the farmer about the expected
+ marketable surplus for maize, groundnuts and soybean.
+ We then ask for each month between May 2022 and April 2023 (and between
+ May 2023 and April 2024 for the second season) how much the farmer is planning
+ to sell for each of the crops, and what the minimum price and point in
+ time should be before they sell.
+ Also for the sales plan, we calculate totals per month and also a grand
+ total for the entire year.
+ This second intervention will be referred to as treatment two (T2).
+\end_layout
+
+\begin_layout Standard
+Note that there is a dynamic aspect to this, which we will use to differentiate
+ motivated reasoning from alternative mechanisms.
+ Over time, as the farmer draws down stocks, the motivated reasoning effect
+ will become stronger: the farmer has to expect ever larger windfall gains
+ in the future to justify additional discretionary spending.
+ Our treatment reduces the motivated reasoning effect by confronting farmers
+ with their expected prices at a time when the motivated reasoning effect
+ was still weak.
+ We thus expect that as the season progresses into the lean season, price
+ expectations of untreated farmers will go up.
+\end_layout
+
+\begin_layout Standard
+We did not merely ask farmers to create these expenditure and sales plans,
+ but also encouraged them to hang them in a central place in the house or
+ store them in a convenient location.
+ Furthermore, to increase the likelihood that farmers use the plan, we also
+ refer to the plan during midline surveys, and reiterate the importance
+ of following these plans.
+\end_layout
+
+\begin_layout Section
+Experimental design and specifications
+\end_layout
+
+\begin_layout Standard
+The experiment was initially designed as a parallel design with one common
+ control group and two treatment arms (or a factorial design where the interacti
+on cell is left empty).
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+ find that, in a similar budget neglect experiment, treated farmers enter
+ the hungry season with 20 percent more maize (valued by current prices
+ at 405 zambian kwacha instead of 335 zambian kwacha in the control group).
+ If we assume that standard deviation is about 592 (1.6 times the mean of
+ treatment and control means – the 1.6 is derived from maize production data
+ in Uganda), we get a sample size of 1,123 in each treatment arm.
+ For one control group and two treatment arms we will thus need about 3,400
+ farmers.
+ For logistical reasons, we will applied cluster sampling in villages and
+ randomly selected 31 farmers per village.
+ As power is optimal when one allocates approximately 42% of the sample
+ to control, and then equally (29% each) to each treatment arm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muralidharan2019factorial"
+literal "false"
+
+\end_inset
+
+, chose 13 households for the control and 9 households in each of the two
+ treatment groups per village.
+ This means we included about 110 villages in our study.
+\end_layout
+
+\begin_layout Standard
+Right before the April 2023 survey round (which was supposed to be the last
+ round), it was decided to allow for follow-up in the subsequent season.
+ As such, we re-treated some of the farmers.
+ However, instead of simply repeating the treatment according to the original
+ randomization, we also decided to include variation in treatment over time
+ (year 1 versus year 2).
+ In particular, we wanted to differentiate between farmers that were never
+ treated ((CC)); farmers that were always treated ((T1T1) and (T2T2)); farmers
+ that were treated only in the first year ((T1C) and (T2C)); and farmers
+ that started receiving treatment in the second year ((CT1) and (CT2)).
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In addition to measuring a dosage effect (once versus twice treated) the
+ decision was also influence by the fact that we found significant imbalance
+ on a range of baseline characteristics for the second treatment.
+ We hope that concerns related to this imbalance can be addressed by comparing
+ differences between C and T2 in year one to differences in year 2 (comparing
+ CC and CT2).
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+In control households in year 1, we assign 28 percent to the first treatment
+ (CT1) and 28 percent to the second treatment (CT2), while the remaining
+ 44 percent remains in the control group in the second year (CC).
+\end_layout
+
+\begin_layout Itemize
+Among households that received the first treatment in year 1, we assign
+ 50 percent to the first treatment again in year 2 (T1T1).
+ The remaining 50 percent did not receive the treatment again (T1C)
+\end_layout
+
+\begin_layout Itemize
+Among households that received the second treatment in year 1, we assign
+ 50 percent to the second treatment again in year 2 (T2T2).
+ The remaining 50 percent did not receive the treatment again (T2C).
+\end_layout
+
+\begin_layout Standard
+The initial model we pre-registered is the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y=\mu_{v}+\beta_{1}T_{1}+\beta_{2}T_{2}+\theta Y_{b}+\varepsilon\label{eq:ancova}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\emph on
+Y
+\emph default
+ is the outcome of interest post treatment, and 
+\begin_inset Formula $Y_{b}$
+\end_inset
+
+ is the outcome of interest measured at baseline.
+ 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+is an indicator dummy for the first treatment and 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ for the second.
+ We will focus on the within-village dimension of the data and so include
+ village fixed effects 
+\begin_inset Formula $\mu_{v}$
+\end_inset
+
+.
+ The parameters of interest are 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+as the average treatment effect for 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ as the average treatment effect for 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the second season and in light of the new treatment cells, we expand
+ equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ancova"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y=\mu_{v}+\beta_{1}T_{1}C+\beta_{2}T_{2}C+\beta_{3}CT_{1}+\beta_{4}CT_{2}+\beta_{4}CT_{2}+\beta_{5}T_{1}T_{1}+\beta_{6}T_{2}T_{2}+\theta Y_{b}+\varepsilon\label{eq:ancova-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the reference category is the group that did not receive treatments
+ in the first nor second season.
+\end_layout
+
+\begin_layout Section
+Data collection
+\end_layout
+
+\begin_layout Standard
+Baseline data collection took place around the end of May and beginning
+ of June 2022.
+ Using tablet computers and Open Data Kit software, 31 enumerators interviewed
+ 3534 farmers that were sampled from four districts in the Central and Northern
+ Regions of Malawi (Kasungu, Ntchisi, Dowa and Mchinji).
+ The study areas are characterized by rain-fed agriculture with a single
+ agricultural season.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Add some more info on agro-ecology here (eg soil type, geology,...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We selected farmers that produce maize, groundnuts and/or soybean.
+ Maize is planted early in the year and harvest usually starts in April
+ and proceeds through May.
+ Soybean is harvested somewhat earlier, groundnuts somewhat later.
+ Soybean and groundnuts can be sold pretty much immediately after the harvest;
+ maize needs to be dried first.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Add some more/more precise info on production here.
+ Like exact planting dates for soy and gnuts, what processing is needed,
+ etc.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get a nationally representative sampling frame of the smallholder farmer
+ population in Malawi, we rely on the list created by the Ministry of Agricultur
+e for their Agricultural Input Programme (AIP).
+ The AIP targets smallholder farmers in the villages who mostly registered
+ with the village chiefs.
+ We used a two-stage sampling procedure where we first sampled villages
+ with the likelihood of a village being selected proportionate to the number
+ of people that live in this village (such that larger villages are more
+ likely to end up in the sample).
+ We then randomly sampled 31 households in each of the sampled villages.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:map-of-study"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives a sense of coverage and dispersion of the interviewed households.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/bjvca/data/projects/malawi/RCT/papers/price_expectations/results/map.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+map of study area with sampled villages
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:map-of-study"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The focus of the study is on market participation and so the targeted study
+ population consists of farmers that are likely to engage with markets.
+ As such, we included qualifier questions in our survey, where we asked
+ farmers if they were planning to sell maize, soybean or groundnuts during
+ the 2022 and 2023 season.
+ Restricting our study population to a particular sub-population has implication
+s for the interpretation of the results.
+ For instance, we will see later that we find relatively high proportions
+ of households reporting to sell to the market.
+ As such, the particular nature of the study population, semi-subsistence
+ smallholder farmers, needs to be kept in mind when interpreting results,
+ as they may be different from for example predominantly self-sufficient
+ farmers.
+\end_layout
+
+\begin_layout Standard
+Baseline data was collected in April 2022.
+ At that time, treatments were also administered (using the simple design
+ consisting of a control group and two treatment groups).
+ A first round of follow-up data collection happened in September 2022,
+ collecting detailed data on transactions between the start of the project
+ and the time of the survey.
+ A second follow-up survey was organized in January 2023 and asked about
+ transactions between September 2022 and January 2023.
+ These two follow-up surveys were phone based.
+ 
+\end_layout
+
+\begin_layout Standard
+Farmers were visited in person in April 2023 to inquire about transactions
+ between January 2023 and April 2023.
+ At that time, the treatment was repeated according to the new design consisting
+ of seven treatment groups.
+ Similar to the first season, we organized phone based surveys in September
+ 2023 and January 2024.
+ The last survey in April 2024 was also phone based as we did not repeat
+ the treatment but only collect data on transactions between January 2024
+ and April 2024.
+\end_layout
+
+\begin_layout Subsection
+Farmer characteristics
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents a number of summary statistics of sampled households and their
+ heads at baseline.
+ Eighty percent of households are headed by men.
+ The average household is headed by a 43 year old with six years of schooling
+ (primary level).
+ The typical household has five members, living in houses with three rooms.
+ Four in every 10 households have their main houses roofed with corrugated
+ iron sheets (as opposed to thatch roofing).
+ We find that the average distance of the households to the nearest all
+ weather road and nearest market is 1.3 and 4.1 km respectively.
+\end_layout
+
+\begin_layout Standard
+We also collected information on access to transport facilities or assets
+ (either through ownership or hire).
+ Results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household-characteristics"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show that households mostly have access to a bicycle (72% of respondents)
+ and ox-carts (60% of the respondents).
+ Ox-carts are particularly important for transportation of harvest from
+ the farms to the market.
+ We also collected information on livestock asset ownership, as these are
+ often a form of savings that can be used as a buffer stock to smooth consumptio
+n.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Household characteristics
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household-characteristics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	Mean	&	Std dev	&	N	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Household head}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household head is male (1=yes)	&	0.791	&	0.407	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Age of household head (years)	&	43.426	&	14.831	&	3,414	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Schooling of household head (years)	&	6.329	&	3.489	&	3,427	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is grass thatch (1=yes)	&	0.609	&	0.488	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Household characteristics}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is corrugated iron  (1=yes)	&	0.39	&	0.488	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household size (number of people)	&	5.043	&	1.992	&	3,530	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of rooms in the house	&	3.202	&	1.178	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance (kms) to nearest all weather road	&	1.308	&	3.433	&	3,346	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance (kms) to nearest market	&	4.107	&	4.78	&	3,243	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Transport}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to bicycle	 (1=yes) &	0.719	&	0.45	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to saloon car (1=yes)	&	0.218	&	0.413	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to pick-up or lorry access (1=yes)	&	0.221	&	0.415	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household has access to ox-cart (1=yes)	&	0.595	&	0.491	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Household owns a motorbike (1=yes)	&	0.11	&	0.313	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Livestock assets}} 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of bulls/oxen/steers owned by household	&	0.123	&	0.653	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of cows or heifers owned by household	&	0.128	&	0.799	&	3,532	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of calves owned by household	&	0.053	&	0.495	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of pigs owned by household	&	0.708	&	1.943	&	3,534	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of goats owned by household	&	1.241	&	2.569	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of sheep owned by household	&	0.055	&	0.519	&	3,531	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of chicken owned by household	&	4.743	&	6.509	&	3,532	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of ducks owned by household	&	0.282	&	1.501	&	3,533	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Other household characteristics that affect market participation included
+ access to credit, access to storage, membership of cooperatives, and whether
+ farmers had already promised part of the 2022 harvest to a buyer.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Household characteristics that affect market participation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that among the surveyed farmers, about 40 percent indicate that they
+ have access to credit, and that less than a quarter had outstanding debts
+ averaging MK 57,000 to repay after harvest.
+ With regards to access to storage, 60 percent of the households reported
+ that they have access, of which half indicated that the storage was crop
+ specific.
+ We also find that, while farmer participation in cooperatives is limited,
+ a moderate share (40%) have access to storage space provided by the cooperative.
+ Lastly, we look at the proportion of farmers that commit a part of their
+ crop to buyers before harvest—a scenario that may often lead farmers to
+ sell at unfavorable prices, or reduces the amount of harvest that farmers
+ can sell after harvest.
+ We find that only a negligible share of farmers (8%) had already promised
+ (part of) the 2022 crop to buyers prior to harvest.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Household characteristics that affect market participation
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Household characteristics that affect market participation"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	Mean	&	Std dev	&	N	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Credit}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have access to credit?  (1=yes) & 0.383 & 0.486 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have debts (cash or in-kind) to be repaid after harvest?   (1=yes)
+ & 0.236 & 0.425 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Estimated amount (Malawian Kwacha) of debt & 56,878 & 92,788 & 819 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Storage}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Do you have access to storage?  (1=yes) & 0.599 & 0.49 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Is the storage crop specific?  (1=yes) & 0.482 & 0.5 & 2,114 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Cooperation}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Are you member of a Cooperatives?  (1=yes) & 0.134 & 0.34 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Does this cooperative provide access to storage?  (1=yes) & 0.388 & 0.488
+ & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Is this Cooperative certified by the Agriculture Commodity Exchange?  (1=yes)
+ & 0.727 & 0.446 & 472 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{
+\backslash
+textit{Advance selling}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Did you already promise part of the 2022 harvest to a buyer?  (1=yes) &
+ 0.077 & 0.267 & 3,532 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Baseline balance
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<code,  echo=FALSE, warning = FALSE, message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+### you first need to run the R code in RCT/mock_report/analysis
+\end_layout
+
+\begin_layout Plain Layout
+
+### these are: 1) baseline_balance.R
+\end_layout
+
+\begin_layout Plain Layout
+
+### 2) analysis.R
+\end_layout
+
+\begin_layout Plain Layout
+
+### note that analysis.R also inlcludes a simulation analysis that can take
+ a lot of time to run, so only run if needed!
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- strsplit(path, "/end_report")[[1]]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+balance <- readRDS(paste(path,"midline_sept/results/balace.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We follow our pre-analysis plan and test baseline balance by constructing
+ a standard balance table consisting of the following variables household/demogr
+aphic characteristics (inspired by balance tables in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.101.6.2350,10.1093/qje/qju002"
+literal "false"
+
+\end_inset
+
+): household head is female (1=yes), household size (number of people),
+ age of household head (years), number of years of education of the household
+ head (years), material of roof (corrugated iron = 1), number of rooms in
+ the house, cultivated acreage (maize+groundnuts+soybean), whether the household
+ hired in agricultural labour (1=yes), distance to nearest all weather road
+ (km), and distance to nearest market (km).
+ We report t-tests comparing treatment and control (unadjusted for multiple
+ hypothesis testing) as well as a joint F-test from a regression of the
+ treatment assignment on all variables in the balance table.
+ Results are summarized in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Balance_main"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Balance table
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Balance_main"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & nobs 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-5}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Household head is female & 
+\backslash
+Sexpr{balance[1,1]} & 
+\backslash
+Sexpr{balance[1,4]}$^{
+\backslash
+Sexpr{ifelse(balance[1,6]<.01,"**",ifelse(balance[1,6]<.05,"*",ifelse(balance[1,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[1,7]}$^{
+\backslash
+Sexpr{ifelse(balance[1,9]<.01,"**",ifelse(balance[1,9]<.05,"*",ifelse(balance[1,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[1,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[1,2]}) & (
+\backslash
+Sexpr{balance[1,5]})  & (
+\backslash
+Sexpr{balance[1,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Household size (number of people) & 
+\backslash
+Sexpr{balance[2,1]} & 
+\backslash
+Sexpr{balance[2,4]}$^{
+\backslash
+Sexpr{ifelse(balance[2,6]<.01,"**",ifelse(balance[2,6]<.05,"*",ifelse(balance[2,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[2,7]}$^{
+\backslash
+Sexpr{ifelse(balance[2,9]<.01,"**",ifelse(balance[2,9]<.05,"*",ifelse(balance[2,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[2,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[2,2]}) & (
+\backslash
+Sexpr{balance[2,5]})  & (
+\backslash
+Sexpr{balance[2,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Age of household head (year) & 
+\backslash
+Sexpr{balance[3,1]} & 
+\backslash
+Sexpr{balance[3,4]}$^{
+\backslash
+Sexpr{ifelse(balance[3,6]<.01,"**",ifelse(balance[3,6]<.05,"*",ifelse(balance[3,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[3,7]}$^{
+\backslash
+Sexpr{ifelse(balance[3,9]<.01,"**",ifelse(balance[3,9]<.05,"*",ifelse(balance[3,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[3,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[3,2]}) & (
+\backslash
+Sexpr{balance[3,5]})  & (
+\backslash
+Sexpr{balance[3,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Years of education of household head & 
+\backslash
+Sexpr{balance[4,1]} & 
+\backslash
+Sexpr{balance[4,4]}$^{
+\backslash
+Sexpr{ifelse(balance[4,6]<.01,"**",ifelse(balance[4,6]<.05,"*",ifelse(balance[4,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[4,7]}$^{
+\backslash
+Sexpr{ifelse(balance[4,9]<.01,"**",ifelse(balance[4,9]<.05,"*",ifelse(balance[4,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[4,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[4,2]}) & (
+\backslash
+Sexpr{balance[4,5]})  & (
+\backslash
+Sexpr{balance[4,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Roof of main building is corrugated iron & 
+\backslash
+Sexpr{balance[5,1]} & 
+\backslash
+Sexpr{balance[5,4]}$^{
+\backslash
+Sexpr{ifelse(balance[5,6]<.01,"**",ifelse(balance[5,6]<.05,"*",ifelse(balance[5,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[5,7]}$^{
+\backslash
+Sexpr{ifelse(balance[5,9]<.01,"**",ifelse(balance[5,9]<.05,"*",ifelse(balance[5,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[5,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[5,2]}) & (
+\backslash
+Sexpr{balance[5,5]})  & (
+\backslash
+Sexpr{balance[5,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Number of rooms in house & 
+\backslash
+Sexpr{balance[6,1]} & 
+\backslash
+Sexpr{balance[6,4]}$^{
+\backslash
+Sexpr{ifelse(balance[6,6]<.01,"**",ifelse(balance[6,6]<.05,"*",ifelse(balance[6,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[6,7]}$^{
+\backslash
+Sexpr{ifelse(balance[6,9]<.01,"**",ifelse(balance[6,9]<.05,"*",ifelse(balance[6,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[6,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[6,2]}) & (
+\backslash
+Sexpr{balance[6,5]})  & (
+\backslash
+Sexpr{balance[6,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Area of cultivated land (acres) & 
+\backslash
+Sexpr{balance[7,1]} & 
+\backslash
+Sexpr{balance[7,4]}$^{
+\backslash
+Sexpr{ifelse(balance[7,6]<.01,"**",ifelse(balance[7,6]<.05,"*",ifelse(balance[7,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[7,7]}$^{
+\backslash
+Sexpr{ifelse(balance[7,9]<.01,"**",ifelse(balance[7,9]<.05,"*",ifelse(balance[7,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[7,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[7,2]}) & (
+\backslash
+Sexpr{balance[7,5]})  & (
+\backslash
+Sexpr{balance[7,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Hired labour for maize, soybean or gnut productions? & 
+\backslash
+Sexpr{balance[8,1]} & 
+\backslash
+Sexpr{balance[8,4]}$^{
+\backslash
+Sexpr{ifelse(balance[8,6]<.01,"**",ifelse(balance[8,6]<.05,"*",ifelse(balance[8,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[8,7]}$^{
+\backslash
+Sexpr{ifelse(balance[8,9]<.01,"**",ifelse(balance[8,9]<.05,"*",ifelse(balance[8,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[8,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[8,2]}) & (
+\backslash
+Sexpr{balance[8,5]})  & (
+\backslash
+Sexpr{balance[8,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance to nearest all weather road (km) & 
+\backslash
+Sexpr{balance[9,1]} & 
+\backslash
+Sexpr{balance[9,4]}$^{
+\backslash
+Sexpr{ifelse(balance[9,6]<.01,"**",ifelse(balance[9,6]<.05,"*",ifelse(balance[9,6]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[9,7]}$^{
+\backslash
+Sexpr{ifelse(balance[9,9]<.01,"**",ifelse(balance[9,9]<.05,"*",ifelse(balance[9,9]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[9,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[9,2]}) & (
+\backslash
+Sexpr{balance[9,5]})  & (
+\backslash
+Sexpr{balance[9,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Distance to nearest market (km) & 
+\backslash
+Sexpr{balance[10,1]} & 
+\backslash
+Sexpr{balance[10,4]}$^{
+\backslash
+Sexpr{ifelse(balance[10,6]<.01,"**",ifelse(balance[10,6]<.05,"*",ifelse(balance[10
+,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[10,7]}$^{
+\backslash
+Sexpr{ifelse(balance[10,9]<.01,"**",ifelse(balance[10,9]<.05,"*",ifelse(balance[10
+,9]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{balance[10,10]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ &
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+Sexpr{balance[10,2]}) & (
+\backslash
+Sexpr{balance[10,5]})  & (
+\backslash
+Sexpr{balance[10,8]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+F-test C/T1 (p-value) & 
+\backslash
+Sexpr{balance[11,1]} & (
+\backslash
+Sexpr{balance[11,2]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+F-test C/T2  (p-value) & 
+\backslash
+Sexpr{balance[12,1]} & (
+\backslash
+Sexpr{balance[12,2]})& 
+\backslash
+ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Likelihood Ratio Test (p-value) & 
+\backslash
+Sexpr{balance[13,1]} & (
+\backslash
+Sexpr{balance[13,2]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: First column reports control group means (and standard deviations
+ below);  **, * and + denote significance at the 1, 5 and 10 percent levels.
+ F-test test for joint significance in a regression with treatment status
+ on the left hand side (T1/C or T2/C).
+ Likelihood ratio test is derived from a multinomial model where the left
+ hand side has three levels (T1,T2,C).
+ All models include village fixed effects.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We find significant imbalance on some of the variables, particularly for
+ the sales plan treatment (T2).
+ While joint F-test for separate treatment control comparisons are not significa
+nt, we do find signs of imbalance when we use a likelihood ratio test derived
+ from a multinomial model where the left hand side has three levels (T1,
+ T2, Ctrl).
+\end_layout
+
+\begin_layout Section
+Impact
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<code_2,  echo=FALSE, warning = FALSE, message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- strsplit(path, "/end_report")[[1]]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_1  <- readRDS(paste(path,"midline_sept/results/prim_maize.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_2  <- readRDS(paste(path,"midline_dec/results/prim_maize.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_3  <- readRDS(paste(path,"endline2023/results/prim_maize.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_s2_1  <- readRDS(paste(path,"midline_sept_2023/results/prim_maize.RDat
+a", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_s2_2  <- readRDS(paste(path,"midline_jan_2024/results/prim_maize.RData
+", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_maize_s2_3  <- readRDS(paste(path,"endline_2024/results/prim_maize.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_1  <- readRDS(paste(path,"midline_sept/results/prim_soy.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_2  <- readRDS(paste(path,"midline_dec/results/prim_soy.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_3  <- readRDS(paste(path,"endline2023/results/prim_soy.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_s2_1  <- readRDS(paste(path,"midline_sept_2023/results/prim_soy.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_s2_2  <- readRDS(paste(path,"midline_jan_2024/results/prim_soy.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_soy_s2_3  <- readRDS(paste(path,"endline_2024/results/prim_soy.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_1  <- readRDS(paste(path,"midline_sept/results/prim_gnuts.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_2  <- readRDS(paste(path,"midline_dec/results/prim_gnuts.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_3  <- readRDS(paste(path,"endline2023/results/prim_gnuts.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_s2_1  <- readRDS(paste(path,"midline_sept_2023/results/prim_gnuts.RDat
+a", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_s2_2  <- readRDS(paste(path,"midline_jan_2024/results/prim_gnuts.RData
+", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+prim_gnuts_s2_3  <- readRDS(paste(path,"endline_2024/results/prim_gnuts.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Primary outcomes
+\end_layout
+
+\begin_layout Standard
+We start with the most parsimonious specification by reporting simple difference
+s between treatment and control farmers obtained from an Ordinary Least
+ Squares regression that regresses the outcome of interest on two dummy
+ variables indicating if the household received T1 or T2 respectively.
+ Results are in the top panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In the bottom panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we show results after including additional controls.
+ These include the outcome at baseline, and village fixed effects.
+ We start with Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which reports results for maize; Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary_soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are similar tables but for groundnuts and soybean, respectively.
+\end_layout
+
+\begin_layout Standard
+A first primary outcome we consider is stocks held of the commodity at the
+ time of the midline survey.
+ In particular, we asked farmers how many bags of the commodity (standard
+ 50 kg bags) they have in store.
+ As the distributions are skewed to the right and includes zeros as well,
+ we use an inverse hyperbolic sine transformation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/obes.12325"
+literal "false"
+
+\end_inset
+
+.
+ For both treatments, we expect a positive effect.
+ Similar to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+, we expect that when making households aware about future needs, they will
+ reduce discretionary expenditures and save more for the future.
+ Furthermore, if farmers expect prices to go up over time and this is reflected
+ in their sales plan, farmers that are encouraged to commit to this sales
+ plan will also be more likely to have saved more early on in the season.
+\end_layout
+
+\begin_layout Standard
+We see that the average control farmer has about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_1[1,1]}
+\end_layout
+
+\end_inset
+
+ bags of maize in store at the time of the survey.
+ We do not find that this is significantly different in the sample of farmers
+ that were taken through a budgeting exercise.
+ However, we do find that stocks are significantly higher among farmers
+ that made a sales plan.
+ Farmers that were asked to commit to a sales plan have stocks that are
+ about 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_1[1,7]*100}
+\end_layout
+
+\end_inset
+
+ percent higher than maize stocks of farmers in the control group.
+ If we add village fixed effects, the effect becomes even stronger.
+\end_layout
+
+\begin_layout Standard
+A second primary outcome tests if the household sold any of the crop in
+ the interval between the intervention and this midline survey.
+ For similar reasons why we expect stocks to be higher, we expect that the
+ treatment would reduce the likelihood of selling early on in the season.
+ We find that 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_1[3,1]*100}
+\end_layout
+
+\end_inset
+
+ percent of households in the control group indicated that they made at
+ least one sales transaction between in the first few months after the start
+ of the project.
+ We do not find that this proportion differs for farmers in T1 nor for farmers
+ in T2.
+\end_layout
+
+\begin_layout Standard
+The third primary outcome is related to the second and is the quantity that
+ was sold during the period between the intervention and the first midline
+ survey.
+ While we may not find that the treatment reduced the fact that farmers
+ sell early, we may still find that farmers sell less of the crop immediately
+ after harvest.
+ We find that farmers in the control group sell on average 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_1[4,1]}
+\end_layout
+
+\end_inset
+
+ bags of maize.
+ Contrary to our expectations, we see that these quantities are higher in
+ both treatment groups, but the differences are not significant.
+\end_layout
+
+\begin_layout Standard
+For farmers that did engage in sales, we can calculate the average price
+ that farmers received for their crop.
+ The aim of the intervention is to increase the price at which farmers sell.
+ The farmers that sold in the control group got on average 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Sexpr{prim_maize_1[6,1]}
+\end_layout
+
+\end_inset
+
+ MKW per kilogram of maize.
+ We again do not find that prices differ significantly in any of the treatment
+ groups.
+ However, we expect that effects of the intervention will only become apparent
+ at endline and prices over the entire period are taken into consideration.
+ This is because the price effect is expected to come from more people selling
+ later in the season.
+\end_layout
+
+\begin_layout Standard
+We also consider behaviour related to purchases of the commodities as key
+ primary outcomes.
+ We expect that, especially later in the season, due to our interventions
+ households will have to buy back less.
+ We see that in the control group, about 30 percent also made at least one
+ purchase of maize before September midline data collection and this proportion
+ is similar in both treatment groups.
+ As for sales, we also look at quantities bought and prices at which the
+ commodities were bought.
+ We find that for maize, the average control group household bought less
+ than one bag on average and paid slightly more than the sales price.
+ We do not see any effects from the interventions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Primary outcomes maize
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Primary-maize"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccccccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & mean ctrl & T1 & T2 & mean ctrl & T1 & T2  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_maize_1[1,1]} & 
+\backslash
+Sexpr{prim_maize_1[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[1,6]<.01,"**",ifelse(prim_maize_1[1,6]<.05,"*",ifelse(pr
+im_maize_1[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_1[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[1,9]<.01,"**",ifelse(prim_maize_1[1,9]<.05,"*",ifelse(pr
+im_maize_1[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_2[1,1]} & 
+\backslash
+Sexpr{prim_maize_2[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[1,6]<.01,"**",ifelse(prim_maize_2[1,6]<.05,"*",ifelse(pr
+im_maize_2[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_2[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[1,9]<.01,"**",ifelse(prim_maize_2[1,9]<.05,"*",ifelse(pr
+im_maize_2[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_3[1,1]} & 
+\backslash
+Sexpr{prim_maize_3[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[1,6]<.01,"**",ifelse(prim_maize_3[1,6]<.05,"*",ifelse(pr
+im_maize_3[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_3[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[1,9]<.01,"**",ifelse(prim_maize_3[1,9]<.05,"*",ifelse(pr
+im_maize_3[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_1[1,2]}) & (
+\backslash
+Sexpr{prim_maize_1[1,5]})  & (
+\backslash
+Sexpr{prim_maize_1[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_2[1,2]}) & (
+\backslash
+Sexpr{prim_maize_2[1,5]})  & (
+\backslash
+Sexpr{prim_maize_2[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_3[1,2]}) & (
+\backslash
+Sexpr{prim_maize_3[1,5]})  & (
+\backslash
+Sexpr{prim_maize_3[1,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold (yes/no) & 
+\backslash
+Sexpr{prim_maize_1[3,1]} & 
+\backslash
+Sexpr{prim_maize_1[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[3,6]<.01,"**",ifelse(prim_maize_1[3,6]<.05,"*",ifelse(pr
+im_maize_1[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_1[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[3,9]<.01,"**",ifelse(prim_maize_1[3,9]<.05,"*",ifelse(pr
+im_maize_1[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_2[3,1]} & 
+\backslash
+Sexpr{prim_maize_2[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[3,6]<.01,"**",ifelse(prim_maize_2[3,6]<.05,"*",ifelse(pr
+im_maize_2[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_2[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[3,9]<.01,"**",ifelse(prim_maize_2[3,9]<.05,"*",ifelse(pr
+im_maize_2[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_3[3,1]} & 
+\backslash
+Sexpr{prim_maize_3[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[3,6]<.01,"**",ifelse(prim_maize_3[3,6]<.05,"*",ifelse(pr
+im_maize_3[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_3[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[3,9]<.01,"**",ifelse(prim_maize_3[3,9]<.05,"*",ifelse(pr
+im_maize_3[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_1[3,2]}) & (
+\backslash
+Sexpr{prim_maize_1[3,5]})  & (
+\backslash
+Sexpr{prim_maize_1[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_2[3,2]}) & (
+\backslash
+Sexpr{prim_maize_2[3,5]})  & (
+\backslash
+Sexpr{prim_maize_2[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_3[3,2]}) & (
+\backslash
+Sexpr{prim_maize_3[3,5]})  & (
+\backslash
+Sexpr{prim_maize_3[3,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_maize_1[4,1]} & 
+\backslash
+Sexpr{prim_maize_1[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[4,6]<.01,"**",ifelse(prim_maize_1[4,6]<.05,"*",ifelse(pr
+im_maize_1[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_1[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[4,9]<.01,"**",ifelse(prim_maize_1[4,9]<.05,"*",ifelse(pr
+im_maize_1[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_2[4,1]} & 
+\backslash
+Sexpr{prim_maize_2[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[4,6]<.01,"**",ifelse(prim_maize_2[4,6]<.05,"*",ifelse(pr
+im_maize_2[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_2[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[4,9]<.01,"**",ifelse(prim_maize_2[4,9]<.05,"*",ifelse(pr
+im_maize_2[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_3[4,1]} & 
+\backslash
+Sexpr{prim_maize_3[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[4,6]<.01,"**",ifelse(prim_maize_3[4,6]<.05,"*",ifelse(pr
+im_maize_3[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_3[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[4,9]<.01,"**",ifelse(prim_maize_3[4,9]<.05,"*",ifelse(pr
+im_maize_3[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_1[4,2]}) & (
+\backslash
+Sexpr{prim_maize_1[4,5]})  & (
+\backslash
+Sexpr{prim_maize_1[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_2[4,2]}) & (
+\backslash
+Sexpr{prim_maize_2[4,5]})  & (
+\backslash
+Sexpr{prim_maize_2[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_3[4,2]}) & (
+\backslash
+Sexpr{prim_maize_3[4,5]})  & (
+\backslash
+Sexpr{prim_maize_3[4,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought (yes/no) & 
+\backslash
+Sexpr{prim_maize_1[7,1]} & 
+\backslash
+Sexpr{prim_maize_1[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[7,6]<.01,"**",ifelse(prim_maize_1[7,6]<.05,"*",ifelse(pr
+im_maize_1[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_1[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[7,9]<.01,"**",ifelse(prim_maize_1[7,9]<.05,"*",ifelse(pr
+im_maize_1[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_2[7,1]} & 
+\backslash
+Sexpr{prim_maize_2[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[7,6]<.01,"**",ifelse(prim_maize_2[7,6]<.05,"*",ifelse(pr
+im_maize_2[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_2[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[7,9]<.01,"**",ifelse(prim_maize_2[7,9]<.05,"*",ifelse(pr
+im_maize_2[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_3[7,1]} & 
+\backslash
+Sexpr{prim_maize_3[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[7,6]<.01,"**",ifelse(prim_maize_3[7,6]<.05,"*",ifelse(pr
+im_maize_3[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_3[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[7,9]<.01,"**",ifelse(prim_maize_3[7,9]<.05,"*",ifelse(pr
+im_maize_3[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_1[7,2]}) & (
+\backslash
+Sexpr{prim_maize_1[7,5]})  & (
+\backslash
+Sexpr{prim_maize_1[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_2[7,2]}) & (
+\backslash
+Sexpr{prim_maize_2[7,5]})  & (
+\backslash
+Sexpr{prim_maize_2[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_3[7,2]}) & (
+\backslash
+Sexpr{prim_maize_3[7,5]})  & (
+\backslash
+Sexpr{prim_maize_3[7,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_maize_1[8,1]} & 
+\backslash
+Sexpr{prim_maize_1[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[8,6]<.01,"**",ifelse(prim_maize_1[8,6]<.05,"*",ifelse(pr
+im_maize_1[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_1[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_1[8,9]<.01,"**",ifelse(prim_maize_1[8,9]<.05,"*",ifelse(pr
+im_maize_1[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_2[8,1]} & 
+\backslash
+Sexpr{prim_maize_2[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[8,6]<.01,"**",ifelse(prim_maize_2[8,6]<.05,"*",ifelse(pr
+im_maize_2[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_2[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_2[8,9]<.01,"**",ifelse(prim_maize_2[8,9]<.05,"*",ifelse(pr
+im_maize_2[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_3[8,1]} & 
+\backslash
+Sexpr{prim_maize_3[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[8,6]<.01,"**",ifelse(prim_maize_3[8,6]<.05,"*",ifelse(pr
+im_maize_3[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_maize_3[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_3[8,9]<.01,"**",ifelse(prim_maize_3[8,9]<.05,"*",ifelse(pr
+im_maize_3[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_1[8,2]}) & (
+\backslash
+Sexpr{prim_maize_1[8,5]})  & (
+\backslash
+Sexpr{prim_maize_1[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_2[8,2]}) & (
+\backslash
+Sexpr{prim_maize_2[8,5]})  & (
+\backslash
+Sexpr{prim_maize_2[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_3[8,2]}) & (
+\backslash
+Sexpr{prim_maize_3[8,5]})  & (
+\backslash
+Sexpr{prim_maize_3[8,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_maize_s2_1[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[1,15]<.01,"**",ifelse(prim_maize_s2_1[1,15]<.05,"*",i
+felse(prim_maize_s2_1[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[1,21]<.01,"**",ifelse(prim_maize_s2_1[1,21]<.05,"*",i
+felse(prim_maize_s2_1[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_2[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[1,15]<.01,"**",ifelse(prim_maize_s2_2[1,15]<.05,"*",i
+felse(prim_maize_s2_2[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[1,21]<.01,"**",ifelse(prim_maize_s2_2[1,21]<.05,"*",i
+felse(prim_maize_s2_2[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_3[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[1,15]<.01,"**",ifelse(prim_maize_s2_3[1,15]<.05,"*",i
+felse(prim_maize_s2_3[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[1,21]<.01,"**",ifelse(prim_maize_s2_3[1,21]<.05,"*",i
+felse(prim_maize_s2_3[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_1[1,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[1,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_2[1,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_2[1,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_3[1,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[1,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[1,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold & 
+\backslash
+Sexpr{prim_maize_s2_1[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[3,15]<.01,"**",ifelse(prim_maize_s2_1[3,15]<.05,"*",i
+felse(prim_maize_s2_1[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[3,21]<.01,"**",ifelse(prim_maize_s2_1[3,21]<.05,"*",i
+felse(prim_maize_s2_1[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_2[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[3,15]<.01,"**",ifelse(prim_maize_s2_2[3,15]<.05,"*",i
+felse(prim_maize_s2_2[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[3,21]<.01,"**",ifelse(prim_maize_s2_2[3,21]<.05,"*",i
+felse(prim_maize_s2_2[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_3[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[3,15]<.01,"**",ifelse(prim_maize_s2_3[3,15]<.05,"*",i
+felse(prim_maize_s2_3[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[3,21]<.01,"**",ifelse(prim_maize_s2_3[3,21]<.05,"*",i
+felse(prim_maize_s2_3[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_1[3,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[3,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_2[3,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_2[3,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_3[3,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[3,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[3,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_maize_s2_1[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[4,15]<.01,"**",ifelse(prim_maize_s2_1[4,15]<.05,"*",i
+felse(prim_maize_s2_1[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[4,21]<.01,"**",ifelse(prim_maize_s2_1[4,21]<.05,"*",i
+felse(prim_maize_s2_1[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_2[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[4,15]<.01,"**",ifelse(prim_maize_s2_2[4,15]<.05,"*",i
+felse(prim_maize_s2_2[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[4,21]<.01,"**",ifelse(prim_maize_s2_2[4,21]<.05,"*",i
+felse(prim_maize_s2_2[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_3[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[4,15]<.01,"**",ifelse(prim_maize_s2_3[4,15]<.05,"*",i
+felse(prim_maize_s2_3[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[4,21]<.01,"**",ifelse(prim_maize_s2_3[4,21]<.05,"*",i
+felse(prim_maize_s2_3[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_1[4,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[4,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_2[4,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_2[4,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_3[4,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[4,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[4,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought & 
+\backslash
+Sexpr{prim_maize_s2_1[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[7,15]<.01,"**",ifelse(prim_maize_s2_1[7,15]<.05,"*",i
+felse(prim_maize_s2_1[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[7,21]<.01,"**",ifelse(prim_maize_s2_1[7,21]<.05,"*",i
+felse(prim_maize_s2_1[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_2[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[7,15]<.01,"**",ifelse(prim_maize_s2_2[7,15]<.05,"*",i
+felse(prim_maize_s2_2[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[7,21]<.01,"**",ifelse(prim_maize_s2_2[7,21]<.05,"*",i
+felse(prim_maize_s2_2[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_3[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[7,15]<.01,"**",ifelse(prim_maize_s2_3[7,15]<.05,"*",i
+felse(prim_maize_s2_3[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[7,21]<.01,"**",ifelse(prim_maize_s2_3[7,21]<.05,"*",i
+felse(prim_maize_s2_3[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_1[7,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[7,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_2[7,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_2[7,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_3[7,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[7,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[7,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_maize_s2_1[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[8,15]<.01,"**",ifelse(prim_maize_s2_1[8,15]<.05,"*",i
+felse(prim_maize_s2_1[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_1[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_1[8,21]<.01,"**",ifelse(prim_maize_s2_1[8,21]<.05,"*",i
+felse(prim_maize_s2_1[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_2[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[8,15]<.01,"**",ifelse(prim_maize_s2_2[8,15]<.05,"*",i
+felse(prim_maize_s2_2[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_2[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_2[8,21]<.01,"**",ifelse(prim_maize_s2_2[8,21]<.05,"*",i
+felse(prim_maize_s2_2[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_maize_s2_3[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[8,15]<.01,"**",ifelse(prim_maize_s2_3[8,15]<.05,"*",i
+felse(prim_maize_s2_3[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_maize_s2_3[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_maize_s2_3[8,21]<.01,"**",ifelse(prim_maize_s2_3[8,21]<.05,"*",i
+felse(prim_maize_s2_3[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_1[8,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[8,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_1[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_2[8,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_2[8,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_maize_s2_3[8,2]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[8,14]})  & (
+\backslash
+Sexpr{prim_maize_s2_3[8,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: First column reports control group means (and standard deviations
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Primary outcomes soybean 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Primary-soy"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccccccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & mean ctrl & T1 & T2 & mean ctrl & T1 & T2  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_soy_1[1,1]} & 
+\backslash
+Sexpr{prim_soy_1[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[1,6]<.01,"**",ifelse(prim_soy_1[1,6]<.05,"*",ifelse(prim_s
+oy_1[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_1[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[1,9]<.01,"**",ifelse(prim_soy_1[1,9]<.05,"*",ifelse(prim_s
+oy_1[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_2[1,1]} & 
+\backslash
+Sexpr{prim_soy_2[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[1,6]<.01,"**",ifelse(prim_soy_2[1,6]<.05,"*",ifelse(prim_s
+oy_2[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_2[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[1,9]<.01,"**",ifelse(prim_soy_2[1,9]<.05,"*",ifelse(prim_s
+oy_2[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_3[1,1]} & 
+\backslash
+Sexpr{prim_soy_3[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[1,6]<.01,"**",ifelse(prim_soy_3[1,6]<.05,"*",ifelse(prim_s
+oy_3[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_3[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[1,9]<.01,"**",ifelse(prim_soy_3[1,9]<.05,"*",ifelse(prim_s
+oy_3[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_1[1,2]}) & (
+\backslash
+Sexpr{prim_soy_1[1,5]})  & (
+\backslash
+Sexpr{prim_soy_1[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_2[1,2]}) & (
+\backslash
+Sexpr{prim_soy_2[1,5]})  & (
+\backslash
+Sexpr{prim_soy_2[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_3[1,2]}) & (
+\backslash
+Sexpr{prim_soy_3[1,5]})  & (
+\backslash
+Sexpr{prim_soy_3[1,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold (yes/no) & 
+\backslash
+Sexpr{prim_soy_1[3,1]} & 
+\backslash
+Sexpr{prim_soy_1[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[3,6]<.01,"**",ifelse(prim_soy_1[3,6]<.05,"*",ifelse(prim_s
+oy_1[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_1[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[3,9]<.01,"**",ifelse(prim_soy_1[3,9]<.05,"*",ifelse(prim_s
+oy_1[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_2[3,1]} & 
+\backslash
+Sexpr{prim_soy_2[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[3,6]<.01,"**",ifelse(prim_soy_2[3,6]<.05,"*",ifelse(prim_s
+oy_2[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_2[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[3,9]<.01,"**",ifelse(prim_soy_2[3,9]<.05,"*",ifelse(prim_s
+oy_2[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_3[3,1]} & 
+\backslash
+Sexpr{prim_soy_3[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[3,6]<.01,"**",ifelse(prim_soy_3[3,6]<.05,"*",ifelse(prim_s
+oy_3[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_3[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[3,9]<.01,"**",ifelse(prim_soy_3[3,9]<.05,"*",ifelse(prim_s
+oy_3[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_1[3,2]}) & (
+\backslash
+Sexpr{prim_soy_1[3,5]})  & (
+\backslash
+Sexpr{prim_soy_1[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_2[3,2]}) & (
+\backslash
+Sexpr{prim_soy_2[3,5]})  & (
+\backslash
+Sexpr{prim_soy_2[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_3[3,2]}) & (
+\backslash
+Sexpr{prim_soy_3[3,5]})  & (
+\backslash
+Sexpr{prim_soy_3[3,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_soy_1[4,1]} & 
+\backslash
+Sexpr{prim_soy_1[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[4,6]<.01,"**",ifelse(prim_soy_1[4,6]<.05,"*",ifelse(prim_s
+oy_1[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_1[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[4,9]<.01,"**",ifelse(prim_soy_1[4,9]<.05,"*",ifelse(prim_s
+oy_1[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_2[4,1]} & 
+\backslash
+Sexpr{prim_soy_2[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[4,6]<.01,"**",ifelse(prim_soy_2[4,6]<.05,"*",ifelse(prim_s
+oy_2[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_2[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[4,9]<.01,"**",ifelse(prim_soy_2[4,9]<.05,"*",ifelse(prim_s
+oy_2[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_3[4,1]} & 
+\backslash
+Sexpr{prim_soy_3[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[4,6]<.01,"**",ifelse(prim_soy_3[4,6]<.05,"*",ifelse(prim_s
+oy_3[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_3[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[4,9]<.01,"**",ifelse(prim_soy_3[4,9]<.05,"*",ifelse(prim_s
+oy_3[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_1[4,2]}) & (
+\backslash
+Sexpr{prim_soy_1[4,5]})  & (
+\backslash
+Sexpr{prim_soy_1[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_2[4,2]}) & (
+\backslash
+Sexpr{prim_soy_2[4,5]})  & (
+\backslash
+Sexpr{prim_soy_2[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_3[4,2]}) & (
+\backslash
+Sexpr{prim_soy_3[4,5]})  & (
+\backslash
+Sexpr{prim_soy_3[4,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought (yes/no) & 
+\backslash
+Sexpr{prim_soy_1[7,1]} & 
+\backslash
+Sexpr{prim_soy_1[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[7,6]<.01,"**",ifelse(prim_soy_1[7,6]<.05,"*",ifelse(prim_s
+oy_1[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_1[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[7,9]<.01,"**",ifelse(prim_soy_1[7,9]<.05,"*",ifelse(prim_s
+oy_1[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_2[7,1]} & 
+\backslash
+Sexpr{prim_soy_2[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[7,6]<.01,"**",ifelse(prim_soy_2[7,6]<.05,"*",ifelse(prim_s
+oy_2[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_2[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[7,9]<.01,"**",ifelse(prim_soy_2[7,9]<.05,"*",ifelse(prim_s
+oy_2[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_3[7,1]} & 
+\backslash
+Sexpr{prim_soy_3[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[7,6]<.01,"**",ifelse(prim_soy_3[7,6]<.05,"*",ifelse(prim_s
+oy_3[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_3[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[7,9]<.01,"**",ifelse(prim_soy_3[7,9]<.05,"*",ifelse(prim_s
+oy_3[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_1[7,2]}) & (
+\backslash
+Sexpr{prim_soy_1[7,5]})  & (
+\backslash
+Sexpr{prim_soy_1[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_2[7,2]}) & (
+\backslash
+Sexpr{prim_soy_2[7,5]})  & (
+\backslash
+Sexpr{prim_soy_2[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_3[7,2]}) & (
+\backslash
+Sexpr{prim_soy_3[7,5]})  & (
+\backslash
+Sexpr{prim_soy_3[7,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_soy_1[8,1]} & 
+\backslash
+Sexpr{prim_soy_1[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[8,6]<.01,"**",ifelse(prim_soy_1[8,6]<.05,"*",ifelse(prim_s
+oy_1[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_1[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_1[8,9]<.01,"**",ifelse(prim_soy_1[8,9]<.05,"*",ifelse(prim_s
+oy_1[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_2[8,1]} & 
+\backslash
+Sexpr{prim_soy_2[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[8,6]<.01,"**",ifelse(prim_soy_2[8,6]<.05,"*",ifelse(prim_s
+oy_2[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_2[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_2[8,9]<.01,"**",ifelse(prim_soy_2[8,9]<.05,"*",ifelse(prim_s
+oy_2[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_3[8,1]} & 
+\backslash
+Sexpr{prim_soy_3[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[8,6]<.01,"**",ifelse(prim_soy_3[8,6]<.05,"*",ifelse(prim_s
+oy_3[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_soy_3[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_3[8,9]<.01,"**",ifelse(prim_soy_3[8,9]<.05,"*",ifelse(prim_s
+oy_3[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_1[8,2]}) & (
+\backslash
+Sexpr{prim_soy_1[8,5]})  & (
+\backslash
+Sexpr{prim_soy_1[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_2[8,2]}) & (
+\backslash
+Sexpr{prim_soy_2[8,5]})  & (
+\backslash
+Sexpr{prim_soy_2[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_3[8,2]}) & (
+\backslash
+Sexpr{prim_soy_3[8,5]})  & (
+\backslash
+Sexpr{prim_soy_3[8,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_soy_s2_1[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[1,15]<.01,"**",ifelse(prim_soy_s2_1[1,15]<.05,"*",ifels
+e(prim_soy_s2_1[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[1,21]<.01,"**",ifelse(prim_soy_s2_1[1,21]<.05,"*",ifels
+e(prim_soy_s2_1[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_2[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[1,15]<.01,"**",ifelse(prim_soy_s2_2[1,15]<.05,"*",ifels
+e(prim_soy_s2_2[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[1,21]<.01,"**",ifelse(prim_soy_s2_2[1,21]<.05,"*",ifels
+e(prim_soy_s2_2[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_3[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[1,15]<.01,"**",ifelse(prim_soy_s2_3[1,15]<.05,"*",ifels
+e(prim_soy_s2_3[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[1,21]<.01,"**",ifelse(prim_soy_s2_3[1,21]<.05,"*",ifels
+e(prim_soy_s2_3[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_1[1,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[1,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_2[1,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_2[1,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_3[1,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[1,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[1,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold & 
+\backslash
+Sexpr{prim_soy_s2_1[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[3,15]<.01,"**",ifelse(prim_soy_s2_1[3,15]<.05,"*",ifels
+e(prim_soy_s2_1[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[3,21]<.01,"**",ifelse(prim_soy_s2_1[3,21]<.05,"*",ifels
+e(prim_soy_s2_1[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_2[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[3,15]<.01,"**",ifelse(prim_soy_s2_2[3,15]<.05,"*",ifels
+e(prim_soy_s2_2[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[3,21]<.01,"**",ifelse(prim_soy_s2_2[3,21]<.05,"*",ifels
+e(prim_soy_s2_2[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_3[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[3,15]<.01,"**",ifelse(prim_soy_s2_3[3,15]<.05,"*",ifels
+e(prim_soy_s2_3[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[3,21]<.01,"**",ifelse(prim_soy_s2_3[3,21]<.05,"*",ifels
+e(prim_soy_s2_3[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_1[3,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[3,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_2[3,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_2[3,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_3[3,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[3,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[3,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_soy_s2_1[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[4,15]<.01,"**",ifelse(prim_soy_s2_1[4,15]<.05,"*",ifels
+e(prim_soy_s2_1[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[4,21]<.01,"**",ifelse(prim_soy_s2_1[4,21]<.05,"*",ifels
+e(prim_soy_s2_1[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_2[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[4,15]<.01,"**",ifelse(prim_soy_s2_2[4,15]<.05,"*",ifels
+e(prim_soy_s2_2[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[4,21]<.01,"**",ifelse(prim_soy_s2_2[4,21]<.05,"*",ifels
+e(prim_soy_s2_2[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_3[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[4,15]<.01,"**",ifelse(prim_soy_s2_3[4,15]<.05,"*",ifels
+e(prim_soy_s2_3[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[4,21]<.01,"**",ifelse(prim_soy_s2_3[4,21]<.05,"*",ifels
+e(prim_soy_s2_3[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_1[4,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[4,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_2[4,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_2[4,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_3[4,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[4,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[4,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought & 
+\backslash
+Sexpr{prim_soy_s2_1[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[7,15]<.01,"**",ifelse(prim_soy_s2_1[7,15]<.05,"*",ifels
+e(prim_soy_s2_1[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[7,21]<.01,"**",ifelse(prim_soy_s2_1[7,21]<.05,"*",ifels
+e(prim_soy_s2_1[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_2[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[7,15]<.01,"**",ifelse(prim_soy_s2_2[7,15]<.05,"*",ifels
+e(prim_soy_s2_2[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[7,21]<.01,"**",ifelse(prim_soy_s2_2[7,21]<.05,"*",ifels
+e(prim_soy_s2_2[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_3[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[7,15]<.01,"**",ifelse(prim_soy_s2_3[7,15]<.05,"*",ifels
+e(prim_soy_s2_3[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[7,21]<.01,"**",ifelse(prim_soy_s2_3[7,21]<.05,"*",ifels
+e(prim_soy_s2_3[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_1[7,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[7,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_2[7,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_2[7,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_3[7,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[7,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[7,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_soy_s2_1[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[8,15]<.01,"**",ifelse(prim_soy_s2_1[8,15]<.05,"*",ifels
+e(prim_soy_s2_1[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_1[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_1[8,21]<.01,"**",ifelse(prim_soy_s2_1[8,21]<.05,"*",ifels
+e(prim_soy_s2_1[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_2[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[8,15]<.01,"**",ifelse(prim_soy_s2_2[8,15]<.05,"*",ifels
+e(prim_soy_s2_2[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_2[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_2[8,21]<.01,"**",ifelse(prim_soy_s2_2[8,21]<.05,"*",ifels
+e(prim_soy_s2_2[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_soy_s2_3[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[8,15]<.01,"**",ifelse(prim_soy_s2_3[8,15]<.05,"*",ifels
+e(prim_soy_s2_3[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_soy_s2_3[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_soy_s2_3[8,21]<.01,"**",ifelse(prim_soy_s2_3[8,21]<.05,"*",ifels
+e(prim_soy_s2_3[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_1[8,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[8,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_1[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_2[8,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_2[8,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_soy_s2_3[8,2]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[8,14]})  & (
+\backslash
+Sexpr{prim_soy_s2_3[8,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: First column reports control group means (and standard deviations
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Primary outcomes gnuts 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Primary-gnuts"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccccccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & mean ctrl & T1 & T2 & mean ctrl & T1 & T2  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_gnuts_1[1,1]} & 
+\backslash
+Sexpr{prim_gnuts_1[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[1,6]<.01,"**",ifelse(prim_gnuts_1[1,6]<.05,"*",ifelse(pr
+im_gnuts_1[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_1[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[1,9]<.01,"**",ifelse(prim_gnuts_1[1,9]<.05,"*",ifelse(pr
+im_gnuts_1[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_2[1,1]} & 
+\backslash
+Sexpr{prim_gnuts_2[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[1,6]<.01,"**",ifelse(prim_gnuts_2[1,6]<.05,"*",ifelse(pr
+im_gnuts_2[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_2[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[1,9]<.01,"**",ifelse(prim_gnuts_2[1,9]<.05,"*",ifelse(pr
+im_gnuts_2[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_3[1,1]} & 
+\backslash
+Sexpr{prim_gnuts_3[1,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[1,6]<.01,"**",ifelse(prim_gnuts_3[1,6]<.05,"*",ifelse(pr
+im_gnuts_3[1,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_3[1,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[1,9]<.01,"**",ifelse(prim_gnuts_3[1,9]<.05,"*",ifelse(pr
+im_gnuts_3[1,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_1[1,2]}) & (
+\backslash
+Sexpr{prim_gnuts_1[1,5]})  & (
+\backslash
+Sexpr{prim_gnuts_1[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_2[1,2]}) & (
+\backslash
+Sexpr{prim_gnuts_2[1,5]})  & (
+\backslash
+Sexpr{prim_gnuts_2[1,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_3[1,2]}) & (
+\backslash
+Sexpr{prim_gnuts_3[1,5]})  & (
+\backslash
+Sexpr{prim_gnuts_3[1,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold (yes/no) & 
+\backslash
+Sexpr{prim_gnuts_1[3,1]} & 
+\backslash
+Sexpr{prim_gnuts_1[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[3,6]<.01,"**",ifelse(prim_gnuts_1[3,6]<.05,"*",ifelse(pr
+im_gnuts_1[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_1[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[3,9]<.01,"**",ifelse(prim_gnuts_1[3,9]<.05,"*",ifelse(pr
+im_gnuts_1[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_2[3,1]} & 
+\backslash
+Sexpr{prim_gnuts_2[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[3,6]<.01,"**",ifelse(prim_gnuts_2[3,6]<.05,"*",ifelse(pr
+im_gnuts_2[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_2[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[3,9]<.01,"**",ifelse(prim_gnuts_2[3,9]<.05,"*",ifelse(pr
+im_gnuts_2[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_3[3,1]} & 
+\backslash
+Sexpr{prim_gnuts_3[3,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[3,6]<.01,"**",ifelse(prim_gnuts_3[3,6]<.05,"*",ifelse(pr
+im_gnuts_3[3,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_3[3,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[3,9]<.01,"**",ifelse(prim_gnuts_3[3,9]<.05,"*",ifelse(pr
+im_gnuts_3[3,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_1[3,2]}) & (
+\backslash
+Sexpr{prim_gnuts_1[3,5]})  & (
+\backslash
+Sexpr{prim_gnuts_1[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_2[3,2]}) & (
+\backslash
+Sexpr{prim_gnuts_2[3,5]})  & (
+\backslash
+Sexpr{prim_gnuts_2[3,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_3[3,2]}) & (
+\backslash
+Sexpr{prim_gnuts_3[3,5]})  & (
+\backslash
+Sexpr{prim_gnuts_3[3,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_gnuts_1[4,1]} & 
+\backslash
+Sexpr{prim_gnuts_1[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[4,6]<.01,"**",ifelse(prim_gnuts_1[4,6]<.05,"*",ifelse(pr
+im_gnuts_1[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_1[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[4,9]<.01,"**",ifelse(prim_gnuts_1[4,9]<.05,"*",ifelse(pr
+im_gnuts_1[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_2[4,1]} & 
+\backslash
+Sexpr{prim_gnuts_2[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[4,6]<.01,"**",ifelse(prim_gnuts_2[4,6]<.05,"*",ifelse(pr
+im_gnuts_2[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_2[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[4,9]<.01,"**",ifelse(prim_gnuts_2[4,9]<.05,"*",ifelse(pr
+im_gnuts_2[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_3[4,1]} & 
+\backslash
+Sexpr{prim_gnuts_3[4,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[4,6]<.01,"**",ifelse(prim_gnuts_3[4,6]<.05,"*",ifelse(pr
+im_gnuts_3[4,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_3[4,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[4,9]<.01,"**",ifelse(prim_gnuts_3[4,9]<.05,"*",ifelse(pr
+im_gnuts_3[4,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_1[4,2]}) & (
+\backslash
+Sexpr{prim_gnuts_1[4,5]})  & (
+\backslash
+Sexpr{prim_gnuts_1[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_2[4,2]}) & (
+\backslash
+Sexpr{prim_gnuts_2[4,5]})  & (
+\backslash
+Sexpr{prim_gnuts_2[4,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_3[4,2]}) & (
+\backslash
+Sexpr{prim_gnuts_3[4,5]})  & (
+\backslash
+Sexpr{prim_gnuts_3[4,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought (yes/no) & 
+\backslash
+Sexpr{prim_gnuts_1[7,1]} & 
+\backslash
+Sexpr{prim_gnuts_1[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[7,6]<.01,"**",ifelse(prim_gnuts_1[7,6]<.05,"*",ifelse(pr
+im_gnuts_1[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_1[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[7,9]<.01,"**",ifelse(prim_gnuts_1[7,9]<.05,"*",ifelse(pr
+im_gnuts_1[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_2[7,1]} & 
+\backslash
+Sexpr{prim_gnuts_2[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[7,6]<.01,"**",ifelse(prim_gnuts_2[7,6]<.05,"*",ifelse(pr
+im_gnuts_2[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_2[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[7,9]<.01,"**",ifelse(prim_gnuts_2[7,9]<.05,"*",ifelse(pr
+im_gnuts_2[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_3[7,1]} & 
+\backslash
+Sexpr{prim_gnuts_3[7,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[7,6]<.01,"**",ifelse(prim_gnuts_3[7,6]<.05,"*",ifelse(pr
+im_gnuts_3[7,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_3[7,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[7,9]<.01,"**",ifelse(prim_gnuts_3[7,9]<.05,"*",ifelse(pr
+im_gnuts_3[7,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_1[7,2]}) & (
+\backslash
+Sexpr{prim_gnuts_1[7,5]})  & (
+\backslash
+Sexpr{prim_gnuts_1[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_2[7,2]}) & (
+\backslash
+Sexpr{prim_gnuts_2[7,5]})  & (
+\backslash
+Sexpr{prim_gnuts_2[7,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_3[7,2]}) & (
+\backslash
+Sexpr{prim_gnuts_3[7,5]})  & (
+\backslash
+Sexpr{prim_gnuts_3[7,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_gnuts_1[8,1]} & 
+\backslash
+Sexpr{prim_gnuts_1[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[8,6]<.01,"**",ifelse(prim_gnuts_1[8,6]<.05,"*",ifelse(pr
+im_gnuts_1[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_1[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_1[8,9]<.01,"**",ifelse(prim_gnuts_1[8,9]<.05,"*",ifelse(pr
+im_gnuts_1[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_2[8,1]} & 
+\backslash
+Sexpr{prim_gnuts_2[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[8,6]<.01,"**",ifelse(prim_gnuts_2[8,6]<.05,"*",ifelse(pr
+im_gnuts_2[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_2[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_2[8,9]<.01,"**",ifelse(prim_gnuts_2[8,9]<.05,"*",ifelse(pr
+im_gnuts_2[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_3[8,1]} & 
+\backslash
+Sexpr{prim_gnuts_3[8,4]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[8,6]<.01,"**",ifelse(prim_gnuts_3[8,6]<.05,"*",ifelse(pr
+im_gnuts_3[8,6]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prim_gnuts_3[8,7]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_3[8,9]<.01,"**",ifelse(prim_gnuts_3[8,9]<.05,"*",ifelse(pr
+im_gnuts_3[8,9]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_1[8,2]}) & (
+\backslash
+Sexpr{prim_gnuts_1[8,5]})  & (
+\backslash
+Sexpr{prim_gnuts_1[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_2[8,2]}) & (
+\backslash
+Sexpr{prim_gnuts_2[8,5]})  & (
+\backslash
+Sexpr{prim_gnuts_2[8,8]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_3[8,2]}) & (
+\backslash
+Sexpr{prim_gnuts_3[8,5]})  & (
+\backslash
+Sexpr{prim_gnuts_3[8,8]}) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Stocks (abs) & 
+\backslash
+Sexpr{prim_gnuts_s2_1[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[1,15]<.01,"**",ifelse(prim_gnuts_s2_1[1,15]<.05,"*",i
+felse(prim_gnuts_s2_1[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[1,21]<.01,"**",ifelse(prim_gnuts_s2_1[1,21]<.05,"*",i
+felse(prim_gnuts_s2_1[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_2[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[1,15]<.01,"**",ifelse(prim_gnuts_s2_2[1,15]<.05,"*",i
+felse(prim_gnuts_s2_2[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[1,21]<.01,"**",ifelse(prim_gnuts_s2_2[1,21]<.05,"*",i
+felse(prim_gnuts_s2_2[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_3[1,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[1,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[1,15]<.01,"**",ifelse(prim_gnuts_s2_3[1,15]<.05,"*",i
+felse(prim_gnuts_s2_3[1,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[1,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[1,21]<.01,"**",ifelse(prim_gnuts_s2_3[1,21]<.05,"*",i
+felse(prim_gnuts_s2_3[1,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_1[1,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[1,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_2[1,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_2[1,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[1,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_3[1,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[1,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[1,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Sold & 
+\backslash
+Sexpr{prim_gnuts_s2_1[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[3,15]<.01,"**",ifelse(prim_gnuts_s2_1[3,15]<.05,"*",i
+felse(prim_gnuts_s2_1[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[3,21]<.01,"**",ifelse(prim_gnuts_s2_1[3,21]<.05,"*",i
+felse(prim_gnuts_s2_1[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_2[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[3,15]<.01,"**",ifelse(prim_gnuts_s2_2[3,15]<.05,"*",i
+felse(prim_gnuts_s2_2[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[3,21]<.01,"**",ifelse(prim_gnuts_s2_2[3,21]<.05,"*",i
+felse(prim_gnuts_s2_2[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_3[3,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[3,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[3,15]<.01,"**",ifelse(prim_gnuts_s2_3[3,15]<.05,"*",i
+felse(prim_gnuts_s2_3[3,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[3,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[3,21]<.01,"**",ifelse(prim_gnuts_s2_3[3,21]<.05,"*",i
+felse(prim_gnuts_s2_3[3,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_1[3,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[3,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_2[3,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_2[3,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[3,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_3[3,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[3,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[3,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant sold & 
+\backslash
+Sexpr{prim_gnuts_s2_1[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[4,15]<.01,"**",ifelse(prim_gnuts_s2_1[4,15]<.05,"*",i
+felse(prim_gnuts_s2_1[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[4,21]<.01,"**",ifelse(prim_gnuts_s2_1[4,21]<.05,"*",i
+felse(prim_gnuts_s2_1[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_2[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[4,15]<.01,"**",ifelse(prim_gnuts_s2_2[4,15]<.05,"*",i
+felse(prim_gnuts_s2_2[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[4,21]<.01,"**",ifelse(prim_gnuts_s2_2[4,21]<.05,"*",i
+felse(prim_gnuts_s2_2[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_3[4,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[4,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[4,15]<.01,"**",ifelse(prim_gnuts_s2_3[4,15]<.05,"*",i
+felse(prim_gnuts_s2_3[4,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[4,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[4,21]<.01,"**",ifelse(prim_gnuts_s2_3[4,21]<.05,"*",i
+felse(prim_gnuts_s2_3[4,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_1[4,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[4,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_2[4,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_2[4,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[4,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_3[4,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[4,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[4,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Bought & 
+\backslash
+Sexpr{prim_gnuts_s2_1[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[7,15]<.01,"**",ifelse(prim_gnuts_s2_1[7,15]<.05,"*",i
+felse(prim_gnuts_s2_1[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[7,21]<.01,"**",ifelse(prim_gnuts_s2_1[7,21]<.05,"*",i
+felse(prim_gnuts_s2_1[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_2[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[7,15]<.01,"**",ifelse(prim_gnuts_s2_2[7,15]<.05,"*",i
+felse(prim_gnuts_s2_2[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[7,21]<.01,"**",ifelse(prim_gnuts_s2_2[7,21]<.05,"*",i
+felse(prim_gnuts_s2_2[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_3[7,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[7,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[7,15]<.01,"**",ifelse(prim_gnuts_s2_3[7,15]<.05,"*",i
+felse(prim_gnuts_s2_3[7,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[7,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[7,21]<.01,"**",ifelse(prim_gnuts_s2_3[7,21]<.05,"*",i
+felse(prim_gnuts_s2_3[7,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_1[7,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[7,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_2[7,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_2[7,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[7,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_3[7,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[7,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[7,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Quant bought & 
+\backslash
+Sexpr{prim_gnuts_s2_1[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[8,15]<.01,"**",ifelse(prim_gnuts_s2_1[8,15]<.05,"*",i
+felse(prim_gnuts_s2_1[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_1[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_1[8,21]<.01,"**",ifelse(prim_gnuts_s2_1[8,21]<.05,"*",i
+felse(prim_gnuts_s2_1[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_2[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[8,15]<.01,"**",ifelse(prim_gnuts_s2_2[8,15]<.05,"*",i
+felse(prim_gnuts_s2_2[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_2[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_2[8,21]<.01,"**",ifelse(prim_gnuts_s2_2[8,21]<.05,"*",i
+felse(prim_gnuts_s2_2[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ & 
+\backslash
+Sexpr{prim_gnuts_s2_3[8,1]} 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[8,13]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[8,15]<.01,"**",ifelse(prim_gnuts_s2_3[8,15]<.05,"*",i
+felse(prim_gnuts_s2_3[8,15]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prim_gnuts_s2_3[8,19]}$^{
+\backslash
+Sexpr{ifelse(prim_gnuts_s2_3[8,21]<.01,"**",ifelse(prim_gnuts_s2_3[8,21]<.05,"*",i
+felse(prim_gnuts_s2_3[8,21]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_1[8,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[8,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_1[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_2[8,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_2[8,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[8,20]})
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prim_gnuts_s2_3[8,2]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[8,14]})  & (
+\backslash
+Sexpr{prim_gnuts_s2_3[8,20]})
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: First column reports control group means (and standard deviations
+ below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "../endline_2024/mock_malawi"
+options "../endline_2024/IFPRI_Style"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1337,7 +1337,7 @@ saveRDS(prim_gnuts_tc, paste(path,"endline_2024/results/prim_gnuts_tc.RData", se
 saveRDS(prim_soy_tc, paste(path,"endline_2024/results/prim_soy_tc.RData", sep="/"))
 
 ###write data for merging with midline 2
-#write.csv(dta,paste(path,"all_rounds/data/endline_2024.csv", sep="/"))
+write.csv(dta,paste(path,"all_rounds/data/endline_2024.csv", sep="/"))
 # 
 # 
 # #### control for FWER using simulation

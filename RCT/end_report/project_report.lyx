@@ -141,11 +141,6 @@ thanks{Development Strategy and Governance Division, International Food
 project report
 \end_layout
 
-\begin_layout Standard
-\align center
-preliminary and incomplete version – please do not cite
-\end_layout
-
 \begin_layout Abstract
 It is often observed that smallholder farmers sell most of their marketable
  surplus immediately after the harvest when seasonal price movements reach
@@ -2766,15 +2761,11 @@ prim_gnuts_s2_3  <- readRDS(paste(path,"endline_2024/results/prim_gnuts.RData",
 \end_layout
 
 \begin_layout Subsection
-Primary outcomes
+Market participation dynamics
 \end_layout
 
 \begin_layout Standard
-We start with the most parsimonious specification by reporting simple difference
-s between treatment and control farmers obtained from an Ordinary Least
- Squares regression that regresses the outcome of interest on two dummy
- variables indicating if the household received T1 or T2 respectively.
- Results are in the top panel of Table 
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Primary-maize"
@@ -2784,55 +2775,10 @@ noprefix "false"
 
 \end_inset
 
-.
- In the bottom panel of Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Primary-maize"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- we show results after including additional controls.
- These include the outcome at baseline, and village fixed effects.
- We start with Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Primary-maize"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, which reports results for maize; Tables 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Primary-gnuts"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Primary_soy"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- are similar tables but for groundnuts and soybean, respectively.
-\end_layout
-
-\begin_layout Standard
-A first primary outcome we consider is stocks held of the commodity at the
- time of the midline survey.
+ shows results for the comparisons between different treatment groups for
+ five primary outcomes.
+ A first primary outcome we consider is stocks held of the commodity at
+ the time of the midline survey.
  In particular, we asked farmers how many bags of the commodity (standard
  50 kg bags) they have in store.
  As the distributions are skewed to the right and includes zeros as well,
@@ -2859,119 +2805,20 @@ literal "false"
  Furthermore, if farmers expect prices to go up over time and this is reflected
  in their sales plan, farmers that are encouraged to commit to this sales
  plan will also be more likely to have saved more early on in the season.
-\end_layout
-
-\begin_layout Standard
-We see that the average control farmer has about 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{prim_maize_1[1,1]}
-\end_layout
-
-\end_inset
-
- bags of maize in store at the time of the survey.
- We do not find that this is significantly different in the sample of farmers
- that were taken through a budgeting exercise.
- However, we do find that stocks are significantly higher among farmers
- that made a sales plan.
- Farmers that were asked to commit to a sales plan have stocks that are
- about 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{prim_maize_1[1,7]*100}
-\end_layout
-
-\end_inset
-
- percent higher than maize stocks of farmers in the control group.
- If we add village fixed effects, the effect becomes even stronger.
+ As such, we expect a positive effect on stocks, particularly in the months
+ immediately following the harvest.
 \end_layout
 
 \begin_layout Standard
 A second primary outcome tests if the household sold any of the crop in
  the interval between the intervention and this midline survey.
  For similar reasons why we expect stocks to be higher, we expect that the
- treatment would reduce the likelihood of selling early on in the season.
- We find that 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{prim_maize_1[3,1]*100}
-\end_layout
-
-\end_inset
-
- percent of households in the control group indicated that they made at
- least one sales transaction between in the first few months after the start
- of the project.
- We do not find that this proportion differs for farmers in T1 nor for farmers
- in T2.
-\end_layout
-
-\begin_layout Standard
-The third primary outcome is related to the second and is the quantity that
- was sold during the period between the intervention and the first midline
- survey.
- While we may not find that the treatment reduced the fact that farmers
- sell early, we may still find that farmers sell less of the crop immediately
- after harvest.
- We find that farmers in the control group sell on average 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{prim_maize_1[4,1]}
-\end_layout
-
-\end_inset
-
- bags of maize.
- Contrary to our expectations, we see that these quantities are higher in
- both treatment groups, but the differences are not significant.
-\end_layout
-
-\begin_layout Standard
-For farmers that did engage in sales, we can calculate the average price
- that farmers received for their crop.
- The aim of the intervention is to increase the price at which farmers sell.
- The farmers that sold in the control group got on average 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-Sexpr{prim_maize_1[6,1]}
-\end_layout
-
-\end_inset
-
- MKW per kilogram of maize.
- We again do not find that prices differ significantly in any of the treatment
- groups.
- However, we expect that effects of the intervention will only become apparent
- at endline and prices over the entire period are taken into consideration.
- This is because the price effect is expected to come from more people selling
- later in the season.
+ treatment would reduce the likelihood of selling early on in the season,
+ and more towards the end of the season when prices go up.
+ The third primary outcome is related to the second and is the quantity
+ that was sold during the period between the intervention and the first
+ midline survey.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2979,14 +2826,100 @@ We also consider behaviour related to purchases of the commodities as key
  primary outcomes.
  We expect that, especially later in the season, due to our interventions
  households will have to buy back less.
- We see that in the control group, about 30 percent also made at least one
- purchase of maize before September midline data collection and this proportion
- is similar in both treatment groups.
- As for sales, we also look at quantities bought and prices at which the
- commodities were bought.
- We find that for maize, the average control group household bought less
- than one bag on average and paid slightly more than the sales price.
- We do not see any effects from the interventions.
+ As for sales, we also look at actual quantities to look at intensive margin
+ effects.
+\end_layout
+
+\begin_layout Standard
+The top part of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows results for the first season, while the bottom part of the table
+ shows results for the second season.
+ For the second season, we only report results for the groups where the
+ treatment was repeated (that is, we compare CC to T1T1 and CC to T2T2).
+ For each season, we report results derived from the three surveys: the
+ first midline done in September and covering transactions done in the period
+ of April to September; the second midline done in January and covering
+ transaction done in the period of October until January; and the endline
+ done in April and covering transactions from the period from February to
+ April.
+ 
+\end_layout
+
+\begin_layout Standard
+Looking at maize stocks in the first season (2022-2023), we see that, as
+ expected, stocks deplete as time goes by.
+ In the control group, stocks are at an average of 5.56 bags in September
+ and reduce further to just 1.38 bags in January.
+ At the time of the next harvest, stock have virtually depleted.
+ The table also shows that there is no difference in stocks at these three
+ points in time in the sub-group that received T1.
+ However, we do see that stocks are significantly higher in September for
+ the group that was asked to prepare a sales plan: in this group, stocks
+ are 2.5 percent higher, suggesting that the intervention encourages farmers
+ to hold on to their maize longer.
+ In the second season, we also see that average stock reduces over time.
+ Even though the estimated treatment effects for T2 aver very close to the
+ ones from the first season, the difference is not statistically different
+ from zero.
+ This is likely due to the smaller sample size as a result of introducing
+ more treatment groups in season 2.
+\end_layout
+
+\begin_layout Standard
+Looking at sales in the first season, we see that about 34 percent of our
+ sample reports at least one sales transaction in the six months following
+ the 2022 harvest.
+ In the October to January period, this reduces somewhat to about 24 percent.
+ During the last few months of the lean season, only 5 percent of households
+ report to be making sales transactions.
+ This suggest that most sales indeed happen during periods where prices
+ are likely to be low due to excess supply.
+ Interestingly, we see that households that were exposed to T2 report a
+ higher incidence of sales later into the season.
+ This suggests that the sales plan induces farmers sell more later in the
+ season when prices are higher.
+ Somewhat surprisingly, we also find a significant effect from T1.
+ Perhaps, due to better budgeting, farmers in this group are also left with
+ higher stocks (and the coefficient for T1 on stocks in the previous survey
+ is indeed positive but not significant) which they can now sell.
+ A similar pattern holds for amounts sold.
+ In the second season (bottom part of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-maize"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) we also see an increase in sales transactions among T2 farmers during
+ the October 2023 - January 2024 period.
+\end_layout
+
+\begin_layout Standard
+Purchase transactions are the mirror image of sales transactions.
+ During the first survey, about 27 percent of households in the control
+ group reported buying maize.
+ This increases over time, and during the final months of the lean season
+ when maize prices are likely to be at their highest, 73 percent of households
+ turn to the market to obtain maize.
+ Also here, there are some indications that especially T2 is effective in
+ reducing the likelihood that farmers have to turn to the market later in
+ the season.
+ In the T2 group, farmers are 4.5 percentage points less likely to buy maize
+ in during the hunger months.
+ In the second season, there are no differences between the treatment groups.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3043,6 +2976,17 @@ hline
 
 \begin_layout Plain Layout
 
+& 
+\backslash
+multicolumn{3}{c}{April - Sept} & 
+\backslash
+multicolumn{3}{c}{Oct - Jan} & 
+\backslash
+multicolumn{3}{c}{Feb - April} 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -3068,6 +3012,19 @@ cline{2-10}
 \begin_layout Plain Layout
 
 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{first season (2022 - 2023)}} 
 \backslash
 
 \backslash
@@ -3652,6 +3609,15 @@ Sexpr{prim_maize_3[8,8]})
 \end_layout
 
 \begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{second season (2023 - 2024)}} 
+\backslash
+
+\backslash
 
 \end_layout
 
@@ -4372,8 +4338,7 @@ scriptsize
 
 \begin_layout Plain Layout
 
-Note: First column reports control group means (and standard deviations
- below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+Note: **, * and + denote significance at the 1, 5 and 10 percent levels.
  All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
@@ -4386,6 +4351,33 @@ Note: First column reports control group means (and standard deviations
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-soy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ repeats the analysis but now for soy bean.
+ We see that, as for maize, T2 seems to be more effective than T1 in countering
+ the sell low buy high trend.
+ In T2, we see that soybean stocks are significantly higher, especially
+ in January when T2 farmers have 45 percent higher stocks than the control
+ group.
+ T2 also seems to result in delayed sales: while 15 percent of farmers made
+ sales transactions in the period between October 2022 - January 2023, this
+ percentage increased to almost 20 percent in the group that was asked to
+ prepare a sales plan.
+ The effect on purchases is less straightforward, with significant effects
+ only during the first six months after the harvest and especially for T1.
+ This could be because soybean is generally used as a cash crop, which is
+ reflected in the low share of households that bought in the market.
 \end_layout
 
 \begin_layout Standard
@@ -4442,6 +4434,17 @@ hline
 
 \begin_layout Plain Layout
 
+& 
+\backslash
+multicolumn{3}{c}{April - Sept} & 
+\backslash
+multicolumn{3}{c}{Oct - Jan} & 
+\backslash
+multicolumn{3}{c}{Feb - April} 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -4467,6 +4470,19 @@ cline{2-10}
 \begin_layout Plain Layout
 
 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{first season (2022 - 2023)}} 
 \backslash
 
 \backslash
@@ -5051,6 +5067,15 @@ Sexpr{prim_soy_3[8,8]})
 \end_layout
 
 \begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{second season (2023 - 2024)}} 
+\backslash
+
+\backslash
 
 \end_layout
 
@@ -5771,8 +5796,7 @@ scriptsize
 
 \begin_layout Plain Layout
 
-Note: First column reports control group means (and standard deviations
- below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+Note: **, * and + denote significance at the 1, 5 and 10 percent levels.
  All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
@@ -5788,10 +5812,34 @@ Note: First column reports control group means (and standard deviations
 \end_layout
 
 \begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Primary-gnuts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ finally repeats the analysis for groundnuts.
+ Again, we see that households that received T2 enter the hunger season
+ with higher stocks.
+ This is also the case for farmers that received T1, but to a lesser extent.
+ As for maize, this is also the case in the second season, but due to smaller
+ samples the results are not precisely measured.
+ Effects on transactions are less in line with our theory.
+ We find a significant increase in sales due to T2 in the first 6 months
+ after the harvest, and only a marginal increase in sales transactions during
+ the October 2022 - January 2023 period.
+ We do not find an effect on purchases.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways true
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5841,6 +5889,17 @@ hline
 
 \begin_layout Plain Layout
 
+& 
+\backslash
+multicolumn{3}{c}{April - Sept} & 
+\backslash
+multicolumn{3}{c}{Oct - Jan} & 
+\backslash
+multicolumn{3}{c}{Feb - April} 
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5866,6 +5925,19 @@ cline{2-10}
 \begin_layout Plain Layout
 
 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{first season (2022 - 2023)}} 
 \backslash
 
 \backslash
@@ -6443,6 +6515,19 @@ Sexpr{prim_gnuts_3[8,8]})
 \begin_layout Plain Layout
 
 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{9}{c}{
+\backslash
+textit{second season (2023 - 2024)}} 
 \backslash
 
 \backslash
@@ -7170,8 +7255,7 @@ scriptsize
 
 \begin_layout Plain Layout
 
-Note: First column reports control group means (and standard deviations
- below); **, * and + denote significance at the 1, 5 and 10 percent levels.
+Note: **, * and + denote significance at the 1, 5 and 10 percent levels.
  All models include village fixed effects and controls for outcome at baseline.
  
 \end_layout
@@ -7184,6 +7268,1445 @@ Note: First column reports control group means (and standard deviations
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Prices
+\end_layout
+
+\begin_layout Standard
+The aim of the interventions is to reverse sell low-buy high behaviour.
+ On the supply side, this means reducing the propensity to sell early at
+ low prices and increase the likelihood of selling later when prices have
+ recovered.
+ At the demand site, this means reducing to propensity to buy late when
+ prices are high, and perhaps buy early in the season when prices are low
+ and store for consumption later on.
+ In addition to looking at the dynamics in market participation in the previous
+ section, the behaviour may also affect prices.
+ In particular, we would expect that treated farmers, and T2 farmers in
+ particular, report higher sales prices as they wait longer.
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:prices"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ therefore looks at the average prices reported by farmers in the different
+ treatment groups.
+ We look at both sales prices (first three columns) and prices at which
+ the commodities were bought (last three columns) and do this for the three
+ commodities.
+\end_layout
+
+\begin_layout Standard
+Results show that one kilogram of maize was sold at an average prices of
+ 205 Malawian Kwacha.
+ The price was about 7 percent higher in the group that made a budget plan.
+ The price at which farmers in the control group bought maize was more than
+ double.
+ However, there are no difference between the different groups.
+\end_layout
+
+\begin_layout Standard
+One kilogram of soybean was sold for about 590 Malawian Kwacha and there
+ is no difference between the control group and the groups that were treated.
+ When buying soybeam prices reached on average 865 Kwacha.
+ Contrary to expectations, we find that among farmers that were asked to
+ provide a sales plan, the purchase price was significantly higher.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, one debe of groundnuts was sold for about 5,400 Kwacha.
+ Also here, there is no difference with the groups that made a budget or
+ sales plan.
+ The price when buying groundnut is only marginally higher.
+ We do not find differences in purchase prices between the different groups.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<code_3,  echo=FALSE, warning = FALSE, message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- getwd()
+\end_layout
+
+\begin_layout Plain Layout
+
+path <- strsplit(path, "/end_report")[[1]]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+prices_all  <- readRDS(paste(path,"all_rounds/results/prices.RData", sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+rev_all  <- readRDS(paste(path,"all_rounds/results/rev_exp_profit.RData",
+ sep="/"))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Prices
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:prices"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{Sales price} & 
+\backslash
+multicolumn{3}{c}{Purchase price} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & mean ctrl & T1 & T2   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-7}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+maize & 
+\backslash
+Sexpr{prices_all[1,1]} & 
+\backslash
+Sexpr{prices_all[1,3]}$^{
+\backslash
+Sexpr{ifelse(prices_all[1,5]<.01,"**",ifelse(prices_all[1,5]<.05,"*",ifelse(prices
+_all[1,5]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[1,6]}$^{
+\backslash
+Sexpr{ifelse(prices_all[1,8]<.01,"**",ifelse(prices_all[1,8]<.05,"*",ifelse(prices
+_all[1,8]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prices_all[1,9]} & 
+\backslash
+Sexpr{prices_all[1,11]}$^{
+\backslash
+Sexpr{ifelse(prices_all[1,13]<.01,"**",ifelse(prices_all[1,13]<.05,"*",ifelse(pric
+es_all[1,13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[1,14]}$^{
+\backslash
+Sexpr{ifelse(prices_all[1,16]<.01,"**",ifelse(prices_all[1,16]<.05,"*",ifelse(pric
+es_all[1,16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[1,2]}) & (
+\backslash
+Sexpr{prices_all[1,4]})  & (
+\backslash
+Sexpr{prices_all[1,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[1,10]}) & (
+\backslash
+Sexpr{prices_all[1,12]})  & (
+\backslash
+Sexpr{prices_all[1,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+soybean & 
+\backslash
+Sexpr{prices_all[2,1]} & 
+\backslash
+Sexpr{prices_all[2,3]}$^{
+\backslash
+Sexpr{ifelse(prices_all[2,5]<.01,"**",ifelse(prices_all[2,5]<.05,"*",ifelse(prices
+_all[2,5]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[2,6]}$^{
+\backslash
+Sexpr{ifelse(prices_all[2,8]<.01,"**",ifelse(prices_all[2,8]<.05,"*",ifelse(prices
+_all[2,8]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prices_all[2,9]} & 
+\backslash
+Sexpr{prices_all[2,11]}$^{
+\backslash
+Sexpr{ifelse(prices_all[2,13]<.01,"**",ifelse(prices_all[2,13]<.05,"*",ifelse(pric
+es_all[2,13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[2,14]}$^{
+\backslash
+Sexpr{ifelse(prices_all[2,16]<.01,"**",ifelse(prices_all[2,16]<.05,"*",ifelse(pric
+es_all[2,16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[2,2]}) & (
+\backslash
+Sexpr{prices_all[2,4]})  & (
+\backslash
+Sexpr{prices_all[2,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[2,10]}) & (
+\backslash
+Sexpr{prices_all[2,12]})  & (
+\backslash
+Sexpr{prices_all[2,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gnuts & 
+\backslash
+Sexpr{prices_all[3,1]} & 
+\backslash
+Sexpr{prices_all[3,3]}$^{
+\backslash
+Sexpr{ifelse(prices_all[3,5]<.01,"**",ifelse(prices_all[3,5]<.05,"*",ifelse(prices
+_all[3,5]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[3,6]}$^{
+\backslash
+Sexpr{ifelse(prices_all[3,8]<.01,"**",ifelse(prices_all[3,8]<.05,"*",ifelse(prices
+_all[3,8]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{prices_all[3,9]} & 
+\backslash
+Sexpr{prices_all[3,11]}$^{
+\backslash
+Sexpr{ifelse(prices_all[3,13]<.01,"**",ifelse(prices_all[3,13]<.05,"*",ifelse(pric
+es_all[3,13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{prices_all[3,14]}$^{
+\backslash
+Sexpr{ifelse(prices_all[3,16]<.01,"**",ifelse(prices_all[3,16]<.05,"*",ifelse(pric
+es_all[3,16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[3,2]}) & (
+\backslash
+Sexpr{prices_all[3,4]})  & (
+\backslash
+Sexpr{prices_all[3,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{prices_all[3,10]}) & (
+\backslash
+Sexpr{prices_all[3,12]})  & (
+\backslash
+Sexpr{prices_all[3,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Revenue and Expenses
+\end_layout
+
+\begin_layout Standard
+We now combine marketing patterns with prices to calculate how much was
+ derived from the sales of the three commodities and how much was spent
+ on them.
+ Results, in thousands of Ugandan shillings, are in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:rev_exp_proftis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the first three columns of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:rev_exp_proftis"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we look at total revenue over the entire first season (multiplying quantities
+ sold by prices at which these quantities were sold).
+ We do this for the three commodities, and then also sum over the three
+ commodities.
+ The results show that the average household in the control group received
+ about 146,000 kwacha from the sales of maize, about 80,000 kwacha from
+ the sales of soybean, and about 43,000 kwacha from the sale of groundnuts.
+ In all, the average control group household had a revenue of about 270,000
+ kwacha (about USD 160).
+ For soybean, we find a significant and positive effect of the sales plan
+ on revenue: Farmers in that group report revenues totaling about 95,000
+ malawian kwacha.
+ Similarly, we find that for groundnuts, revenues are higher in the T2 sub-group.
+ The positive treatment effects for T2 are also reflected in a slightly
+ higher total revenue.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Revenue and expenses
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:rev_exp_proftis"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rccccccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{3}{c}{Revenue} & 
+\backslash
+multicolumn{3}{c}{Expenses} & 
+\backslash
+multicolumn{3}{c}{Revenue - Expenses} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& mean ctrl & T1 & T2 & mean ctrl & T1 & T2 & mean ctrl & T1 & T2  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{2-10}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+maize & 
+\backslash
+Sexpr{rev_all[1,1]} & 
+\backslash
+Sexpr{rev_all[1,3]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,5]<.01,"**",ifelse(rev_all[1,5]<.05,"*",ifelse(rev_all[1,5]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[1,6]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,8]<.01,"**",ifelse(rev_all[1,8]<.05,"*",ifelse(rev_all[1,8]
+<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[1,9]} & 
+\backslash
+Sexpr{rev_all[1,11]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,13]<.01,"**",ifelse(rev_all[1,13]<.05,"*",ifelse(rev_all[1,
+13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[1,14]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,16]<.01,"**",ifelse(rev_all[1,16]<.05,"*",ifelse(rev_all[1,
+16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[1,17]} & 
+\backslash
+Sexpr{rev_all[1,19]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,21]<.01,"**",ifelse(rev_all[1,21]<.05,"*",ifelse(rev_all[1,
+21]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[1,22]}$^{
+\backslash
+Sexpr{ifelse(rev_all[1,24]<.01,"**",ifelse(rev_all[1,24]<.05,"*",ifelse(rev_all[1,
+24]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[1,2]}) & (
+\backslash
+Sexpr{rev_all[1,4]})  & (
+\backslash
+Sexpr{rev_all[1,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[1,10]}) & (
+\backslash
+Sexpr{rev_all[1,12]})  & (
+\backslash
+Sexpr{rev_all[1,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[1,18]}) & (
+\backslash
+Sexpr{rev_all[1,20]})  & (
+\backslash
+Sexpr{rev_all[1,23]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+soybean & 
+\backslash
+Sexpr{rev_all[2,1]} & 
+\backslash
+Sexpr{rev_all[2,3]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,5]<.01,"**",ifelse(rev_all[2,5]<.05,"*",ifelse(rev_all[2,5]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[2,6]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,8]<.01,"**",ifelse(rev_all[2,8]<.05,"*",ifelse(rev_all[2,8]
+<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[2,9]} & 
+\backslash
+Sexpr{rev_all[2,11]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,13]<.01,"**",ifelse(rev_all[2,13]<.05,"*",ifelse(rev_all[2,
+13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[2,14]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,16]<.01,"**",ifelse(rev_all[2,16]<.05,"*",ifelse(rev_all[2,
+16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[2,17]} & 
+\backslash
+Sexpr{rev_all[2,19]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,21]<.01,"**",ifelse(rev_all[2,21]<.05,"*",ifelse(rev_all[2,
+21]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[2,22]}$^{
+\backslash
+Sexpr{ifelse(rev_all[2,24]<.01,"**",ifelse(rev_all[2,24]<.05,"*",ifelse(rev_all[2,
+24]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[2,2]}) & (
+\backslash
+Sexpr{rev_all[2,4]})  & (
+\backslash
+Sexpr{rev_all[2,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[2,10]}) & (
+\backslash
+Sexpr{rev_all[2,12]})  & (
+\backslash
+Sexpr{rev_all[2,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[2,18]}) & (
+\backslash
+Sexpr{rev_all[2,20]})  & (
+\backslash
+Sexpr{rev_all[2,23]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gnuts & 
+\backslash
+Sexpr{rev_all[3,1]} & 
+\backslash
+Sexpr{rev_all[3,3]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,5]<.01,"**",ifelse(rev_all[3,5]<.05,"*",ifelse(rev_all[3,5]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[3,6]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,8]<.01,"**",ifelse(rev_all[3,8]<.05,"*",ifelse(rev_all[3,8]
+<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[3,9]} & 
+\backslash
+Sexpr{rev_all[3,11]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,13]<.01,"**",ifelse(rev_all[3,13]<.05,"*",ifelse(rev_all[3,
+13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[3,14]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,16]<.01,"**",ifelse(rev_all[3,16]<.05,"*",ifelse(rev_all[3,
+16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[3,17]} & 
+\backslash
+Sexpr{rev_all[3,19]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,21]<.01,"**",ifelse(rev_all[3,21]<.05,"*",ifelse(rev_all[3,
+21]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[3,22]}$^{
+\backslash
+Sexpr{ifelse(rev_all[3,24]<.01,"**",ifelse(rev_all[3,24]<.05,"*",ifelse(rev_all[3,
+24]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[3,2]}) & (
+\backslash
+Sexpr{rev_all[3,4]})  & (
+\backslash
+Sexpr{rev_all[3,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[3,10]}) & (
+\backslash
+Sexpr{rev_all[3,12]})  & (
+\backslash
+Sexpr{rev_all[3,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[3,18]}) & (
+\backslash
+Sexpr{rev_all[3,20]})  & (
+\backslash
+Sexpr{rev_all[3,23]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+all & 
+\backslash
+Sexpr{rev_all[4,1]} & 
+\backslash
+Sexpr{rev_all[4,3]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,5]<.01,"**",ifelse(rev_all[4,5]<.05,"*",ifelse(rev_all[4,5]
+<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[4,6]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,8]<.01,"**",ifelse(rev_all[4,8]<.05,"*",ifelse(rev_all[4,8]
+<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[4,9]} & 
+\backslash
+Sexpr{rev_all[4,11]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,13]<.01,"**",ifelse(rev_all[4,13]<.05,"*",ifelse(rev_all[4,
+13]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[4,14]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,16]<.01,"**",ifelse(rev_all[4,16]<.05,"*",ifelse(rev_all[4,
+16]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+Sexpr{rev_all[4,17]} & 
+\backslash
+Sexpr{rev_all[4,19]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,21]<.01,"**",ifelse(rev_all[4,21]<.05,"*",ifelse(rev_all[4,
+21]<.1,"+","")))}}$  & 
+\backslash
+Sexpr{rev_all[4,22]}$^{
+\backslash
+Sexpr{ifelse(rev_all[4,24]<.01,"**",ifelse(rev_all[4,24]<.05,"*",ifelse(rev_all[4,
+24]<.1,"+","")))}}$ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[4,2]}) & (
+\backslash
+Sexpr{rev_all[4,4]})  & (
+\backslash
+Sexpr{rev_all[4,7]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[4,10]}) & (
+\backslash
+Sexpr{rev_all[4,12]})  & (
+\backslash
+Sexpr{rev_all[4,15]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+& (
+\backslash
+Sexpr{rev_all[4,18]}) & (
+\backslash
+Sexpr{rev_all[4,20]})  & (
+\backslash
+Sexpr{rev_all[4,23]}) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+scriptsize
+\end_layout
+
+\begin_layout Plain Layout
+
+Note: **, * and + denote significance at the 1, 5 and 10 percent levels.
+ All models include village fixed effects and controls for outcome at baseline.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the expense side (columns 4-6), we see farmers buy maize totaling just
+ under 120,000 kwacha.
+ Households do not really buy soybean and groundnuts in the market.
+ We do not find that the treatments affected expenses.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, the last three columns looks at the net position of the household
+ on the three commodities, as well as the total (final two rows).
+ We see that the average net position for maize is marginal, as a lot of
+ buying is happening in the control group.
+ Net positions for soybean (as a cash crop) and groundnuts are higher.
+ We see that the sales plan increased net positions for soybean and groundnuts.
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+Smallholder farmers often sell their marketable surplus or cash crops immediatel
+y after harvest to itinerant traders at the farm gate, which results in
+ sub-optimal outcomes due to low prices and poor market conditions.
+ Post-harvest, prices drop significantly, and the condition of the produce,
+ such as undried maize, is often used by buyers to further reduce the price.
+ Farmers then face higher prices later in the season when they need to repurchas
+e their crops, creating the "sell low-buy high" puzzle.
+ This behavior can be attributed to several factors, including lack of storage
+ facilities, urgent cash needs, market access limitations, and risk aversion.
+ Behavioral causes to the "sell low-buy high" puzzle have received less
+ attention in research.
+ These include issues related to "budget neglect," where farmers underestimate
+ future financial needs due to the cognitive cognitive effort needed to
+ predict all future needs over an extended period of time, or motivated
+ reasoning, where future earnings are overestimated to justify discretionary
+ spending now.
+\end_layout
+
+\begin_layout Standard
+This study tested these behavioral explanations through a field experiment
+ in Malawi, focusing on maize, groundnuts, and soybean producers.
+ The experiment employed a parallel design with two treatment arms and a
+ control group.
+ The first treatment tested the budget neglect hypothesis by having farmers
+ complete a detailed budgeting exercise immediately post-harvest.
+ The second treatment tested the motivated reasoning hypothesis through
+ a sales planning intervention, where farmers committed to sales plans and
+ minimum prices.
+ The impact of these interventions was compared to a control group.
+ The experiment was repeated in a second year to assess the effectiveness
+ of repeated treatments, resulting in seven distinct treatment arms to evaluate
+ various combinations of one-off and repeated interventions.
+\end_layout
+
+\begin_layout Standard
+In terms of smallholder market participation, we found that for maize, the
+ sales planning intervention (T2) led to higher stocks immediately after
+ harvest and encouraged delayed sales into higher price periods, reducing
+ the need for later market purchases.
+ Budgeting intervention (T1) showed mixed results with some positive impacts
+ on stock levels but less consistency in influencing sales timing.
+ For soybean, T2 was notably effective in maintaining higher stocks and
+ delaying sales, while T1's impact was less clear.
+ Groundnuts showed similar trends, with T2 increasing stocks entering the
+ hunger season but showing inconsistent effects on transaction timing.
+ Overall, the interventions, particularly T2, helped mitigate the sell low-buy
+ high phenomenon by promoting better stock management and sales timing among
+ farmers.
+ 
+\end_layout
+
+\begin_layout Standard
+The idea behind the interventions is to delay sales and reduce incidences
+ of purchase if prices are high.
+ Analysis of average prices reported by farmers revealed that maize sold
+ for 205 Malawian Kwacha per kilogram, with a 7 percent higher price for
+ those who made a budget plan.
+ There was no significant difference in purchase price of maize among different
+ groups.
+ Soybean sold for about 590 Kwacha per kilogram without significant price
+ differences across groups, but the purchase price was higher for farmers
+ with a sales plan.
+ Groundnuts sold for about 5,400 Kwacha per debe, with no significant difference
+s between treatment and control groups in both sales and purchase prices.
+ Overall, while budgeting interventions increased sales prices for maize,
+ other commodities showed less consistent effects.
+\end_layout
+
+\begin_layout Standard
+Finally, we combine market participation dynamics with prices to look at
+ effects of revenue, expenses and the value of marketed surplus (or deficit).
+ The average household in the control group earned about 146,000 kwacha
+ from maize, 80,000 kwacha from soybean, and 43,000 kwacha from groundnuts,
+ totaling 270,000 kwacha (approximately USD 160).
+ The sales plan intervention (T2) significantly increased revenue for soybean
+ (95,000 kwacha) and groundnuts, resulting in a slightly higher total revenue.
+ On the expense side, households spent about 120,000 kwacha on maize, with
+ minimal spending on soybean and groundnuts, and no significant effect from
+ the treatments.
+ Net positions, considering both revenues and expenses, were marginal for
+ maize due to substantial purchasing, but higher for soybean and groundnuts.
+ The sales plan intervention improved net positions for both soybean and
+ groundnuts.
+\end_layout
+
+\begin_layout Standard
+In sum, while our results to some extent support the hypotheses, the evidence
+ is much less convincing that what 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "augenblick2021budget"
+literal "false"
+
+\end_inset
+
+ report.
+ Furthermore, our study suggests that an intervention that focuses more
+ on planning of sales is more effective than an intervention that focuses
+ on expenses.
+ This finding is potentially important for policy makers and practitioners:
+ We found that budgeting is something that is often used by nongovernmental
+ organizations during extension and training programs.
+ Our study suggests that a sales plan, which was far easier to do than a
+ complete budget, is likely to be more cost-effective than budgetting.
+ 
 \end_layout
 
 \begin_layout Standard

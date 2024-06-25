@@ -1792,78 +1792,68 @@ saveRDS(prim_soy_tc, paste(path,"midline_sept/results/prim_soy_tc.RData", sep="/
 ###write data for merging with midline 2
 write.csv(dta,paste(path,"all_rounds/data/midline_sept.csv", sep="/"))
 
+###this is for maize
+test <- dta[c("farmer_ID","trans.1..q43d", "trans.2..q43d","trans.3..q43d","trans.4..q43d","trans.5..q43d")]
 
-#### control for FWER using simulation
+test <- reshape(test, 
+        direction = "long",
+        varying = list(names(test)[2:6]),
+        idvar = "farmer_ID")
 
-library(randomizr)
+test2 <- dta[c("farmer_ID","trans.1..group2.q43c", "trans.2..group2.q43c","trans.3..group2.q43c","trans.4..group2.q43c","trans.5..group2.q43c")]
 
-#we need to create an ID within block for merging
-#do this in a loop
-dta$id_in_blocks <- NA
-for (i in levels(dta$fe_vil)) {
-  dta$id_in_blocks[dta$fe_vil==i] <- 1:length(dta$id_in_blocks[dta$fe_vil==i])
+test2 <- reshape(test2, 
+        direction = "long",
+        varying = list(names(test2)[2:6]),
+        idvar = "farmer_ID")
 
-}
-to_drop <- "treatment"
-dta <- dta[ , !(names(dta) %in% to_drop)]
+maize_sold_1 <- merge(test,test2)
+names(maize_sold_1) <-  c("farmer_ID", "trans_ID","price","quant")
+maize_sold_1$price[maize_sold_1$price >2000 | maize_sold_1$price <50] <- NA
+maize_sold_1$quant[maize_sold_1$quant >100] <- NA
 
-crit_val <- 0.05
+write.csv(maize_sold_1,paste(path,"all_rounds/data/maize_sold_1.csv", sep="/"), row.names = FALSE)
 
-blocks <- rep(1:114, times = 31)
-id_in_blocks <- rep(1:31, times = 114)
-block_m_each <- matrix(NA,114,3)
-block_m_each[,1] <- 13
-block_m_each[,2] <- 9 
-block_m_each[,3] <- 9 
-f_s <- c("ihs(stock_maize_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_maize_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_maize~treatment + sold_maize_b +fe_vil" ,"ihs(sold_maize_kg)~treatment + sold_maize_kg_b +fe_vil","sold_maize_pct~treatment + sold_maize_pct_b +fe_vil","price_maize~treatment + price_maize_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil" , "ihs(stock_gnuts_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_gnuts_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_gnuts~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_gnuts_kg)~treatment + sold_gnuts_kg_b +fe_vil","sold_gnuts_pct~treatment + sold_gnuts_pct_b +fe_vil","price_gnuts~treatment + price_gnuts_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil", "ihs(stock_soy_abs)~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","stock_soy_pct~treatment + hhsize+ironroof+tot_acre+hired_labour+ fe_vil","sold_soy~treatment + sold_gnuts_b +fe_vil" ,"ihs(sold_soy_kg)~treatment + sold_soy_kg_b +fe_vil","sold_soy_pct~treatment + sold_soy_pct_b +fe_vil","price_soy~treatment + price_soy_b + hhsize+ironroof+tot_acre+hired_labour+ fe_vil")
+##this is for soy
+test <- midline_sept[c("farmer_ID","trans2.1..group6.q52c", "trans2.2..group6.q52c","trans2.3..group6.q52c","trans2.4..group6.q52c","trans2.5..group6.q52c","trans2.6..group6.q52c","trans2.7..group6.q52c","trans2.8..group6.q52c","trans2.9..group6.q52c","trans2.10..group6.q52c","trans2.11..group6.q52c")]
 
-# Helper functions
-do_reg_T1 <- function(data_set, f_s){
-  summary(lm(as.formula(f_s),data=data_set))$coefficients[2,4]
-}
+test <- reshape(test, 
+                direction = "long",
+                varying = list(names(test)[2:12]),
+                idvar = "farmer_ID")
 
-do_reg_T2 <- function(data_set, f_s){
-  summary(lm(as.formula(f_s),data=data_set))$coefficients[3,4]
-}
+test2 <- midline_sept[c("farmer_ID","trans2.1..q52d", "trans2.2..q52d","trans2.3..q52d","trans2.4..q52d","trans2.5..q52d","trans2.6..q52d","trans2.7..q52d","trans2.8..q52d","trans2.9..q52d","trans2.10..q52d","trans2.11..q52d")]
 
-permute_treat <- function(dta_fun, f_s){
-  dta_fun$blocks <- as.numeric(dta_fun$fe_vil)
-  assignment <-    data.frame(blocks,id_in_blocks,block_ra(blocks = blocks, block_m_each = block_m_each,conditions = c("control", "T1", "T2")))
-  names(assignment) <- c("blocks","id_in_blocks", "treatment")
-  dta_sim <- merge(dta_fun, assignment, by.x=c("blocks", "id_in_blocks"), by.y=c("blocks", "id_in_blocks"))
-    
-  ps_sim <- matrix(NA,1,2*length(f_s))               
-  for (i in 1:length(f_s)) {            
-  ps_sim[i] <- do_reg_T1(dta_sim, f_s[i])
-   ps_sim[i+(length(f_s))] <- do_reg_T2(dta_sim, f_s[i])
-  }
-  return(ps_sim)
-}
-threshold_finder<- function(threshold){
-  mean(apply(many_ps, 2, x <- function(x) sum(x <= threshold) > 0 ))
-}
-startTime <- Sys.time()
-#we can get the p_obs from the prim_ matrices
-p_obs <- c(prim_maize[1:6,6],prim_gnuts[1:6,6],prim_soy[1:6,6],prim_maize[1:6,9],prim_gnuts[1:6,9],prim_soy[1:6,9])
-# Simulate under the sharp null
-many_ps <- replicate(1000, permute_treat(dta,f_s), simplify = TRUE)
-# Obtain the Type I error rate for a series of thresholds
-thresholds <- seq(0, crit_val, length.out = 1000)
-type_I_rate <- sapply(thresholds, threshold_finder)
-# Find the largest threshold that yields an alpha type I error rate
-target_p_value <- thresholds[max(which(type_I_rate <=crit_val))]
-# Apply target p_value to observed p_values
-sig_simulated <- p_obs <= target_p_value
-# Compare to raw p-values
-sig <- p_obs <= crit_val
+test2 <- reshape(test2, 
+                 direction = "long",
+                 varying = list(names(test2)[2:12]),
+                 idvar = "farmer_ID")
 
-endTime <- Sys.time()
+soy_sold_1 <- merge(test,test2)
+names(soy_sold_1) <-  c("farmer_ID", "trans_ID","quant","price")
+soy_sold_1$price[soy_sold_1$price >2000 | soy_sold_1$price <50] <- NA
+soy_sold_1$quant[soy_sold_1$quant >250] <- NA
 
-# prints recorded time
-print(endTime - startTime)
+write.csv(soy_sold_1,paste(path,"all_rounds/data/soy_sold_1.csv", sep="/"), row.names = FALSE)
 
-print("the end")
+#this is for gnuts
+test <- midline_sept[c("farmer_ID","trans1.1..group4.q47c", "trans1.2..group4.q47c","trans1.3..group4.q47c","trans1.4..group4.q47c","trans1.5..group4.q47c","trans1.6..group4.q47c","trans1.7..group4.q47c")]
 
+test <- reshape(test, 
+                direction = "long",
+                varying = list(names(test)[2:8]),
+                idvar = "farmer_ID")
 
+test2 <- midline_sept[c("farmer_ID","trans1.1..q47d", "trans1.2..q47d","trans1.3..q47d","trans1.4..q47d","trans1.5..q47d","trans1.6..q47d","trans1.7..q47d")]
 
+test2 <- reshape(test2, 
+                 direction = "long",
+                 varying = list(names(test2)[2:8]),
+                 idvar = "farmer_ID")
 
+gnuts_sold_1 <- merge(test,test2)
+names(gnuts_sold_1) <-  c("farmer_ID", "trans_ID","quant","price")
+gnuts_sold_1$price[gnuts_sold_1$price >15000 | gnuts_sold_1$price <2000] <- NA
+gnuts_sold_1$quant[gnuts_sold_1$quant >250] <- NA
+
+write.csv(gnuts_sold_1,paste(path,"all_rounds/data/gnuts_sold_1.csv", sep="/"), row.names = FALSE)

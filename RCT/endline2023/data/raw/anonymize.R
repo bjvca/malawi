@@ -57,9 +57,9 @@ saveWidget(m, file="malawi_progress.html")
 #duplicates
 dta$farmer_ID[duplicated(dta$farmer_ID)]
 
-dupper <- "F_3425"
+dupper <- "n/a"
 #get name of village
-dupper_vil <- dta$q3[dta$farmer_ID == dupper][1] 
+dupper_vil <- "KOTHO" 
 #what farmers from baseline can not be matched with a farmer from enldine 
 unmatched <- setdiff(dta_base$farmer_ID[dta_base$q3 == dupper_vil],dta$farmer_ID[dta$q3 == dupper_vil])
 #so one of the unmatched farmers should be linked to one of the duplicates
@@ -79,6 +79,7 @@ dup$round <- "endline"
 
 
 dup <- rbind(dup,dta_base)
+
 pal <- colorFactor(c("red", "green"),dup$round)
 m <- leaflet() %>% setView(lat = -13.713, lng = 33.85, zoom=9)  %>%  addTiles(group="OSM") %>% addTiles(urlTemplate = "https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G",  group="Google", attribution = 'Google')  %>% addProviderTiles(providers$OpenTopoMap, group="Topography") %>% addCircleMarkers(data=dup, lng=~as.numeric(longitude), lat=~as.numeric(latitude),radius= 2,  color=~pal(round), popup = ~as.character(farmer_ID), group = "X_uuid")   %>%  addLayersControl(baseGroups=c('OSM','Google','Topography')) 
 
@@ -117,9 +118,14 @@ dta <- dta[dta$farmer_ID !="F_512",]
 dta <- dta[dta$farmer_ID !="F_897",]
 dta <- dta[dta$farmer_ID !="F_135",]
 dta <- dta[dta$farmer_ID !="F_3425",]
-dta <- dta[dta$farmer_ID !="n/a",]
 dta$farmer_ID[duplicated(dta$farmer_ID)]
+dta$farmer_ID[dta$X_uuid == "c79c2166-f57e-4b94-a8d1-4edfee508659"] <- "F_1282"
+dta$farmer_ID[dta$X_uuid == "4bb7f855-9c62-4c06-9c78-0b694093d541"] <- "F_1294"
+dta$farmer_ID[dta$X_uuid == "29174733-8404-48c4-9dc9-7564ea39de4e"] <- "F_1407"
+dta$farmer_ID[dta$X_uuid == "5679c60b-6398-426b-893e-8b26ee2b67b2"] <- "F_1419"
+dta$farmer_ID[dta$X_uuid == "040ea61c-f9a3-46e0-9f92-12e8970bc617"] <- "F_1402"
 
+dta <- dta[dta$farmer_ID !="n/a",]
 #dupper <- "F_3425"
 #dup <- dta[dta$farmer_ID==dupper,c("farmer_ID","q3","check.maize._GPS_longitude","check.maize._GPS_latitude","X_uuid")]
 #names(dup) <- c("farmer_ID","village","longitude","latitude","X_uuid")
